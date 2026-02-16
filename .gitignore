@@ -18,3 +18,9 @@ Thumbs.db
 *~
 .vscode/
 .idea/
+
+# Jekyll
+webpage/vendor
+webpage/.jekyll-cache
+webpage/.jekyll-metadata
+webpage/_site
