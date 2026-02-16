@@ -1,0 +1,20 @@
+# Jekyll
+webpage/_site/
+webpage/.jekyll-cache/
+webpage/.jekyll-metadata
+webpage/Gemfile.lock
+
+# Ruby
+.bundle/
+vendor/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
