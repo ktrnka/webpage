@@ -1,6 +1,7 @@
 ---
-title: "Urban detrashing tips — Imported"
+title: "Urban detrashing tips"
 layout: default
+show_logo: false
 ---
 
 # Urban detrashing tips
@@ -74,8 +75,3 @@ Approach:
 - Start with the least-damaging method (soapy water, scrubbing) and escalate only if needed.
 - Use a glass scraper carefully (shallow angle, slicing motion) and wear gloves.
 - Test in a small corner before aggressive cleaning; avoid damaging reflective surfaces on traffic signs.
-
----
-
-- Raw HTML snapshot saved to `download/other_urban_cleanup_tips.html`.
-- I will not copy external images or binary assets into the repo unless you explicitly ask — tell me which assets to mirror and I will prepare an assets manifest first.

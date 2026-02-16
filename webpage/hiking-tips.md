@@ -1,6 +1,7 @@
 ---
-title: "Hiking tips — Imported"
+title: "Hiking tips"
 layout: default
+show_logo: false
 ---
 
 # Hiking tips
@@ -90,8 +91,3 @@ The basics, in priority order:
 If you're in Washington, use [WTA](https://www.wta.org/) — the hike finder and trail reports are very helpful. Check distance, elevation gain (ft/mile), terrain, and recent trail reports. Also check weather for the trailhead and summit.
 
 AllTrails is my main source outside Washington.
-
----
-
-- Raw HTML snapshot saved to `download/other_hiking_tips.html`.
-- I will not copy external images or binary assets into the repo unless you explicitly ask — tell me which assets to mirror and I will prepare an assets manifest first.

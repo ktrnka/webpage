@@ -1,6 +1,6 @@
 # Site settings
-title: Your Name
-description: Personal webpage
+title: Keith Trnka
+description: Personal website of Keith Trnka, PhD
 logo: /assets/img/profile.jpg
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site

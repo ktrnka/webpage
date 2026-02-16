@@ -1,11 +1,10 @@
 ---
-title: "Publications — Keith Trnka (imported)"
+title: "Publications"
 layout: default
+show_logo: false
 ---
 
 # Publications
-
-I rebuilt this list from the saved site snapshot (`download/publications.html`). Where you already added PDFs to `assets/pdf/` I've linked to those local files; remaining items keep their original external links.
 
 ## External links
 
@@ -46,16 +45,3 @@ I rebuilt this list from the saved site snapshot (`download/publications.html`).
 
 - Elzer, Stephanie; Carberry, Sandra; Chester, Daniel; Demir, Seniz; Green, Nancy; Zukerman, Ingrid; Trnka, Keith. *Exploring and exploiting the limited utility of captions in recognizing intention in information graphics.* ACL 2005, pp. 223–230. (original link preserved)
 
----
-
-Notes
-
-- Raw HTML snapshot: `download/publications.html` ✅
-- Local PDFs referenced from `assets/pdf/` where available.
-
-If you want I can:
-1. Replace the remaining Drive links with local PDFs (you can drop them in `assets/pdf/`).
-2. Reformat citations (APA/IEEE) or add BibTeX export.
-3. Split the list into year‑indexed pages or add a searchable index.
-
-Which of the above would you like next? (I can proceed with 1 by default if you say “yes”.)

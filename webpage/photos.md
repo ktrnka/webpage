@@ -1,6 +1,7 @@
 ---
-title: "Photos — Imported"
+title: "Photos"
 layout: default
+show_logo: false
 ---
 
 # Photos
@@ -66,7 +67,3 @@ A curated list of photo albums and galleries (external Google Photos links). I d
 - [Mason Lake](https://goo.gl/photos/ES4cptWP8uKi4xZ78)
 - [Crystal Lakes](https://goo.gl/photos/wNQM5ibiLEHxSXyH7)
 
----
-
-- Raw HTML snapshot saved to `download/other_photos.html`.
-- I will not copy external images into the repo unless you ask — tell me if you want specific albums mirrored.
