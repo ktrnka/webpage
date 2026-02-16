@@ -2,13 +2,20 @@
 
 Branch: `import/keith-trnka-com`
 
-- [ ] Get profile/header image(s) into `webpage/imported-keith-trnka/assets/` (ask before copying from Google-hosted URLs)
+- [ ] Get profile/header image(s) into `webpage/assets/` (ask before copying from Google-hosted URLs) — user locating source now
 - [ ] Recreate site styling (fonts/colors) so imported pages match original look (`assets/css`)
-- [ ] Improve `publications.md` using `download/publications.html` (curl saved raw HTML)
-- [ ] Import "Other" pages: `Photos`, `Hiking tips`, `Urban detrashing tips` (placeholders added; fill from `download/` if available)
-- [ ] Optionally download publication PDFs into `webpage/imported-keith-trnka/papers/` (need confirmation)
+- [x] Improve `publications.md` using `download/publications.html` — rebuilt; local PDFs linked from `assets/pdf/`
+- [x] Import "Other" pages: `Photos`, `Hiking tips`, `Urban detrashing tips` — converted and moved into site root
+- [x] Move imported pages out of `webpage/imported-keith-trnka/` into `webpage/` (overwrote temp `index.md`)
+- [x] Publication PDFs: linked from `webpage/assets/pdf/` (user-provided)
 - [ ] Review and approve assets to include (images, PDFs, fonts)
 
 Notes:
-- Imported pages are under `webpage/imported-keith-trnka/`.
-- Raw HTML snapshots will be in `download/` to help conversion.
+- Raw HTML snapshots are in `download/`.
+- Imported content now lives in `webpage/` (the temporary `imported-keith-trnka/` folder was removed).
+- Working branch: `import/keith-trnka-com`.
+
+Next actions:
+- Add profile/header image when you provide the source (I won't copy from Google-hosted URLs without your permission). 
+- If you want styling matched, tell me whether to copy fonts/colors from the snapshot or hand-tune `assets/css`.
+- I can open a PR for review when you're ready.
