@@ -43,5 +43,5 @@ show_logo: false
 
 ### 2005
 
-- Elzer, Stephanie; Carberry, Sandra; Chester, Daniel; Demir, Seniz; Green, Nancy; Zukerman, Ingrid; Trnka, Keith. *Exploring and exploiting the limited utility of captions in recognizing intention in information graphics.* ACL 2005, pp. 223–230. (original link preserved)
+- Elzer, Stephanie; Carberry, Sandra; Chester, Daniel; Demir, Seniz; Green, Nancy; Zukerman, Ingrid; Trnka, Keith. *Exploring and exploiting the limited utility of captions in recognizing intention in information graphics.* ACL 2005, pp. 223–230.
 

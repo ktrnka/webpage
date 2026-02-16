@@ -78,7 +78,14 @@ a {
 
 a:hover, a:focus {
   color: var(--accent-mid);
-  font-weight: 700;
+  text-decoration: underline;
+}
+
+// External links styling
+a[href^="http"]:not([href*="ktrnka.github.io"])::after {
+  content: " ↗";
+  font-size: 0.8em;
+  color: var(--muted);
 }
 
 a small {
@@ -89,7 +96,7 @@ a small {
 }
 
 .wrapper {
-  width: 860px;
+  width: 1060px;
   margin: 0 auto;
 }
 
@@ -200,7 +207,7 @@ header ul a {
 
 header ul a:hover, header ul a:focus {
   color: var(--accent);
-  font-weight: 700;
+  text-decoration: underline;
 }
 
 header ul a:active {
@@ -224,9 +231,18 @@ header ul a strong {
 }
 
 section {
-  width: 500px;
+  width: 750px;
   float: right;
   padding-bottom: 50px;
+}
+
+// Single column layout for content pages
+.single-column section {
+  width: 100%;
+  max-width: 800px;
+  float: none;
+  margin: 0 auto;
+  padding: 0 20px 50px;
 }
 
 small {
