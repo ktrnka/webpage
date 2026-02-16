@@ -4,10 +4,6 @@ layout: default
 show_logo: false
 ---
 
-# Photos
-
-A curated list of photo albums and galleries (external Google Photos links). I did **not** copy any images into the repository — tell me if you want me to mirror specific albums.
-
 ## 2019
 
 - [Wonderland Trail](https://photos.app.goo.gl/J9fgCjiiT98UWJEA9)
