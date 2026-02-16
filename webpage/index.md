@@ -1,6 +1,6 @@
 ---
 title: "Keith Trnka"
-layout: default
+layout: special
 ---
 
 # Keith Trnka, PhD
