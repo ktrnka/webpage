@@ -47,6 +47,7 @@ Branch: `import/keith-trnka-com`
 - Tech debt:
     - Reduce code duplication between the index layout and default page layouts
     - Fix Sass @import deprecation warning (migrate to @use/@forward before Dart Sass 3.0.0)
+    - The internal links don't work (need to copy the subdir thing from recipes deployment script)
 - Research:
     - Look into Jekyll plugins for automated link testing
     - Look into Jekyll plugins for automated image optimization/sizing
