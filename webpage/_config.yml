@@ -1,3 +1,7 @@
+plugins:
+  - jekyll-theme-minimal
+  - jekyll-seo-tag
+
 # Site settings
 title: Keith Trnka
 description: Personal website of Keith Trnka, PhD
