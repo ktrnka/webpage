@@ -52,6 +52,7 @@ Branch: `import/keith-trnka-com`
     - Look into Jekyll plugins for automated link testing
     - Look into Jekyll plugins for automated image optimization/sizing
     - Research Jekyll best practices for performance optimization
+    - What's the Jekyll SEO thing about?
 
 Notes:
 - Raw HTML snapshots are in `download/`.
