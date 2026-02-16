@@ -1,6 +1,7 @@
 # Site settings
 title: Your Name
 description: Personal webpage
+logo: /assets/img/profile.jpg
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 

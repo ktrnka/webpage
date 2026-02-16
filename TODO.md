@@ -2,7 +2,7 @@
 
 Branch: `import/keith-trnka-com`
 
-- [ ] Get profile/header image(s) into `webpage/assets/` (ask before copying from Google-hosted URLs) — user locating source now
+- [x] Get profile/header image(s) into `webpage/assets/` — added `webpage/assets/img/profile.jpg` (resized with ImageMagick)
 - [ ] Recreate site styling (fonts/colors) so imported pages match original look (`assets/css`)
 - [x] Improve `publications.md` using `download/publications.html` — rebuilt; local PDFs linked from `assets/pdf/`
 - [x] Import "Other" pages: `Photos`, `Hiking tips`, `Urban detrashing tips` — converted and moved into site root
