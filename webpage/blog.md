@@ -1,0 +1,16 @@
+---
+layout: default
+title: Blog
+---
+
+# Blog
+
+{% for post in site.posts %}
+<article class="post">
+  <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+  {% if post.excerpt %}
+  <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+  {% endif %}
+</article>
+{% endfor %}

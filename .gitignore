@@ -3,6 +3,7 @@ webpage/_site/
 webpage/.jekyll-cache/
 webpage/.jekyll-metadata
 webpage/Gemfile.lock
+webpage/Gemfile
 
 # Ruby
 .bundle/

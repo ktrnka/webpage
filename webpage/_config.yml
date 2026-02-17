@@ -1,6 +1,7 @@
 plugins:
   - jekyll-theme-minimal
   - jekyll-seo-tag
+  - jekyll-feed
 
 # Site settings
 title: Keith Trnka
@@ -18,11 +19,13 @@ title_separator: "|"
 
 # Build settings
 theme: jekyll-theme-minimal
-plugins:
-  - jekyll-seo-tag
+
+# Blog settings
+permalink: /blog/:year/:month/:title/
 
 # Exclude files from the build
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - vendor/
