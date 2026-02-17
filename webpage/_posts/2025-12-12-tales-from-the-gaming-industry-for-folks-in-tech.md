@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Tales from the gaming industry for folks in tech
 date: 2025-12-12
 ---

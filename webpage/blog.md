@@ -3,7 +3,21 @@ layout: default
 title: Blog
 ---
 
-# Blog
+<style>
+article.post {
+  margin-bottom: 3em; /* Largest space: between posts */
+}
+
+article.post h2 {
+  margin-bottom: 0.25em; /* Smallest space: between title and date */
+}
+
+article.post time {
+  display: block;
+  margin-bottom: 1em; /* Medium space: between date and excerpt */
+  color: #666;
+}
+</style>
 
 {% for post in site.posts %}
 <article class="post">

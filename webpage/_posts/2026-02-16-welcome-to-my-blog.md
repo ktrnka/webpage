@@ -1,10 +1,8 @@
 ---
-layout: default
+layout: post
 title: Welcome to My Blog
 date: 2026-02-16
 ---
-
-# Welcome to My Blog
 
 This is a placeholder blog post to test the blog functionality. The permalink format is configured to use `/blog/:year/:month/:title/`, so this post should be accessible at:
 
