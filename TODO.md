@@ -21,6 +21,7 @@ Branch: `import/keith-trnka-com`
   - [x] Remove "Hosted on GitHub Pages" footer
 - [ ] Test GitHub Pages build (verify GitHub Actions succeeds)
 - Fix relative links on github pages
+- Create a blog section
 
 ## Before Merge/Deploy 🚀
 - [x] Add missing "Blog before 2017" link (https://kwtrnka.wordpress.com/)
@@ -31,13 +32,25 @@ Branch: `import/keith-trnka-com`
 - [ ] Consider updating or removing "Why have a webpage?" section (revisit after blog migration)
 
 ## In Progress 🚧
+- Blog migration from Medium
+  - Waiting on Medium data export for bulk processing
+  - Need to handle articles with images, gists, and embedded code
 
 
 ## Backlog 📋
 - Blog
-    - Create a blog section
-    - Begin converting old Medium articles to the new form
+    - Remove smart quotes from all converted blog posts (create script to automate)
+    - Begin converting old Medium articles to the new form (waiting on export)
     - Begin converting old WordPress articles to the new form
+    - Research and implement email notification system for blog updates (RSS-to-email services, etc.)
+    - Set up private repo for blog drafts/candidates
+      - Use git submodule for private repo (lives in same directory tree but separate version control)
+      - Ensure private submodule is in .gitignore of public repo
+      - Merge existing content aggregation repo (has tooling for Reddit posts, YouTube office hours, emails/advice docs)
+      - Workflow: aggregation → drafts → manual review/editing → manual copy to public _posts/ → commit to public repo
+- AI/Development tooling
+    - Create .github/copilot-instructions.md with project-specific guidance
+    - Document common task patterns as Copilot skills
 - Recipes
     - Consider merging the recipes repo into this one
 - Scripting support
