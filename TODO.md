@@ -62,6 +62,10 @@ Branch: `import/keith-trnka-com`
     - Fix Sass @import deprecation warning (migrate to @use/@forward before Dart Sass 3.0.0)
     - The internal links don't work (need to copy the subdir thing from recipes deployment script)
     - I edited the Github Action to use the standard patterns from other repos to help fix relative links, but that effort removed local testing too! 003a0513e2dbb2456ac792007c068c8dc4197d9f
+- Content
+    - Make a folder for guides, move hiking and detrashing to there
+    - Bring the Kodable tips over
+- Mobile layout: I checked the pages and most look good. The homepage is a little janky though (the sidebar/header is now above the main content, which is good, but it's not aligned very nicely)
 
 Notes:
 - Raw HTML snapshots are in `download/`.
