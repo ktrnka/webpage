@@ -33,8 +33,6 @@ Branch: `import/keith-trnka-com`
 
 
 ## Backlog 📋
-- [ ] Find and add link for: Kamboj et al. AAMAS workshop 2010 (Electric Vehicle Coalitions)
-- [ ] Find and add link for: Elzer et al. ACL 2005 (information graphics captions)
 - Blog
     - Create a blog section
     - Begin converting old Medium articles to the new form

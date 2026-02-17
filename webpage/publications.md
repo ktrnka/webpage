@@ -16,7 +16,7 @@ show_logo: false
 ### 2010
 
 - Trnka, Keith. *Word Prediction Techniques for User Adaptation and Sparse Data Mitigation.* University of Delaware PhD Thesis (2010). ([paper](/assets/pdf/trnka-thesis.pdf))
-- Kamboj, S.; Decker, K.; Trnka, K.; Pearre, N.; Kern, C.; Kempton, W. *Exploring the formation of Electric Vehicle Coalitions for Vehicle‑To‑Grid Power Regulation.* AAMAS workshop on Agent Technologies for Energy Systems (2010).
+- Kamboj, S.; Decker, K.; Trnka, K.; Pearre, N.; Kern, C.; Kempton, W. *Exploring the formation of Electric Vehicle Coalitions for Vehicle‑To‑Grid Power Regulation.* AAMAS workshop on Agent Technologies for Energy Systems (2010). ([search on Google Scholar](https://scholar.google.com/scholar?hl=en&q=Exploring+the+formation+of+Electric+Vehicle+Coalitions+for+Vehicle%E2%80%91To%E2%80%91Grid+Power+Regulation))
 
 ### 2009
 
@@ -43,5 +43,5 @@ show_logo: false
 
 ### 2005
 
-- Elzer, Stephanie; Carberry, Sandra; Chester, Daniel; Demir, Seniz; Green, Nancy; Zukerman, Ingrid; Trnka, Keith. *Exploring and exploiting the limited utility of captions in recognizing intention in information graphics.* ACL 2005, pp. 223–230.
+- Elzer, Stephanie; Carberry, Sandra; Chester, Daniel; Demir, Seniz; Green, Nancy; Zukerman, Ingrid; Trnka, Keith. *Exploring and exploiting the limited utility of captions in recognizing intention in information graphics.* ACL 2005, pp. 223–230. ([paper](https://aclanthology.org/P05-1028.pdf))
 
