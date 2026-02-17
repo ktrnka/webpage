@@ -53,6 +53,7 @@ Branch: `import/keith-trnka-com`
     - Document common task patterns as Copilot skills
 - Recipes
     - Consider merging the recipes repo into this one
+- Seattle outdoor volunteering calendar: Link from my site
 - Scripting support
     - Check for dead links (CI test)
     - Check for redirected links: It'll be faster for users if the links are direct not redirects
