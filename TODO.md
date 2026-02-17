@@ -19,11 +19,12 @@ Branch: `import/keith-trnka-com`
   - [x] Replace bold-on-hover for links with underline styling
   - [x] Restore missing inline links (Palia, Singularity 6, 98point6, Swype, etc.)
   - [x] Remove "Hosted on GitHub Pages" footer
+- [ ] Test GitHub Pages build (verify GitHub Actions succeeds)
+- Fix relative links on github pages
 
 ## Before Merge/Deploy 🚀
 - [x] Add missing "Blog before 2017" link (https://kwtrnka.wordpress.com/)
 - [ ] Verify all 33 PDF links work
-- [ ] Test GitHub Pages build (verify GitHub Actions succeeds)
 - [ ] Manual testing:
   - [ ] Test UI across sizes/browsers (desktop, tablet, mobile)
   - [ ] Check number of network round-trips (minimize for performance)
