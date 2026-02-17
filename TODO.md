@@ -48,6 +48,7 @@ Branch: `import/keith-trnka-com`
     - Reduce code duplication between the index layout and default page layouts
     - Fix Sass @import deprecation warning (migrate to @use/@forward before Dart Sass 3.0.0)
     - The internal links don't work (need to copy the subdir thing from recipes deployment script)
+    - I edited the Github Action to use the standard patterns from other repos to help fix relative links, but that effort removed local testing too! 003a0513e2dbb2456ac792007c068c8dc4197d9f
 
 Notes:
 - Raw HTML snapshots are in `download/`.
