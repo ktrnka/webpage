@@ -16,7 +16,7 @@ You might know me from:
 
 ## Personal
 
-Interests: [Green Seattle](https://www.greenseattle.org/), [Seattle Adopt‑a‑street](https://www.seattle.gov/transportation/projects-and-programs/programs/pedestrian-program/adopt-a-street), hiking, tennis, running, pickleball, coffee, beer, [baking](https://ktrnka.github.io/recipes/), reading sci‑fi/fantasy, and learning.
+Interests: [Green Seattle](https://www.greenseattle.org/), [Seattle Adopt‑a‑street](https://www.seattle.gov/transportation/projects-and-programs/programs/pedestrian-program/adopt-a-street), hiking, tennis, running, pickleball, coffee, baking, reading, and learning.
 
 ## How to pronounce my last name
 
@@ -24,4 +24,6 @@ Pretend there's an "i" in there — pronounced like "Trinka."
 
 ## Why have a webpage?
 
-To host copies of publications and to act as a link hub to other sites.
+1. To host free copies of my publications
+2. To take control of my blogging platform
+3. To serve as a link hub so that people can find my work or contact me
