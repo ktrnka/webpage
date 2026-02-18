@@ -34,9 +34,10 @@ After running pandoc, apply these fixes before saving as a Jekyll post:
 
 1. **Remove the H1 title** (first line) — goes into front matter as `title:` instead
 2. **Remove the truncated teaser line** — Medium adds a short preview sentence ending in `…` right after the title, followed by a `---` separator; delete both
-3. **Replace `graf` code block language** — Medium exports use ` ```graf ` as the language tag; replace with an appropriate language like `shell` or just remove it
-4. **Remove the Medium footer** — Delete the last 3 lines: `By [Author](url) on [Date](url).`, the canonical link line, and the "Exported from Medium" line; also the preceding `---` HR separator
-5. **Add Jekyll front matter**:
+3. **Check for Medium subtitle / duplicated heading** — Some posts have a subtitle or a repeated heading near the top (e.g., `### Post Title` appearing again right after the teaser removal). This makes the post snippet on the blog index uninformative. Clean it up so the first visible paragraph is real content.
+4. **Replace `graf` code block language** — Medium exports use ` ```graf ` as the language tag; assign the correct language to every code block (e.g., `python`, `yaml`, `dockerfile`, `hcl`, `json`) so syntax highlighting works.
+5. **Remove the Medium footer** — Delete the last 3 lines: `By [Author](url) on [Date](url).`, the canonical link line, and the "Exported from Medium" line; also the preceding `---` HR separator
+6. **Add Jekyll front matter**:
 
 ```yaml
 ---
@@ -73,6 +74,10 @@ Download command:
 ```bash
 curl -sL 'https://cdn-images-1.medium.com/...' -o webpage/assets/img/posts/name.png
 ```
+
+**Verify image count:** After converting, count image references in the draft (`grep -c 'cdn-images'`) and confirm it matches the number of `curl` downloads. It's easy to miss images, especially in image-heavy posts.
+
+**Image centering:** Jekyll/kramdown has no centering shorthand. Recommended approach: add a CSS rule in `_sass/` that centers all `img` inside `.post` content (affects all post images uniformly). Alternatively wrap individual images in `<div style="text-align:center">` blocks.
 
 ### Gist embeds in Medium posts
 

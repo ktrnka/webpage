@@ -33,11 +33,15 @@ Branch: `import/keith-trnka-com`
 
 ## In Progress 🚧
 - Blog migration from Medium
-  - Manually do the MT part 3 post because the LLM failed
-  - Do some touch-up on future crap part 1; some of the images failed
+  - MT part 3 didn't convert correctly — needs to be done manually
+  - Touch up Future Crap Part 1: some images were dropped during conversion
+  - Improve posts where Medium subtitle/heading got duplicated, making blog-index snippets uninformative (e.g., Future Crap posts)
+  - Add CSS to center images in blog posts
+  - Review code blocks in all converted posts — ensure correct language tags for syntax highlighting (python, yaml, etc.)
 - Older blog migration from WordPress
     - Tried to find the old export feature but it looks like it's gone
-    - I have a copy here: https://github.com/ktrnka/resume/blob/main/data_exports/wordpress/trnkaphd.WordPress.2025-07-26.xml (warning: slow page load!)
+    - Export XML: https://github.com/ktrnka/resume/blob/main/data_exports/wordpress/trnkaphd.WordPress.2025-07-26.xml (warning: slow page load!)
+    - Research Python libraries for processing WordPress XML exports (e.g., `wordpress-export-to-markdown`), or write a custom parser
 
 
 ## Backlog 📋
@@ -46,6 +50,8 @@ Branch: `import/keith-trnka-com`
     - Begin converting old Medium articles to the new form (waiting on export)
     - Begin converting old WordPress articles to the new form
     - Research and implement email notification system for blog updates (RSS-to-email services, etc.)
+    - Look into Medium post claps/views/stats — identify most popular posts and consider light optimization on top performers
+    - Write a post about why I'm moving blog hosting again (Medium → self-hosted Jekyll)
     - Set up private repo for blog drafts/candidates
       - Use git submodule for private repo (lives in same directory tree but separate version control)
       - Ensure private submodule is in .gitignore of public repo
