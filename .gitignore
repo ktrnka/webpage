@@ -20,6 +20,9 @@ Thumbs.db
 .vscode/
 .idea/
 
+# Scratch/temp work
+tmp/
+
 # Jekyll
 webpage/vendor
 webpage/.jekyll-cache

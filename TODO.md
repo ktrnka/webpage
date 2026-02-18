@@ -33,8 +33,11 @@ Branch: `import/keith-trnka-com`
 
 ## In Progress 🚧
 - Blog migration from Medium
-  - Waiting on Medium data export for bulk processing
-  - Need to handle articles with images, gists, and embedded code
+  - Manually do the MT part 3 post because the LLM failed
+  - Do some touch-up on future crap part 1; some of the images failed
+- Older blog migration from WordPress
+    - Tried to find the old export feature but it looks like it's gone
+    - I have a copy here: https://github.com/ktrnka/resume/blob/main/data_exports/wordpress/trnkaphd.WordPress.2025-07-26.xml (warning: slow page load!)
 
 
 ## Backlog 📋
@@ -65,6 +68,7 @@ Branch: `import/keith-trnka-com`
 - Content
     - Make a folder for guides, move hiking and detrashing to there
     - Bring the Kodable tips over
+    - Write a basic crawler from my old blog because their site is super broken: https://kwtrnka.wordpress.com/feed/
 - Mobile layout: I checked the pages and most look good. The homepage is a little janky though (the sidebar/header is now above the main content, which is good, but it's not aligned very nicely)
 
 Notes:
