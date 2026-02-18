@@ -34,9 +34,10 @@ Branch: `import/keith-trnka-com`
 ## In Progress 🚧
 - Blog migration from Medium
   - MT part 3 didn't convert correctly — needs to be done manually
-  - Touch up Future Crap Part 1: some images were dropped during conversion
+  - Touch up Future Crap Part 1: some images were dropped during conversion ✅ fixed
+  - Re-download 2 rate-limited mt-chat-3 images ✅ fixed (downloaded as .webp, renamed accordingly)
   - Improve posts where Medium subtitle/heading got duplicated, making blog-index snippets uninformative (e.g., Future Crap posts)
-  - Add CSS to center images in blog posts
+  - Add CSS to center images in blog posts ✅
   - Review code blocks in all converted posts — ensure correct language tags for syntax highlighting (python, yaml, etc.)
 - Older blog migration from WordPress
     - Tried to find the old export feature but it looks like it's gone
@@ -46,6 +47,7 @@ Branch: `import/keith-trnka-com`
 
 ## Backlog 📋
 - Blog
+    - Add paper/reference links to academic blog posts (MT series, etc.) — many papers are cited by name but not linked; find DOIs or Google Scholar links so readers can follow the research
     - Remove smart quotes from all converted blog posts (create script to automate)
     - Begin converting old Medium articles to the new form (waiting on export)
     - Begin converting old WordPress articles to the new form

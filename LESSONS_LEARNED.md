@@ -77,7 +77,30 @@ curl -sL 'https://cdn-images-1.medium.com/...' -o webpage/assets/img/posts/name.
 
 **Verify image count:** After converting, count image references in the draft (`grep -c 'cdn-images'`) and confirm it matches the number of `curl` downloads. It's easy to miss images, especially in image-heavy posts.
 
-**Image centering:** Jekyll/kramdown has no centering shorthand. Recommended approach: add a CSS rule in `_sass/` that centers all `img` inside `.post` content (affects all post images uniformly). Alternatively wrap individual images in `<div style="text-align:center">` blocks.
+**Image centering:** Jekyll/kramdown has no centering shorthand. Recommended approach: add a CSS rule in `_sass/` that centers all `img` inside `.post` content (affects all post images uniformly). Alternatively wrap individual images in `<div style="text-align:center">` blocks. Implemented rule:
+```scss
+.post-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+```
+
+**Download images one at a time** — Medium rate-limits batch downloads. If you download multiple images in a loop without delays, many will silently return an HTML error page (~8.9K or ~6.8K) instead of image data. Always download sequentially (one `curl` per image, no parallelism).
+
+**Detecting bad downloads:** After downloading, verify with `file`:
+```bash
+file webpage/assets/img/posts/postname-* | grep -v 'image data'
+```
+Any line returned is a bad file (HTML or empty). Suspicious size pattern: bad files are suspiciously uniform (~8.9K or ~6.8K); real images vary widely (30K–2M). Use `ls -lh` to spot outliers at a glance.
+
+**Re-downloading rate-limited images:** If a URL stays rate-limited across multiple retries in the same session, stop trying — Medium appears to block the specific URL for the session. Note the filename and URL in TODO.md and retry later (e.g., next day or different network).
+
+**Mapping CDN URLs to descriptive filenames:** When you need to identify which CDN URL corresponds to which named file (e.g., after a failed batch download), grep the draft in `tmp/` with a few lines of context:
+```bash
+grep -B2 -A2 'partial-cdn-hash' tmp/postname-draft.md
+```
+The draft's image table (generated during conversion) maps line numbers, partial hashes, descriptions, and target filenames, making URL→name lookups fast.
 
 ### Gist embeds in Medium posts
 
