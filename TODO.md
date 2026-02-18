@@ -42,7 +42,7 @@ Branch: `import/keith-trnka-com`
 - Older blog migration from WordPress
     - Tried to find the old export feature but it looks like it's gone
     - Export XML: https://github.com/ktrnka/resume/blob/main/data_exports/wordpress/trnkaphd.WordPress.2025-07-26.xml (warning: slow page load!)
-    - Research Python libraries for processing WordPress XML exports (e.g., `wordpress-export-to-markdown`), or write a custom parser
+    - Research Python libraries for processing WordPress XML exports (e.g., `wordpress-export-to-markdown`), or write a custom parser. This looks reasonable: https://pypi.org/project/wpparser/
 
 
 ## Backlog 📋
