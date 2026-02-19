@@ -70,6 +70,8 @@ Branch: `import/keith-trnka-com`
 - Scripting support
     - Check for dead links (CI test)
     - Check for redirected links: It'll be faster for users if the links are direct not redirects
+    - Search `_posts/` for remaining `[caption` WP shortcodes (not all were caught by the batch cleanup): `grep -r '\[caption' _posts/`
+    - Search `_posts/` for `kwtrnka.wordpress.com/tag/` URLs (WP tag links that should be replaced or removed): `grep -r 'kwtrnka.wordpress.com/tag/' _posts/`
 - Tech debt:
     - Reduce code duplication between the index layout and default page layouts
     - Fix Sass @import deprecation warning (migrate to @use/@forward before Dart Sass 3.0.0)

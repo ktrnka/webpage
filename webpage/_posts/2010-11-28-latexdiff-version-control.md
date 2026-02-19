@@ -4,7 +4,7 @@ layout: post
 title: latexdiff + version control = ???
 date: 2010-11-28
 ---
-In the past, I've used [latexdiff](http://www.ctan.org/tex-archive/support/latexdiff/) to show the changes between different versions of a paper.  But it's a pain to keep the old version around.  Or if I'm using a version control system I have to remember the right version number (and remember the commands to retrieve old versions and rename them).  For some reason, this past week I came across the [latexdiff manual](http://tug.ctan.org/tex-archive/support/latexdiff/latexdiff-man.pdf), which is just a nicely formatted man page.  But I noticed that latexdiff comes with other scripts... notably *latediff-vc*.  What does this script do?
+In the past, I've used [latexdiff](http://www.ctan.org/tex-archive/support/latexdiff/) to show the changes between different versions of a paper.  But it's a pain to keep the old version around.  Or if I'm using a version control system I have to remember the right version number (and remember the commands to retrieve old versions and rename them).  For some reason, this past week I came across the [latexdiff manual](http://tug.ctan.org/tex-archive/support/latexdiff/latexdiff-man.pdf), which is just a nicely formatted man page.  But I noticed that latexdiff comes with other scripts... notably *latexdiff-vc*.  What does this script do?
 latexdiff-vc combines latexdiff with a version control interface, and supports CVS, SVN, or RCS.  If you use something else like Git or Mercurial, don't fret!  It's just a Perl script, so it should be pretty easy to port.
 Here are a few examples from the man page:
 

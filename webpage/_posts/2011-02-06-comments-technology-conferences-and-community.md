@@ -4,7 +4,7 @@ layout: post
 title: "comments:  Technology, Conferences, and Community"
 date: 2011-02-06
 ---
-Jonathan Grudin recently published an article on conference/journal culture in computer science entitled [Technology, Conferences, and Community](http://cacm.acm.org.proxy.nss.udel.edu/magazines/2011/2/104400-technology-conferences-and-community/fulltext) in Communications of the ACM. Unfortunately it's behind a paywall, but I'm sure there's fulltext out there via Google or Google Scholar. I'll give a (hopefully short) summary and then some commentary.
+Jonathan Grudin recently published an article on conference/journal culture in computer science entitled [Technology, Conferences, and Community](https://cacm.acm.org/magazines/2011/2/104400-technology-conferences-and-community/fulltext) in Communications of the ACM. Unfortunately it's behind a paywall, but I'm sure there's fulltext out there via Google or Google Scholar. I'll give a (hopefully short) summary and then some commentary.
 
 summary
 -------

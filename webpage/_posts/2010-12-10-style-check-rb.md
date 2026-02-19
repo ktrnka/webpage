@@ -8,9 +8,7 @@ I'm very interested in tools to help write papers, specifically automatic proofr
 This isn't the same type of tool as its production counterparts;  it's simply a Ruby script written by [Neil Spring](http://www.cs.umd.edu/~nspring/) at the University of Maryland, who seems to have struggled with some similar issues in proofreading latex documents.
 The core of the checker is a set of various regular expressions.  If any regex is found in the source document, it spits out an error message like a compiler.  The format of the errors is such that editors like emacs and other programs can jump to the error in the source document.  (His webpage shows it in an emacs context).  Here is some of the basic output on the dirty testing file:
 
-```
 ![style-check.rb on test-dirty.tex](/assets/img/posts/wp/screen-shot-2010-12-10-at-4-00-18-pm.png)
-```
 
 The test-dirty example shows the basic error messages.  If you run with the -v flag, it'll also explain each error. Below is a snippet from that.
 

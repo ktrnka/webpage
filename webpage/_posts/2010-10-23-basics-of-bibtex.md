@@ -8,7 +8,9 @@ Like most authors in my area, I use LaTeX for writing papers and BibTeX for cita
 The first problem I had was understanding the types of entries and the fields I needed.  It wasn't around back then, but now [the BibTeX Wikipedia page](http://en.wikipedia.org/wiki/BibTeX) provides the information:  a list of entry types and the required/optional fields for each.  In addition to the other information, the list shows that you can use the *note* field to include whatever additional information you'd like (e.g., url, access date).
 Beyond the basic understanding, I figured my .bib file was just a list of independent entries. That's not quite true; the two notable features I wish I'd learned sooner were macros and crossref fields.
 Generally, you'd define macros at the top of your bibtex file and then you can use them in the entries.  They're expansion rules, similar to C-style macros.  Macros are one way to have a consistent way of displaying conference/journal names.  They're also a way to quickly change all cited conference/journal names to a short form if you need to cut a few lines to fit space requirements (e.g., EMNLP vs Empirical Methods in Natural Language Processing).  Here's an example:
-> @string{iui = {International Conference on Intelligent User Interfaces (IUI)}}
+```bibtex
+@string{iui = {International Conference on Intelligent User Interfaces (IUI)}}
+```
 
 Crossrefs allow you to have a hierarchical entry structure.  When you specify a cite key in the crossref field, it looks up that entry and fills in any blank fields.  You can use them to specify the conference information only once and crossref to it from each publication, or you can use them to make aliases of citations.
 The main downside of macros and crossrefs is that it makes it more difficult to send people a simple, single BibTeX entry (like on your webpage). In any case, I wish I'd known about them when I was starting.

@@ -18,7 +18,10 @@ Implementation #2:  sorted string[]
 -----------------------------------
 
 This takes 13.17 MB to store the list. I'm surprised it's less space than the vector, but I guess the table could've just recently doubled in size for the vector.
-Implementation #3:  hash table
+
+Implementation #3:  hash table
+-------------------------------
+
 Assuming that we double the size of the list whenever we reach 75% load factor, it takes 21.52 MB. If I hard-code the initial size of the list to the perfect size for that load factor, then it's 17.96 MB.
 Checking to see if something is in the list is probably plenty fast, though it depends on the hash function we choose. It should be possible to use a better hash function (like say perfect hashing) once we've finalized the contents and increase the load factor to shrink it more.
 

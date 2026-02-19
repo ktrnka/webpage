@@ -8,6 +8,7 @@ Inevitably your email address will be somewhere on the web and a web bot will sc
 I imagine people view it as a deterrent - bots can grab the majority of email addresses even without processing for spelled-out ones, so there's little benefit to adding processing.  At the same time, it only takes a few minutes of fiddling with regular expressions to parse most of the spelled-out ones, and I'm sure it would have a very low false-positive rate.
 Instead, I use Javascript to dynamically generate the email address.  My reasoning is that the normal way of writing a web bot forces you to parse the html yourself (or run it through a parser), so you don't have Javascript execution.  Of course it'd still be a problem if my email address were in plain text, but instead I hex-escape the email.  Not being content with that, I then semi-randomly split up the hex string into a concatenation.  Here's what the Javascript can look like:
 
+<!-- KT TODO: Repair this block -->
 ```
 |  |
 | --- |

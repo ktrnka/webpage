@@ -4,6 +4,7 @@ layout: post
 title: "Summary: Predicting win/loss for League of Legends"
 date: 2016-05-19
 ---
+<!-- KT TODO: This post was never finished. Contains placeholder text (`<description of champion selection>`, `<link to monte or saint>`, `<insert diagram>`, incomplete sentence). Review and complete or significantly trim before publishing. -->
 Periodically I find that I need a quick project summary but I only have a long series of work-in-progress posts.
 I'll cover the basics of the problem setup, what worked, and loosely why it worked. I'll focus on the common questions people ask me: what features were important, why is this problem important, do you have any tips for machine learning, etc. I won't cover the missteps along the way or the roundabout steps it took to learn; that's what the old posts are for.
 

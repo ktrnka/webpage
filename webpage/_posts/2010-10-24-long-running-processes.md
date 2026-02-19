@@ -4,7 +4,7 @@ layout: post
 title: long-running processes
 date: 2010-10-24
 ---
-Some of my simulations take a while to run. so I have a couple of servers that I ssh into and run them on.  But there are a host of little things I didn't know about at first:
+Some of my simulations take a while to run, so I have a couple of servers that I ssh into and run them on.  But there are a host of little things I didn't know about at first:
 
 * Running something in the background (*&*) still has a problem - the new process is tied to the shell's process.  So if you log out or your computer goes to sleep, the ssh connection is broken, which kills the shell and in turn the stuff you were running. However, you can address this problem with the *nohup* command, like so: "nohup perl blah.pl &".
 * Sometimes I'm running a quick script but I don't want to open a new terminal window, and I forget to put & in there.  Don't fret! You can suspend the current process with CTRL-Z and then use the *bg* command to start the suspended process again, but in the background.  There's also a *fg* command for the foreground.

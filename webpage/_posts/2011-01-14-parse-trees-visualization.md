@@ -27,8 +27,6 @@ input format
 
 The input can either be XML or Lisp.  I prefer XML, where the elements (tags) are the constituent labels and the features are attributes on each element.  Shallow parses are detected automatically (if multiple words are children of a "leaf" constituent).
 
-*I've tried including an example simple parse several times, but WordPress doesn't deal nicely with the code tag, and the pre tag still interprets S as strikethrough/etc.*
-
 Spaces are significant here.  Sometimes you might want a constituent label that isn't a valid XML element name.  In this case, use some extra syntax:
 
 ```

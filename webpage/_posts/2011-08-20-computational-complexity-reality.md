@@ -12,7 +12,7 @@ maps
 
 Complexity fails to adequately describe the problematic situation of picking a good map implementation. There's considerable disagreement over whether we should teach hashtables as O(n) access or O(1) average access, and how to place prominence on the average case compared to the worst-case. Students of different teachers will similarly disagree about binary search trees - if they even know to specify unbalanced, we have the O(n) vs O(log n) misunderstanding.
 Ultimately when we're developing a product, we care about whether it runs *fast enough*. So how much is fast enough?
-\*crickets\*
+*crickets*
 Here is a list of things I feel are inadequately taught in data structures classes:
 
 * the memory overhead of binary search trees may be significant for your application

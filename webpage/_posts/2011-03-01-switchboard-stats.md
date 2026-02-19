@@ -12,7 +12,7 @@ The prevalence of lowercase words in Switchboard shouldn't come as much of a sur
 You can also see some other trends in Switchboard transcription and Google 1T conventions. Switchboard transcribes numbers spelled out (e.g., "nineteen eighty eight"). Google's model splits up words with hyphens so those are rare or non-existent in 1T data. I'm curious what sorts of things fall into the *other* category though.
 Note that the symbol category uses regex character class \pS, which matches Unicode chars that are indicated as symbols. But I haven't done much testing with it yet.
 The second graph compares the distribution of pronouns in each corpus. For starters, Switchboard is about 10% pronouns compared to maybe 1% for the Google 1T web data. However, this graph is only within those percents.
-![](/assets/img/posts/wp/pronoun-distributions.png)
+![distribution of pronouns in Switchboard vs Web 1T](/assets/img/posts/wp/pronoun-distributions.png)
 The distributions make some sense - Switchboard's much higher percent of "I" comes at the expense of other words. If you think about the situation, when would the speakers use he/she? I'm a bit surprised that "they" is higher in Switchboard though.
 I repeated the same analysis for a list of contractions. The percent in web data is surprisingly low (0.0002%) for my list compared to Switchboard (4.5%), but I took a look at the distribution within the group here.
 ![distribution of contractions](/assets/img/posts/wp/contractions-details.png)

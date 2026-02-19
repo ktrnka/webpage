@@ -67,6 +67,7 @@ walkthrough
 
 I don't think I have the best vita, but I'm reasonably satisfied with the amount of information and the compactness. So I'll link my CV here and walk through the sections. The design goal is to expect some power law for the chance that they'll read a section as a function of how far into the CV it is. Another way of putting it: they'll probably read your name and education. Half as likely to read the next section. Half again to read the next section and so on. You really want to get to "the meat" of what they're looking for on the first page.
 
+<!-- KT TODO: the PDF CV links and source zip below are dead; consider relinking or removing -->
 * [CV for research and development positions](http://kwtrnka.wordpress.com/wp-content/uploads/2011/05/trnka-rnd.pdf)
 * [CV for teaching positions](http://kwtrnka.wordpress.com/wp-content/uploads/2011/05/trnka-teaching.pdf)
 * [source latex files (and my tweaks to the class file)](http://www.cis.udel.edu/~trnka/trnka-cv-sources.zip)

@@ -6,7 +6,7 @@ date: 2015-03-27
 ---
 *This might only make sense to players of [MOBA](http://en.wikipedia.org/wiki/Multiplayer_online_battle_arena)-style games.*
 There's been renewed debate lately over time estimates in software engineering such as the [no-estimates debate](https://medium.com/backchannel/estimates-we-don-t-need-no-stinking-estimates-dcbddccbd3d4). It's incredibly hard to estimate how long a new feature or bug fix will take.
-And it baffles people when you don't know how long it'll take. I prefer to say "It'll take 3-4 hours if things go according to plan, but could take 1-2 weeks depending on how things break." I've had to explain over and over, which probably means my explanation is not good enough. This time I'll try an analogy with [League of Legends](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCQQFjAA&url=http%3A%2F%2Fleagueoflegends.com%2F&ei=XOYVVefyJc3joAT_v4H4BA&usg=AFQjCNHkwWwIC6wIlMNlDz8QGmSd8O21Nw&sig2=C7rhQgUI0hA_30BPNq3oiQ&bvm=bv.89381419,d.cGU).
+And it baffles people when you don't know how long it'll take. I prefer to say "It'll take 3-4 hours if things go according to plan, but could take 1-2 weeks depending on how things break." I've had to explain over and over, which probably means my explanation is not good enough. This time I'll try an analogy with [League of Legends](https://leagueoflegends.com).
 
 "I need a ward at their red buff asap"
 ======================================

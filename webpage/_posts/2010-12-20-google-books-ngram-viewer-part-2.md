@@ -4,7 +4,7 @@ layout: post
 title: google books ngram viewer (part 2)
 date: 2010-12-20
 ---
-Last week, I [covered](/blog/2010/12/google-books-ngram-viewer/ "google books ngram viewer") the release of the [Google Books NGram Viewer](http://ngrams.googlelabs.com/) .  Google's handy tool has received a lot of attention since then, which I'll attempt to summarize and I'll add some more information.
+Last week, I [covered](/blog/2010/12/google-books-ngram-viewer/ "google books ngram viewer") the release of the [Google Books NGram Viewer](https://books.google.com/ngrams).  Google's handy tool has received a lot of attention since then, which I'll attempt to summarize and I'll add some more information.
 
 [Science](http://www.sciencemag.org/content/early/2010/12/15/science.1199644)
 -----------------------------------------------------------------------------

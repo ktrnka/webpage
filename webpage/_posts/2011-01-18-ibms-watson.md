@@ -5,7 +5,7 @@ title: "IBM's Watson"
 date: 2011-01-18
 ---
 In case you haven't heard of it yet, IBM developed a deep QA system called [Watson](http://www.research.ibm.com/deepqa/).  They've had a medium-sized team working on it for about 4 years.  Among others is Jennifer Chu-Carroll, who received her Ph.D. from the University of Delaware under Sandee Carberry (who was part of my Ph.D. committee).
-[youtube=http://www.youtube.com/watch?v=FC3IryWr4c8]
+[Video: IBM Watson vs. Jeopardy champions](https://www.youtube.com/watch?v=FC3IryWr4c8)
 We'll have to wait until February 14-16 to see its actual performance, but the rumors say that it's very good. Good enough to have the news and blog sphere making SkyNet/singularity/etc analogies.  For example, see [the Atlantic Wire](http://www.theatlanticwire.com/opinions/view/opinion/World-Terrified-of-Jeopardy-Dominating-Supercomputer-6563) (which has many links).
 IBM probably has some very interesting technology in there.  The speech recognition alone is impressive, especially recognizing names and their spellings. (This requires more than just an ngram model)
 Deep natural language understanding is incredibly difficult and is never finished.  There will always be some awkward syntax that our programs can't parse/tag/etc.  Or an obscure idiom.  Or extreme cases of polysemy. For Jeopardy especially, there are difficulties in determining the "hole" that the answer leaves.  The answer isn't always an exact answer to a Who/What is type of question.

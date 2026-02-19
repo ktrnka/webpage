@@ -4,7 +4,7 @@ layout: post
 title: word prediction + ??? = google scribe
 date: 2010-12-14
 ---
-There's a South Park episode that spawned the quote "Simpsons did it."  In research, I'm starting to feel like we could say "Google did it."  I'm talking about Google Scribe, which bring word prediction (my research area) to the masses.
+There's a South Park episode that spawned the quote "Simpsons did it."  In research, I'm starting to feel like we could say "Google did it."  I'm talking about Google Scribe, which brings word prediction (my research area) to the masses.
 [Google Scribe](http://scribe.googlelabs.com/) is a Google Labs project that adds predictive text entry to certain things (I think originally it was for Google Documents).  I've been trying out the [Google Scribe extension](https://chrome.google.com/extensions/detail/jlhhbmloafbaonaondjcedenomeeggda) for Chrome the past few days, which enables Scribe on any web text input.
 
 user perspective

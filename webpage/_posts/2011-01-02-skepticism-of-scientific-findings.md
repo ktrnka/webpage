@@ -26,7 +26,7 @@ I'll list several reasons why you may not be able to reproduce an NLP study.
   + How do you deal with outliers?  Sometimes there may be legitimate reasons to exclude data.  For example, suppose the participants are typing on a device and the device locks up.  You probably can't integrate the data, so it's gotta go.  Similarly, if someone decides to answer their phone during a study, that might be a good reason to throw out their data.  If someone's natural typing rate is abnormally slow or fast, you might consider removing it.  But you shouldn't remove data because it makes your system look really bad.  If you do that, you'll be chasing significance like the article mentions.
 
 At the high level, if you can't reproduce something it means you didn't follow the original procedures exactly.  Most likely it means that the original procedures were inadequately documented.  In computer science, this becomes very clear once you try to code someone else's algorithm.  It's also possible that you misread the original procedures.
-from [The New Yorker](http://www.newyorker.com/reporting/2010/12/13/101213fa_fact_lehrer) and [PLoS Medicine](http://www.plosmedicine.org/article/info:doi/10.1371/journal.pmed.0020124) from [Slashdot](http://science.slashdot.org/story/11/01/02/1244210/Why-Published-Research-Findings-Are-Often-False?from=rss)
+*Sources: [The New Yorker](http://www.newyorker.com/reporting/2010/12/13/101213fa_fact_lehrer), [PLoS Medicine](http://www.plosmedicine.org/article/info:doi/10.1371/journal.pmed.0020124), via [Slashdot](http://science.slashdot.org/story/11/01/02/1244210/Why-Published-Research-Findings-Are-Often-False?from=rss)*
 
 ### addendum
 

@@ -74,7 +74,7 @@ After
 -----
 
 I can write all I want, but the pictures tell the story.  HSF first:
-![](/assets/img/posts/wp/hs-clean-top.jpg)![](/assets/img/posts/wp/cpu-fan-clean-bottom.jpg)
+![Clean heatsink top](/assets/img/posts/wp/hs-clean-top.jpg)![Clean CPU fan bottom](/assets/img/posts/wp/cpu-fan-clean-bottom.jpg)
 
 Case fan:![Clean case fan (exterior face)](/assets/img/posts/wp/case-fan-clean-ext.jpg)
 
