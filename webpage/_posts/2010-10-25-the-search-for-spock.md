@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: the search for spock

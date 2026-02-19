@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Predicting League matches: Are some matches more predictable?"

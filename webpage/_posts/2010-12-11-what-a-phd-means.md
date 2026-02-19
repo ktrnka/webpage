@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: what a phd means...

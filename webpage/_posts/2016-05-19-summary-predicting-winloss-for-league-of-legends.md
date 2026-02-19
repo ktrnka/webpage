@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Summary: Predicting win/loss for League of Legends"

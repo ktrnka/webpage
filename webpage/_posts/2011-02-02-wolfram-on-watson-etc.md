@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Wolfram on Watson, etc

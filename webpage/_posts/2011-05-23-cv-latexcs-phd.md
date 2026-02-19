@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: cv + latex/cs + phd = ???

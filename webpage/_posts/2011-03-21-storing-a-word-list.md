@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: storing a word list

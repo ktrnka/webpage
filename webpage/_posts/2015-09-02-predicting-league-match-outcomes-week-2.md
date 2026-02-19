@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Predicting League match outcomes: Week 2"

@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: word prediction + ??? = google scribe

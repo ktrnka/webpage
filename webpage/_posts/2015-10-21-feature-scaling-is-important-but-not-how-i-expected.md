@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Feature scaling is important, but not how I expected

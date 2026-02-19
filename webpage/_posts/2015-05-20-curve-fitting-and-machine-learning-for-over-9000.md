@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Curve fitting and machine learning for Over 9000

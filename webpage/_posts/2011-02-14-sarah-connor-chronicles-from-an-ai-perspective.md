@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Sarah Connor Chronicles from an AI Perspective

@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Synonyms for factoid search, Part 3

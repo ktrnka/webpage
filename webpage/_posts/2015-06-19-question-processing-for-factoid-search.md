@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Question processing for factoid search

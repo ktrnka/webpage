@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: google books ngram viewer (part 2)

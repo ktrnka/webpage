@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: viterbi search for re-capitalization

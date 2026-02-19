@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Tips on moving from grad school to industry

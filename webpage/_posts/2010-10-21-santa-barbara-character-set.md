@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Santa Barbara + character set = :("

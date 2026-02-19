@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "scikit-learn 0.17 is out!"

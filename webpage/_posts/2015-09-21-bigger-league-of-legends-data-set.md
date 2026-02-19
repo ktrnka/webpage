@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Bigger League of Legends data set

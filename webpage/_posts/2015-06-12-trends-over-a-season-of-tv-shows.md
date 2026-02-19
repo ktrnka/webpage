@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Trends over a season of TV shows

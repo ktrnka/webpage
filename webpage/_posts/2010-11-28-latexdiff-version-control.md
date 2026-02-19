@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: latexdiff + version control = ???

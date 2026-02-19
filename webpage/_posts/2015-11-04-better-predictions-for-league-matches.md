@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Better predictions for League matches

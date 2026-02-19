@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Tuning dropout for each network size

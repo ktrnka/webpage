@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: start of semester tips

@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: REST API design tips

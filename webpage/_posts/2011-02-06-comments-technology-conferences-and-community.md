@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "comments:  Technology, Conferences, and Community"

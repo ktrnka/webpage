@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Projecting the number of downloads for torrents

@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Software engineering estimates and League of Legends

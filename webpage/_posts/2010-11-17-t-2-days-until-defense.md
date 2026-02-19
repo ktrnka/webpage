@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: T-2 days until defense

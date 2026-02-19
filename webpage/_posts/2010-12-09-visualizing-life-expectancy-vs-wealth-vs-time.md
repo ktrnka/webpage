@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: visualizing life expectancy vs wealth vs time

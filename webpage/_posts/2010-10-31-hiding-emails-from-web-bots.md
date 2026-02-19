@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: hiding emails from web bots

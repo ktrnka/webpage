@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Mechanical Turk: Tips and Tricks 1"

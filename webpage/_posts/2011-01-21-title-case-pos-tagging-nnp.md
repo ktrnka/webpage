@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: title case + pos tagging = nnp

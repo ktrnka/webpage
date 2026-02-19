@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Predicting League match outcomes: First week of machine learning"

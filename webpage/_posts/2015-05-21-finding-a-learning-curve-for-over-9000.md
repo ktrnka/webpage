@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Finding a learning curve for Over 9000
