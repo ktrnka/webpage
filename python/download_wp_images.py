@@ -33,7 +33,7 @@ OUTPUT_DIR = REPO_ROOT / "webpage" / "assets" / "img" / "posts" / "wp"
 
 # Only download images hosted on WordPress
 WP_IMAGE_PATTERN = re.compile(
-    r"https://kwtrnka\.wordpress\.com/wp-content/uploads/[^\s\"')>]+"
+    r"https?://kwtrnka\.wordpress\.com/wp-content/uploads/[^\s\"')>]+"
 )
 
 DEFAULT_RATE_LIMIT = 5.0  # seconds between requests
@@ -66,9 +66,10 @@ def extract_urls_from_posts(posts_dir: Path) -> dict[str, list[str]]:
 
 
 def strip_resize_params(url: str) -> str:
-    """Remove query string (e.g. ?w=300) to get the full-resolution image."""
+    """Remove query string (e.g. ?w=300) and normalize http→https."""
     parsed = urlparse(url)
-    return urlunparse(parsed._replace(query="", fragment=""))
+    scheme = "https" if parsed.scheme == "http" else parsed.scheme
+    return urlunparse(parsed._replace(scheme=scheme, query="", fragment=""))
 
 
 def validate_url(url: str) -> tuple[bool, str]:
