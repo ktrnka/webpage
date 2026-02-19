@@ -1,0 +1,26 @@
+
+---
+layout: post
+title: "Santa Barbara + character set = :("
+date: 2010-10-21
+---
+Although I'd been thinking about starting a blog at several times, an issue I had yesterday with the Santa Barbara Corpus of Spoken American English (SBCSAE) really motivated me.  In general, I have Perl scripts to simulate typing with word prediction and then when I want to compute statistical significance, I analyse my log files in Java.  I use gzipped XML for logs, which (normally) I like a lot - the raw XML gives nice human-readable data and gzip addresses the filesize explosion from XML.
+I'm in the process of putting the finishing touches on my dissertation and my current to-do was to update the data tables in a chapter with statistical significance information like p-values.  But the Java program fails on SBC, and here's the error:
+> Exception in thread "main" com.sun.org.apache.xerces.internal.impl.io.MalformedByteSequenceException: Invalid byte 1 of 1-byte UTF-8 sequence
+
+When I saw the error, I froze in confusion and terror.  For starters, the file should be all ASCII output from Perl.  (Although I later remembered that ASCII is a subset of UTF-8.)  I'd run the analysis on this corpus before, so what's changed?  I have no recollection of making any changes to corpus cleanup or anything.
+This led me to question many things.  I'm lazy and don't put a nice XML header in my files for instance.  Maybe Java 1.6 was more picky about these things?  But Java 1.5 fares no differently.  There were a handful of other absurd things that went through my mind: maybe Perl output formatting has changed?  Maybe the results actually crashed midway and it's a partially corrupt gzip file (if it's even possible to make it past the GZipInputStream without errors)?
+In the end, I must have added the actual words being typed to the log file since the last time I analysed logs (about 2 yr).  I narrowed the problem down to a specific file, *sbc060.trn*.  I view the file with *less* and find things like *we<92>re.* Honestly I was tired so I wasn't sure if it was hex or decimal, so I wrote a Perl script to show me the decimal char codes for everything.  Like all silly tired adventures, I just typed the Perl script on the command-line rather than in a file and find that it's 0x92 or 146 decimal.
+I searched for *sbc060.trn* and quoted it only gave me one result, which was a file list.  I previously had problems with files from Windows, so I tried using *iconv* to convert from Windows-1252 to UTF-8, but it failed.  Instead I did some Google searches to help identify the character set, and they mentioned the (very useful) unix tools *file* and *auto\_ef* (Solaris only).
+*file* is an interesting tool - it identifies the file type and the encoding of the file.  *auto\_ef* is a Solaris-specific tool that does something similar for text files and goes beyond to analyse character frequencies and guess the language as well.  Despite this, *auto\_ef* failed and *file* gave me these unhelpful results:
+> sbc060.trn: Non-ISO extended-ASCII English text
+
+After doing a Google search for extended ASCII charts, I matched the problem to Windows-1252.  It's depressing that *iconv* and *file* couldn't deal with it.  The basic problem is that a stylized right single-quote is used instead of the apostrophe on your keyboard.  Programs like Word make this change automatically.
+So I tried *iconv* again, making sure to inspect the charset list of *iconv* first this time and matching the case/etc (WINDOWS-1252 was there).  In the end, I wrote a Perl script to do the substitution s/\x92/'/g on each line.
+But, as it turns out, there were some other invalid characters buried in other files.  In the end, I wrote a Perl script to remove the attribute that contained words (it wasn't necessary for the analysis but I didn't remember that at first).
+In the context of my dissertation research, I'd love to go through and ensure that all character set issues are fixed.  For example, suppose we have we\x92ve in a testing document but only we've in the training data.  The simulation won't select we've as a prediction/completion of we\x92ve.  So the result is lower keystroke savings on SBC, and potentially slightly lower on other corpora in out-of-domain or mixed-domain tests.  However, if I change it, I'll need to re-run several months worth of simulations, which I don't have time for (especially if it might only be a small change in the percentage).
+Now I should say that I spent an extensive amount of time writing corpus cleanup and normalization functions based on random samples of documents from each corpus, so this problem was pretty shocking.  Thus, here are the things I've (re)learned about corpus studies:
+
+* address formatting/etc issues in corpora by checking ALL documents.  Whether you run *file* on every document or write a script to do the analysis, it's important.
+* this isn't the first time I came across a character set issue in a corpus.  When I started my thesis project years ago, I had no understanding of character sets other than ASCII (which as it turns out, I understood incorrectly by thinking ASCII specified characters 128-255).
+* many things change over the years, but doubting version changes is a poor intuition for certain software
