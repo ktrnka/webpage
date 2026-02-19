@@ -140,7 +140,7 @@ I found it interesting to compare and contrast the operations of 98point6 (24/7 
 
 At 98point6 we emphasized reliability and scrutinized our service availability. We typically ranged from 99.3% to 99.9% availability, with the variance driven by larger outages like third-party services going down for extended periods. For reference, 99.9% availability means about 9 hours of downtime per year whether planned or unplanned. In some years, just one or two bad outages could cause 9 hours of downtime.
 
-In online gaming it's common to have scheduled downtime. That's a time when the game client may be updated, servers may be updated/restarted, and so on. When things went really well, that would only take 1–2 hours per week (~99% uptime). Coming from healthcare initially I scoffed a bit at the downtime but our tech stack required us to have downtime for coordinated updates across all clients and servers.
+In online gaming it's common to have scheduled downtime. That's a time when the game client may be updated, servers may be updated/restarted, and so on. When things went really well, that would only take 1-2 hours per week (~99% uptime). Coming from healthcare initially I scoffed a bit at the downtime but our tech stack required us to have downtime for coordinated updates across all clients and servers.
 
 After seeing both in practice, I feel that predictability is often more important to users than availability. For example, in Palia our players expected downtime on Tuesday mornings and planned accordingly. It didn't bother most people. What bothered players was unexpected downtime and unexpected instability. Like when the 2 hour downtime turned into 6 hours and they couldn't play when they expected to.
 

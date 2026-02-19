@@ -16,7 +16,7 @@ Scrape 3: 2.13 days after release, 70,100 downloads
 ...
 Scrape 14: 13.14 days after release, 97,900 downloads
 Compared to episodes of other shows this is very popular. But on the first day of a new episode we've only seen 20,000 so it drags down the average. That affects the overall rankings by demoting any series with a new episode. It also means that shows with older episodes will get a slight boost.
-[![Tokyo Ghoul Root A Episode 3 downloads](https://kwtrnka.wordpress.com/wp-content/uploads/2015/02/image-1.png)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/02/image-1.png)
+![Tokyo Ghoul Root A Episode 3 downloads](/assets/img/posts/wp/image-1.png)
 
 Solution: Extrapolate number of downloads at 7 days
 ===================================================
@@ -25,7 +25,7 @@ The download graphs look predictable. So we can probably train a computer to pr
 First attempt (Predicted\_1 below): *b* \* log(time\_since\_release + *a*)
 The *a* is there because we want the curve to fit (0, 0): zero downloads at release. But log(0) is undefined. The *b* is there because some series/episodes get more downloads per day than others.
 And I used [scipy.optimize.curve\_fit](http://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html) to fit this function to each episode individually. It worked alright but would always overestimate after a while. Compared to the projections it seemed that actual downloads were slowing down.
-[![Anime download prediction](https://kwtrnka.wordpress.com/wp-content/uploads/2015/02/image-2.png)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/02/image-2.png)
+![Anime download prediction](/assets/img/posts/wp/image-2.png)
 Second attempt (Predicted\_2): *b* \* log(time\_since\_release + *a*) ^ *c*
 This fit the data much better. But of course it should! The effect of *c* can't be done by *a*or *b* and I'm basically seeing how well it fits my training data.
 I also evaluated by extrapolating from the first few days and measuring accuracy at day 7 which is a better test.

@@ -4,8 +4,8 @@ layout: post
 title: "Predicting League match outcomes: Week 2"
 date: 2015-09-02
 ---
-I've continued to log my experimental accuracy in predicting League of Legends matches (see [part 1](https://kwtrnka.wordpress.com/2015/08/25/predicting-league-match-outcomes-first-week-of-machine-learning/)) and this graph picks up from where I left off last time (around 64% accuracy).
-[![Experimental accuracy part 2](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-4.png)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-4.png)
+I've continued to log my experimental accuracy in predicting League of Legends matches (see [part 1](/blog/2015/08/predicting-league-match-outcomes-first-week-of-machine-learning/)) and this graph picks up from where I left off last time (around 64% accuracy).
+![Experimental accuracy part 2](/assets/img/posts/wp/image-4.png)
 When I hit 100% I learned I had data leakage. Then it dropped back down after fixing the leakage problems. (1) Also note that the cyclic patterns in the graph happen because I run random forest, then logistic regression, then gradient boosting trees most of the time. If I could do it again I'd make a different column in the spreadsheet for each one.
 
 Gradient boosting trees revisited
@@ -31,7 +31,7 @@ Aside: Diagnosing by decision tree images
 
 Random forests and gradient boosting trees are both collections of large numbers of decision trees (I'm using 100-500). It's too hard to just look inside. But I can take a single decision tree and visualize that.
 Scikit-learn fortunately has [a function](http://scikit-learn.org/stable/modules/generated/sklearn.tree.export_graphviz.html) to export a graph file of the decision tree. Then you can plug it into [webgraphviz](http://www.webgraphviz.com/) if it's small enough or render locally. Unfortunately the trees get so big that they crash renderers. Even with max depth of 5 it's a very horizontal image:
-[![decision_tree.dot](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/decision_tree-dot1.png?w=660)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/decision_tree-dot1.png)
+![decision_tree.dot](/assets/img/posts/wp/decision_tree-dot1.png)
 Second aside: While trying to make a graph fit on this blog post I started lowering the max\_depth and found that actually decision trees aren't completely crap they just overfit horribly with default parameters in sklearn.
 
 Aside: What may have worked

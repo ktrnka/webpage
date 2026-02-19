@@ -12,9 +12,9 @@ The main challenge is that the code and data must be compatible. For example, if
 
 ### Goals
 
-- Continuous deployment — We shouldn't do much manual work to deploy an update.
-- Continuous integration — The model and code should be tested together before deployment. There should be no risk of model-code incompatibility on deployment.
-- Risk-free reverting — When we detect a bug and roll back to an older version, there's no risk of model-code incompatibility.
+- Continuous deployment -- We shouldn't do much manual work to deploy an update.
+- Continuous integration -- The model and code should be tested together before deployment. There should be no risk of model-code incompatibility on deployment.
+- Risk-free reverting -- When we detect a bug and roll back to an older version, there's no risk of model-code incompatibility.
 
 ### Assumptions
 
@@ -39,7 +39,7 @@ This greatly reduces time to checkout, branch, and update compared to git. You'r
 Notes on LFS providers
 
 - If you use github, they have an account-level limit on LFS storage and you need to buy data packs when you run out of storage space. You'll need to be proactive to ensure that your developers aren't blocked on pushing commits.
-- You can use different storage providers for git and git-lfs. The LFS provider can be operated through services like Artifactory or you can create an AWS Lambda to use S3 for storage. However, the configuration for a secondary provider for LFS can be complex, especially in a CI/CD pipeline like Jenkins — commands like `checkout scm` don't work anymore.
+- You can use different storage providers for git and git-lfs. The LFS provider can be operated through services like Artifactory or you can create an AWS Lambda to use S3 for storage. However, the configuration for a secondary provider for LFS can be complex, especially in a CI/CD pipeline like Jenkins -- commands like `checkout scm` don't work anymore.
 
 Your team will all need to install git-lfs onto their machines then configure git to use it. Your repo will need to be configured as well and the `.gitattributes` file should be tracked in regular git.
 
@@ -78,13 +78,13 @@ Disadvantages
 
 - Need to run additional commands like `dvc add`, `dvc push`, `dvc pull`. It's slightly more work than lazydata.
 
-The process for adding to a new repo is similar to lazydata — you install it via pip, run `dvc init`, setup the remote, and then commit the new files. When adding a file you run `dvc add`. And then when you commit via git you also run `dvc push`.
+The process for adding to a new repo is similar to lazydata -- you install it via pip, run `dvc init`, setup the remote, and then commit the new files. When adding a file you run `dvc add`. And then when you commit via git you also run `dvc push`.
 
 When teammates want to read the files they need to install it via `requirements.txt`/`Pipfile` and then run `dvc pull` after cloning the repo.
 
 #### Amazon Sagemaker
 
-Sagemaker works very differently — you aren't taking your existing Flask service and standing it up so much as you change your model training and serving process to fit Sagemaker. They manage model versions in S3 for you and manage the hosting of the models as well.
+Sagemaker works very differently -- you aren't taking your existing Flask service and standing it up so much as you change your model training and serving process to fit Sagemaker. They manage model versions in S3 for you and manage the hosting of the models as well.
 
 Azure and Google Cloud have similar services.
 
@@ -99,7 +99,7 @@ Disadvantages
 - You'll need to understand the AWS ecosystem much more, especially for security
 - It makes custom model serving a bit harder
 
-The setup for this is more extensive — see [Sagemaker docs](https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-hosting.html).
+The setup for this is more extensive -- see [Sagemaker docs](https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-hosting.html).
 
 ### Briefly mentioned
 
@@ -109,11 +109,11 @@ Pickle is the easy way to serialize machine learning models. Popular libraries l
 
 #### scikit-learn pipelines
 
-If you're using scikit-learn in any way, I recommend using pipelines. They bundle together all preprocessing with the model itself and you save it as a single file. This eliminates a common source of error — different preprocessing for training and testing/serving.
+If you're using scikit-learn in any way, I recommend using pipelines. They bundle together all preprocessing with the model itself and you save it as a single file. This eliminates a common source of error -- different preprocessing for training and testing/serving.
 
 #### [ONNX](https://onnx.ai)
 
-ONNX is an open source neural network serialization format. There are many efficient implementations of model serving using ONNX. I looked into it earlier this year but found only minimal support for text processing — it's really mainly for image processing.
+ONNX is an open source neural network serialization format. There are many efficient implementations of model serving using ONNX. I looked into it earlier this year but found only minimal support for text processing -- it's really mainly for image processing.
 
 #### Weights database
 

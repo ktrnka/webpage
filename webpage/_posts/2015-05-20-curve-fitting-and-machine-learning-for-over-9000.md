@@ -14,7 +14,7 @@ Each episode of each show is processed independently; I'm treating this purely a
 
 downloads *= b \** log*(*days\_since\_release *+ a) ^ c*
 
-For more info on the background see [previous post](https://kwtrnka.wordpress.com/2015/02/13/projecting-the-number-of-downloads-for-torrents/).
+For more info on the background see [previous post](/blog/2015/02/projecting-the-number-of-downloads-for-torrents/).
 
 Problems
 --------
@@ -70,12 +70,12 @@ Looking at weird data
 
 Sometimes we fit the data poorly because we pick poor parameters for our model.  Other times it's because the model can't represent the data.
 In experimenting with various models I found that a small number of episodes had download curves that couldn't be fit well by any of my models. In the development data it was 8/398 episodes, about 2%. It's interesting to look at them:
-[caption id="attachment\_468" align="aligncenter" width="300"][![Aldnoah.Zero, Episode 21](https://kwtrnka.wordpress.com/wp-content/uploads/2015/05/aldnoah-zero_21.png?w=300)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/05/aldnoah-zero_21.png) Aldnoah Zero, Episode 21. It's tough to see but the first 3 days follow a log curve (just a much smaller one).[/caption]
-[caption id="attachment\_473" align="aligncenter" width="300"][![Gundam G no Reconguista, Episode 24](https://kwtrnka.wordpress.com/wp-content/uploads/2015/05/gundam_g_no_reconguista_24.png?w=300)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/05/gundam_g_no_reconguista_24.png) Gundam G no Reconguista, Episode 24. Another interesting one and again it looks like a smaller log curve started off at first then a bigger one is added.[/caption]
-[caption id="attachment\_475" align="aligncenter" width="300"][![Sidonia_no_Kishi_Daikyuu_Wakusei_Seneki_2](https://kwtrnka.wordpress.com/wp-content/uploads/2015/05/sidonia_no_kishi_daikyuu_wakusei_seneki_2.png?w=300)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/05/sidonia_no_kishi_daikyuu_wakusei_seneki_2.png) Knights of Sidonia Season 2, Episode 2. This clearly looks like two curves added.[/caption]
+![Aldnoah Zero, Episode 21. It's tough to see but the first 3 days follow a log curve (just a much smaller one).](/assets/img/posts/wp/aldnoah-zero_21.png)
+![Gundam G no Reconguista, Episode 24. Another interesting one and again it looks like a smaller log curve started off at first then a bigger one is added.](/assets/img/posts/wp/gundam_g_no_reconguista_24.png)
+![Knights of Sidonia Season 2, Episode 2. This clearly looks like two curves added.](/assets/img/posts/wp/sidonia_no_kishi_daikyuu_wakusei_seneki_2.png)
 Looking over them I'd say that probably a less popular fansub group is occasionally doing an earlier release than the more popular one. Or it's plausible that the show had a really good episode and tons of new fans started watching a few days later. It's also plausible that there was a processing bug and I was missing data for the first few days. But I'd expect that to be only missing data for a single day.
 Here's a normal curve for reference:
-[caption id="attachment\_476" align="aligncenter" width="300"][![Naruto Shippuuden, Episode 408](https://kwtrnka.wordpress.com/wp-content/uploads/2015/05/naruto_shippuuden_408.png?w=300)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/05/naruto_shippuuden_408.png) Naruto Shippuuden, Episode 408. What a smooth curve![/caption]
+![Naruto Shippuuden, Episode 408. What a smooth curve!](/assets/img/posts/wp/naruto_shippuuden_408.png)
 
 Wrapping it up
 ==============

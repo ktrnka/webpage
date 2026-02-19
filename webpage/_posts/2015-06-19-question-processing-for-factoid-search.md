@@ -13,7 +13,7 @@ Will people actually enter questions?
 
 Previously we worked on [Swype](http://www.swype.com/); we're intimately familiar with mobile text input. Usually people cut corners and write short messages when possible. If you're typing then keyword search is easier. But if you're using speech recognition it's less clear. It'll recognize full sentences better and there may be a preference for full questions.
 If possible it's best to look at data. But without a live system there's no data coming in. So I made a mock image of the system and used Mechanical Turk to solicit example searches. I iterated on this and learned several [tips for Mechanical Turk](https://kwtrnka.wordpress.com/category/mechanical-turk/)
-[![Mechanical Turk HIT for Toyota Prius Searchify ad](https://kwtrnka.wordpress.com/wp-content/uploads/2015/06/prius-hit.png?w=300)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/06/prius-hit.png)
+![Mechanical Turk HIT for Toyota Prius Searchify ad](/assets/img/posts/wp/prius-hit.png)
 I tried to keep the directions short and tried not to lead users into giving questions vs keywords. I also ran a second version specifically asking for questions rather than searches.
 This task was extremely informative. Notes:
 

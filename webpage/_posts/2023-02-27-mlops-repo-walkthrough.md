@@ -124,7 +124,7 @@ It's just copying the serving/app/data folder into the Docker image from the mac
 
 **Additional reading**
 
-- [Operating Lambda: Performance optimization — Part 1 (AWS)](https://aws.amazon.com/blogs/compute/operating-lambda-performance-optimization-part-1/): This covers cold starts and how to address them.
+- [Operating Lambda: Performance optimization -- Part 1 (AWS)](https://aws.amazon.com/blogs/compute/operating-lambda-performance-optimization-part-1/): This covers cold starts and how to address them.
 - [Docker overview (Docker)](https://docs.docker.com/get-started/overview/)
 - [What is Docker? (AWS)](https://aws.amazon.com/docker/)
 
@@ -432,7 +432,7 @@ It's tough to review your own work, but I'll give it a fair shot! I have three s
 **Is the service highly available?**
 
 - Due to cold starts, when the service deploys it causes a full outage until the new model is loaded. In a professional situation that's unacceptable but may be acceptable for hobbyist work.
-- Can we quickly and safely revert if a bug makes it to production? Yes, in this repo we'd revert by merging a PR in Github. The deployment pipeline takes 4–5 minutes. It'll probably take longer to get your PR approved.
+- Can we quickly and safely revert if a bug makes it to production? Yes, in this repo we'd revert by merging a PR in Github. The deployment pipeline takes 4-5 minutes. It'll probably take longer to get your PR approved.
 - Can we quickly detect production issues? No, there aren't any alarms implemented in this repo so if it goes down we probably won't find out right away. AWS provides some default dashboards for API gateway and Lambda though.
 - Can we switch to PyTorch without downtime? Yes, this repo is implemented so that we could make a major machine learning change like switching frameworks, test it, and deploy without downtime and with the ability to revert, so long as the framework change is a single PR.
 
@@ -448,8 +448,8 @@ There are several gaps in my testing:
 
 It's tough to judge your own work for learnability. Whenever possible it's better to have someone review the work and explain the challenges they faced.
 
-- In my opinion, this is hard for a complete beginner to learn because there are so many tools. Most of the complexity happens in automation, which the developer may not need to fully understand. But DVC for instance introduces a new concept — instead of just doing a *git clone* they also need to pull the DVC files to make the repo work. That could be improved with git hooks.
-- A related challenge with DVC is that it requires an AWS credential — now your devs need to have AWS setup to work in the repo, and you need to make sure that they have appropriate permissions to the S3 bucket.
+- In my opinion, this is hard for a complete beginner to learn because there are so many tools. Most of the complexity happens in automation, which the developer may not need to fully understand. But DVC for instance introduces a new concept -- instead of just doing a *git clone* they also need to pull the DVC files to make the repo work. That could be improved with git hooks.
+- A related challenge with DVC is that it requires an AWS credential -- now your devs need to have AWS setup to work in the repo, and you need to make sure that they have appropriate permissions to the S3 bucket.
 - For a developer with prior AWS experience, this might be easier to learn than a repo with many ML-specific tools or platforms.
 - Terraform adds another programming language and way of thinking. If I could do it again I'd try replacing that part with CDK so that devs don't need to learn another infrastructure language.
 - API gateway and Lambda can be challenging to understand, and aren't great technologies for junior developers in my experience.
@@ -463,7 +463,7 @@ While the previous subsection was about new developers, this is about the day to
 
 - Are there situations that might require multiple PRs across repos? Training, serving, and infrastructure are all in the same repo so major changes can be made in a single, well-tested PR. On the other hand, it's likely that this code is being called by another repo that isn't shown, and changes involving the JSON input shape, for example, may require PRs across repos.
 - Would this repo work nicely with security scanners such as [depandabot](https://github.blog/2020-06-01-keep-all-your-packages-up-to-date-with-dependabot/)? In the past I've had challenges in easily updating ML packages flagged by dependabot. With this repo setup it's possible to configure dependabot to open PRs with new dependencies, build updated models, and test that they work in the service. If the PR passes we can simply merge it to update dependencies.
-- Although deployment takes 4–5 minutes, it'd be better if it took closer to 1 minute. Fortunately Github Actions gives us time tracking by stage so we can investigate further. For example, it takes a little over 1 minute just to install DVC and CDK every time. Running the CDK pipeline including the Docker build takes about 3 minutes.
+- Although deployment takes 4-5 minutes, it'd be better if it took closer to 1 minute. Fortunately Github Actions gives us time tracking by stage so we can investigate further. For example, it takes a little over 1 minute just to install DVC and CDK every time. Running the CDK pipeline including the Docker build takes about 3 minutes.
 
 **Any security concerns?**
 
@@ -474,7 +474,7 @@ I'm not a security professional but I've been involved in enough reviews to chec
 - If you're adapting this to work with sensitive training data, Github Actions might not be an option.
 - The API is completely open to the world. If the model is highly unique and valuable, you don't want others to probe it indiscriminately. Auth and/or IP filtering can help.
 - pickle files allow arbitrary code execution. But to write those pickle files, someone would need write access to your S3 bucket and would need to trigger a redeploy from Github. Pickle files are an unlikely attack vector of choice in this system.
-- If there are vulnerabilities in the Docker image, it won't be updated until the next deployment. This is one disadvantage of using Docker for lambda — we're the ones managing these system dependencies rather than AWS managing them like they do for zip-file lambdas.
+- If there are vulnerabilities in the Docker image, it won't be updated until the next deployment. This is one disadvantage of using Docker for lambda -- we're the ones managing these system dependencies rather than AWS managing them like they do for zip-file lambdas.
 
 #### Concerns in an actual company
 
@@ -482,14 +482,14 @@ If you're building a system professionally, this repo isn't enough of a template
 
 - Endpoint security (auth, secret management, IP restrictions, etc)
 - Endpoint stability (DNS)
-- Endpoint versioning — If the input or output data structure will change in a way that isn't backwards-compatible, you may need to support multiple data structures and have a version of the endpoint itself.
+- Endpoint versioning -- If the input or output data structure will change in a way that isn't backwards-compatible, you may need to support multiple data structures and have a version of the endpoint itself.
 - CORS when it's being integrated with a frontend served from a different domain, and also latency optimization relating to CORS
 - Private PyPI inside Docker, if you use any internal modules
 - Multiple deployment stages: dev, staging, prod
 - Integration testing, end-to-end testing, and unit testing for any business logic
 - Provisioned concurrency, setup to warm up Lambda *before* the API gateway switches to the new version so that we have zero downtime
 - Dashboards and alarms
-- Training data versioning, data updates, and data testing — If you're getting new data over time there's a need for a whole pipeline before training.
+- Training data versioning, data updates, and data testing -- If you're getting new data over time there's a need for a whole pipeline before training.
 
 Now that I'm thinking about the business, it's a good time to mention the big picture. When you're writing an API it's a piece of a larger system. I've seen significant harm caused by focusing too much on just one repo and too little on the code that calls the API. For example, we could change our API without telling anyone and it may bring down our product.
 
@@ -522,8 +522,8 @@ The following is an example prioritization that might make sense for a small sta
 
 **Medium priorities**
 
-- IP filtering, auth, and/or your security of choice — This could range high to low depending on the application though
-- Alarms for outages — This could range high to low depending on the application
+- IP filtering, auth, and/or your security of choice -- This could range high to low depending on the application though
+- Alarms for outages -- This could range high to low depending on the application
 - True zero-downtime deployments
 
 **Low priorities**

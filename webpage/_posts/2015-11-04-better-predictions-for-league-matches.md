@@ -4,11 +4,11 @@ layout: post
 title: Better predictions for League matches
 date: 2015-11-04
 ---
-I'm predicting the winner of League of Legends ranked games with machine learning. The models look at player histories, champions picked, player ranks, blue vs red side, solo vs team queue, etc. The last time I wrote about accuracy improvements my best was [61.2% accuracy with gradient boosting trees](https://kwtrnka.wordpress.com/2015/09/02/predicting-league-match-outcomes-week-2/).
-Since then I've increased the amount of data from about 45,000 matches to 1.8 million matches. I've done analysis and the trends are [much more reliable](https://kwtrnka.wordpress.com/2015/09/21/bigger-league-of-legends-data-set/).
+I'm predicting the winner of League of Legends ranked games with machine learning. The models look at player histories, champions picked, player ranks, blue vs red side, solo vs team queue, etc. The last time I wrote about accuracy improvements my best was [61.2% accuracy with gradient boosting trees](/blog/2015/09/predicting-league-match-outcomes-week-2/).
+Since then I've increased the amount of data from about 45,000 matches to 1.8 million matches. I've done analysis and the trends are [much more reliable](/blog/2015/09/bigger-league-of-legends-data-set/).
 Experiments with 1.8 million matches are slow so I usually use 200k and sometimes 50k to test code. Almost always the trends in 200k are the same as 1.8 million but they run in minutes or hours compared to hours or days.
 I keep a spreadsheet with the outcome of each experiment and notes that indicate the model used, features used, and any other tweaks. This graph shows the progress since the last post.
-[![Accuracy improvements Sep Oct 2015](https://kwtrnka.wordpress.com/wp-content/uploads/2015/11/image-18.png)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/11/image-18.png)
+![Accuracy improvements Sep Oct 2015](/assets/img/posts/wp/image-18.png)
 The graph fluctuates so much because I sometimes test ideas on 50,000 matches. The models are worse but it allows rapid testing.
 I also test multiple model types. It smooths out towards the end because I wasn't experimenting as much with weaker models. On this particular problem, gradient boosting trees and neural networks are clearly stronger than logistic regression and random forests.
 
@@ -76,7 +76,7 @@ I also found tiny gains from subsample 0.9, which helps reduce overfitting. I t
 ### Random forests
 
 I also tried tuning with random forests and found that I was using too few trees so upped that from 100 to 150. I was hoping to find the "elbow" in the graph of accuracy vs number of trees but it's smoother than I'd like:
-[![Accuracy vs number of trees in random forest](https://kwtrnka.wordpress.com/wp-content/uploads/2015/11/image-19.png?w=300)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/11/image-19.png)
+![Accuracy vs number of trees in random forest](/assets/img/posts/wp/image-19.png)
 I have no idea why there's a blip at 100.
 I also tried re-tuning min\_samples\_leaf and min\_samples\_split; higher values reduce overfitting and speed up training. I didn't see much gain. I'm using min\_samples\_leaf 7 and min\_samples\_split 50.
 
@@ -116,11 +116,11 @@ Things that might help:
 Extra: Predictability tests
 ===========================
 
-It's good to understand when your models are doing well and poorly. I looked at this [before](https://kwtrnka.wordpress.com/2015/09/09/predicting-league-matches-are-some-matches-more-predictable/) but there weren't too many interesting trends. I've changed my tests in three ways:  logistic regression instead of random forests (for speed), full 1.8 million matches instead of 44k, and using the players' current league/rank to tell the level of the match instead of their rank in previous season.
-[![Predictability by league](https://kwtrnka.wordpress.com/wp-content/uploads/2015/11/image-20.png)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/11/image-20.png)
+It's good to understand when your models are doing well and poorly. I looked at this [before](/blog/2015/09/predicting-league-matches-are-some-matches-more-predictable/) but there weren't too many interesting trends. I've changed my tests in three ways:  logistic regression instead of random forests (for speed), full 1.8 million matches instead of 44k, and using the players' current league/rank to tell the level of the match instead of their rank in previous season.
+![Predictability by league](/assets/img/posts/wp/image-20.png)
 The black line is is overall average and the thin blue lines show plus or minus one standard deviation around the main blue line. Generally lower leagues are much more predictable. There isn't a statistically significant difference between silver and gold or master and challenger, but the difference between bronze and silver is significant, gold vs platinum, platinum vs diamond, and diamond vs master.
 It's probably because there are more errors in pick/ban phase at lower ranks that players haven't learned yet. And also high level players are more capable of playing all roles reasonably whereas lower rank players might play only one role well.
-[![Predictability by version](https://kwtrnka.wordpress.com/wp-content/uploads/2015/11/image-21.png)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/11/image-21.png)
+![Predictability by version](/assets/img/posts/wp/image-21.png)
 This shows the prediction accuracy of the model by game version. I removed all game versions with a low number of matches. The standard deviation for most versions is around 0.2%.
 The trend worries me. It's completely unlike what I saw on older data (basically flat). It likely means that the features for current league are partially revealing the outcome of previous matches. Unfortunately the Riot API doesn't provide a player's historical ranking so it's not possible to look up their ranking at the time they played a past game. I could drop the feature but it's useful. Or I could recrawl each player's league every day but I don't have enough cloud storage to store that.
 

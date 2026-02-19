@@ -23,7 +23,7 @@ Data
 ====
 
 I'm using Google Analytics and it shows some interesting trends. First up are page views for June 2015:
-[![Page views by day, peaking on 6/23](https://kwtrnka.wordpress.com/wp-content/uploads/2015/06/image.png?w=300)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/06/image.png)
+![Page views by day, peaking on 6/23](/assets/img/posts/wp/image.png)
 I made the Reddit threads on 6/23. Before that I'd been getting at 0-80 pageviews per day. But the Reddit threads produced 533 views on 6/23 and 131 on 6/24. Since then it's back to regular levels but there are no days with zero views.
 
 Demographics before Reddit
@@ -32,7 +32,7 @@ Demographics before Reddit
 One of the difficulties in using Google Analytics is that much of the traffic is fake. 14% of the traffic is from fake referrals (see [this](http://viget.com/advance/removing-referral-spam-from-google-analytics)).
 Looking over the flow, 98% visit the front page then leave.
 Geographically most the traffic is from the United States but also some from China, Japan, Germany, and Brazil and a little from other countries. Location is not set for 24% of sessions and those sessions have average duration 0 sec (probably web bots). Here's the [raw data](https://docs.google.com/spreadsheets/d/1W7r6QKulbF6hzlaa25Pma27Ud5GXEiNklUjN3fGR8eE/edit?usp=sharing).
-[![Map of the page views before Reddit](https://kwtrnka.wordpress.com/wp-content/uploads/2015/06/image-1.png?w=300)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/06/image-1.png)
+![Map of the page views before Reddit](/assets/img/posts/wp/image-1_2.png)
 99% of visits are from desktop over this time period. The only 3 visits from mobile were all from my own phone.
 
 Demographics after Reddit
@@ -41,7 +41,7 @@ Demographics after Reddit
 Fake referrals make up only 4% now!
 96% of visits view the front page and leave (down from 98%). That means more users are visiting the Winter 2015 or About pages (but only a few).
 Geographically the distribution has only 7% unset locations (vs 24%). The United States is 51% of sessions (vs 34%). English-speaking countries follow the US: Canada, UK, and Australia. Maybe Reddit is biased more towards English-speaking countries? [Raw data link](https://docs.google.com/spreadsheets/d/15tYNTU2zDOuYKOmC_zFURdli_q9W5bTR81hnfJJNBp0/edit?usp=sharing).
-[![Map of page views after Reddit](https://kwtrnka.wordpress.com/wp-content/uploads/2015/06/image-2.png?w=300)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/06/image-2.png)
+![Map of page views after Reddit](/assets/img/posts/wp/image-2_2.png)
 The device demographics from Reddit are different: only 72% from desktop (vs 99%). 23% from mobile and 5% from tablet. I'm glad the site is responsive to device size!
 In browsing the data I saw that Google Analytics tracks page load speed:
 

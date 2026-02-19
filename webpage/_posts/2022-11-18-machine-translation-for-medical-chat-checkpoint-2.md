@@ -85,15 +85,15 @@ I found **Microsoft Azure Translate** easier to setup and use than GCP, partly b
 
 #### On ensembles
 
-I included multiple translation providers for the ensemble benefit — if different systems make different kinds of errors, when you look at multiple options you can often figure out the best output. *Sometimes* the systems differed in a way that helped me find the best translation. But usually all four systems provide very similar translations, so the ensemble idea wasn't as useful as I'd hoped.
+I included multiple translation providers for the ensemble benefit -- if different systems make different kinds of errors, when you look at multiple options you can often figure out the best output. *Sometimes* the systems differed in a way that helped me find the best translation. But usually all four systems provide very similar translations, so the ensemble idea wasn't as useful as I'd hoped.
 
 #### On translation quality
 
 I noted some of the translation problems I saw but keep in mind that these are anecdotes and it'd be better to do a proper study when possible.
 
-- There was sometimes ambiguity around formality, such as how to translate "pee". I've observed many doctors use "pee" rather than "urine" to be informal with patients. I'm not sure what the best translation in Spanish would be though — most systems translated it "orina" and one "pis". Ideally the user interface would help me verify the translation of formality better.
+- There was sometimes ambiguity around formality, such as how to translate "pee". I've observed many doctors use "pee" rather than "urine" to be informal with patients. I'm not sure what the best translation in Spanish would be though -- most systems translated it "orina" and one "pis". Ideally the user interface would help me verify the translation of formality better.
 - I also observed that incomplete sentences became complete sentences when translated and back-translated. Maybe the API setting in AWS Translate would help.
-- "Clear out" turned into "clean" in Spanish and that's not *quite* the same meaning when talking about clearing an infection out of your system — that's the exact kind of thing I'd like to help doctors investigate in the user interface, but I haven't figured out how to do definitions of phrases properly.
+- "Clear out" turned into "clean" in Spanish and that's not *quite* the same meaning when talking about clearing an infection out of your system -- that's the exact kind of thing I'd like to help doctors investigate in the user interface, but I haven't figured out how to do definitions of phrases properly.
 - As far as I can tell, the Spanish word for cranberry and blueberry is the same, "arándano". In the context of cranberry juice that's probably ok; I don't think blueberry juice is common but it could be a little ambiguous and the English speaker might not even know.
 - One time, a translation system simply dropped an entire sentence! I've heard that neural machine translation can do that, but it's the first time I've seen it.
 - The acronym UTI was processed strangely. It's a common acronym for urinary tract infection. Some systems would translate the acronym to "infección del tracto urinario", others to "ITU", and others left it as "UTI". There was even one system that did this translation: UTI (en) → UTI (es) → ICU (en). UTI is definitely not the same as ICU!
@@ -133,7 +133,7 @@ In my [previous literature review]({% post_url 2022-10-25-machine-translation-fo
 
 I started off by measuring the cosine similarity of word bigram distributions between the source and back-translation, but found that it would often give very low near-zero numbers.
 
-I did a quick literature search and found [(Rapp, 2009)](https://aclanthology.org/P09-2034.pdf), which builds an automated metric using backtranslation to assess the quality of machine translation. They found that it was possible to build a metric on backtranslation that correlated with human ratings. They introduce a new metric OrthoBleu that's like Bleu but uses character trigrams — it led to a usable metric that doesn't require a reference translation! Keep in mind that they're testing English-German MT, and character ngrams might be particularly helpful there at scoring partial credit with German compounds, so it may not address issues in all language pairs.
+I did a quick literature search and found [(Rapp, 2009)](https://aclanthology.org/P09-2034.pdf), which builds an automated metric using backtranslation to assess the quality of machine translation. They found that it was possible to build a metric on backtranslation that correlated with human ratings. They introduce a new metric OrthoBleu that's like Bleu but uses character trigrams -- it led to a usable metric that doesn't require a reference translation! Keep in mind that they're testing English-German MT, and character ngrams might be particularly helpful there at scoring partial credit with German compounds, so it may not address issues in all language pairs.
 
 I approximated OrthoBleu using cosine similarity of character trigrams between the source and back-translation. I also added a start of message and end of message token to ensure that there would be at least one character trigram (and to slightly improve the metric, maybe).
 

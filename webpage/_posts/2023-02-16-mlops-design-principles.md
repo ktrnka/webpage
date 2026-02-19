@@ -14,7 +14,7 @@ In this article I'll share the principles I've learned over the years in deployi
 
 So you've got a model and want to integrate it into your product? It's probably not a one-time thing! You're going to need to fix bugs or release improvements! So you should think about having a process or system for updating models.
 
-You're going to want it to be easy for your team. You also want it to be reliable — your users won't be happy if the service goes down when you update! Those are the two key concerns: **minimizing defects and maximizing developer productivity**.
+You're going to want it to be easy for your team. You also want it to be reliable -- your users won't be happy if the service goes down when you update! Those are the two key concerns: **minimizing defects and maximizing developer productivity**.
 
 I want to first acknowledge the bigger picture before getting into machine learning: These concerns aren't specific to machine learning at all!
 
@@ -36,9 +36,9 @@ MLOps is about building and delivering machine learning code+models rapidly and 
 
 These are lessons I've learned from deploying models at Swype, Nuance, and 98point6. I'll explain the problems that motivated each principle and how I've applied it since.
 
-I find it's important to understand why you build software so that I can better adapt to new situations. That's why I'm writing up principles — I've seen many people overly focus on tools without understanding the underlying reasons. And what's more, each company comes with different challenges so the existing solutions may not apply, even if the principles do.
+I find it's important to understand why you build software so that I can better adapt to new situations. That's why I'm writing up principles -- I've seen many people overly focus on tools without understanding the underlying reasons. And what's more, each company comes with different challenges so the existing solutions may not apply, even if the principles do.
 
-One last word before I get into it — I haven't "solved" this field by any means. This reflects my current understanding from a decade of industry experience and I hope to improve my opinions in the future.
+One last word before I get into it -- I haven't "solved" this field by any means. This reflects my current understanding from a decade of industry experience and I hope to improve my opinions in the future.
 
 #### Version the code and model together, or link them
 
@@ -116,7 +116,7 @@ Side note: Design your code base so that you can unit test any business logic in
 
 Reduce the burden on your devs by automating what you can, such as retraining models with new data or deploying a model once it's validated. Automate testing when you can.
 
-Be cautious about automating too soon — automation isn't always worth the effort, and it's also risky to automate a process before really understanding the challenges.
+Be cautious about automating too soon -- automation isn't always worth the effort, and it's also risky to automate a process before really understanding the challenges.
 
 In cases where testing wasn't automated, I found that some devs would forget to run tests and push buggy code or models. Then it would disrupt another developer, who would think they broke something.
 
@@ -144,11 +144,11 @@ I also want to mention that saving your models with ONNX and other library-indep
 
 It's generally good to use well-tested, publicly-available code instead of writing new code. For example, using PyTorch will be better than writing your own neural network library from scratch because it's highly tested and optimized.
 
-On the other hand, I've seen code that goes overboard with dependencies that aren't strictly needed. Unfortunately, each dependency is an opportunity for a performance bug or security vulnerability. I found this was a problem in the Javascript ecosystem. As a result, projects which depended on Javascript would often trigger security scan warnings. At 98point6 I experienced this because of CDK in Javascript — we'd go to deploy a minor update to an old service only to find that the Javascript dependencies of CDK had tripped the security scanner. Then we'd have to go figure out the update process.
+On the other hand, I've seen code that goes overboard with dependencies that aren't strictly needed. Unfortunately, each dependency is an opportunity for a performance bug or security vulnerability. I found this was a problem in the Javascript ecosystem. As a result, projects which depended on Javascript would often trigger security scan warnings. At 98point6 I experienced this because of CDK in Javascript -- we'd go to deploy a minor update to an old service only to find that the Javascript dependencies of CDK had tripped the security scanner. Then we'd have to go figure out the update process.
 
 In contrast, Swype and Nuance were on the extreme minimal side of dependencies. In my first two months I learned that we couldn't use standard template library (STL) in C++ because some of our customers required compilers without STL. So instead I wrote my own data structures which were certainly less tested, documented, and performant than STL. If I could do it again I'd explore other options.
 
-There's another cost to dependencies — it's more for new developers to learn. When you're adding more dependencies and complexity, it's good to double-check that the benefit will be worthwhile even for new teammates.
+There's another cost to dependencies -- it's more for new developers to learn. When you're adding more dependencies and complexity, it's good to double-check that the benefit will be worthwhile even for new teammates.
 
 ### What's next?
 

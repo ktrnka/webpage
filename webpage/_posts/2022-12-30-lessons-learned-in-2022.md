@@ -14,7 +14,7 @@ As I was listing things out, I didn't want anyone to feel like this is in any wa
 
 Genetic algorithms still have uses, even in the age of neural networks. I found them useful in an optimization problem that was difficult to represent as constraint programming and also difficult to represent as gradient descent. Using a genetic algorithm drastically shortened the time it took to get an algorithm functional enough to demonstrate.
 
-Early in the year, I'd dismissed GPT3 and other large language models as hype and not interesting. I was wrong — they're quite interesting and useful, even if they're *sometimes* overhyped. I've found them useful for writing and summarizing, and sometimes as an alternative for Google search. I find it helpful to think of them as "super duper fill-in-the-blanks algorithms". And related to that, prompt engineering is an interesting field. If you'd like to learn more, see [Learn Prompting](https://learnprompting.org/).
+Early in the year, I'd dismissed GPT3 and other large language models as hype and not interesting. I was wrong -- they're quite interesting and useful, even if they're *sometimes* overhyped. I've found them useful for writing and summarizing, and sometimes as an alternative for Google search. I find it helpful to think of them as "super duper fill-in-the-blanks algorithms". And related to that, prompt engineering is an interesting field. If you'd like to learn more, see [Learn Prompting](https://learnprompting.org/).
 
 ### Data science
 

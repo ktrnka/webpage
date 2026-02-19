@@ -6,7 +6,7 @@ date: 2022-08-04
 
 Recently I talked to a few folks that were curious about transitioning into software engineering management, and we talked about what it was like when I made that transition about 4 years ago. I'll summarize most of those conversations in this post. I'll focus on the surprises I found in the first few months of management.
 
-Before jumping into what I found surprising, some context first: My former position might best be called lead machine learning engineer — I was an individual contributor spending about 20 hours per week on leadership efforts like mentoring and the roadmap in addition to research and development. I transitioned to manage a team of 6, which was a mixture of machine learning engineers and software engineers.
+Before jumping into what I found surprising, some context first: My former position might best be called lead machine learning engineer -- I was an individual contributor spending about 20 hours per week on leadership efforts like mentoring and the roadmap in addition to research and development. I transitioned to manage a team of 6, which was a mixture of machine learning engineers and software engineers.
 
 ### Surprises
 
@@ -33,8 +33,8 @@ Finally, management felt much more entangled with my personality, for example I 
 ### Non-surprises
 
 - It's a meeting-heavy workload.
-- I had to write more documents — I vaguely knew about this, though I hadn't thought about it in detail. The documents could range from levelling documents to team charters to quarterly roadmaps to multi-year vision statements to investor/customer inquiries.
-- There's tons of management advice out there, but almost none of it is backed by evidence — I knew about this somewhat already but it didn't fully hit me until years later.
+- I had to write more documents -- I vaguely knew about this, though I hadn't thought about it in detail. The documents could range from levelling documents to team charters to quarterly roadmaps to multi-year vision statements to investor/customer inquiries.
+- There's tons of management advice out there, but almost none of it is backed by evidence -- I knew about this somewhat already but it didn't fully hit me until years later.
 - It took more effort to have candid conversations with my team.
 
 Hope this helps some of you that are curious about management!

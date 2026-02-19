@@ -20,7 +20,7 @@ I didn't initially understand why it was better than any sort of simple average.
 
 You could check how long each employee has been with the company and just average.
 
-If your team is growing quickly, most of your employees are new, which unfortunately brings down the average. That doesn't sound right — hiring new people shouldn't make your retention number immediately worse!
+If your team is growing quickly, most of your employees are new, which unfortunately brings down the average. That doesn't sound right -- hiring new people shouldn't make your retention number immediately worse!
 
 On the other hand, if you've lost a lot of employees, those employees don't affect the number at all! In the worst case you could have most employees quit immediately but a few employees stick it out for a long time and the average would be high. That would also be misleading.
 
@@ -120,7 +120,7 @@ Keep in mind that the model doesn't explain *why* wearing socks affected retenti
 
 Also keep in mind that the model assumes that each feature affects retention independently and may not handle [intersectionality](https://en.wikipedia.org/wiki/Intersectionality) well.
 
-If you're interested in diving deeper with more realistic data, IBM released [an example data set](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset) with many different employee features you can try out — see [this notebook for an example](https://www.kaggle.com/subhasree/employee-attrition-using-survival-analysis/notebook).
+If you're interested in diving deeper with more realistic data, IBM released [an example data set](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset) with many different employee features you can try out -- see [this notebook for an example](https://www.kaggle.com/subhasree/employee-attrition-using-survival-analysis/notebook).
 
 Tip: You can do a basic cohort analysis by bucketing the start_date with `pandas.qcut`.
 
@@ -128,7 +128,7 @@ Tip: You can do a basic cohort analysis by bucketing the start_date with `pandas
 
 When I was dealing with retention issues a year or two ago, I was worried that immigration status may play a significant factor in retention.
 
-What I actually found was that software engineers on my team left much sooner than machine learning engineers, and no other variable explained the data nearly as well. Keep in mind that it doesn't say *why* retention was different between groups — it could be that I was better at managing machine learning engineers than software engineers, or that the MLE roles were more fun, or it could be that software engineers had more job prospects, or any number of factors. I didn't have the data to compare against other teams, which might have provided more insight.
+What I actually found was that software engineers on my team left much sooner than machine learning engineers, and no other variable explained the data nearly as well. Keep in mind that it doesn't say *why* retention was different between groups -- it could be that I was better at managing machine learning engineers than software engineers, or that the MLE roles were more fun, or it could be that software engineers had more job prospects, or any number of factors. I didn't have the data to compare against other teams, which might have provided more insight.
 
 In the end, I resolved to put more effort into retention for software engineers.
 
@@ -141,7 +141,7 @@ If you're looking to calculate retention for your team, all you need are start a
 - [Hands-on Survival Analysis with Python](https://towardsdatascience.com/hands-on-survival-analysis-with-python-270fa1e6fb41)
 - [Applying Survival Analysis to Reduce Employee Turnover: A Practical Case](https://www.aihr.com/blog/applying-survival-analysis-reduce-employee-turnover-practical-case/)
 - [Handbook of Regression Modeling in People Analytics: Ch 9 Survival Analysis for Modeling Singular Events Over Time](https://peopleanalytics-regression-book.org/survival.html)
-- [intelliHR explanation of survival analysis for retention](https://intellihr.com/en-us/insights/survival-analysis) — this has some great charts
+- [intelliHR explanation of survival analysis for retention](https://intellihr.com/en-us/insights/survival-analysis) -- this has some great charts
 - [PySurvival tutorial on employee retention](https://square.github.io/pysurvival/tutorials/employee_retention.html)
 
 ### Follow-up: How would you handle involuntary exits (layoffs and firings)?
@@ -152,4 +152,4 @@ In the case of voluntary exits, you can use the math to help guide hiring to mai
 
 In the case of firing, it's usually a mistake in the hiring pipeline to address.
 
-It's rarely the case that the underlying problem is the same between those two types of attrition. With that said, I wouldn't be surprised if there were some employers that had similar underlying causes of voluntary and involuntary exits — and for those employers I'd want to keep them in the same analysis.
+It's rarely the case that the underlying problem is the same between those two types of attrition. With that said, I wouldn't be surprised if there were some employers that had similar underlying causes of voluntary and involuntary exits -- and for those employers I'd want to keep them in the same analysis.

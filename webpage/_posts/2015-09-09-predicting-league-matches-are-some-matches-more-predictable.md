@@ -23,7 +23,7 @@ Game Version
 ============
 
 Riot updates the game balance about every two weeks. Sometimes new champions are added and they may be too strong or too weak. Champions are tweaked and may become too strong or too weak. The most egregious recent change was 5.16 in which Skarner was nearly 100% banned or picked.
-[![Prediction accuracy by version](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-3.png)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-3.png)
+![Prediction accuracy by version](/assets/img/posts/wp/image-3_2.png)
 Raw data [here](https://docs.google.com/spreadsheets/d/1D_hm0ORmt_3WBrlmOspqWHz0n70suH57WIKqifmzRP8/edit?usp=sharing) with standard deviations (couldn't figure out error bars in Google Sheets). I dropped versions with fewer than 100 matches. Most of the data is 5.14-5.16 so those patches comprise most of the overall average. The big blips seem statistically significant unless I computed standard deviations incorrectly.
 Some comments on what changed in some patches:
 
@@ -42,7 +42,7 @@ League tier
 Your ranked tier is a rough measure of overall skill level: bronze, silver, gold, platinum, diamond, master, and challenger. Are matches more predictable in bronze? In a previous post I saw a blue side advantage in low tiers and red side advantage in higher tiers.
 If you aren't familiar with League of Legends one thing to note is that the number of players at each tier follows a sort of exponential distribution. See [LoL Summoners' Global Stats](http://www.lolsummoners.com/stats) for instance. 27% of players are bronze, 42% silver, 20% gold, 8% platinum, 2% diamond, 0.04% master, 0.02% challenger.
 Note that I'm still just using highestAchievedSeasonTier which is the max of all previous seasons and many players don't have a value. Also I have the median value for blue and red side separately so I only counted games where they were the same.
-[![Prediction accuracy by tier](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-41.png)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-41.png)
+![Prediction accuracy by tier](/assets/img/posts/wp/image-41.png)
 Aside from platinum the others are all within about a standard deviation of one another. I don't even have a guess as to why platinum is less predictable; it has the most data of these groups.
 Maybe when I look up their current season tier and crawl more data I can update this and get more accurate results. That should confirm the weird dip in predictability of platinum matches or show that it was an artifact of the way I was measuring.
 

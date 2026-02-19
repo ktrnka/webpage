@@ -101,7 +101,7 @@ I've only had one issue with TLP and that's when playing Youtube videos in Chrom
 
 ### Special note about Spotify
 
-If you use Spotify via the deb package, be sure to minimize the window while playing music in the background. I found that the laptop was drawing 30–45W with Spotify playing in the background when not visible but not minimized, and only around 10W when minimized. This appears to be a common, old issue [1](https://community.spotify.com/t5/Desktop-Linux/High-CPU-usage-on-desktop-client/td-p/5264603), [2](https://github.com/flathub/com.spotify.Client/issues/223), [3](https://forum.garudalinux.org/t/spotify-high-gpu-usage/45648).
+If you use Spotify via the deb package, be sure to minimize the window while playing music in the background. I found that the laptop was drawing 30-45W with Spotify playing in the background when not visible but not minimized, and only around 10W when minimized. This appears to be a common, old issue [1](https://community.spotify.com/t5/Desktop-Linux/High-CPU-usage-on-desktop-client/td-p/5264603), [2](https://github.com/flathub/com.spotify.Client/issues/223), [3](https://forum.garudalinux.org/t/spotify-high-gpu-usage/45648).
 
 ### Semi-failed: Low-effort wattage monitoring
 

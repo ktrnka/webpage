@@ -33,11 +33,11 @@ This affects localization because there are TONS of verbs. Take a string like "S
 
 Why is this a problem? Because we didn't instruct our translators on whether to use *tu* or *usted* form. Each translator decided for themselves. So some of our strings were in *tu* form and others *usted* form. As a result, our app felt inconsistent to Spanish speakers.
 
-Eventually we solved this with a style guide, but the real problem is that the person setting it all up originally wasn't even aware that Spanish had a language feature that English doesn't. I'm not even sure how we caught this issue — probably we have a native tester or maybe a translator asked for clarification eventually.
+Eventually we solved this with a style guide, but the real problem is that the person setting it all up originally wasn't even aware that Spanish had a language feature that English doesn't. I'm not even sure how we caught this issue -- probably we have a native tester or maybe a translator asked for clarification eventually.
 
 ### Issue 4: Dealing with branches of Swype
 
-In the end, we maintained branches of our code base for several customers. This led to considerable problems because we couldn't afford to separately translate and update the 2–3 branches of the app that were under active development.
+In the end, we maintained branches of our code base for several customers. This led to considerable problems because we couldn't afford to separately translate and update the 2-3 branches of the app that were under active development.
 
 We had a loose collection of data and scripts to attempt to share translations between branches without overwriting de-branded content or re-branded content. Eventually this was centrally managed in a database with a web frontend.
 
@@ -45,10 +45,10 @@ Branching caused other problems so I'm going to say that the branching was the r
 
 ### Issue 5: Unsolved mysteries
 
-It's reasonable to focus on what Android and iOS support — some combination of language and location such as en-US for US English. This paradigm works relatively well but breaks down as you start to support more languages than the operating systems:
+It's reasonable to focus on what Android and iOS support -- some combination of language and location such as en-US for US English. This paradigm works relatively well but breaks down as you start to support more languages than the operating systems:
 
 - Hinglish: This is a mixture of Hindi and English written with English letters. In Swype it was more commonly used than Hindi. But the spellings aren't standardized and there's no ISO code for Hinglish. So when a user selects the Hinglish keyboard, should the app switch strings to Hinglish or should its strings match the operating system, which doesn't have Hinglish available?
-- Serbian: This language can be written in Latin script or Cyrillic — [wikipedia](https://en.wikipedia.org/wiki/Romanization_of_Serbian) says 47% favor Latin and 36% prefer Cyrillic. But again we have the same problem because there's no ISO code to distinguish.
+- Serbian: This language can be written in Latin script or Cyrillic -- [wikipedia](https://en.wikipedia.org/wiki/Romanization_of_Serbian) says 47% favor Latin and 36% prefer Cyrillic. But again we have the same problem because there's no ISO code to distinguish.
 
 ### Quick tips
 

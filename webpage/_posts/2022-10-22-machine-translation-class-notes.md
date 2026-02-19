@@ -8,13 +8,13 @@ I'd like to build a machine translation system for English-Spanish medical chat.
 
 I took the [Coursera class on machine translation](https://www.coursera.org/learn/machinetranslation) and read many of the papers they reference, particularly in areas that I wasn't familiar with. I've summarized many of them below with notes on how the papers may help in medical MT.
 
-I enjoyed the class — It covers a good range of topics including modern methods like BERT.
+I enjoyed the class -- It covers a good range of topics including modern methods like BERT.
 
 ### Evaluation methods
 
 #### [Bleu: a method for automatic evaluation of machine translation (Papineni et. al., 2002)](https://aclanthology.org/P02-1040.pdf)
 
-This paper introduced Bleu scoring, the most common evaluation metric for MT. It's a geometric mean of ngram precision ranging from ngram length 1–4. They also add a length factor to penalize translations that omit details from the source, and a factor to penalize repetitive but common ngrams.
+This paper introduced Bleu scoring, the most common evaluation metric for MT. It's a geometric mean of ngram precision ranging from ngram length 1-4. They also add a length factor to penalize translations that omit details from the source, and a factor to penalize repetitive but common ngrams.
 
 They evaluate the proposed metric by correlation with human judgements on translation quality, finding that their method is well correlated with humans.
 
@@ -52,7 +52,7 @@ MEANT might be a useful option for medical machine translation because many pape
 
 The authors create a machine-learned metric by trying to predict human judgments of translation quality. One problem they note with metrics like Bleu is that word ngram features are very sparse which can make it less reliable, especially for short documents or sentence-level evaluation.
 
-They design many of their features to be less sparse, for example character ngram overlap between reference and candidate. They also include word ngram overlap features. I found it surprising that they also included recall features — the Bleu paper specifically mentioned that they couldn't use recall because of multiple references. Maybe multiple references fell out of favor over the years due to the cost? This paper also includes complicated features about word order changes, using permutation trees (PET) but I didn't understand how those worked.
+They design many of their features to be less sparse, for example character ngram overlap between reference and candidate. They also include word ngram overlap features. I found it surprising that they also included recall features -- the Bleu paper specifically mentioned that they couldn't use recall because of multiple references. Maybe multiple references fell out of favor over the years due to the cost? This paper also includes complicated features about word order changes, using permutation trees (PET) but I didn't understand how those worked.
 
 These features are fed into a linear model to predict human ratings. They compared it against METEOR and found that their method (called BEER) was generally better across language pairs. They used Kendall Tau for evaluation, which surprised me a bit because others all used Spearman or Pearson correlation. Maybe it's because of the learning-to-rank approach?
 
@@ -64,7 +64,7 @@ Another thing I like about the BEER work is that it could be applied to other qu
 
 #### [CharacTer: Translation Edit Rate on a Character Level (Wang et. al., 2016)](https://aclanthology.org/W16-2342.pdf)
 
-This paper is aimed at evaluation in morphologically rich languages — word-based approaches don't work so well in those languages. To use the phrasing of the BEER paper, word-based features are too sparse.
+This paper is aimed at evaluation in morphologically rich languages -- word-based approaches don't work so well in those languages. To use the phrasing of the BEER paper, word-based features are too sparse.
 
 They're extending the translation edit rate (TER) metric to work at the character level. This is how they describe TER:
 
@@ -72,7 +72,7 @@ They're extending the translation edit rate (TER) metric to work at the characte
 
 They create a character-level edit distance metric called CharacTer, that uses word-level alignment with character edit distance. The word-level alignment was found to be necessary for runtime performance.
 
-They found that it often outperformed other metrics. One of their key improvements was a modification that could be applied to other metrics as well — to normalize by the hypothesis length rather than the reference length.
+They found that it often outperformed other metrics. One of their key improvements was a modification that could be applied to other metrics as well -- to normalize by the hypothesis length rather than the reference length.
 
 I like that it's a simple way to measure similarity to the reference and it doesn't need anything language-specific for morphology. It felt like they did manual hyperparameter tuning and I'd prefer automated tuning, but that's a minor point. Also I wonder why a character-based method like chrF3 didn't meet their needs? Is 3 too short of an ngram?
 

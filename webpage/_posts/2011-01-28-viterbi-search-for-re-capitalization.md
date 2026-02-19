@@ -4,7 +4,7 @@ layout: post
 title: viterbi search for re-capitalization
 date: 2011-01-28
 ---
-Last week I mentioned that I was working to [restore the capitalization](http://kwtrnka.wordpress.com/2011/01/21/title-case-pos-tagging-nnp/ "title case + pos tagging = nnp") of graph titles.  At the time, I was using Google's trillion word unigram model to disambiguate case.  But it didn't work quite right.  It seemed like an improvement over just lowercasing them, but you'd end up with words like *Spring* or *Jobs* capitalized all the time.  It became clear that some additional information was necessary.  There are three candidates for additional information:
+Last week I mentioned that I was working to [restore the capitalization](/blog/2011/01/title-case-pos-tagging-nnp/ "title case + pos tagging = nnp") of graph titles.  At the time, I was using Google's trillion word unigram model to disambiguate case.  But it didn't work quite right.  It seemed like an improvement over just lowercasing them, but you'd end up with words like *Spring* or *Jobs* capitalized all the time.  It became clear that some additional information was necessary.  There are three candidates for additional information:
 
 1. the immediate context of the word
    This lends itself to higher-order ngrams. For example, consider *Stocks Spring Back*. Based on *Stocks*, we can decide that *Spring* refers to the action rather than the season.

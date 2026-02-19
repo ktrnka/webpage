@@ -84,7 +84,7 @@ Other notes:
 
 #### [Development of machine translation technology for assisting health communication: A systematic review (2018)](https://www.sciencedirect.com/science/article/pii/S1532046418301448)
 
-This is an excellent meta-review of papers around 2006–2016. It had good things to say about PAHOMTS though unfortunately they couldn't include it because it was made before 2006.
+This is an excellent meta-review of papers around 2006-2016. It had good things to say about PAHOMTS though unfortunately they couldn't include it because it was made before 2006.
 
 They found that machine translation wasn't good enough to be used without professional translators though there were some areas in which it might be ok. I was very surprised to read that they saw no significant difference in the severity of errors made by Google Translate and human translators.
 
@@ -135,10 +135,10 @@ These are some of the key findings:
 - It's helpful to repeat back what you heard to the patient to double-check your understanding.
 - Clinicians mentioned that there's variable quality even with professional translators.
 - Sometimes if a professional translation talks a lot longer than the physician, the physician would ask to clarify exactly what was communicated.
-- There's a lot of discussion about risk and liability — people don't want to use Google Translate for consent or something really critical, but feel ok with it for history taking and other low risk situations.
+- There's a lot of discussion about risk and liability -- people don't want to use Google Translate for consent or something really critical, but feel ok with it for history taking and other low risk situations.
 - Cultural differences could make translator-mediated conversation even more difficult, for example if topics more common in the US were somewhat taboo in the patient's culture.
-- There were also issues with medical literacy — Teaching the patient about their body is even harder with translation.
-- Even some Spanish speakers would use Google Translate to translate specific words, like if they didn't know the medical term for something. That rings true with what I heard — doctors that were Spanish-native speakers but not medically trained in Spanish may not know the terminology.
+- There were also issues with medical literacy -- Teaching the patient about their body is even harder with translation.
+- Even some Spanish speakers would use Google Translate to translate specific words, like if they didn't know the medical term for something. That rings true with what I heard -- doctors that were Spanish-native speakers but not medically trained in Spanish may not know the terminology.
 - Patients often just say yes to everything even if they don't understand, but will talk honestly with a non-doctor that's a native speaker. Doctors felt this was due to the difference in authority.
 - Backtranslation was used to check quality.
 
@@ -157,7 +157,7 @@ They set up machine translation-mediated online chats between participants and h
 Key insights:
 
 - People don't always know when a mistranslation has happened, and assume one hasn't, so the two people sometimes both walk away thinking they've communicated successfully but they haven't!
-- People try to adapt their writing to get more reliable translations — for instance, simplifying their language and avoiding informal language. But in practice they would forget to keep doing this as the conversation went on.
+- People try to adapt their writing to get more reliable translations -- for instance, simplifying their language and avoiding informal language. But in practice they would forget to keep doing this as the conversation went on.
 - People often attribute weirdness or rudeness to the other person though it can be caused by the MT system.
 - People that understand both languages sometimes are able to infer what the original must have been, even when they're not able to see the other language.
 - Modern MT systems are quite good at fluency, but not as much at adequacy.
@@ -199,7 +199,7 @@ My read on this paper is that it's trying to allow for fine-tuning on a small co
 
 They achieved decent improvements over standard fine-tuning.
 
-The general approach makes sense to me — find or create a small number of parameters to domain-adapt in fine-tuning. That's been my experience in domain adaptation to the medical field as well; that it's helpful to carefully limit the number of free parameters to prevent overfitting.
+The general approach makes sense to me -- find or create a small number of parameters to domain-adapt in fine-tuning. That's been my experience in domain adaptation to the medical field as well; that it's helpful to carefully limit the number of free parameters to prevent overfitting.
 
 ### API review
 
@@ -245,7 +245,7 @@ The Azure API sounds easier to work with, because you can provide document-align
 
 As I was editing this post, I stumbled into several commercial offerings for seamless translation of live chat and other customer support. For the most part, the companies integrate with existing customer service platforms such as ZenDesk, Salesforce, and so on, and enable a company to staff customer service agents in one language with automated translation into the language of the customer.
 
-KantanAI has [some information online](https://kantanmtblog.com/2021/04/28/kantanstream-meets-the-challenge-of-big-data-and-wins/). They mainly act as a plugin to existing customer service tools and do seamless translation. The translation is human-in-the-loop — many messages go through machine translation but many others are sent to quick-response professional translators. That builds up a data set for them and over time should enable a much better MT system.
+KantanAI has [some information online](https://kantanmtblog.com/2021/04/28/kantanstream-meets-the-challenge-of-big-data-and-wins/). They mainly act as a plugin to existing customer service tools and do seamless translation. The translation is human-in-the-loop -- many messages go through machine translation but many others are sent to quick-response professional translators. That builds up a data set for them and over time should enable a much better MT system.
 
 Unbabel also has some information online such as [case studies of deployments](https://resources.unbabel.com/case-studies/farfetch-elevates-customer-support-agent-experience-with-unbabel). I found the post interesting because the highlights from the customer sounded so similar to priorities in workforce management in healthcare, like the effects of reduced reliance on hard-to-hire people. The writing suggests that turnaround time is occasionally a problem, so maybe it's more for email support rather than live chat, or live chat in an overstaffed center that already has non-instant response times.
 
@@ -281,13 +281,13 @@ This is a somewhat big pivot from how I was originally thinking, and I'll have t
 Back to my MT project, I imagine physicians would progress through a level system with light gamification:
 
 1.  Initially, the physician reads and writes in English. When they're reading, it shows the patient's Spanish with English MT output from multiple complementary systems.
-2.  When the physician is reading, they'd be able to click on English words to see the aligned Spanish and definitions. Likewise they could click on the Spanish words to see alignment and definitions. This would be a weak signal to indicate proficiency (but it can't be the only one). Words that are likely "new" to the physician are highlighted like Duolingo to encourage them to read the definition. Over time that would become more rare — maybe one or two new words per chat.
+2.  When the physician is reading, they'd be able to click on English words to see the aligned Spanish and definitions. Likewise they could click on the Spanish words to see alignment and definitions. This would be a weak signal to indicate proficiency (but it can't be the only one). Words that are likely "new" to the physician are highlighted like Duolingo to encourage them to read the definition. Over time that would become more rare -- maybe one or two new words per chat.
 3.  The physician progresses to read Spanish more reliably so the English translations are hidden by default. They would need to click to see the translations. This click data is used as a weak signal on their proficiency with words/phrases.
 4.  There's a separate progression for writing proficiency. They'd initially write in English, see multiple Spanish translations with English back-translations, and select the one they prefer.
 5.  After a while, the physician writes some messages in Spanish with appropriate spell/grammar-check and sees multiple back-translations to review.
 6.  The physician eventually writes mostly in Spanish but the back-translations are hidden by default. They can click to review back-translations, which is used as a weak signal on proficiency and medical importance.
 
-I don't have it all figured out though — there's a huge gap on the writing side between steps 4 & 5. I don't have many ideas for how to incrementally learn writing while chatting with the patient, except maybe leaning on standard phrases or templates.
+I don't have it all figured out though -- there's a huge gap on the writing side between steps 4 & 5. I don't have many ideas for how to incrementally learn writing while chatting with the patient, except maybe leaning on standard phrases or templates.
 
 The UI would use small icons for simple quality checks:
 
@@ -325,7 +325,7 @@ Advantages of a teaching approach to MT:
 Disadvantages of a teaching approach to MT:
 
 - Doctors tend to be very busy and time-sensitive. Would there be enough doctors willing to slow down a little to learn Spanish?
-- There's more to implement and maintain — there are multiple MT integrations and integration with translation dictionaries. The alignment code would be yet another piece to maintain.
+- There's more to implement and maintain -- there are multiple MT integrations and integration with translation dictionaries. The alignment code would be yet another piece to maintain.
 - Showing multiple translations and backtranslations may take a lot of screen space and add cognitive load, compared to seamless MT.
 
 Additional concerns:
@@ -344,12 +344,12 @@ Beyond this, I've got to 1) read more 2) start trying out existing APIs 3) build
 #### Reading wishlist
 
 - UX for language-teaching apps like Duolingo
-- UX for MT-mediated chat — find and read more
+- UX for MT-mediated chat -- find and read more
 - Try out PAHOMTS and/or read about it
-- Best practices for corpus-building — I suspect that I may need to build a small in-domain corpus for this effort, and I could learn from the way large corpora are built.
-- Machine translation models for dialogue — Most MT research is about sentence translation, but I bet there are possible gains from iteratively translating a conversation as a document. For example, a word might be ambiguous in one sentence but not in a previous sentence.
+- Best practices for corpus-building -- I suspect that I may need to build a small in-domain corpus for this effort, and I could learn from the way large corpora are built.
+- Machine translation models for dialogue -- Most MT research is about sentence translation, but I bet there are possible gains from iteratively translating a conversation as a document. For example, a word might be ambiguous in one sentence but not in a previous sentence.
 - Simpler approaches to domain adaptation
-- Read about the user experience of Facebook's M messenger — I believe they released MT-mediated chat a while back but I haven't heard anything since
+- Read about the user experience of Facebook's M messenger -- I believe they released MT-mediated chat a while back but I haven't heard anything since
 - Read through [https://machinetranslate.org/](https://machinetranslate.org/)
 - Skim this year's WMT proceedings if they're available
 

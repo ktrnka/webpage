@@ -4,7 +4,7 @@ layout: post
 title: Ensembles part 2
 date: 2015-12-03
 ---
-I've been using ensembles of my best classifiers to slightly improve accuracy at predicting League of Legends winners. [Previously](https://kwtrnka.wordpress.com/2015/11/23/ensemble-notes/) I tried scikit-learn's VotingClassifier and also experimented with probability calibration.
+I've been using ensembles of my best classifiers to slightly improve accuracy at predicting League of Legends winners. [Previously](/blog/2015/11/ensemble-notes/) I tried scikit-learn's VotingClassifier and also experimented with probability calibration.
 Since then I've followed up on two ideas: 1) tuning classifier weights with VotingClassifier and 2) making an ensemble that combines individual classifier probabilities using logistic regression (and other methods!).
 
 Tuning classifier weights
@@ -12,7 +12,7 @@ Tuning classifier weights
 
 The best ensemble combines gradient boosting trees and a neural network. VotingClassifier allows for weights on the individual classifiers: By default they're evenly weighted but you can skew the voting towards one classifier. Gradient boosting is a stronger individual classifier so it should probably get more weight than the neural network.
 I evaluated several weights with 10-fold cross validation. (1) Side note: This time I'm trying out [Plotly](https://plot.ly/feed/) because it can make charts with error bars. I'm just showing plus or minus one standard deviation on the error bars.
-![Prediction accuracy vs ensemble weights](https://kwtrnka.wordpress.com/wp-content/uploads/2015/12/prediction-accuracy-vs-ensemble-weights.png)
+![Prediction accuracy vs ensemble weights](/assets/img/posts/wp/prediction-accuracy-vs-ensemble-weights.png)
 The default weights are 0.5 for each classifier.
 Roughly there's a hump around 0.8 weight on gradient boosting but it's *very* rough. Almost all results are within a standard deviation of each other.
 Generally I'll stick with 0.8 weight for now. One note of caution: I'm reporting results on my overall evaluation so I'm cheating the evaluation a little in picking 0.8.

@@ -18,7 +18,7 @@ Game version
 
 The majority of my old data was from when I started crawling: 5.14-5.16.
 In the new setup it's pretty even from 5.5 to 5.16.
-[![Matches crawled by version](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-5.png?w=300)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-5.png)
+![Matches crawled by version](/assets/img/posts/wp/image-5.png)
 5.17 doesn't have much data because it was just released when I did this crawl. The blip in 5.7 is around when URF mode was released - maybe that increases ranked play as well?
 Either way, I have a much more even distribution across versions than before.
 
@@ -27,27 +27,27 @@ Players by tier
 
 The old code figured out a player's league by the highest league they've reached in the past - this info is easily available in the match data for the game to set borders at the loading screen.
 The majority of players were diamond but also many players are new and didn't have a value:
-[caption id="attachment\_546" align="aligncenter" width="300"][![Games by most common highest achieved season tier in old data set.](https://kwtrnka.wordpress.com/wp-content/uploads/2015/08/games_by_tier.png?w=300)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/08/games_by_tier.png) Games by most common highest achieved season tier in old data set.[/caption]
+![Games by most common highest achieved season tier in old data set.](/assets/img/posts/wp/games_by_tier.png)
 The new data is a much cleaner distribution: many more players in platinum than diamond, gold than platinum, etc.
-[caption id="attachment\_570" align="aligncenter" width="300"][![Players by league in the updated data set.](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-6.png?w=300)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-6.png) Players by league in the updated data set.[/caption]
+![Players by league in the updated data set.](/assets/img/posts/wp/image-6.png)
 This is similar to the distributions shown on [League of Graphs](http://www.leagueofgraphs.com/rankings/summoners-distribution) and [League of Legends Summoners](http://www.lolsummoners.com/stats). One of the interesting parts of those sites is showing the stats by division as well; you can see that division V typically has many more players than other divisions. That's because it's easier to be promoted a tier than demoted a tier.
-[![image (7)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-7.png)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-7.png)
+![image (7)](/assets/img/posts/wp/image-7.png)
 The same trend is shown - there are many more players in gold V than silver 1, for instance. (The league labels got mangled a bit when exporting from google sheets, sorry!)
 
 Blue side win rate
 ==================
 
-Overall the blue side has a small advantage. In solo queue the blue side wins 50.5% of the time. Previously I saw that [it varies by league](https://kwtrnka.wordpress.com/2015/08/25/predicting-league-match-outcomes-first-week-of-machine-learning/) but wasn't statistically significant (read: possibly due to randomness). But now I have enough data that the trends are statistically significant!
+Overall the blue side has a small advantage. In solo queue the blue side wins 50.5% of the time. Previously I saw that [it varies by league](/blog/2015/08/predicting-league-match-outcomes-first-week-of-machine-learning/) but wasn't statistically significant (read: possibly due to randomness). But now I have enough data that the trends are statistically significant!
 
 Win rate by tier in solo queue
 ------------------------------
 
-[caption id="attachment\_577" align="aligncenter" width="600"][![Thick line is the win rate. Thin lines show plus or minus one standard deviation. Note that the axis doesn't go to zero.](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-15.png)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-15.png) Thick line is the win rate. Thin lines show plus or minus one standard deviation. Note that the axis doesn't go to zero.[/caption]
+![Thick line is the win rate. Thin lines show plus or minus one standard deviation. Note that the axis doesn't go to zero.](/assets/img/posts/wp/image-15.png)
 For the curious, see note (1) on how the tiers are computed.
 From platinum down to bronze the blue side has a win rate of 50.8% to 51.2% and those stats are roughly within a standard deviation of each other (not significant).
 But then the blue side has a 48.5% win rate in diamond and 47.0% in masters! The change from platinum to diamond is significant and so is the change from diamond to master. The difference between master and challenger could just be randomness; there aren't enough challenger games to tell for sure.
 Maybe breaking it down by division will help find what's going on?
-[caption id="attachment\_578" align="aligncenter" width="600"][![Thick line is the win rate. Thin lines show plus or minus one standard deviation. Note that the axis doesn't go to zero.](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-17.png)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-17.png) Thick line is the win rate. Thin lines show plus or minus one standard deviation. Note that the axis doesn't go to zero.[/caption]
+![Thick line is the win rate. Thin lines show plus or minus one standard deviation. Note that the axis doesn't go to zero.](/assets/img/posts/wp/image-17.png)
 The entirety of the drop happens between platinum I and diamond 3, dropping from 50.4% win rate for blue down to 47.4% win rate. Each of those successive drops is statistically significant.
 Possible explanations:
 
@@ -59,7 +59,7 @@ Win rate by tier in team queue
 
 Last time I analyzed only 44 thousand games and about 14 thousand were team games. There wasn't really enough data to get a clear picture.
 Now the trend for team games is clear.
-[caption id="attachment\_576" align="aligncenter" width="600"][![Win rate by tier team queue](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-14.png)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/09/image-14.png) Thick line is the win rate. Thin lines show plus or minus one standard deviation. Note that the axis doesn't go to zero.[/caption]
+![Thick line is the win rate. Thin lines show plus or minus one standard deviation. Note that the axis doesn't go to zero.](/assets/img/posts/wp/image-14.png)
 The changes from silver to gold, gold to platinum, platinum to diamond, and diamond to master tier are significant. There isn't really enough data for bronze to say and challenger data is so sparse that I didn't show it.
 The closest published stat I could find was 52.8% win rate for blue side in team queue vs 50.9% for solo queue on [League of Graphs](http://www.leagueofgraphs.com/rankings/win-stats) but that doesn't show the effect of higher tiers.
 There are two clear trends: 1) blue side has a bigger advantage in team queue than solo queue and 2) the advantage grows at higher rankings.

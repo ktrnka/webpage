@@ -4,7 +4,7 @@ layout: post
 title: Synonyms for factoid search, Part 3
 date: 2015-06-16
 ---
-In the previous two posts I described 1) [our problem and initial simple approaches](https://kwtrnka.wordpress.com/2015/04/24/synonyms-for-factoid-search-part-1/) and 2) [WordNet-based solutions](https://kwtrnka.wordpress.com/2015/05/15/synonyms-for-factoid-search-part-2/). Now I'm finally writing up our best solutions: gathering a domain-specific corpus and learning word associations.
+In the previous two posts I described 1) [our problem and initial simple approaches](/blog/2015/04/synonyms-for-factoid-search-part-1/) and 2) [WordNet-based solutions](/blog/2015/05/synonyms-for-factoid-search-part-2/). Now I'm finally writing up our best solutions: gathering a domain-specific corpus and learning word associations.
 Quick reminder: The goal is to look up facts related to a car advertisement. But there's a huge problem in that the data only has one or two words per fact and people often use different words when searching. So we need a good source of synonyms or related words for the automotive domain.
 *Note: This post was much longer than I expected :(*
 

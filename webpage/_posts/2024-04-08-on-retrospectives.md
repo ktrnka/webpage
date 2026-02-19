@@ -65,7 +65,7 @@ I like the "what's worked well and what hasn't worked well" framework in retros,
 - Retrium worked well for us because it allowed a smooth process of: Everyone write things to talk about, we group them all, we vote, then discuss the groups in vote order
 - Things that have worked well as the moderator/leader:
 - When I set a theme for the team retro, the team was more engaged.
-- It helped to start the retro meeting with a brief 1–2 minute reminder of the purpose of the retro. In that quick overview, I'd share what we will talk about, what we'll try not to talk about, my role in the meeting, and so on.
+- It helped to start the retro meeting with a brief 1-2 minute reminder of the purpose of the retro. In that quick overview, I'd share what we will talk about, what we'll try not to talk about, my role in the meeting, and so on.
 - I made sure we heard from everyone, and also made sure we all understood any issues in enough depth. Put simply, my role was to get people talking in the right direction and to listen.
 - Talking begets talking, so I tried to make sure everyone speaks at least once. This helped to survey the breadth of different issues.
 - It's important to balance positive and negative sentiment. If it's all negative that can demotivate people. If it's all positive that usually doesn't lead to improvement. "What's going well" or "what's not going well" is a simple framework that ensures we discuss both.
@@ -193,19 +193,19 @@ I did a brief literature review while writing this, and I'm sharing what I've se
 
 From Google SRE:
 
-- [Google SRE — Postmortem Culture: Learning from Failure](https://sre.google/sre-book/postmortem-culture/): I love that they emphasize postmortems as learning.
+- [Google SRE -- Postmortem Culture: Learning from Failure](https://sre.google/sre-book/postmortem-culture/): I love that they emphasize postmortems as learning.
 - [Example Postmortem](https://sre.google/sre-book/example-postmortem/)
-- [Chapter 10 — Postmortem Culture: Learning from Failure, Google SRE Book](https://sre.google/workbook/postmortem-culture/): Great read, including a comparison of two retrospectives (one good, one bad).
+- [Chapter 10 -- Postmortem Culture: Learning from Failure, Google SRE Book](https://sre.google/workbook/postmortem-culture/): Great read, including a comparison of two retrospectives (one good, one bad).
 
 From PagerDuty
 
 - [PagerDuty Incident Response Documentation](https://response.pagerduty.com/): Good links under "after incident"
 - [Three analytical traps in accident investigation](https://www.youtube.com/watch?v=TqaFT-0cY7U): I agree with the point on counterfactual traps though I'm looking for a plain way to phrase it.
-- [Anti-Patterns — PagerDuty Incident Response Documentation](https://response.pagerduty.com/resources/anti_patterns/#getting-everyone-on-the-call): This has an excellent example of a retrospective in public. What we did, what happened, what we changed, and the impact of the change.
-- [Effective Postmortems — PagerDuty Incident Response Documentation](https://response.pagerduty.com/after/effective_post_mortems/): Good quick overview. They're particular about when to use the term "outage" which seems motivated by customer communication. Communication to stakeholders and customers is good to keep in mind, though I prefer statements like "10% of customers have degraded service." It'd be even better to be more specific about the degradation.
-- [Getting Started — PagerDuty Retrospectives Documentation](https://retrospectives.pagerduty.com/getting_started/): I agree that the facilitator should generally not express opinions.
-- [Planning The Retrospective — PagerDuty Retrospectives Documentation](https://retrospectives.pagerduty.com/planning/): I agree on the use of a timer to make sure each topic is covered, and setting the agenda for the first few minutes. I don't like the example agenda though; starting with metrics can anchor the entire conversation too much on what's easy to measure, not necessarily what's most important. Also I prefer to have the "good vibes" be a more key part of the retro itself rather than the ending.
-- [During The Retrospective — PagerDuty Retrospectives Documentation](https://retrospectives.pagerduty.com/during/): I agree with using voting to help prioritize and converge.
+- [Anti-Patterns -- PagerDuty Incident Response Documentation](https://response.pagerduty.com/resources/anti_patterns/#getting-everyone-on-the-call): This has an excellent example of a retrospective in public. What we did, what happened, what we changed, and the impact of the change.
+- [Effective Postmortems -- PagerDuty Incident Response Documentation](https://response.pagerduty.com/after/effective_post_mortems/): Good quick overview. They're particular about when to use the term "outage" which seems motivated by customer communication. Communication to stakeholders and customers is good to keep in mind, though I prefer statements like "10% of customers have degraded service." It'd be even better to be more specific about the degradation.
+- [Getting Started -- PagerDuty Retrospectives Documentation](https://retrospectives.pagerduty.com/getting_started/): I agree that the facilitator should generally not express opinions.
+- [Planning The Retrospective -- PagerDuty Retrospectives Documentation](https://retrospectives.pagerduty.com/planning/): I agree on the use of a timer to make sure each topic is covered, and setting the agenda for the first few minutes. I don't like the example agenda though; starting with metrics can anchor the entire conversation too much on what's easy to measure, not necessarily what's most important. Also I prefer to have the "good vibes" be a more key part of the retro itself rather than the ending.
+- [During The Retrospective -- PagerDuty Retrospectives Documentation](https://retrospectives.pagerduty.com/during/): I agree with using voting to help prioritize and converge.
 
 [Debriefing Facilitation Guide](https://extfiles.etsy.com/DebriefingFacilitationGuide.pdf) (Etsy): This is a great read. Highlights:
 
@@ -217,7 +217,7 @@ Others
 
 - [Incident 151 \| Heroku Status](https://status.heroku.com/incidents/151): They're clear about the severity of the outage and provide examples to understand it. I especially like the "Our Response" section and their three major lessons under Remediation.
 - [Blame. Language. Sharing. \| Fractional by Lindsay Holmwood](https://fractio.nl/2015/10/30/blame-language-sharing/): The section on hindsight bias is useful, especially for junior engineers. I especially like running premortems with the predictions written down, then checking the predictions later so that we can learn to anticipate the future better.
-- [Kitchen Soap — The Infinite Hows (or, the Dangers Of The Five Whys)](https://www.kitchensoap.com/2014/11/14/the-infinite-hows-or-the-dangers-of-the-five-whys/): I agree that multiple factors always contribute to a problem, though I didn't interpret "The Five Whys" in the way they did.
+- [Kitchen Soap -- The Infinite Hows (or, the Dangers Of The Five Whys)](https://www.kitchensoap.com/2014/11/14/the-infinite-hows-or-the-dangers-of-the-five-whys/): I agree that multiple factors always contribute to a problem, though I didn't interpret "The Five Whys" in the way they did.
 - [STELLA report](https://snafucatchers.github.io/): Great quote: "Postmortems are not magic. They can be done well. They can also be done badly" YES
 - [How to run an effective retrospective](https://www.notonlycode.org/effective-retrospective/): I love this one, and I might not have written my post if it had been longer.
 - [Improving Postmortem Practices with Veteran Google SRE, Steve McGhee](https://www.blameless.com/blog/improve-postmortem-with-sre-steve-mcghee): Lots of great content here. The commentary on including names is unique and valuable.

@@ -4,13 +4,13 @@ layout: post
 title: Synonyms for factoid search, Part 2
 date: 2015-05-15
 ---
-*The [previous post](https://kwtrnka.wordpress.com/2015/04/24/synonyms-for-factoid-search-part-1/) described the problem and attempted to find synonyms for Elastic Search using a thesaurus, Wikipedia redirect groups, and Bing's related searches.*
+*The [previous post](/blog/2015/04/synonyms-for-factoid-search-part-1/) described the problem and attempted to find synonyms for Elastic Search using a thesaurus, Wikipedia redirect groups, and Bing's related searches.*
 
 Problem recap
 =============
 
 We were adding a search box to ads to look up quick facts, initially focused on car ads. The big issue is that queries such as "ac" or "a/c" need to match a Json object containing only "air conditioner". Searches like "cost" need to match "MSRP" or at least "price".
-[![Toyota Prius Ad with Search Box](https://kwtrnka.wordpress.com/wp-content/uploads/2015/04/prius-ad.png?w=206)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/04/prius-ad.png)
+![Toyota Prius Ad with Search Box](/assets/img/posts/wp/prius-ad.png)
 
 Synonyms from WordNet
 =====================

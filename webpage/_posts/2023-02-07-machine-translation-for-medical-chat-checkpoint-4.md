@@ -94,7 +94,7 @@ I also tried to get it to work with the HuggingFace MarianMTModel models but it 
 
 At this point, I wasn't sure if what I wanted was possible but also it seems like the sort of thing that a researcher might publish. So I did some searching and read a few of the results so far.
 
-**Koehn, P., & Knowles, R. (2017). *Six Challenges for Neural Machine Translation*. 28–39.** [**https://doi.org/10.48550/arxiv.1706.03872**](https://doi.org/10.48550/arxiv.1706.03872)
+**Koehn, P., & Knowles, R. (2017). *Six Challenges for Neural Machine Translation*. 28-39.** [**https://doi.org/10.48550/arxiv.1706.03872**](https://doi.org/10.48550/arxiv.1706.03872)
 
 On page 1 we have a key quote:
 
@@ -124,9 +124,9 @@ Unfortunately, most of their examples are with an LSTM and a simple attention me
 
 This paper gave me a great example of what I'd like to build but didn't show how to use Transformer attention weights.
 
-I also want to note that I've only discussed a piece of the paper — it's a larger system to help professional translators and I enjoyed reading it.
+I also want to note that I've only discussed a piece of the paper -- it's a larger system to help professional translators and I enjoyed reading it.
 
-**Bibal, A., Cardon, R., Alfter, D., Wilkens, R., Wang, X., François, T., & Watrin, P. (2022). Is Attention Explanation? An Introduction to the Debate. *ACL*, *1*, 3889–3900.** [**https://doi.org/10.18653/V1/2022.ACL-LONG.269**](https://doi.org/10.18653/V1/2022.ACL-LONG.269)
+**Bibal, A., Cardon, R., Alfter, D., Wilkens, R., Wang, X., François, T., & Watrin, P. (2022). Is Attention Explanation? An Introduction to the Debate. *ACL*, *1*, 3889-3900.** [**https://doi.org/10.18653/V1/2022.ACL-LONG.269**](https://doi.org/10.18653/V1/2022.ACL-LONG.269)
 
 This is another great read!
 

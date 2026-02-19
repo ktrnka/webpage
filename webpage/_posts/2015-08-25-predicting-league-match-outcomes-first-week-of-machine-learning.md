@@ -7,7 +7,7 @@ date: 2015-08-25
 *Edit 8/26: I meant to include learning curves but forgot. Added initial learning curve and final learning curve.*
 Just a reminder, my goal is to predict the winner of a League of Legends ranked 5x5 game based on the pick/ban phase, including any player stats. This is an intermediate goal towards predicting the outcome of professional matches.
 Before you read much further, decide on your own hypotheses: How accurate is good? How accurate is bad? Is 100% achievable? What would it mean? (Look back after reading more to assess your predictions.)
-In the [previous post](https://kwtrnka.wordpress.com/2015/08/24/predicting-league-match-outcomes-gathering-data/) I described my infrastructure for building a database of players and matches from the Riot API. This one will describe the process of machine learning including the horrible failures.
+In the [previous post](/blog/2015/08/predicting-league-match-outcomes-gathering-data/) I described my infrastructure for building a database of players and matches from the Riot API. This one will describe the process of machine learning including the horrible failures.
 
 Data and evaluation
 ===================
@@ -21,10 +21,10 @@ Problem setup
 
 Two-class classification is straightforward: the output is a simple yes or no. To convert this problem, I'm predicting whether the blue side will win.
 The following is a graph of experiments from August 18-24. The left side is the oldest experiment and right side is the most recent.
-[![Accuracy over time](https://kwtrnka.wordpress.com/wp-content/uploads/2015/08/league_match_prediction_graph1.png)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/08/league_match_prediction_graph1.png)
+![Accuracy over time](/assets/img/posts/wp/league_match_prediction_graph1.png)
 There was a terrible mistake in the middle and I wanted to hide it for the purpose of graphing, but I think it's important not to hide mistakes so that we can learn. Aside from that middle part there's a rough upward trend. I started off around 51-55% accuracy and now I'm achieving 61-64% accuracy.
 I'll discuss these four phases separately:
-[![Accuracy over time in 4 regions](https://kwtrnka.wordpress.com/wp-content/uploads/2015/08/league_match_prediction_graph_annotations.png)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/08/league_match_prediction_graph_annotations.png)
+![Accuracy over time in 4 regions](/assets/img/posts/wp/league_match_prediction_graph_annotations.png)
 
 Phase 1: Basics
 ===============
@@ -50,14 +50,14 @@ But even then, given a game how do I decide whether it's diamond level or gold 
 2. You can look up the current league/tier each player is in. But you can't look up the tier they were at the time they played a game in their match history.
 
 #2 is probably more accurate but adds a ton more server lookups so I'm using their highest previously achieved tier as each player's current level. Given each individual's ranking I combine them by taking the most common one. Sometimes that may mean the most common is unranked though. (1)
-[caption id="attachment\_546" align="aligncenter" width="300"][![Games by most common highest achieved season tier](https://kwtrnka.wordpress.com/wp-content/uploads/2015/08/games_by_tier.png?w=300)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/08/games_by_tier.png) Games crawled by most common highest achieved season tier[/caption]
+![Games crawled by most common highest achieved season tier](/assets/img/posts/wp/games_by_tier.png)
 Even though I started the crawl with current challenger and master players most of what I get are former diamond and platinum players and a ton of formerly unranked players.
 How does it break down by solo queue and team queue? I prioritize team games higher when crawling but solo queue is more popular.
 Solo queue: ~30,000 games
 Team queue: ~14,000 games
 So I have a good number of team games to hopefully learn different trends.
 Looking at the blue side advantage by queue and tier:
-[![Blue side win rate by tier and queue](https://kwtrnka.wordpress.com/wp-content/uploads/2015/08/win_rate_tier_queue_fixed.png)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/08/win_rate_tier_queue_fixed.png)
+![Blue side win rate by tier and queue](/assets/img/posts/wp/win_rate_tier_queue_fixed.png)
 I have zero master team games so that data point is missing. In solo queue there's an interesting trend where the blue side has more advantage at lower ranks and red side has advantage at higher ranks. In team queue the blue side is even or favored to win at all ranks.
 I tested statistical significance between a few pairs like solo queue silver vs platinum but the difference wasn't significant. In other words, it's possible that the difference between any two pairs is just due to random chance. There's clearly something fishy and it's possible that more data would reveal a difference that can't be attributed to chance. Or it's possible that there's a better statistical test for this situation which is sort of a mixture of rank correlation with binomial distributions.
 
@@ -95,7 +95,7 @@ I started with three classifiers:
 My first 6 experiments were just variations on these three with some hyperparameter tuning, like the number of trees for random forests, min\_samples\_split for random forests, or the regularization constant for logistic regression. My conclusion from this was that gradient boosting wasn't helpful when random forests had the same number of trees and that logistic regression was comparable but much faster to train than both. Logistic regression with L2 regularization was better than L1. From then on out I stopped using gradient boosting and stopped trying L1 regularization in logistic regression.
 I converted the highestSeasonAchievedTier to numbers like challenger=1, master=2, diamond=3, ... and took an actual average. At first I accidentally did integer division rather than floating point but when I used floating point division I found the results were slightly worse. Probably it's because it's allowing the classifiers to try and do comparisons that are too sparse.
 I generated a learning curve with random forests to check whether I'm overfitting or underfitting.
-[caption id="attachment\_551" align="aligncenter" width="300"][![Learning curve for initial experiment.](https://kwtrnka.wordpress.com/wp-content/uploads/2015/08/learning_curve_orig_no_reg.png?w=300)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/08/learning_curve_orig_no_reg.png) Learning curve for random forest classifier with 10 trees. Regularization params disabled.[/caption]
+![Learning curve for random forest classifier with 10 trees. Regularization params disabled.](/assets/img/posts/wp/learning_curve_orig_no_reg.png)
 It's the worst of both worlds! The gap between training and testing is enormous (overfitting). It's a little better if we set min\_samples\_split but still flat. So even regularization methods don't help. At the time I felt that we were also underfitting because additional data doesn't help but I was wrong - it's fitting the training data almost perfectly.
 In a moment of desperation I tried enriching the feature space on the mistaken assumption that I also had underfitting. I felt that it's silly to just check if Annie is on blue side. Annie could be played mid or support or honestly some people probably play top/jungle/adc Annie (and probably would have lower winrates doing so). But unfortunately I'd removed the timeline data which indicates the lane each player is in to save space. Instead I tried just doing fields like Blue.Player1.IsAnnie, Blue.Player1.IsAhri, etc. At this point I also included the summoner spells - it's useful to know whether a support player selects ignite or exhaust for instance. So I had more columns like Blue.Player1.HasExhaust and so on. Instead of the 272 champion indicator features this is 1,260 champion features and 220 summoner spell features.
 This was much worse! The summoner spells generally were used in the classifiers but the model was overfitting.
@@ -164,7 +164,7 @@ otherwise
 
 Encoding some win rates this way got me up to 64%.
 Here's the learning curve now:
-[caption id="attachment\_553" align="aligncenter" width="300"][![Learning curve showing the impact of more data.](https://kwtrnka.wordpress.com/wp-content/uploads/2015/08/learning_curve_08_26.png?w=300)](https://kwtrnka.wordpress.com/wp-content/uploads/2015/08/learning_curve_08_26.png) Learning curve showing the impact of more data. Regularization disabled. Ran this with 100 trees.[/caption]
+![Learning curve showing the impact of more data. Regularization disabled. Ran this with 100 trees.](/assets/img/posts/wp/learning_curve_08_26.png)
 It's still overfitting but we're improving with more data. Removing or simplifying features is more likely to help. Filling in better default values is likely to help. Getting more data will help too.
 
 Conclusions

@@ -4,7 +4,7 @@ layout: post
 title: google books ngram viewer (part 2)
 date: 2010-12-20
 ---
-Last week, I [covered](http://kwtrnka.wordpress.com/2010/12/16/google-books-ngram-viewer/ "google books ngram viewer") the release of the [Google Books NGram Viewer](http://ngrams.googlelabs.com/) .  Google's handy tool has received a lot of attention since then, which I'll attempt to summarize and I'll add some more information.
+Last week, I [covered](/blog/2010/12/google-books-ngram-viewer/ "google books ngram viewer") the release of the [Google Books NGram Viewer](http://ngrams.googlelabs.com/) .  Google's handy tool has received a lot of attention since then, which I'll attempt to summarize and I'll add some more information.
 
 [Science](http://www.sciencemag.org/content/early/2010/12/15/science.1199644)
 -----------------------------------------------------------------------------
@@ -12,7 +12,7 @@ Last week, I [covered](http://kwtrnka.wordpress.com/2010/12/16/google-books-ngra
 The original article is available online through *Science*.  It's free with registration and the article isn't very long.  It focuses on showing cultural trends with this data and pushes the term *culturomics*.  I'll try to summarize most of the points.
 For starters, they provide information on the collection of texts surveyed.  The Google Books project has digitized about 15 million books, and they picked about 5 million of them based on [OCR](http://en.wikipedia.org/wiki/Optical_character_recognition "Optical character recognition") quality and metadata. They note that periodicals were excluded, but I didn't even know those were a part of Google Books.  In any case, the 5 million books contain about 500 billion words, 361 billion of which are English.  In contrast, [Google popular 5-gram model](http://www.ldc.upenn.edu/Catalog/CatalogEntry.jsp?catalogId=LDC2006T13) was built using 1 trillion words of web data (which is considerably easier to obtain).  The 5 million books used for the project comprise about 4% of all books ever printed.
 The ngram models can be used for a variety of studies, but one of the ones I found interesting was comparing "the Great War" to "World War I", which I reproduced using the web tool:
-[caption id="attachment\_214" align="aligncenter" width="460" caption="Great War vs World War I"][![Great War vs World War I](http://kwtrnka.wordpress.com/wp-content/uploads/2010/12/ww1.png "World War 1")](http://kwtrnka.wordpress.com/wp-content/uploads/2010/12/ww1.png)[/caption]
+![Great War vs World War I](/assets/img/posts/wp/ww1.png)
 Unfortunately, this highlights one of the problems with Google's tool --- we would really like to compare "Great War" to "World War I" (uppercase i) OR "World War 1" (number 1) OR "First World War".  As far as I can tell, that isn't possible in the current system.
 They move on to discuss the size of the general English vocabulary or lexicon.  However, non-words clog up the results somewhat (numbers, misspellings, etc).  Although numbers can be filtered automatically, misspellings can't.  Therefore they filtered a random sample.  They found that vocabulary nearly doubled from 1950 to 2000.
 The authors compare their analysis of English vocabulary with dictionaries and in general conclude that dictionaries accurately survey common words, but struggle with some infrequent words.  In the end, they suggest that their analysis can be used by lexicographers to better find low-frequency words missing in the dictionaries and to better keep up with new words.
@@ -47,8 +47,8 @@ They conclude that the correlation of keyword frequency with real-world events 
 
 Wired covers the story from the perspective of our ever-changing culture and includes some discussion of the *Science* article that accompanied the release.  Compared to other coverage, they include several graphs from the original article --- burnt/burned in American/British English, popularity of several scientists over time, and popularity of several foods.
 The graphs of burnt/burned in American vs British English are reproduced below.  In American English, *burned* becomes more common around 1855.  In contrast, British English prefers *burnt* until about the 1980-1995 range, when *burned* finally becomes more common.
-[caption id="attachment\_212" align="aligncenter" width="460" caption="American English"][![burnt vs burned in American English](http://kwtrnka.wordpress.com/wp-content/uploads/2010/12/burnt-american.png "burnt vs burned in American English")](http://kwtrnka.wordpress.com/wp-content/uploads/2010/12/burnt-american.png)[/caption]
-[caption id="attachment\_213" align="aligncenter" width="460" caption="British English"][![burnt vs burned for British English](http://kwtrnka.wordpress.com/wp-content/uploads/2010/12/burnt-british.png "burnt vs burned for British English")](http://kwtrnka.wordpress.com/wp-content/uploads/2010/12/burnt-british.png)[/caption]
+![American English](/assets/img/posts/wp/burnt-american.png)
+![British English](/assets/img/posts/wp/burnt-british.png)
  
 Fortunately, they present it with a grain of salt --- although Google Books and the ngram viewer allow for excellent historical analysis, research using this resource is non-trivial.  Book writing is a skewed sample of language, and may not include useful data on certain topics, such as obscenity.
 
