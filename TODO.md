@@ -48,6 +48,7 @@ Branch: `import/keith-trnka-com`
 ## Backlog 📋
 - Blog
     - Add paper/reference links to academic blog posts (MT series, etc.) — many papers are cited by name but not linked; find DOIs or Google Scholar links so readers can follow the research
+    - Cross-post project navigation: Several blog series span many posts (LoL/ML prediction series, Searchify/synonyms series, MTurk series, Over 9000 series). Research a good way to surface this — options include Jekyll `categories:` or `tags:`, a naming convention in titles, a dedicated "series" collection, or a handcrafted index page per project. Goal: readers landing on one post in a series can easily find the others.
     - Remove smart quotes from all converted blog posts (create script to automate)
     - Begin converting old Medium articles to the new form (waiting on export)
     - Begin converting old WordPress articles to the new form
