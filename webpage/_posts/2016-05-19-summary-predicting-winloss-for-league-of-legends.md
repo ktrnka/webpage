@@ -7,7 +7,7 @@ published: false
 
 <!-- KT TODO: This post was never finished. Contains placeholder text (`<description of champion selection>`, `<link to monte or saint>`, `<insert diagram>`, incomplete sentence). Review and complete or significantly trim before publishing. 
 
-Looking online, I never published it! This might be something worth putting in a drafts folder then cleaning up so that we can publish it
+Looking online, I never published it! I set published to false to block it out
 -->
 
 Periodically I find that I need a quick project summary but I only have a long series of work-in-progress posts.
