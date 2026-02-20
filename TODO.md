@@ -25,10 +25,10 @@ Dead/hijacked links:
 - [ ] Write a post about moving from Medium → self-hosted Jekyll
 
 ## Content 📝
-- [ ] Make a folder for guides, move hiking and detrashing tips there
-- [ ] Bring the Kodable tips over
-- [ ] Consider updating or removing "Why have a webpage?" section
-- [ ] Seattle outdoor volunteering calendar: link from site
+- [X] Make a folder for guides, move hiking and detrashing tips there
+- [X] Bring the Kodable tips over
+- [X] Consider updating or removing "Why have a webpage?" section
+- [X] Seattle outdoor volunteering calendar: link from site
 
 ## Tech debt 🔩
 - [ ] Reduce code duplication between index layout and default page layouts
