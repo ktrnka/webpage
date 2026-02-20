@@ -3,7 +3,9 @@ layout: post
 title: latex tips and tricks
 date: 2010-11-11
 ---
+
 LaTeX takes some getting used to, but now that I'm used to it I (usually) love it.  Part of the initial difficulty lies in understanding the syntax and how it affects typesetting, which I won't discuss in this post.  Some of that is better now in our department - they cover LaTeX somewhat in the new grad SIG.  Instead, I'll focus on software issues.  For example, when I started off, I was typing my documents in a text editor and using a makefile to latex/bibtex commands.  I don't even know if it had syntax highlighting.
+
 The best LaTeX editor I could find is [TeXShop](http://pages.uoregon.edu/koch/texshop/) (OS X only).  The interface is intuitive and simplifies many tasks.  Command-T will pass your document through latex and display the output in another window.  Ah, so simple.  There are a number of things that helped me work more efficiently with TeXShop and I'll just use a list for that:
 
 * pdflatex - except in special cases, I suggest always using pdflatex rather than the old style of latex producing a dvi file which is then later rendered to postscript or pdf.  It's faster and nicer.

@@ -48,7 +48,7 @@ Branch: `import/keith-trnka-com`
 ## Backlog 📋
 - Blog — bugs found in local preview
     - ~~**Broken images in WP posts**~~ ✅ Fixed: converted all 24 affected WP posts to use `{{ "/assets/img/posts/wp/..." | relative_url }}` Liquid filter
-    - **Missing paragraph breaks in old WP posts**: Many older imported posts lost their blank lines between paragraphs during the WordPress XML extraction, making them a wall of text. Needs investigation: spot-check a few WP-era posts (e.g., 2010–2012 range) against the original WordPress blog at https://kwtrnka.wordpress.com/ to identify the scope, then add blank lines back.
+    - ~~**Missing paragraph breaks in old WP posts**~~ ✅ Fixed: inserted blank lines between adjacent paragraph lines across all 73 WP-era posts (2010–2016) using a Python script that preserves front matter, code blocks, setext headings, and tight lists
 - Blog
     - Add paper/reference links to academic blog posts (MT series, etc.) — many papers are cited by name but not linked; find DOIs or Google Scholar links so readers can follow the research
     - Cross-post project navigation: Several blog series span many posts (LoL/ML prediction series, Searchify/synonyms series, MTurk series, Over 9000 series). Research a good way to surface this — options include Jekyll `categories:` or `tags:`, a naming convention in titles, a dedicated "series" collection, or a handcrafted index page per project. Goal: readers landing on one post in a series can easily find the others.

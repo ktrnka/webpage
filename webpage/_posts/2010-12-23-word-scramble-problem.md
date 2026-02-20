@@ -3,8 +3,11 @@ layout: post
 title: word scramble problem
 date: 2010-12-23
 ---
+
 *Sorry for the delay in posting something --- I'll be more active again once I get over this cold.  Here's something from my Drafts folder in the meantime.*
+
 The word scramble problem seems to crop up every few years or something.  [Brain Oddities](http://www.ritholtz.com/blog/2010/12/brain-oddities-irrelevant-spelling/) has the recent version. We took a look at the problem in our NLP class in 2003, and I [wrote a program](http://www.cis.udel.edu/~trnka/past_coursework/word_scramble.html) that worked for basically any word it's seen in training.  It doesn't even use a complicated model or anything.  And the number of words encountered in training is much less than the vocabulary of a normal adult.
+
 Some comments on the newest take:
 
 * The text is a little offensive... I don't think it has much of anything to do with general intelligence.  I wouldn't say someone's smart for being able to read it, or unintelligent for not being able to read it.

@@ -3,6 +3,7 @@ layout: post
 title: what a phd means...
 date: 2010-12-11
 ---
+
 I thought it might be interesting to make a (semi-funny) bulleted list about what a Ph.D. is.
 
 * doctor of grading

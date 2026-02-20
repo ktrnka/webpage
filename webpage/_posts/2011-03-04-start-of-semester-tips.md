@@ -3,6 +3,7 @@ layout: post
 title: start of semester tips
 date: 2011-03-04
 ---
+
 If you've never taught before or are getting used to it again:
 
 * Buy new socks.

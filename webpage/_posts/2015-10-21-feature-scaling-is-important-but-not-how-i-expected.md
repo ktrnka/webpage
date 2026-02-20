@@ -3,10 +3,15 @@ layout: post
 title: Feature scaling is important, but not how I expected
 date: 2015-10-21
 ---
+
 Currently I'm getting up to speed with the [Keras](http://keras.io/) library for neural networks. After about a day and a half of effort I have a neural network that's tied with my best results ever for predicting the winner of League of Legends matches.
+
 Keras doesn't provide exactly the same methods as a [scikit-learn](http://scikit-learn.org/stable/) model so I have to write some code to fit it into the cross validation and hyperparameter tuning frameworks. Then I'll have an apples-to-apples comparison.
+
 I learned that feature scaling is critically important for Keras models. Some models won't even improve beyond random predictions without it! I knew that feature scaling was good for speeding up convergence but didn't think modern optimizers would suffer total failure without it.
+
 If you aren't familiar with [feature scaling](https://en.wikipedia.org/wiki/Feature_scaling), it's just making sure that all your features have a similar range of values. The scaling I'm using subtracts the average value and divides by standard deviation so most values will fall in the -1 to 1 range after scaling (called standardization or a z-score). It's also possible to scale each feature so that the minimum is 0 and maximum is 1.
+
 Feature scaling is important for machine learning models that use some form of gradient descent, like logistic regression and neural networks. In previous experiments I'd tried logistic regression with and without scaling and it had only minor impact though. However, I only ran those tests *after* finding a reasonable range of regularization constants to tune. Unfortunately I learned that hard way that the optimal regularization constant is radically different for scaled vs. unscaled data (1).
 
 What I learned today
@@ -45,13 +50,16 @@ Note that GridSearchCV and LogisticRegressionCV are the same speed with libline
 * liblinear GridSearchCV without feature scaling: **33.0 minutes** [what I've been using for weeks :( ]
 
 **After these optimizations it's 27.5x faster.**
+
 I didn't even try tests with 1.8 million samples. From memory that took about 3 hours for liblinear GridSearchCV without feature scaling and tuning 5 C values instead of 10. If the same speedup holds it should train in about 6.5 minutes.
+
 I also checked the accuracy at the optimal C value for both. The fastest run found an optimum of 66.37% accuracy. The slowest (no feature scaling) found an optimum of 66.26% accuracy. So it's not that lbfgs is cutting corners here; we're actually gaining accuracy due to better optimization of C value with feature scaling.
 
 Why does this matter?
 =====================
 
 When I'm trying out a new feature I don't know if it's useful or not. So I test it at 50k samples. But sometimes the feature isn't reliable in a small data set. I may find that it fluctuates the accuracy by 0.01 at 50k samples but gives a 0.2 gain at 2 million. Big improvements are clear even at 50k though; this is mostly helping me to quickly make decisions about small changes.
+
 It really matters because speed of iteration is life. What I mean is being able to test ideas quickly.
 
 Notes

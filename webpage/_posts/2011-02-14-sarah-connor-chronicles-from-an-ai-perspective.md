@@ -3,11 +3,17 @@ layout: post
 title: Sarah Connor Chronicles from an AI Perspective
 date: 2011-02-14
 ---
+
 A bit of departure from my usual, but I thought it'd be interesting to review Terminator:  Sarah Connor Chronicles from the perspective of an AI researcher. I'll go through the first season in this post and the second season at another time.
+
 That said, artificial intelligence is a large field. My focus is natural language processing and (to a lesser extent) machine learning, though I also have experience with multi-agent systems and searching.
+
 There's a very clear separation between perception and reality of AI. Popular perception is that we're trying to imitate humans and build machines that can perform general-purpose reasoning and learning. General-purpose reasoning is generally avoided because of the need for a large knowledge base. In contrast, most AI courses focus on searching (even in reasoning problems). If a problem is too difficult or dynamic for a normal computer program, we represent it as an exploratory process and try to find the best sequence of actions possible.
+
 I'll format this as relatively chronological notes for each episode and I'll try to limit my comments to CS/AI/HCI.
+
 Background
+
 If you didn't watch the series but wanted to follow along, here's the short version of the background.
 
 * Sarah Connor - human survivor of numerous attacks by terminators attempting to prevent John Connor (her son) from living and/or becoming humanity's leader in the future.
@@ -121,5 +127,7 @@ summary
 =======
 
 The major offense is the idea that a chess-playing computer is designed for general-purpose reasoning and control. There are discrepancies with artificial intelligence and computer science in general, but they aren't too different than the movie/tv kayfabe of other fields.
+
 For more information on chess-playing computers, I suggest *Artificial Intelligence:  A Modern Approach* by Russell and Norvig, Chapter 5. The end of the chapter has an excellent historical account of chess playing.
+
 On a side note, I thought it was an excellent series. I'll take notes on season 2 when I find more time.

@@ -3,8 +3,11 @@ layout: post
 title: Synonyms for factoid search, Part 3
 date: 2015-06-16
 ---
+
 In the previous two posts I described 1) [our problem and initial simple approaches](/blog/2015/04/synonyms-for-factoid-search-part-1/) and 2) [WordNet-based solutions](/blog/2015/05/synonyms-for-factoid-search-part-2/). Now I'm finally writing up our best solutions: gathering a domain-specific corpus and learning word associations.
+
 Quick reminder: The goal is to look up facts related to a car advertisement. But there's a huge problem in that the data only has one or two words per fact and people often use different words when searching. So we need a good source of synonyms or related words for the automotive domain.
+
 *Note: This post was much longer than I expected :(*
 
 Problems with previous approaches
@@ -16,16 +19,27 @@ Scraping a domain-specific corpus
 =================================
 
 Goals:
+
 1) Automated
+
 2) Scale to other domains
+
 The second goal is tricky: I wanted something that would work when we're dealing with ads for phones, drugs, homes, credit cards, etc.
+
 There's a subreddit for almost anything. A quick search for auto subreddits shows /r/cars, /r/Autos, /r/MechanicAdvice, /r/Cartalk, and tons of manufacturer-specific subreddits.
+
 So I wrote a reddit scraper using a Python module named [scrapy](http://doc.scrapy.org/en/latest/index.html). The setup was a bit involved:
+
 1) Get scrapy installed. On Windows use [Anaconda](https://store.continuum.io/cshop/anaconda/) to make this easier
+
 2) Run scrapy command to create a default project
+
 3) Make classes for the items you want to scrape
+
 4) Write a spider with starting URLs, rules to extract URLs that you want to follow next, rules to filter URLs to follow, and rules to extract the actual items from the pages
+
 5) Add a pipeline to clean up the items (strip any leftover html, clean up whitespace, etc)
+
 Generally you can follow the [tutorial](http://doc.scrapy.org/en/latest/intro/tutorial.html). Tips:
 
 * Use [scrapy XPath selectors](http://doc.scrapy.org/en/latest/topics/selectors.html) to pick the parts of the HTML you want to process. When possible prefer to extract content based on CSS classes and ids. Figure out the XPath you need by right-clicking in Chrome and doing "Inspect element"
@@ -93,15 +107,20 @@ Synonyms from latent semantic analysis
 ======================================
 
 A common solution for finding synonyms came from information retrieval research in the 90's. The rough approach is to build a giant matrix of word counts per document, apply singular value decomposition, then drop the least important dimensions.
+
 Using the resulting decomposition in information retrieval is called [latent semantic indexing](https://en.wikipedia.org/wiki/Latent_semantic_indexing). Usually when it's applied to synonyms it's called [latent semantic analysis](https://en.wikipedia.org/wiki/Latent_semantic_analysis). And more broadly it's a machine learning technique called [principal components analysis](https://en.wikipedia.org/wiki/Principal_component_analysis).
+
 The result is that you get three matrices: mapping of terms to semantic dimensions with weights, weights for the dimensions, and a matrix mapping documents to semantic dimensions. For synonyms you can use the term-to-semantic-dimension matrix to compute semantic similarity. (1)
+
 Previously I tended to stay away from LSI/LSA because they use compiled tools with little documentation. But we found a great Python module called [gensim](https://radimrehurek.com/gensim/), which provides a nice wrapper around LSI/LSA as well as related approaches like LDA and word2vec.
+
 There are a couple really nice things about using LSA:
 
 1. No word sense disambiguation (2)
 2. Continuous similarity scores between terms, can set a threshold to tune precision vs recall
 
 We treated each Reddit thread as a document because the comments were too short to learn useful cooccurrences.
+
 To look up synonyms I make one "document" for each word in the vocabulary. Then I used gensim's LsiModel and MatrixSimilarity to "search" for the most related terms for any input.
 
 Examples
@@ -144,14 +163,18 @@ Side track: Issues in the overall system
 ----------------------------------------
 
 Unlike web search, sometimes in factoid search it's best to return no results. For example we had an issue where a query for "sunroof" would return the info for "technology package". This happened because there was no information at all for sunroof, certainly no "sunroof": false in the data and happened because "sunroof" and "package" were often mentioned together in the corpus. We didn't have a good solution for this except to set the synonyms threshold to be more restrictive.
+
 This would've been a good area for further work had Searchify continued.
 
 Alternate approach: Pseudo-relevance feedback
 =============================================
 
 The relevance feedback is another technique from information retrieval. Imagine a thumbs up/down button on each search result. If you did that, then the system can redo the search to prefer good documents and penalize bad documents. Some of the background is in the [Rocchio algorithm](https://en.wikipedia.org/wiki/Rocchio_algorithm).
+
 An interesting tweak is pseudo-relevance. The system assumes that documents with good scores are mostly good and documents with bad scores are mostly bad. Then it finds words that occur more in good documents than bad, adds them to the query, and redoes the search.
+
 It can also generate lists of related terms. We'd search our set of documents for a term, say "color" and assume the top 20 documents are relevant. And assume all other documents are irrelevant to "color". Then we compute the probability of each word in those two sets and take the difference in probabilities.
+
 What we get are scores like "paint" is 0.005 more probable in documents related to "color". Some old debug output:
 
 ```
@@ -198,8 +221,11 @@ Side track: Using multiword queries
 -----------------------------------
 
 When looking up synonyms for "sun roof" we could use a bigram-aware IR engine for pseudo-relevance feedback. This would prefer documents that have "sun roof" rather than "sun" and "roof" in different parts of the document.
+
 This improved synonyms for phrases but unfortunately there wasn't a way to use it in ElasticSearch synonyms. We could've used it in the overall system by running an ElasticSearch query against the web crawl data first and then expanding the original query before sending to the fact database. However, this would add an additional search to the latency of the system. (May have been quick enough but we didn't get to look into it.)
+
 How I'd improve more
+
 We stopped working on Searchify a while back but I thought it'd be nice to lay out what I saw as the path forwards in generating synonyms for ElasticSearch.
 
 * Make a gold-standard evaluation of the synonym component. Get human annotated data from tasks on Mechanical Turk. Something like "Which of these words is most related to X when talking about cars?"
@@ -216,4 +242,5 @@ Notes
 =====
 
 (1) Calling it semantic similarity is a bit misleading. You're computing something more like "How often do these terms appear in documents with the same words?"
+
 (2) For us this is helpful but it can be bad if you need to differentiate between different senses of a word. It's a common problem with co-occurrence methods.

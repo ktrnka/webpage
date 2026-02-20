@@ -3,6 +3,7 @@ layout: post
 title: long-running processes
 date: 2010-10-24
 ---
+
 Some of my simulations take a while to run, so I have a couple of servers that I ssh into and run them on.  But there are a host of little things I didn't know about at first:
 
 * Running something in the background (*&*) still has a problem - the new process is tied to the shell's process.  So if you log out or your computer goes to sleep, the ssh connection is broken, which kills the shell and in turn the stuff you were running. However, you can address this problem with the *nohup* command, like so: "nohup perl blah.pl &".

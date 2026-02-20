@@ -3,7 +3,9 @@ layout: post
 title: ambitions
 date: 2011-02-28
 ---
+
 I was re-reading *The Bourne Supremacy* recently and this quote struck me:
+
 > ambitions are all incompatible (fact-check)
 
 That's what this semester feels like to me.  Here are the ambitions in conflict with one another:

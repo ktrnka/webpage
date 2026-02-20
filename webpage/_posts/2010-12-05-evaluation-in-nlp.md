@@ -3,21 +3,33 @@ layout: post
 title: evaluation in NLP
 date: 2010-12-05
 ---
+
 Let me first state my basic perspective:
 
 Evaluation is the concrete specification of your research goals.
 
 Modern research in natural language processing is evaluation heavy.  The research process can be thought of as an optimization designed to maximize whichever evaluation metric you pick.  Due to the critical role of evaluation, it's important to critically analyse your evaluation methods in the context of your research goals. Is your goal to benefit end-users of your proposed system?  Or is it more important to be published with good results?  Depending on your priorities, your choice of texts and metrics may change.  (And which algorithms you pursue may also change.)
+
 Also, I should say that prior work completely shapes your freedom here.  If everyone uses one standard corpus and one or two standard evaluation metrics, then you're stuck with that (at least initially).  If a different evaluation metric or text makes something more clear, then you can add that on top.  For example, in language modeling you might consider separately evaluating on known and unknown (OOV) words.  But to stay related to the field, you also need a combined evaluation.
+
 I'm an advocate of creating any reasonable evaluation approach that gives you a more complete picture of what's going on.  The split evaluation in the previous paragraph was one such evaluation - different kinds of cache models have different effects for known vs unknown words, so split evaluation helps me understand where the benefits are coming from.
+
 Problems can occur when the evaluation methods don't match the research goals.  One of the most famous examples in my mind is an old summarization competition.  One task was about generating titles.  The winning solution ended up being something very basic, such as picking out keywords and squashing them together.  To score better, they removed words that didn't carry much (if any) content, like function words and boring modifiers.  They won the competition, even though their titles weren't grammatical or natural at all.
+
 At this point in the story, many people will say "well, they cheated".  But that perspective is a deviation from the evaluation mindset.  If someone cheated, you should be able to quantify how much they cheated.  But if you can quantify it, you probably could've made a better evaluation measure to begin with.
+
 On the other hand, if you're researching title generation and see that evaluation focuses only on keywords, you might think that the task is only about information content, not the presentation.  Either way, if you have some goals for the research, the evaluation needs to reflect that or else the research will take unintended directions. For the record, I don't think the biggest problem is intentional gaming of artificial evaluations, but that research will unintentionally deviate from the originally intended goals over time.
+
 Another related example of evaluation is BLEU scoring, which is used as an automatic evaluation of natural language generation.  But because of its automated nature, it can deviate from human judgments of grammaticality, naturalness, etc.  That gets me back to the point:  What's the research goal?  How would you go about measuring text generation quality in general?  How about judgments on a 5-sentence summary?  It partly depends on the task, right?
+
 I tend to be a bigger fan of task-specific evaluations rather than generic evaluations.  Summarization is one of the fields that makes me feel this way.  Imagine two different tasks.  In the first task, we're searching (on say Google), and provided a 1-2 sentence summary containing our keywords.  This summary is used to more quickly decide whether to click on a link or not.
+
 In the second task, we're summarizing product reviews.  The summary will be presented to the user to help decide whether to buy the product or not.  For example, imagine a summary of NewEgg reviews, or a more natural version of the summaries on Staples' customer reviews.
+
 Does it make sense to have a single evaluation measure for both?  We might consider grammatical quality, for instance.  But is grammatical quality even important for these tasks?  In the information retrieval task, the description should capture the difference between the query and the more-specific information need, providing the user a better chance to judge relevance.  In the product task, we need to ensure good coverage of the information in the reviews.  Furthermore, the product review task isn't about a particular situation like the google task.
+
 My feelings on summarization is that we should evaluate the ability to accomplish the task-specific goal. Unfortunately, generation-like tasks don't have good automatic evaluations.
+
 I'll list out some evaluation issues in NLP:
 
 * in some tasks, user evaluations aren't necessarily well-correlated with automatic evaluations.  But user evaluation are tedious, expensive, and may not produce the same results with a different user base.  For generation tasks, we seem to be stuck with either automatic evaluations that are rough approximations, or user testing which may not even be reproducible.
@@ -33,4 +45,5 @@ I'll list out some evaluation issues in NLP:
   + Also, because evaluation is so important, we've seen more and more papers where the gist is "I applied machine learning to X and improved performance by Y".  I don't have anything against machine learning, but papers are accepted on the basis of the percent improvement, even if they don't provide the linguistic implications of their feature space.  Such papers may have zero linguistic intuition, but may be accepted on the basis of numbers alone.  Effectively, the papers can be accepted without improving the body of knowledge in the field.
 
  
+
 To summarize, evaluation is the concrete description of your research goals, and problems arise when your evaluation and research goals are pointing in slightly different directions.  That said, evaluation isn't trivial, especially for tasks involving natural language generation.

@@ -3,13 +3,17 @@ layout: post
 title: Tips on moving from grad school to industry
 date: 2014-02-24
 ---
+
 After finishing my PhD and teaching for a semester, I joined Swype as a Software Engineer. My focus was on researching and developing language modeling improvements; it wasn't just coding away.
+
 But there were loads of things I didn't understand at first. There are still aspects of industry that surprise me.
+
 Biggest things first:
 
 * Financial stability
 * Time off. I suspect because of grad school, I still don't remember when holidays are.
 * A schedule. You're working with people, so you align to their schedule. In my grad school days, my schedule didn't matter except for rare meetings.
+
 Random links:
 
 * [Paul Graham's essays](http://paulgraham.com/articles.html)
