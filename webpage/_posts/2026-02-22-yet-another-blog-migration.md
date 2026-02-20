@@ -65,7 +65,13 @@ It'd be nice to get back to the speed and simplicity of the web 1.0 with some of
     - Some have sold their domains (like Google Battle) which have been taken over by just ads. I wonder what percent of page views are just bots
 - Surprisingly not broken
     - Google Books ngram viewer
-    - BBspot
-    - Newegg links to CPUs from 13 years ago
+    - [BBspot](https://en.wikipedia.org/wiki/BBspot)
+    - A Newegg link to the specific CPU I bought a long time ago, and the image of the CPU box still works
 - Renewed sadness
     - AnandTech
+
+Observations
+- Academic links tend to be more reliable than industry links, probably because professors stay with institutions MUCH longer
+- More domain hijacking than I expected, which encouraged me to edit all links and it's making me reconsider how I want to do links in the future
+- Companies that made a major pivot, like Plotly
+- Linking to books: Back when I was writing, I felt great about Amazon so I tended to link to books there. Now I don't feel as great about Amazon so I swapped those to Goodreads (still Amazon but a little removed from their store)
