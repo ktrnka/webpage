@@ -4,7 +4,7 @@ title: Question processing for factoid search
 date: 2015-06-19
 ---
 
-Searchify was a project to enable quick factoid lookup on mobile advertisements. A full screen ad would have a search box and you could get quick answers without leaving the ad or even the app. Previously I've written about [building synonyms for automotive in Searchify](https://kwtrnka.wordpress.com/tag/searchify/).
+Searchify was a project to enable quick factoid lookup on mobile advertisements. A full screen ad would have a search box and you could get quick answers without leaving the ad or even the app. Previously I've written about building synonyms for automotive in Searchify.
 
 One problem we faced is similar to web search: Will users prefer keyword search (e.g., "price") or full question search (e.g., "How much is it?")?
 
@@ -17,7 +17,7 @@ Will people actually enter questions?
 
 Previously we worked on [Swype](http://www.swype.com/); we're intimately familiar with mobile text input. Usually people cut corners and write short messages when possible. If you're typing then keyword search is easier. But if you're using speech recognition it's less clear. It'll recognize full sentences better and there may be a preference for full questions.
 
-If possible it's best to look at data. But without a live system there's no data coming in. So I made a mock image of the system and used Mechanical Turk to solicit example searches. I iterated on this and learned several [tips for Mechanical Turk](https://kwtrnka.wordpress.com/category/mechanical-turk/)
+If possible it's best to look at data. But without a live system there's no data coming in. So I made a mock image of the system and used Mechanical Turk to solicit example searches. I iterated on this and learned several tips for Mechanical Turk.
 
 ![Mechanical Turk HIT for Toyota Prius Searchify ad]({{ "/assets/img/posts/wp/prius-hit.png" | relative_url }})
 

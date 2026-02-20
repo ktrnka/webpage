@@ -3,7 +3,7 @@ layout: post
 title: Switching from deep to wide
 date: 2016-02-02
 ---
-In the [previous post](/blog/2016/01/gains-from-deep-learning/) I found gains by adding a second hidden layer. But I accidentally found even better results with wider networks of a single hidden layer. I've done more systematic experimentation and wanted to share. Just as a reminder this is a part of my [ongoing project](https://kwtrnka.wordpress.com/tag/league-of-legends/) to predict the winner of ranked matches in League of Legends based on information from champion select and the player histories.
+In the [previous post](/blog/2016/01/gains-from-deep-learning/) I found gains by adding a second hidden layer. But I accidentally found even better results with wider networks of a single hidden layer. I've done more systematic experimentation and wanted to share. Just as a reminder this is a part of my ongoing project to predict the winner of ranked matches in League of Legends based on information from champion select and the player histories.
 
 On the smaller dataset (50k rows) increasing the size of the network is harmful: it's just overfitting. This is probably a part of the reason why I originally decided to stay with a small network but I'll show that this conclusion doesn't apply to the larger dataset.
 

@@ -7,7 +7,7 @@ In the [previous post](/blog/2016/02/switching-from-deep-to-wide/) I tested a ra
 
 But I learned from the [Stanford CNN class](http://cs231n.github.io/) that I made a mistake: It's bad to view network complexity as regularization, instead it's better to pick the most complex you can and tune dropout (and/or L2). I'd amend that to say that it's bad if you have excess compute resources. If the pace of experimentation is limited by runtime then reducing the network size may be a good way to achieve both regularization and experimental efficiency.
 
-Just as a reminder this is a part of my [ongoing project](https://kwtrnka.wordpress.com/tag/league-of-legends/) to predict the winner of ranked matches in League of Legends based on information from champion select and the player histories.
+Just as a reminder this is a part of my ongoing project to predict the winner of ranked matches in League of Legends based on information from champion select and the player histories.
 Here's the graph from last time, showing that added network complexity is harmful on a small dataset. I kept the default of 0.5 dropout.
 
 ![Shallow NN hidden units on 50k dataset]({{ "/assets/img/posts/wp/shallow-nn-hidden-units-on-50k-dataset.png" | relative_url }})
