@@ -4,8 +4,6 @@ title: "Future Crap, Part 2: Building brand-injection for generative AI"
 date: 2024-07-01
 ---
 
-#### Building brand-injection for generative AI
-
 *If you're looking for example output, start with* [*Part 1*](https://medium.com/@keith.trnka/future-crap-part-1-373e607aef51)*. This post is the "how it's made" portion.*
 
 ![Clock with bacon hands -- one of the generated images from Part 1]({{ "/assets/img/posts/future-crap-1-clock-bacon.png" | relative_url }})

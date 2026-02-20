@@ -4,8 +4,6 @@ title: "Machine translation for medical chat, checkpoint #4"
 date: 2023-02-07
 ---
 
-If this is your first time reading this series, welcome!
-
 This series of posts is about building trustworthy machine translation for medical chat. Multilingual doctors are rare and not all patients in the US speak English. However, just using machine translation isn't enough; physicians often have concerns with safety and trust.
 
 [My previous article](https://medium.com/@keith.trnka/machine-translation-for-medical-chat-checkpoint-3-9a00ef1e9a11) was a literature review of user experience for machine translation in chat. I found that there were some promising directions in safety and trust, but the field hasn't discovered a definitive solution yet.

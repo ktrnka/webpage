@@ -4,9 +4,6 @@ title: "Predicting League match outcomes: Gathering data"
 date: 2015-08-24
 ---
 
-The goal
-========
-
 I'd like to take the results of pick/ban phase of professional League of Legends matches and compute the probability of the winner. In part I find it interesting to watch analysis of pick/ban phase by regular casters or Saint's VOD reviews. How much of the game is *really* determined at pick/ban phase? Was a match unwinnable after a bad pick/ban or is it just slightly harder? How much does it depend on the specific players? How much depends on the history of those two teams? Is there a measurable probability effect from jet lag? And so on.
 
 Unfortunately there isn't that much data for professional matches. The game is constantly changing and the teams/players are also changing quickly. With so many things changing at once, 1-2 games per week per team is probably not enough to easily develop a machine learning system. So I'll work on a simpler problem and try to apply the insights I learn to professional matches.

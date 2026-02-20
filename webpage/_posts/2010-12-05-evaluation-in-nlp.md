@@ -4,8 +4,6 @@ title: evaluation in NLP
 date: 2010-12-05
 ---
 
-Let me first state my basic perspective:
-
 Evaluation is the concrete specification of your research goals.
 
 Modern research in natural language processing is evaluation heavy.  The research process can be thought of as an optimization designed to maximize whichever evaluation metric you pick.  Due to the critical role of evaluation, it's important to critically analyse your evaluation methods in the context of your research goals. Is your goal to benefit end-users of your proposed system?  Or is it more important to be published with good results?  Depending on your priorities, your choice of texts and metrics may change.  (And which algorithms you pursue may also change.)

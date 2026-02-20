@@ -4,11 +4,9 @@ title: "Future Crap, Part 1: Injecting ads into image generators"
 date: 2024-06-24
 ---
 
-#### Injecting ads into image generators
+You know what sucks on the Internet? Ads everywhere! You know what generative AI doesn't have yet? Ads everywhere!
 
 *Note: This is the silly fun post and* [*Part 2*](https://medium.com/@keith.trnka/future-crap-part-2-fda70eb03ef1) *is the technical post.* ***This is purely a demonstration of technology and is not affiliated with any of the brands in the post.***
-
-You know what sucks on the Internet? Ads everywhere! You know what generative AI doesn't have yet? Ads everywhere!
 
 This project takes your creations with image generators and jams ads into them! And not those sad overlays that you could ad-block, no! The ads are product placements inside the image, much like [Heineken beer in a James Bond movie](https://en.wikipedia.org/wiki/Heineken#Advertising).
 

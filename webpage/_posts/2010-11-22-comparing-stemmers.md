@@ -4,9 +4,6 @@ title: comparing stemmers
 date: 2010-11-22
 ---
 
-Preface
--------
-
 Natural language understanding typically involves a huge chain of processing and errors can happen anywhere, then get propagated to your system which operates at the top of the stack.  I'll give an example from my thesis work - adapting a language model to the style of text:
 
 * style adaptation

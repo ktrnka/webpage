@@ -4,8 +4,6 @@ title: "Predicting League match outcomes: First week of machine learning"
 date: 2015-08-25
 ---
 
-*Edit 8/26: I meant to include learning curves but forgot. Added initial learning curve and final learning curve.*
-
 Just a reminder, my goal is to predict the winner of a League of Legends ranked 5x5 game based on the pick/ban phase, including any player stats. This is an intermediate goal towards predicting the outcome of professional matches.
 
 Before you read much further, decide on your own hypotheses: How accurate is good? How accurate is bad? Is 100% achievable? What would it mean? (Look back after reading more to assess your predictions.)
