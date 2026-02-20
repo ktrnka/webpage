@@ -20,9 +20,8 @@ Like lbfgs and newton-cg, sag supports warm\_start so it works well in conjuncti
 
 First I tried on the 200k match dataset with 61 features. I repeated the tests for better accuracy.
 
-|  |  |  |
+<!-- KT TODO: This table has pretty janky rendering -->
 
-| --- | --- | --- |
 
 | Solver | Training time | Accuracy |
 
@@ -42,9 +41,8 @@ sag is faster than newton-cg but still about 3x slower than lbfgs. It does eke o
 
 sag is designed for large data sets so I also tried on the 1.8 mil x 61 dataset:
 
-|  |  |  |
+<!-- KT TODO: This table has pretty janky rendering -->
 
-| --- | --- | --- |
 
 | Solver | Training time | Accuracy |
 
@@ -66,9 +64,7 @@ RandomForestClassifier
 
 Tried this on the 200k x 61 dataset:
 
-|  |  |  |
-
-| --- | --- | --- |
+<!-- KT TODO: This table has pretty janky rendering -->
 
 | Version | Training time | Accuracy |
 
@@ -84,6 +80,8 @@ GradientBoostingClassifier
 --------------------------
 
 Gradient boosting trains much more slowly than other methods so I started on the 50k x 61 dataset. I ran some tests multiple times to be certain of the results.
+
+<!-- KT TODO: This table has pretty janky rendering -->
 
 |  |  |  |
 

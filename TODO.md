@@ -49,6 +49,13 @@ Branch: `import/keith-trnka-com`
 - Blog — bugs found in local preview
     - ~~**Broken images in WP posts**~~ ✅ Fixed: converted all 24 affected WP posts to use `{{ "/assets/img/posts/wp/..." | relative_url }}` Liquid filter
     - ~~**Missing paragraph breaks in old WP posts**~~ ✅ Fixed: inserted blank lines between adjacent paragraph lines across all 73 WP-era posts (2010–2016) using a Python script that preserves front matter, code blocks, setext headings, and tight lists
+    - WP table conversions look pretty broken across multiple files (such as webpage/_posts/2015-11-16-scikit-learn-0-17-is-out.md and webpage/_posts/2015-11-23-ensemble-notes.md)
+    - Examples with poor auto-snippets: 
+        - http://127.0.0.1:4000/webpage/blog/2015/09/bigger-league-of-legends-data-set/
+        - http://127.0.0.1:4000/webpage/blog/2024/06/future-crap-part-1/
+        - http://127.0.0.1:4000/webpage/blog/2024/07/future-crap-part-2/
+        - http://127.0.0.1:4000/webpage/blog/2015/11/scikit-learn-0-17-is-out/
+        - http://127.0.0.1:4000/webpage/blog/2015/08/predicting-league-match-outcomes-gathering-data/
 - Blog
     - Add paper/reference links to academic blog posts (MT series, etc.) — many papers are cited by name but not linked; find DOIs or Google Scholar links so readers can follow the research
     - Cross-post project navigation: Several blog series span many posts (LoL/ML prediction series, Searchify/synonyms series, MTurk series, Over 9000 series). Research a good way to surface this — options include Jekyll `categories:` or `tags:`, a naming convention in titles, a dedicated "series" collection, or a handcrafted index page per project. Goal: readers landing on one post in a series can easily find the others.

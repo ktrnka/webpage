@@ -24,6 +24,8 @@ I ran several tests on the 200k x 61 dataset and found that calibration helps a 
 
 Here are the raw numbers over 4 tests with and without calibration. Each of those tests is a 5-fold cross-validation run so the standard deviations are showing the variation between the different folds.
 
+<!-- KT TODO: This table has pretty janky rendering -->
+
 |  |  |  |  |  |
 
 | --- | --- | --- | --- | --- |
@@ -71,6 +73,8 @@ Hard voting
 I've been using soft voting which averages the probabilities of the individual classifiers. When you only have two good models it's the only option. I briefly tried including logistic regression in the soft voting ensemble but found that it was harmful.
 
 However, I didn't try hard voting. Not all classifiers provide probabilities so hard voting is sometimes necessary. Another advantage is that I don't have to consider calibration.
+
+<!-- KT TODO: This table has pretty janky rendering -->
 
 |  |  |
 
