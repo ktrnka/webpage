@@ -13,8 +13,8 @@ Setup/Background
 
 Relevant hardware (thanks to the magic of Newegg's history):
 
-* [AMD Athlon 64 X2 5400+ Brisbane 2.8GHz](http://www.newegg.com/Product/Product.aspx?Item=N82E16819103235) (with the packaged cooler, but with [Arctic Silver 5](http://www.newegg.com/Product/Product.aspx?Item=N82E16835100007) instead of the prepackaged thermal pad)
-* [MSI MBOX K9N6SGM-V](http://www.newegg.com/Product/Product.aspx?Item=N82E16856167009)
+* AMD Athlon 64 X2 5400+ Brisbane 2.8GHz (with the packaged cooler, but with Arctic Silver 5 instead of the prepackaged thermal pad)
+* MSI MBOX K9N6SGM-V
   (yeah I was lazy and used a barebones)
 * Age/usage/environment:  3.5 yr, of which 3 years were heavy usage in an ordinary carpeted area.
 
@@ -132,5 +132,5 @@ I've never used compressed air for dusting.  I know many people do, but it only
 See also
 --------
 
-* [AnandTech's CPUs and Overclocking Forums](http://forums.anandtech.com/forumdisplay.php?f=5)
+* AnandTech's CPUs and Overclocking Forums (now dead)
   It's been a long time since I've been interested in overclocking but lurking here is a decent starting point.

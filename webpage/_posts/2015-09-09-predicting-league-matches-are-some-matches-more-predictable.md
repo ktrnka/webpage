@@ -28,7 +28,7 @@ Riot updates the game balance about every two weeks. Sometimes new champions are
 
 ![Prediction accuracy by version]({{ "/assets/img/posts/wp/image-3_2.png" | relative_url }})
 
-Raw data [here](https://docs.google.com/spreadsheets/d/1D_hm0ORmt_3WBrlmOspqWHz0n70suH57WIKqifmzRP8/edit?usp=sharing) with standard deviations (couldn't figure out error bars in Google Sheets). I dropped versions with fewer than 100 matches. Most of the data is 5.14-5.16 so those patches comprise most of the overall average. The big blips seem statistically significant unless I computed standard deviations incorrectly.
+I dropped versions with fewer than 100 matches. Most of the data is 5.14-5.16 so those patches comprise most of the overall average. The big blips seem statistically significant unless I computed standard deviations incorrectly.
 
 Some comments on what changed in some patches:
 
@@ -78,8 +78,6 @@ Of these champions, Tahm Kench and Kha'Zix have pretty low win rates. Varus and
 One problem in analyzing this data is that the impact of champion picks is very dependent on the game version and individual player. If we have a few Varus mains with over 200 games played on him, they will likely have much higher win rates and lead to more predictable matches.
 
 I don't feel comfortable drawing any conclusions from this analysis except to say that looking at individual champions alone clearly doesn't explain what my models are learning. In previous experiments I found that indicator variables for champion picks didn't help the model; it added too much sparseness and the model couldn't learn as well. So the models can't easily learn to predict outcome purely based on the champions.
-
-The raw data is [here](https://docs.google.com/spreadsheets/d/1D_hm0ORmt_3WBrlmOspqWHz0n70suH57WIKqifmzRP8/edit?usp=sharing) if you'd like to look.
 
 Thoughts
 ========

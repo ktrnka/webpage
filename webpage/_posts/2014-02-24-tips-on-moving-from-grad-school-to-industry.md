@@ -17,7 +17,7 @@ Biggest things first:
 Random links:
 
 * [Paul Graham's essays](http://paulgraham.com/articles.html)
-* [Notes from Peter Thiel's startup class](http://blakemasters.com/peter-thiels-cs183-startup)
+* [Notes from Peter Thiel's startup class](https://blakemasters.tumblr.com/peter-thiels-cs183-startup)
 * Google IO talks by Brian Fitzpatrick and Ben Collins-Sussman
   + [Open Source Projects and Poisonous People (2008)](http://youtu.be/-F-3E8pyjFo)
   + [The Myth of the Genius Programmer (2009)](http://youtu.be/OTCuYzAw31Y)

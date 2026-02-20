@@ -8,7 +8,7 @@ It's tempting to focus purely on the engineering or research of a project. Hmm 
 
 However for side projects the entire solution is your responsibility. That means not just making a great product but also acquiring customers or users. And even making a great product involves graphic design, user feedback, support, and other areas outside of a research-and-development role.
 
-So last week I tried plugging [Over 9000](http://www.over9000.me/) on Reddit to grow the user base and learn more about achieving traction.
+So last week I tried plugging Over 9000 on Reddit to grow the user base and learn more about achieving traction.
 
 What I did
 ==========
@@ -34,11 +34,11 @@ I made the Reddit threads on 6/23. Before that I'd been getting at 0-80 pagevi
 Demographics before Reddit
 --------------------------
 
-One of the difficulties in using Google Analytics is that much of the traffic is fake. 14% of the traffic is from fake referrals (see [this](http://viget.com/advance/removing-referral-spam-from-google-analytics)).
+One of the difficulties in using Google Analytics is that much of the traffic is fake. 14% of the traffic is from fake referrals.
 
 Looking over the flow, 98% visit the front page then leave.
 
-Geographically most the traffic is from the United States but also some from China, Japan, Germany, and Brazil and a little from other countries. Location is not set for 24% of sessions and those sessions have average duration 0 sec (probably web bots). Here's the [raw data](https://docs.google.com/spreadsheets/d/1W7r6QKulbF6hzlaa25Pma27Ud5GXEiNklUjN3fGR8eE/edit?usp=sharing).
+Geographically most the traffic is from the United States but also some from China, Japan, Germany, and Brazil and a little from other countries. Location is not set for 24% of sessions and those sessions have average duration 0 sec (probably web bots).
 
 ![Map of the page views before Reddit]({{ "/assets/img/posts/wp/image-1_2.png" | relative_url }})
 
@@ -51,7 +51,7 @@ Fake referrals make up only 4% now!
 
 96% of visits view the front page and leave (down from 98%). That means more users are visiting the Winter 2015 or About pages (but only a few).
 
-Geographically the distribution has only 7% unset locations (vs 24%). The United States is 51% of sessions (vs 34%). English-speaking countries follow the US: Canada, UK, and Australia. Maybe Reddit is biased more towards English-speaking countries? [Raw data link](https://docs.google.com/spreadsheets/d/15tYNTU2zDOuYKOmC_zFURdli_q9W5bTR81hnfJJNBp0/edit?usp=sharing).
+Geographically the distribution has only 7% unset locations (vs 24%). The United States is 51% of sessions (vs 34%). English-speaking countries follow the US: Canada, UK, and Australia. Maybe Reddit is biased more towards English-speaking countries?
 
 ![Map of page views after Reddit]({{ "/assets/img/posts/wp/image-2_2.png" | relative_url }})
 

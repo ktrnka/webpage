@@ -92,7 +92,7 @@ Wikipedia redirects
 
 Wikipedia will redirect you to the correct page if you type a similar word or phrase. The "Fuels", "Feul", and "Chemical fuel" all redirect to the page for "Fuel". The page for "Seattle Sounders FC" has redirects for "Seattle MLS", "Seattle MLS team", "Sounders FC", "Seattle Sounders", etc. The redirect structure can be used to extract realistic synonyms even for things that wouldn't appear in a dictionary.
 
-Here's [a good post on the process](http://www.behind-the-enemy-lines.com/2013/02/wikisynonyms-find-synonyms-using.html) with a web demo system and they provide a [web API](https://www.mashape.com/ipeirotis/wikisynonyms) to query redirect-based synonyms. The main problem with this process is that you need a word list ahead of time. If you have a corpus for the domain you can easily generate them all (though it takes a while). But let's get to some examples!
+Here's [a good post on the process](http://www.behind-the-enemy-lines.com/2013/02/wikisynonyms-find-synonyms-using.html) with a web demo system and they provided a web API to query redirect-based synonyms. The main problem with this process is that you need a word list ahead of time. If you have a corpus for the domain you can easily generate them all (though it takes a while). But let's get to some examples!
 
 Input: air conditioning
 

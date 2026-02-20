@@ -29,7 +29,7 @@ The most common stemmer I've seen is Porter's stemmer, which is a rule-based ste
 
 ### PC-KIMMO
 
-Alternatively, people sometimes use a more principled morphological analysis, [PC-KIMMO](http://www.sil.org/pckimmo/).  PC-KIMMO is a C version of the KIMMO software, which is a two-level morphological analysis.  It includes some basic part of speech information in the analysis, so you might be able to come up with something like *test + PLURAL = tests*.  The main drawback of PC-KIMMO is that it's a pain to use in Perl - you can write a wrapper to call the C program, but it's slow to call the program all the time.
+Alternatively, people sometimes use a more principled morphological analysis, PC-KIMMO.  PC-KIMMO is a C version of the KIMMO software, which is a two-level morphological analysis.  It includes some basic part of speech information in the analysis, so you might be able to come up with something like *test + PLURAL = tests*.  The main drawback of PC-KIMMO is that it's a pain to use in Perl - you can write a wrapper to call the C program, but it's slow to call the program all the time.
 
 One of the really interesting aspects of PC-KIMMO is that it's basically parsing the inside of a word.  So the program returns a set of parse trees for a word.  Although this usually means suffixes, I think it can parse prefixes too.
 
@@ -44,7 +44,7 @@ Comparing stemmers
 
 The motivation for comparing stemmers was to evaluate stemmer quality for Emily Hill's research.  Ideally, we want to answer the question *How good is Porter's stemmer compared to PC-KIMMO?* To do this, we would need a gold standard of stemmings, but we don't have that.  We could easily compute something like percent agreement, but does it even make sense?  Suppose we're stemming *comparing* and Porter's returns *compar* but PC-KIMMO returns *compare*.  Is that agreement or not?
 
-Instead, I wrote a tool to facilitate subjective analysis.  You can take a look at the output [here](http://www.cis.udel.edu/~trnka/work/emily_analysis.txt), though the file is fairly large.  I'll show an example and explain how to interpret it:
+Instead, I wrote a tool to facilitate subjective analysis. I'll show an example and explain how to interpret it:
 
 ```
            word   shared in set   PC-KIMMO only   Porter's only

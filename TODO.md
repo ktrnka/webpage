@@ -6,12 +6,9 @@
 Remaining `<!-- KT TODO -->` markers in posts:
 - [ ] `2016-05-19-summary-predicting-winloss-for-league-of-legends.md` — unfinished draft with placeholder text; decide: complete, heavily trim, or remove
 
-Other post quality issues:
-- [ ] Fix poor auto-snippets on blog index (headings/images leaking into excerpt):
-  - `bigger-league-of-legends-data-set`, `future-crap-part-1`, `future-crap-part-2`, `scikit-learn-0-17-is-out`, `predicting-league-match-outcomes-gathering-data`
-- [X] MT chat part 3 didn't convert correctly from Medium — needs manual redo
-- [X] Review code blocks in all converted posts — ensure correct language tags for syntax highlighting
-- [X] Remove smart quotes from all converted blog posts (script to automate)
+Dead/hijacked links:
+- [ ] **`over9000.bitballoon.com` and `over9000.me` now link to someone else's project** — appears in 5 posts. Probably just remove the links or link to the GitHub repo instead.
+- [ ] Finish reviewing / editing all links. I stopped at 2015-09-21-bigger-league-of-legends-data-set.md
 
 ## Deployment & infrastructure 🚀
 - [ ] Fix relative links on GitHub Pages (internal links break due to baseurl; need to replicate recipes repo deployment approach — see commit 003a0513)
@@ -22,9 +19,8 @@ Other post quality issues:
 
 ## Blog features & enhancements 📋
 - [ ] Series/project navigation: readers landing on one post in a series should find the others (LoL/ML, Searchify/synonyms, MTurk, Over 9000). **Research note:** Jekyll `categories:` build into the URL, `tags:` don't — otherwise very similar. Start with small controlled tests before committing to a scheme.
-- [ ] Improve blog index snippets where Medium subtitle/heading got duplicated (e.g., Future Crap posts)
 - [ ] Add paper/reference links to academic blog posts (MT series, etc.) — cite DOIs or Google Scholar
-- [Might be done?] High-res WP images: at minimum add `max-width: 100%` CSS so they don't break layout. Optional: batch resize with ImageMagick.
+- [ ] High-res WP images: verify `max-width: 100%` CSS is in place so they don't break layout. Optional: batch resize with ImageMagick.
 - [ ] Research email notification / RSS-to-email for blog updates
 - [ ] Write a post about moving from Medium → self-hosted Jekyll
 
@@ -38,6 +34,7 @@ Other post quality issues:
 - [ ] Reduce code duplication between index layout and default page layouts
 - [ ] Fix Sass `@import` deprecation warning (migrate to `@use`/`@forward` before Dart Sass 3.0.0)
 - [ ] Fix mobile homepage layout (sidebar/header alignment above main content)
+- [ ] Code block syntax highlighting: language tags are labeled but no visible styling on frontend — investigate Jekyll/Rouge theme config
 - [ ] Link checking CI: HTMLProofer for internal links (`--disable-external`); Lychee on a cron schedule for external links
 - [ ] Check for redirected links (faster for users if links are direct)
 
@@ -73,6 +70,9 @@ Other post quality issues:
 - [x] Fixed missing paragraph breaks: inserted blank lines across all 75 WP-era posts
 - [x] Downloaded 127 WP images to `assets/img/posts/wp/`
 - [x] Removed all `[caption` shortcodes, WP tag/category links
+- [x] Repaired all broken WP tables and bad code blocks
+- [x] Labeled language tags on all code blocks
+- [x] Fixed blog index auto-snippets (good enough)
 
 </details>
 
@@ -82,6 +82,8 @@ Other post quality issues:
 - [x] Converted Medium posts to Jekyll Markdown
 - [x] Fixed Future Crap Part 1 dropped images
 - [x] Re-downloaded rate-limited mt-chat-3 images (.webp)
+- [x] Fixed MT chat part 3 conversion
+- [x] Removed smart quotes from converted posts
 
 </details>
 

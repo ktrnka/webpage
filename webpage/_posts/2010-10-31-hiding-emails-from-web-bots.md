@@ -17,6 +17,6 @@ Instead, I use Javascript to dynamically generate the email address.  My reaso
 </script>
 ```
 
-I generate my Javascript mailtos with [a Perl script](http://www.cis.udel.edu/~trnka/email_obfuscator.pl), and although the random splitting isn't perfect or anything, it's good enough.  However, I'm not so naïve as to think that it can't be parsed, but it's probably safer than spelling out the email address and the end-user doesn't have to know about it (aside from some NoScript users).  If bots learn to parse that, you could of course move the code into an external Javascript file or do all sorts of other sneaky things.
+I generate my Javascript mailtos with a Perl script, and although the random splitting isn't perfect or anything, it's good enough.  However, I'm not so naïve as to think that it can't be parsed, but it's probably safer than spelling out the email address and the end-user doesn't have to know about it (aside from some NoScript users).  If bots learn to parse that, you could of course move the code into an external Javascript file or do all sorts of other sneaky things.
 
 In some sense, the practice of trying to hide your email from scanners is moot - if bots grab emails from PDFs, there's nothing I can do about my published papers.  Similarly, I can't do much about hyperlinks on departmental webpages or other types of lists.  At the same time, it's plausible that maybe someday in the distant future, Apache might change any mailto link into a random code generation (more random even than what I've shown).

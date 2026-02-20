@@ -4,7 +4,7 @@ title: Projecting the number of downloads for torrents
 date: 2015-02-13
 ---
 
-One of my current projects is [Over 9000](http://over9000.bitballoon.com/), a visualization that shows which anime series are currently popular. I get the data by scraping a popular anime torrent site every day and come up with a single number that represents the popularity of a show.
+One of my current projects is Over 9000, a visualization that shows which anime series are currently popular. I get the data by scraping a popular anime torrent site every day and come up with a single number that represents the popularity of a show.
 
 The problem with average number of downloads
 ============================================
@@ -68,7 +68,7 @@ That provides me a little robustness: Instead of a plain average I can use a we
 Wow so this is working?
 -----------------------
 
-Uhhh... on my local machine. The daily job runs on Heroku which I learned can't install scipy! Luckily I found [a guide to using Anaconda on Heroku to get around this](http://wallfloweropen.com/?project=heroku-app-for-convex-optimization) so I'll try that out.
+Uhhh... on my local machine. The daily job runs on Heroku which I learned can't install scipy!
 
 Why not linear regression?
 ==========================

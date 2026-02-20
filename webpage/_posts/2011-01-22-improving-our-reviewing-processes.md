@@ -28,9 +28,9 @@ He suggests that normalization by subfield may be necessary also.
 
 ### Encouraging High-Quality Reviews
 
-Mani brings up the idea of open reviewing using the [British Medical Journal](http://www.bmj.com/ "BMJ") as the prime example.  In this and other journals, the reviews are made public.  Thus the quality of the reviewing can have a real effect on reputation.  He notes some problems though, such as a tend towards more conservative reviews.
+Mani brings up the idea of open reviewing using the [British Medical Journal](http://www.bmj.com/) as the prime example.  In this and other journals, the reviews are made public.  Thus the quality of the reviewing can have a real effect on reputation.  He notes some problems though, such as a tend towards more conservative reviews.
 
-The second interesting part is that some journals ([Biomed Central](http://www.biomedcentral.com/) and [Atmospheric Chemistry and Physics](http://www.atmospheric-chemistry-and-physics.net/ "Atmospheric Chemistry and Physics")) provide access to the history of versions of a paper in addition to their reviews.  I can only imagine how instructive this would be for a young researcher.
+The second interesting part is that some journals ([Biomed Central](http://www.biomedcentral.com/) and [Atmospheric Chemistry and Physics](http://www.atmospheric-chemistry-and-physics.net/)) provide access to the history of versions of a paper in addition to their reviews.  I can only imagine how instructive this would be for a young researcher.
 
 The final suggestion is to train reviewers.  Maybe the reviewers tried, but forgot to review a certain aspect of a paper.  Or maybe they didn't provide clear suggestions for improvement, etc.  British Medical Journal is mentioned again - they provide PowerPoint presentations to train reviewers.  One of Mani's suggestions is to potentially require some short online reviewer training (somewhat akin to human subjects training I imagine).  Open reviewing ties into this:  Open reviews could form the basis of an example-based training program.
 

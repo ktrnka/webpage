@@ -4,14 +4,14 @@ title: parse trees + visualization = ???
 date: 2011-01-14
 ---
 
-There have been many points in my research career when I realized that I would understand the problem better if someone had visualized my data somehow.  Usually, that means I write some simple visualization that's close enough to quickly answer my questions about the data.  For example, I've [compared stemmers/lemmatizers in a simple way](/blog/2010/11/comparing-stemmers/ "comparing stemmers") to help understand the differences.  It isn't the prettiest visualization, but it's enough to quickly learn something new.
+There have been many points in my research career when I realized that I would understand the problem better if someone had visualized my data somehow.  Usually, that means I write some simple visualization that's close enough to quickly answer my questions about the data.  For example, I've [compared stemmers/lemmatizers in a simple way](/blog/2010/11/comparing-stemmers/) to help understand the differences.  It isn't the prettiest visualization, but it's enough to quickly learn something new.
 
 Back when I was working in an older lab (maybe 2003-2004), my labmate Rashida Davis had a problem with a parser.  For certain sentences, it'd return as many as 50 different parses.  Part of the problem was that the grammar was developed a long time ago (and had some unfortunate ambiguities).  Another part of the problem was that the grammar had many feature structures in addition to plain constituent labels.  Being the generous guy that I am, I decided to write a Java program to draw the parse trees and help to compare them.  (Unfortunately, I had no sense of the complexity of the parse trees when I started out)
 
 parse tree application
 ----------------------
 
-This led to a publicly available program, [parse tree application](http://www.cis.udel.edu/~trnka/pta/), which does the work of drawing and comparing various kinds of parse trees.  Part of the motivation was to help compare trees for a friend, but another part of the motivation was to make it easier to have nicely drawn parse trees in publications.  So the output can be saved as EPS, PNG, or JPG.  I had to take some extra effort to get EPS output, but I wanted vector graphics suitable for LaTeX.  Also, if you're on a Mac, you can print and save to PDF.  I seem to remember being able to edit the EPS output nicely in Inkscape.
+This led to a publicly available program, parse tree application, which does the work of drawing and comparing various kinds of parse trees.  Part of the motivation was to help compare trees for a friend, but another part of the motivation was to make it easier to have nicely drawn parse trees in publications.  So the output can be saved as EPS, PNG, or JPG.  I had to take some extra effort to get EPS output, but I wanted vector graphics suitable for LaTeX.  Also, if you're on a Mac, you can print and save to PDF.  I seem to remember being able to edit the EPS output nicely in Inkscape.
 
 ![example parse tree]({{ "/assets/img/posts/wp/demo_example1.png" | relative_url }})
 
@@ -63,4 +63,4 @@ The design as an application maybe isn't the best:  You download and unpack a z
 conclusions
 -----------
 
-The [parse tree application](http://www.cis.udel.edu/~trnka/pta/) is a step in the right direction for more quickly visualizing output/etc in NLP.  But it's still very involved to quickly determine the differences in a large set of parse trees.
+The parse tree application is a step in the right direction for more quickly visualizing output/etc in NLP.  But it's still very involved to quickly determine the differences in a large set of parse trees.

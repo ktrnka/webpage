@@ -29,7 +29,7 @@ Episode 1:  Prologue
 * When chasing John, Chromartie switches to infrared at some point.  Realistically, a good machine would use both visible spectrum and IR at the same time.
   + For reference in the real world, see [DoDaam's Super aEgis II](http://www.gizmag.com/korea-dodamm-super-aegis-autonomos-robot-gun-turret/17198/), which is an autonomous turret that "can find and lock on to a human-sized target in pitch darkness at a distance of up to 1.36 miles".
 * Voice imitation is interesting. But the way it's done is overly futuristic. For one, the machine hasn't even heard every [phoneme](http://en.wikipedia.org/wiki/Phoneme) out of Sarah Connor. Even if you hear all the phonemes, the speech you can generate is very artificial. Then even if you hear the person say every word in the English language, you can't produce natural speech just by playing them back. It's an incredibly complex process.
-  + Some of my friends at [AgoraNet](http://www.agora-net.com/) work in speech synthesis for the ModelTalker project, trying to imitate people's voices from samples. They can do reasonably well, but you need more than just a couple of sentences.
+  + Some of my friends at AgoraNet work in speech synthesis for the ModelTalker project, trying to imitate people's voices from samples. They can do reasonably well, but you need more than just a couple of sentences.
 * Cameron quickly understood the analogy "put those back in the holster" to mean "put your bra on". Analogies are very difficult to process and it stands out even more when she struggles with other analogies.
   + The only thought I have of potentially interpreting that with software is plan recognition, but it's a stretch. There are just so many other possible meanings:
     - holster your firearms

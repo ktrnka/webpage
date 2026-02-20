@@ -4,7 +4,7 @@ title: "IBM's Watson"
 date: 2011-01-18
 ---
 
-In case you haven't heard of it yet, IBM developed a deep QA system called [Watson](http://www.research.ibm.com/deepqa/).  They've had a medium-sized team working on it for about 4 years.  Among others is Jennifer Chu-Carroll, who received her Ph.D. from the University of Delaware under Sandee Carberry (who was part of my Ph.D. committee).
+In case you haven't heard of it yet, IBM developed a deep QA system called Watson.  They've had a medium-sized team working on it for about 4 years.  Among others is Jennifer Chu-Carroll, who received her Ph.D. from the University of Delaware under Sandee Carberry (who was part of my Ph.D. committee).
 
 [Video: IBM Watson vs. Jeopardy champions](https://www.youtube.com/watch?v=FC3IryWr4c8)
 

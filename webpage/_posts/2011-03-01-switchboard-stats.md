@@ -4,7 +4,7 @@ title: Switchboard stats
 date: 2011-03-01
 ---
 
-I've been using the [Switchboard corpus](http://www.isip.piconepress.com/projects/switchboard/) for years and I recently gave a talk in class with some statistics, including simple tests to compare Switchboard to a background corpus. In this case, I used Google's Web 1T unigram model for "general purpose statistics". I'll include and discuss the interesting graphs, but the full slides are online [here](http://www.cis.udel.edu/~trnka/CISC889-11S/lectures/switchboard.pdf).
+I've been using the [Switchboard corpus](http://www.isip.piconepress.com/projects/switchboard/) for years and I recently gave a talk in class with some statistics, including simple tests to compare Switchboard to a background corpus. In this case, I used Google's Web 1T unigram model for "general purpose statistics".
 
 The first big test was to classify words into a set of word shapes and compare. Before looking at the graph below, consider the ambiguity: Is "A" title case or all caps? What is "JetBlue"? What about "T3"?
 

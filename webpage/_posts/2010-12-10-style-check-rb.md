@@ -4,7 +4,7 @@ title: style-check.rb
 date: 2010-12-10
 ---
 
-I'm very interested in tools to help write papers, specifically automatic proofreaders.  I've noted a couple before, namely [After the Deadline](/blog/2010/10/after-the-deadline/ "After the Deadline") and [Grammarian Pro X](/blog/2010/11/grammarian-pro-x/ "Grammarian Pro X").  I recently came across the tool [style-check.rb](http://www.cs.umd.edu/~nspring/software/style-check-readme.html), which helps proofread LaTeX documents.  It doesn't really have a name per se, just the filename style-check.rb.
+I'm very interested in tools to help write papers, specifically automatic proofreaders.  I recently came across the tool [style-check.rb](http://www.cs.umd.edu/~nspring/software/style-check-readme.html), which helps proofread LaTeX documents.  It doesn't really have a name per se, just the filename style-check.rb.
 
 This isn't the same type of tool as its production counterparts;  it's simply a Ruby script written by [Neil Spring](http://www.cs.umd.edu/~nspring/) at the University of Maryland, who seems to have struggled with some similar issues in proofreading latex documents.
 

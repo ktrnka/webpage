@@ -48,7 +48,7 @@ Generally you can follow the [tutorial](http://doc.scrapy.org/en/latest/intro/tu
 * Decide whether you want a depth-first search or breadth-first. They have memory tradeoffs but depth-first tends to go off into weird deep sections of the internet. See [this](http://doc.scrapy.org/en/latest/faq.html#does-scrapy-crawl-in-breadth-first-or-depth-first-order).
 * When running your scraper from the command line, you can store the scraped items as Json which is great for downstream processing.
 * I used the HTML stripper from [NLTK](http://www.nltk.org/) (nltk.clean\_html). It's higher quality than writing your own.
-* If I could do it again I'd probably spend a day and see if I can set up two levels of [Kimono](https://www.kimonolabs.com/) scrapers to accomplish something similar.
+* If I could do it again I'd probably spend a day and see if I can set up two levels of Kimono scrapers to accomplish something similar.
 
 For this project I really just need a collection of documents. I wasn't sure at first whether I wanted each comment to be a document or each thread so I made sure I could experiment with both. So I have a file format like:
 

@@ -20,7 +20,7 @@ In a long document like a book, tables, figures, and equations help give visual 
 
 That leads me to some popular layouts --- many conferences use a two-column layout rather than a single-column layout.  I can't speak for others, but I lose my place less often in two-column format.  In single-column format, I have to concentrate for every line wrap.
 
-Similarly, try out the Chrome extension [Readability Redux](https://chrome.google.com/extensions/detail/jggheggpdocamneaacmfoipeehedigia) or the cross-browser bookmarklet [Readability](http://lab.arc90.com/experiments/readability/) and play with the margin width.  I've found that it's much easier to read with medium margins compared to small or extra small margins, partly because I spend less time finding the next line.
+Similarly, try out the Chrome extension Readability Redux or the cross-browser bookmarklet Readability and play with the margin width.  I've found that it's much easier to read with medium margins compared to small or extra small margins, partly because I spend less time finding the next line.
 
 ### summary/conclusions
 

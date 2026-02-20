@@ -6,7 +6,7 @@ date: 2010-12-23
 
 *Sorry for the delay in posting something --- I'll be more active again once I get over this cold.  Here's something from my Drafts folder in the meantime.*
 
-The word scramble problem seems to crop up every few years or something.  [Brain Oddities](http://www.ritholtz.com/blog/2010/12/brain-oddities-irrelevant-spelling/) has the recent version. We took a look at the problem in our NLP class in 2003, and I [wrote a program](http://www.cis.udel.edu/~trnka/past_coursework/word_scramble.html) that worked for basically any word it's seen in training.  It doesn't even use a complicated model or anything.  And the number of words encountered in training is much less than the vocabulary of a normal adult.
+The word scramble problem seems to crop up every few years or something.  [Brain Oddities](http://www.ritholtz.com/blog/2010/12/brain-oddities-irrelevant-spelling/) has the recent version. We took a look at the problem in our NLP class in 2003, and I wrote a program that worked for basically any word it's seen in training.  It doesn't even use a complicated model or anything.  And the number of words encountered in training is much less than the vocabulary of a normal adult.
 
 Some comments on the newest take:
 
@@ -18,7 +18,7 @@ Some comments on the newest take:
   + Instead of a random scramble, just reverse the interior letters.  It's much harder to read than random scrambling.
   + Many of the observations can be modeled using a basic ngram model along with a word list.
   + rastafasta links an excellent [youtube response](http://www.youtube.com/watch?v=TNStNUizxhE).  It gives a more realistic assessment of things.
-* In all likelihood, it might be best to suggest that a [noisy channel model](http://en.wikipedia.org/wiki/Noisy_channel_model "Noisy channel model") of typing/etc is what's going on.  Here are some examples of related things:
+* In all likelihood, it might be best to suggest that a [noisy channel model](http://en.wikipedia.org/wiki/Noisy_channel_model) of typing/etc is what's going on.  Here are some examples of related things:
   + email/paper typos
     Even if something is misspelled, you can usually figure it out right?  Based on the context in the sentence, the type of misspelling, and previous words in the same document.
   + printing errors

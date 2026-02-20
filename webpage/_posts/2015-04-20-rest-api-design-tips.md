@@ -4,7 +4,7 @@ title: REST API design tips
 date: 2015-04-20
 ---
 
-For the server side of [Pollable](http://pollable.me/) we iterated on the REST API several times and learned a lot the hard way. And [this excellent article](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api) is great for design tips.
+For the server side of Pollable we iterated on the REST API several times and learned a lot the hard way. And [this excellent article](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api) is great for design tips.
 
 We're using RESTful calls of Json only and https only; much of this deals with the design of the Json objects.
 

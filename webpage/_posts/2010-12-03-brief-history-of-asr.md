@@ -4,7 +4,7 @@ title: brief history of ASR
 date: 2010-12-03
 ---
 
-This is the first part of a two-part article on evaluation in natural language processing.  For the first part, I'd like to focus on Fred Jelinek's ACL Lifetime Achievement Award, which has a corresponding publication in *Computational Linguistics* entitled *[ACL Lifetime Achievement Award: The Dawn of Statistical ASR and MT](http://www.aclweb.org/anthology-new/J/J09/J09-4004.pdf).*
+This is the first part of a two-part article on evaluation in natural language processing.  For the first part, I'd like to focus on Fred Jelinek's ACL Lifetime Achievement Award, which has a corresponding publication in *Computational Linguistics* entitled *ACL Lifetime Achievement Award: The Dawn of Statistical ASR and MT.*
 
 His article tells the story of automatic speech recognition (ASR) over the years.  The beginnings are interesting biographically; Jelinek started in information theory at MIT, then tried to switch to linguistics during grad school, but wasn't allowed to.  When he interviewed at Cornell, another faculty member wanted to work with him in applying information theory to linguistics.  But by the time he arrived, that faculty member had moved on.  So he spent ten years on information theory before starting to work with IBM on speech recognition.
 

@@ -4,7 +4,7 @@ title: Trends over a season of TV shows
 date: 2015-06-12
 ---
 
-If I plot the number of downloads per episode over the length of an anime series, are there interesting trends? I'm using the data and estimation methods from [Over 9000](http://www.over9000.me/) and graphing the number of downloads for each episode 7 days from when the torrent is available.
+If I plot the number of downloads per episode over the length of an anime series, are there interesting trends? I'm using the data and estimation methods from Over 9000 and graphing the number of downloads for each episode 7 days from when the torrent is available.
 
 I'm also showing a shaded region to indicate potential error in the estimate: When we extrapolate from only a little data then it's less reliable.
 
@@ -86,11 +86,11 @@ But the data is quite noisy, especially any older data. And certain shows buck t
 Can we predict ratings?
 =======================
 
-It's great when people rate shows on sites like [MyAnimeList](http://myanimelist.net/)but it's a small percentage of the viewers and many wait to rate until the show is over. It'd be great if we could use the shape of the curves to indicate how good a show is.
+It's great when people rate shows on sites like MyAnimeList but it's a small percentage of the viewers and many wait to rate until the show is over. It'd be great if we could use the shape of the curves to indicate how good a show is.
 
 I looked at the data from 6 shows in Winter and 7 shows in Spring as a proof of concept experiment. I manually picked the first episode of the season and the last episode with reliable data. Then I computed the percent of viewers that stayed all the way through.
 
-Separately I found the ratings for each show on MyAnimeList and correlated with viewer retention. The Google Sheet is available [here](https://docs.google.com/spreadsheets/d/1cAZqNIEnNJPm-ab6F8tRBZDjgT2oABC_qkfU_Kjmsfk/edit?usp=sharing).
+Separately I found the ratings for each show on MyAnimeList and correlated with viewer retention.
 
 ![Scatter plot of retention vs MAL rating]({{ "/assets/img/posts/wp/image-3.png" | relative_url }})
 

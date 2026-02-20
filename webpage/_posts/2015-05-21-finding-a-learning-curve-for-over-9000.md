@@ -4,7 +4,7 @@ title: Finding a learning curve for Over 9000
 date: 2015-05-21
 ---
 
-For [Over 9000](http://over9000.bitballoon.com/) I'm estimating the number of torrent downloads per show/episode at 7 days from release. If I have enough data I can compute that by interpolating points. But usually I need to extrapolate from the first few days of downloads.
+For Over 9000 I'm estimating the number of torrent downloads per show/episode at 7 days from release. If I have enough data I can compute that by interpolating points. But usually I need to extrapolate from the first few days of downloads.
 
 I've focused on fitting log curves with scipy and I'm starting to get setup for more rigorous machine learning.
 

@@ -40,7 +40,7 @@ The new data is a much cleaner distribution: many more players in platinum than 
 
 ![Players by league in the updated data set.]({{ "/assets/img/posts/wp/image-6.png" | relative_url }})
 
-This is similar to the distributions shown on [League of Graphs](http://www.leagueofgraphs.com/rankings/summoners-distribution) and [League of Legends Summoners](http://www.lolsummoners.com/stats). One of the interesting parts of those sites is showing the stats by division as well; you can see that division V typically has many more players than other divisions. That's because it's easier to be promoted a tier than demoted a tier.
+This is similar to the distributions shown on [League of Graphs](http://www.leagueofgraphs.com/rankings/summoners-distribution) and League of Legends Summoners. One of the interesting parts of those sites is showing the stats by division as well; you can see that division V typically has many more players than other divisions. That's because it's easier to be promoted a tier than demoted a tier.
 
 ![image (7)]({{ "/assets/img/posts/wp/image-7.png" | relative_url }})
 

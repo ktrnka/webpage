@@ -11,7 +11,7 @@ Last week, I [covered](/blog/2010/12/google-books-ngram-viewer/ "google books ng
 
 The original article is available online through *Science*.  It's free with registration and the article isn't very long.  It focuses on showing cultural trends with this data and pushes the term *culturomics*.  I'll try to summarize most of the points.
 
-For starters, they provide information on the collection of texts surveyed.  The Google Books project has digitized about 15 million books, and they picked about 5 million of them based on [OCR](http://en.wikipedia.org/wiki/Optical_character_recognition "Optical character recognition") quality and metadata. They note that periodicals were excluded, but I didn't even know those were a part of Google Books.  In any case, the 5 million books contain about 500 billion words, 361 billion of which are English.  In contrast, [Google popular 5-gram model](http://www.ldc.upenn.edu/Catalog/CatalogEntry.jsp?catalogId=LDC2006T13) was built using 1 trillion words of web data (which is considerably easier to obtain).  The 5 million books used for the project comprise about 4% of all books ever printed.
+For starters, they provide information on the collection of texts surveyed.  The Google Books project has digitized about 15 million books, and they picked about 5 million of them based on [OCR](http://en.wikipedia.org/wiki/Optical_character_recognition) quality and metadata. They note that periodicals were excluded, but I didn't even know those were a part of Google Books.  In any case, the 5 million books contain about 500 billion words, 361 billion of which are English.  In contrast, [Google popular 5-gram model](http://www.ldc.upenn.edu/Catalog/CatalogEntry.jsp?catalogId=LDC2006T13) was built using 1 trillion words of web data (which is considerably easier to obtain).  The 5 million books used for the project comprise about 4% of all books ever printed.
 
 The ngram models can be used for a variety of studies, but one of the ones I found interesting was comparing "the Great War" to "World War I", which I reproduced using the web tool:
 
@@ -29,7 +29,7 @@ The article moves on to several similar "half-life" trends --- years, inventions
 
 Some of the most interesting results come for people --- in modern times, the initial burst of fame is quicker and rises higher, but drops off much more quickly.  They also segregate by person type, showing the long-increase in fame of authors and scientists and the correlation between age and fame for actors and politicians.
 
-Finally they survey censorship by querying names and comparing trends in English compared to German (for Nazi censorship) or English compared to Chinese (for [Tiananmen Square](http://en.wikipedia.org/wiki/Tiananmen_Square "Tiananmen Square")).
+Finally they survey censorship by querying names and comparing trends in English compared to German (for Nazi censorship) or English compared to Chinese (for [Tiananmen Square](http://en.wikipedia.org/wiki/Tiananmen_Square)).
 
 Overall, the article is worth reading, but it gives a strange vibe.  It's really a survey of possibilities using the Google Books NGram Viewer.
 
@@ -38,7 +38,7 @@ Overall, the article is worth reading, but it gives a strange vibe.  It's reall
 
 The first half of Mark Liberman's post describes an interesting OCR problem --- in the past, an *s* looked much more like an *f* except when used at the end of a word.  He provides some excellent graphs showing that the OCR software saw an *f* up until the common glyphs changed, then saw an *s.*
 
-He moves on to describe the problem of [word sense disambiguation](http://en.wikipedia.org/wiki/Word_sense_disambiguation "Word sense disambiguation") --- when you query for a word, say *C*, you get results for C as a computer language and results for C as a letter name (e.g., "Curtain C") among others.
+He moves on to describe the problem of [word sense disambiguation](http://en.wikipedia.org/wiki/Word_sense_disambiguation) --- when you query for a word, say *C*, you get results for C as a computer language and results for C as a letter name (e.g., "Curtain C") among others.
 
 The article concludes that researchers are in an awkward position.  We can process the ngram data freely, but we don't have access to the underlying texts (though with good reason).  But because of this, we can't correct things like the s/f problem, word sense disambiguation, part-of-speech based queries, and any of the other myriad analyses we might want to apply.
 

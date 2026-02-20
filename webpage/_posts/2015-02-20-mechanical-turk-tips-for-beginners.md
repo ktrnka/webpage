@@ -43,15 +43,17 @@ Opinion-type work can't be done yourself.
 Links
 =====
 
-[TurkerNation](http://turkernation.com):  Forum with lots of helpful people, great place to get tips and tricks.  Focused more on the worker side but there are enough requesters to answer almost anything.
+_Note from 2026: I removed the dead links but left the titles in case they're searchable_
 
-[The Myth of Low-Cost, High-Quality on Amazon's Mechanical Turk](http://turkernation.com/showthread.php?21352-The-Myth-of-Low-Cost-High-Quality-on-Amazon-s-Mechanical-Turk)
+TurkerNation:  Forum with lots of helpful people, great place to get tips and tricks.  Focused more on the worker side but there are enough requesters to answer almost anything.
 
-[Making the Most of Mechanical Turk: Tips and Best Practices](http://blog.echen.me/2012/04/25/making-the-most-of-mechanical-turk-tips-and-best-practices/)
+The Myth of Low-Cost, High-Quality on Amazon's Mechanical Turk
 
-[HIT Critique: Design Tips for Improving Results](http://mechanicalturk.typepad.com/blog/2013/07/hit-critique-design-tips-for-improving-results-.html)
+Making the Most of Mechanical Turk: Tips and Best Practices 
 
-[Best practices (official)](http://mturkpublic.s3.amazonaws.com/docs/MTURK_BP.pdf): Very useful.
+HIT Critique: Design Tips for Improving Results
+
+Best practices (official): Very useful.
 
 [TurkOpticon](https://turkopticon.ucsd.edu): Where workers go to review requesters.
 
