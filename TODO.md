@@ -7,8 +7,8 @@ Remaining `<!-- KT TODO -->` markers in posts:
 - [ ] `2016-05-19-summary-predicting-winloss-for-league-of-legends.md` — unfinished draft with placeholder text; decide: complete, heavily trim, or remove
 
 Dead/hijacked links:
-- [ ] **`over9000.bitballoon.com` and `over9000.me` now link to someone else's project** — appears in 5 posts. Probably just remove the links or link to the GitHub repo instead.
-- [ ] Finish reviewing / editing all links. I stopped at 2015-09-21-bigger-league-of-legends-data-set.md
+- [X] **`over9000.bitballoon.com` and `over9000.me` now link to someone else's project** — appears in 5 posts. Probably just remove the links or link to the GitHub repo instead.
+- [X] Finish reviewing / editing all links. I stopped at 2015-09-21-bigger-league-of-legends-data-set.md
 
 ## Deployment & infrastructure 🚀
 - [ ] Fix relative links on GitHub Pages (internal links break due to baseurl; need to replicate recipes repo deployment approach — see commit 003a0513)
@@ -29,6 +29,7 @@ Dead/hijacked links:
 - [X] Bring the Kodable tips over
 - [X] Consider updating or removing "Why have a webpage?" section
 - [X] Seattle outdoor volunteering calendar: link from site
+- [X] Replace all Amazon book links with Goodreads
 
 ## Tech debt 🔩
 - [ ] Reduce code duplication between index layout and default page layouts
@@ -37,6 +38,12 @@ Dead/hijacked links:
 - [ ] Code block syntax highlighting: language tags are labeled but no visible styling on frontend — investigate Jekyll/Rouge theme config
 - [ ] Link checking CI: HTMLProofer for internal links (`--disable-external`); Lychee on a cron schedule for external links
 - [ ] Check for redirected links (faster for users if links are direct)
+- [ ] The "special" layout for index.md really breaks the separation of content and styles
+- [ ] The page title on index.md is weird: "Keith Trnka | Personal website of Keith Trnka, PhD"
+
+## Usability
+- [ ] For blog pages, consider moving gists into the page content itself
+- [ ] Navigation back to index from subpages
 
 ## Someday / low priority 💤
 - [ ] Look into Medium post claps/views/stats — optimize top performers

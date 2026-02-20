@@ -88,7 +88,7 @@ The closest published stat I could find was 52.8% win rate for blue side in team
 
 There are two clear trends: 1) blue side has a bigger advantage in team queue than solo queue and 2) the advantage grows at higher rankings.
 
-It seems to agree with professional results: overall 57% win rate for blue side and 59% in NA+EU Spring split 2015 according to [esportsfanz](https://esportsfanz.com/blog/red-vs-blue-how-serious-is-the-win-rate/).
+It seems to agree with professional results: overall 57% win rate for blue side and 59% in NA+EU Spring split 2015 according to esportsfanz.
 
 The overwhelming advantage of blue side in team queue is likely due to first pick and ban. Like solo queue, players at platinum begin to take more advantage of first pick/ban and it escalates to master tier. The advantage in team queue is likely much greater because you're coordinating the draft strategy with your teammates. Furthermore, trading your pick is more effective with a team than with random solo queue players.
 
