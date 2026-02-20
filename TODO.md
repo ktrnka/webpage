@@ -50,6 +50,7 @@ Dead/hijacked links:
 - [ ] Set up private repo for blog drafts/candidates (git submodule approach)
 - [ ] Consider merging recipes repo into this one
 - [ ] Create `.github/copilot-instructions.md` with project-specific guidance
+- [ ] Something like "guest authors" in which I can list Claude if I'm relying heavily on AI
 
 ---
 
