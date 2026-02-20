@@ -32,14 +32,14 @@ Fortunately this is a common problem in web forms: certain values are invalid an
 
 You need to be comfortable editing the HTML of your HIT. Add these two lines near the top:
 
-```
+```html
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="http://parsleyjs.org/dist/parsley.min.js"></script>
 ```
 
 Add this bit near the end. I have it after the "End Survey Body" comment.
 
-```
+```html
 <script type="text/javascript">
  $('#mturk_form').parsley();
 </script>
@@ -47,7 +47,7 @@ Add this bit near the end. I have it after the "End Survey Body" comment.
 
 Now add "required" to any input tags you want to require, such as:
 
-```
+```html
 <input class="form-control" name="poll_2" required size="120" type="text" />
 ```
 

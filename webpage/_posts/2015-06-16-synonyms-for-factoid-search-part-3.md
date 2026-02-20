@@ -52,7 +52,7 @@ Generally you can follow the [tutorial](http://doc.scrapy.org/en/latest/intro/tu
 
 For this project I really just need a collection of documents. I wasn't sure at first whether I wanted each comment to be a document or each thread so I made sure I could experiment with both. So I have a file format like:
 
-```
+```json
 {"title": "Thread 1 title", "url": "http://blah", "body": ["Post 1", "Post 2", ...], "links": ["http://...", "http://...", ]}
 {"title": "Thread 2 title", "url": "http://blah", "body": ["Post 1", "Post 2", ...], "links": ["http://...", "http://...", ]}
 ...

@@ -10,14 +10,11 @@ I imagine people view it as a deterrent - bots can grab the majority of email ad
 
 Instead, I use Javascript to dynamically generate the email address.  My reasoning is that the normal way of writing a web bot forces you to parse the html yourself (or run it through a parser), so you don't have Javascript execution.  Of course it'd still be a problem if my email address were in plain text, but instead I hex-escape the email.  Not being content with that, I then semi-randomly split up the hex string into a concatenation.  Here's what the Javascript can look like:
 
-<!-- KT TODO: Repair this block -->
-```
-|  |
-| --- |
-| <script type="text/javascript"> |
-|  | addr = decodeURIComponent("%74%" + "72%" + "6E%6B%61%" + "4" + "0%75%64" + "%" + "6" + "5" + "%" + "6" + "C" + "%" + "2" + "E" + "%" + "6" + "5" + "%" + "6" + "4" + "%" + "7" + "5") |
-|  | document.write("addr + "\">" + addr + "") |
-| </script> |  |
+```html
+<script type="text/javascript">
+    addr = decodeURIComponent("%74%" + "72%" + "6E%6B%61%" + "4" + "0%75%64" + "%" + "6" + "5" + "%" + "6" + "C" + "%" + "2" + "E" + "%" + "6" + "5" + "%" + "6" + "4" + "%" + "7" + "5");
+    document.write(`<a href="mailto:${addr}">${addr}</a>`);
+</script>
 ```
 
 I generate my Javascript mailtos with [a Perl script](http://www.cis.udel.edu/~trnka/email_obfuscator.pl), and although the random splitting isn't perfect or anything, it's good enough.  However, I'm not so naïve as to think that it can't be parsed, but it's probably safer than spelling out the email address and the end-user doesn't have to know about it (aside from some NoScript users).  If bots learn to parse that, you could of course move the code into an external Javascript file or do all sorts of other sneaky things.

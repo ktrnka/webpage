@@ -60,30 +60,19 @@ There were concerns that this would be too slow or overfit the data so we also h
 
 We split the data 80/20 and evaluated on the held out data. We also evaluated on the training data to help understand how much we're overfitting.
 
-|  |  |  |
-
-| --- | --- | --- |
-
 | Two-part classes (50 classes) | On test data | On training data |
-
+| --- | --- | --- |
 | Predict majority | 17.3% | 17.7% |
-
 | Predict by first word only | 33.5% |  |
-
 | Logistic reg on uni/bi/tri | 76.2% | 97.9% |
-
 | Logistic reg on start of question uni/bi/tri | 56.5% | 62.5% |
 
-|  |  |  |
 
 | One-part classes (6 classes) | On test data | On training data |
-
+| --- | --- | --- |
 | Predict majority | 22.9% | 22.9% |
-
 | Predict by first word only | 50.4% |  |
-
 | Logistic reg on uni/bi/tri | 84.0% | 98.3% |
-
 | Logistic reg on start of question uni/bi/tri | 68.5% | 73.7% |
 
 Even these simple approaches are significantly better than predict majority and predicting using just the first word. But they're clearly overfitting the training data: there's a big gap between accuracy on the training and testing data.

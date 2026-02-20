@@ -43,7 +43,7 @@ First and foremost, separate the sections into separate files.  If you've done 
 
 You can solve this problem with the *ifthen* package. There are several pseudo-guides online.  In my top-level documents I have this:
 
-```
+```latex
 \usepackage{ifthen}
 
 % conditional compilation flags
@@ -53,7 +53,7 @@ You can solve this problem with the *ifthen* package. There are several pseudo-
 
 Where I set the boolean differently in each top-level version.  In my education file I have this (the education file has my degree listings):
 
-```
+```latex
 \ifthenelse{\boolean{thesis-abstract}}{\input{thesis-desc} \vspace{0.1in} \\ }{}
 ```
 

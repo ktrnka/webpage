@@ -112,18 +112,11 @@ Conclusions
 
 I re-trained and tested the best settings on 200k matches with 5-fold cross-validation with 3 threads:
 
-|  |  |  |
-
-| --- | --- | --- |
-
 |  | Accuracy (200k) | Training time |
-
+| --- | --- | --- |
 | Gradient boosting trees | 67.7% | 43.9 min |
-
 | Neural networks | 67.4% | 7.3 min |
-
 | Logistic regression | 66.6% | 0.6 min |
-
 | Random forests | 66.3% | 14.1 min |
 
 I'm not sure why gradient boosting lost 0.2% from previous runs but the hybrid with logistic regression gets 67.9% (not listed above) so I'm not too worried.
@@ -132,18 +125,11 @@ I might have to try a scikit-learn wrapper for [xgboost](https://github.com/dmlc
 
 Below are the best results to date in one table. The runs on 1.8 million matches aren't necessarily with the same hyperparams as the corresponding 200k tests because it takes so long to rerun.
 
-|  |  |  |
-
-| --- | --- | --- |
-
 |  | 200k matches | 1.8m matches |
-
+| --- | --- | --- |
 | Gradient boosting trees | 67.9% | 67.7% |
-
 | Neural networks | 67.4% | 67.0% |
-
 | Logistic regression | 66.6% | 66.1% |
-
 | Random forests | 66.3% | 66.2% |
 
 So what's next? Unfortunately the ranked season ends next week and there are massive overhauls for season 6. Especially with ranked team builder queue, I expect that more players will get their best role so matches will be less predictable. I'd really like to hit 70% accuracy but I'm running out of time before everything changes.

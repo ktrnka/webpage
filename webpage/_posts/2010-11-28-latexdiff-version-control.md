@@ -10,13 +10,13 @@ latexdiff-vc combines latexdiff with a version control interface, and supports C
 
 Here are a few examples from the man page:
 
-```
+```bash
 latexdiff-vc --svn -r file.tex
 ```
 
 This compares file.tex against the most recent version in the SVN repository.  The *--svn* option might not be necessary though:  the documentation says it tries to guess the version control system. (I bet it checks to see if *.svn* exists)
 
-```
+```bash
 latexdiff-vc --svn -r 29 file.tex
 ```
 

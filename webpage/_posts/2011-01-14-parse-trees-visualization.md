@@ -40,13 +40,13 @@ The input can either be XML or Lisp.  I prefer XML, where the elements (tags) a
 
 Spaces are significant here.  Sometimes you might want a constituent label that isn't a valid XML element name.  In this case, use some extra syntax:
 
-```
+```xml
 <constituent label="+S">+s</constituent>
 ```
 
 Here's an example shallow parse with features:
 
-```
+```xml
 <S><NP AGR="3s" ROLE="SUBJ">The dog</NP> <VP><V AGR="3s">ate</V> <NP AGR="3s" ROLE="OBJ">the cat</NP></VP></S>
 ```
 

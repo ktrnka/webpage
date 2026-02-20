@@ -20,34 +20,22 @@ Like lbfgs and newton-cg, sag supports warm\_start so it works well in conjuncti
 
 First I tried on the 200k match dataset with 61 features. I repeated the tests for better accuracy.
 
-<!-- KT TODO: This table has pretty janky rendering -->
-
-
 | Solver | Training time | Accuracy |
-
+| --- | --- | --- |
 | lbfgs | 0.5 min | 66.59% |
-
 | lbfgs | 0.5 min | 66.59% |
-
 | sag | 1.7 min | 66.60% |
-
 | sag | 1.8 min | 66.60% |
-
 | newton-cg | 2.4 min | 66.60% |
-
 | newton-cg | 2.6 min | 66.60% |
 
 sag is faster than newton-cg but still about 3x slower than lbfgs. It does eke out that last 0.01% accuracy though.
 
 sag is designed for large data sets so I also tried on the 1.8 mil x 61 dataset:
 
-<!-- KT TODO: This table has pretty janky rendering -->
-
-
 | Solver | Training time | Accuracy |
-
+| --- | --- | --- |
 | lbfgs | 7.2 min | 66.07% |
-
 | sag | 45.8 min | 66.07% |
 
 It's over 6x slower and achieves the same accuracy. Maybe sag's benefit really shines on datasets with a large number of features: sklearn team testing used 500 features and 47k features.
@@ -64,12 +52,9 @@ RandomForestClassifier
 
 Tried this on the 200k x 61 dataset:
 
-<!-- KT TODO: This table has pretty janky rendering -->
-
 | Version | Training time | Accuracy |
-
+| --- | --- | --- |
 | Random Forest 0.16.1 | 14.1 min | 66.34% |
-
 | Random Forest 0.17 | 13.7 min | 66.39% |
 
 The training time and accuracy fluctuations could just be differences due to randomization; random forests tend to fluctuate more than other methods from test to test. In the worst case, it doesn't seem that much has changed. In the best case there are slight improvements.
@@ -81,42 +66,24 @@ GradientBoostingClassifier
 
 Gradient boosting trains much more slowly than other methods so I started on the 50k x 61 dataset. I ran some tests multiple times to be certain of the results.
 
-<!-- KT TODO: This table has pretty janky rendering -->
-
-|  |  |  |
-
-| --- | --- | --- |
-
 | Version | Training time | Accuracy |
-
+| --- | --- | --- |
 | Gradient Boosting 0.16.1 | 7.6 min | 66.08% |
-
 | Gradient Boosting 0.16.1 with feature scaling | 8.8 min | 66.10% |
-
 | Gradient Boosting 0.17 | 11.0 min | 66.17% |
-
 | Gradient Boosting 0.17 | 11.6 min | 66.34% |
-
 | Gradient Boosting 0.17 with feature scaling | 11.7 min | 66.14% |
-
 | Gradient Boosting 0.17 with feature scaling | 11.7 min | 66.17% |
-
 | Gradient Boosting 0.17 presort=False | 14.0 min | 65.94% |
-
 | Gradient Boosting 0.17 max\_features=auto | 11.2 min | 66.19% |
 
 Gradient boosting is clearly slower in 0.17 and generally a tad more accurate. The default presort setting is good for runtime and accuracy. Feature scaling doesn't really help. Adjusting the max\_features setting seems to help a touch (should reduce variance and improve training time).
 
 I also tested on the 200k x 61 data:
 
-|  |  |  |
-
-| --- | --- | --- |
-
 | Version | Training time | Accuracy |
-
+| --- | --- | --- |
 | Gradient Boosting 0.16.1 | 43.9 min | 67.66% |
-
 | Gradient Boosting 0.17 | 62.3 min | 67.75% |
 
 Again it's slower but more accurate. I've [opened a ticket](https://github.com/scikit-learn/scikit-learn/issues/5808) and right now it's under investigation. It sounds like a change in the error computation may be the culprit.

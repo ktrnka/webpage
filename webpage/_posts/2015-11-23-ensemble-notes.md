@@ -6,7 +6,7 @@ date: 2015-11-23
 
 I thought [probability calibration](http://scikit-learn.org/stable/modules/calibration.html) would be difficult but it's pretty easy. My ensemble code looks like this:
 
-```
+```python
 estimators = []
 
 estimators.append(("nn", NnWrapper(dropout=0.5))
@@ -24,29 +24,15 @@ I ran several tests on the 200k x 61 dataset and found that calibration helps a 
 
 Here are the raw numbers over 4 tests with and without calibration. Each of those tests is a 5-fold cross-validation run so the standard deviations are showing the variation between the different folds.
 
-<!-- KT TODO: This table has pretty janky rendering -->
-
-|  |  |  |  |  |
-
-| --- | --- | --- | --- | --- |
-
-|  | Without calibration | | With calibration | |
-
-|  | Accuracy | Std dev | Accuracy | Std dev |
-
-|  | 67.93 | 0.12 | 68.11 | 0.48 |
-
-|  | 67.77 | 0.14 | 67.87 | 0.19 |
-
-|  | 67.86 | 0.18 | 67.89 | 0.19 |
-
-|  | 67.96 | 0.15 | 67.89 | 0.16 |
-
-| Average | 67.88 |  | 67.94 |  |
-
-| Spread | 0.19 |  | 0.24 |  |
-
-| Runtime | 51.7 min |  | 95 min |  |
+| Run | Without calibration (accuracy +/- std dev) | With calibration |
+| --- | --- | --- |
+| 1 | 67.93 +/- 0.12 | 68.11 +/- 0.48 |
+| 2 | 67.77 +/- 0.14 | 67.87 +/- 0.19 |
+| 3 | 67.86 +/- 0.18 | 67.89 +/- 0.19 |
+| 4 | 67.96 +/- 0.15 | 67.89 +/- 0.16 |
+| Average | 67.88 | 67.94 |
+| Spread | 0.19 | 0.24 |
+| Runtime | 51.7 min | 95 min |
 
 My first run with calibration was amazing: 68.1% accuracy is the best I've ever seen on this data! But it was a fluke. Also the standard deviation is very high, which likely means that one of the folds was accidentally very easy to predict. Although the average accuracy is higher with calibration it's almost entirely due to that one outlier.
 
@@ -74,18 +60,10 @@ I've been using soft voting which averages the probabilities of the individual c
 
 However, I didn't try hard voting. Not all classifiers provide probabilities so hard voting is sometimes necessary. Another advantage is that I don't have to consider calibration.
 
-<!-- KT TODO: This table has pretty janky rendering -->
-
-|  |  |
-
-| --- | --- |
-
 | Model | Accuracy on 200k x 61, 10-fold |
-
+| --- | --- |
 | Hard voting: Neural network + Gradient boosting + Logistic regression | 67.57% |
-
 | Soft voting: Neural network + Gradient boosting + Logistic regression | 67.53% |
-
 | Soft voting: Neural network + Gradient boosting (previous best) | 67.88% |
 
 Hard and soft voting with three classifiers are well within a standard deviation of each other. But they're well beyond a standard deviation lower than soft voting with the two best individual models.

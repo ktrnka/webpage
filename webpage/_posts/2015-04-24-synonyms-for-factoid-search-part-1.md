@@ -14,7 +14,7 @@ The idea behind Searchify was to add a search box to the bottom of the ad. You 
 
 On the backend we're searching against a Json data like this (1):
 
-```
+```json
 {
  "Compass": "YES",
  "Clock": "YES",

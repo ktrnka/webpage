@@ -4,17 +4,14 @@
 
 ## Blog post cleanup 🔧
 Remaining `<!-- KT TODO -->` markers in posts:
-- [ ] `2010-10-31-hiding-emails-from-web-bots.md` — broken code block needs repair
-- [ ] `2015-11-16-scikit-learn-0-17-is-out.md` — 4 broken WP tables
-- [ ] `2015-11-23-ensemble-notes.md` — 2 broken WP tables
 - [ ] `2016-05-19-summary-predicting-winloss-for-league-of-legends.md` — unfinished draft with placeholder text; decide: complete, heavily trim, or remove
 
 Other post quality issues:
 - [ ] Fix poor auto-snippets on blog index (headings/images leaking into excerpt):
   - `bigger-league-of-legends-data-set`, `future-crap-part-1`, `future-crap-part-2`, `scikit-learn-0-17-is-out`, `predicting-league-match-outcomes-gathering-data`
 - [X] MT chat part 3 didn't convert correctly from Medium — needs manual redo
-- [ ] Review code blocks in all converted posts — ensure correct language tags for syntax highlighting
-- [ ] Remove smart quotes from all converted blog posts (script to automate)
+- [X] Review code blocks in all converted posts — ensure correct language tags for syntax highlighting
+- [X] Remove smart quotes from all converted blog posts (script to automate)
 
 ## Deployment & infrastructure 🚀
 - [ ] Fix relative links on GitHub Pages (internal links break due to baseurl; need to replicate recipes repo deployment approach — see commit 003a0513)
