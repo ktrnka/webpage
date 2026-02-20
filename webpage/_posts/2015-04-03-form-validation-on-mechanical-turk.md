@@ -9,7 +9,7 @@ Problem: Workers submitting the form without all the fields filled out
 ======================================================================
 
 Most of my tasks have requested short snippets. For example, I asked workers to provide example searches for an ad:
-![Search for more info](/assets/img/posts/wp/macbook_air_ad_search.png)
+![Search for more info]({{ "/assets/img/posts/wp/macbook_air_ad_search.png" | relative_url }})
 I had workers provide three example searches. But I'd get emails like this:
 "I was doing your survey and hit the return key by accident before the last question."
 "I hit enter and it submitted the Hit before I typed in a third question."
@@ -43,7 +43,7 @@ Now add "required" to any input tags you want to require, such as:
 ```
 
 Now you're all done! Here's what it'll look like if you hit enter or click Submit with a blank field.
-![If you hit enter it'll show a little popup below the field.](/assets/img/posts/wp/mturk_validation.png)
+![If you hit enter it'll show a little popup below the field.]({{ "/assets/img/posts/wp/mturk_validation.png" | relative_url }})
 
 Other notes
 ===========

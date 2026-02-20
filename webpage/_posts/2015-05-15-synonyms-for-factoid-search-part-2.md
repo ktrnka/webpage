@@ -9,7 +9,7 @@ Problem recap
 =============
 
 We were adding a search box to ads to look up quick facts, initially focused on car ads. The big issue is that queries such as "ac" or "a/c" need to match a Json object containing only "air conditioner". Searches like "cost" need to match "MSRP" or at least "price".
-![Toyota Prius Ad with Search Box](/assets/img/posts/wp/prius-ad.png)
+![Toyota Prius Ad with Search Box]({{ "/assets/img/posts/wp/prius-ad.png" | relative_url }})
 
 Synonyms from WordNet
 =====================

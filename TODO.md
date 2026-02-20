@@ -47,7 +47,7 @@ Branch: `import/keith-trnka-com`
 
 ## Backlog 📋
 - Blog — bugs found in local preview
-    - **Broken images in WP posts**: All WP posts reference images as `/assets/img/posts/wp/filename.png` (absolute paths), but the site has `baseurl: "/webpage"` so they need the `relative_url` Liquid filter. Working posts (e.g., Future Crap Part 2) use `{{ "/assets/img/posts/..." | relative_url }}`. Fix: batch sed/python to convert all `](/assets/img/posts/wp/` → `]({{ "/assets/img/posts/wp/` and close with ` | relative_url }})`. Affects all `_posts/*.md` files that have WP images.
+    - ~~**Broken images in WP posts**~~ ✅ Fixed: converted all 24 affected WP posts to use `{{ "/assets/img/posts/wp/..." | relative_url }}` Liquid filter
     - **Missing paragraph breaks in old WP posts**: Many older imported posts lost their blank lines between paragraphs during the WordPress XML extraction, making them a wall of text. Needs investigation: spot-check a few WP-era posts (e.g., 2010–2012 range) against the original WordPress blog at https://kwtrnka.wordpress.com/ to identify the scope, then add blank lines back.
 - Blog
     - Add paper/reference links to academic blog posts (MT series, etc.) — many papers are cited by name but not linked; find DOIs or Google Scholar links so readers can follow the research

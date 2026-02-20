@@ -6,7 +6,7 @@ date: 2015-04-24
 *A while back I worked on a potential startup project called Searchify and needed to generate domain-specific synonyms. I'm finally getting around to writing that up but there may be some holes in my memory or notes.*
 Advertising on mobile phones is a growing area but it's a mess. Suppose you get a full-screen ad for a car. Even if you're interested would you click on it? I wouldn't; it'll switch to a web browser, load for 20 seconds, and then I might not be able to get back to what I was doing.
 The idea behind Searchify was to add a search box to the bottom of the ad. You could enter factoid searches like "price" and see a little popup with the info. You could star the factoid and then close the ad without losing your place in the app. Then come back to it later if you're still interested.
-![Toyota Prius Ad with Search Box](/assets/img/posts/wp/prius-ad.png)
+![Toyota Prius Ad with Search Box]({{ "/assets/img/posts/wp/prius-ad.png" | relative_url }})
 On the backend we're searching against a Json data like this (1):
 
 ```

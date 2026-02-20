@@ -26,12 +26,12 @@ Before
 ------
 
 Here's a shot of what we're working with:
-![Dusty case interior](/assets/img/posts/wp/mobo-ground-zero.jpg)
+![Dusty case interior]({{ "/assets/img/posts/wp/mobo-ground-zero.jpg" | relative_url }})
 Our main targets are the case fan and the CPU heatsink/fan (HSF).  Here are the two sides of the case fan:
-![Dirty case fan (interior face)](/assets/img/posts/wp/case-fan-dirty-int.jpg)![Dirty case fan (exterior face)](/assets/img/posts/wp/case-fan-dirty-ext.jpg)
+![Dirty case fan (interior face)]({{ "/assets/img/posts/wp/case-fan-dirty-int.jpg" | relative_url }})![Dirty case fan (exterior face)]({{ "/assets/img/posts/wp/case-fan-dirty-ext.jpg" | relative_url }})
 The really yucky side is the exterior-facing side.  That dust was sandwiched between the fan and the grill on the back of the case.
 Now for the heatsink/fan.  I'll just show the one photo of them apart:
-![Dirty heatsink/fan, separated](/assets/img/posts/wp/hsf-dirty.jpg)
+![Dirty heatsink/fan, separated]({{ "/assets/img/posts/wp/hsf-dirty.jpg" | relative_url }})
 Take a look at the top view in the first picture.  I bet you didn't expect to find that much fur between the fan and HSF!  I sure didn't!
 
 The Cleaning
@@ -73,13 +73,13 @@ After
 -----
 
 I can write all I want, but the pictures tell the story.  HSF first:
-![Clean heatsink top](/assets/img/posts/wp/hs-clean-top.jpg)![Clean CPU fan bottom](/assets/img/posts/wp/cpu-fan-clean-bottom.jpg)
+![Clean heatsink top]({{ "/assets/img/posts/wp/hs-clean-top.jpg" | relative_url }})![Clean CPU fan bottom]({{ "/assets/img/posts/wp/cpu-fan-clean-bottom.jpg" | relative_url }})
 
-Case fan:![Clean case fan (exterior face)](/assets/img/posts/wp/case-fan-clean-ext.jpg)
+Case fan:![Clean case fan (exterior face)]({{ "/assets/img/posts/wp/case-fan-clean-ext.jpg" | relative_url }})
 
 Mobo (it was tough to get in there with my bear-sized hands so it's not as clean as I'd like):
 
-![Clean motherboard and case](/assets/img/posts/wp/mobo-clean.jpg)
+![Clean motherboard and case]({{ "/assets/img/posts/wp/mobo-clean.jpg" | relative_url }})
 
 The replacement thermal grease was also Arctic Silver 5, but it was a newer tube.
 

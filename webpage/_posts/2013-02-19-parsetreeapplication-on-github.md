@@ -10,7 +10,7 @@ ParseTreeApplication
 
 Periodically people send me thanks or feature requests for ParseTreeApplication, a tool I wrote years ago to draw and compare parse trees.  Like so:
 
-![high attachment - Keith is using the telescope to see the man.](/assets/img/posts/wp/parse-high.png)![Low attachment - Keith is seeing a man, who has a telescope.](/assets/img/posts/wp/parse-low.png)
+![high attachment - Keith is using the telescope to see the man.]({{ "/assets/img/posts/wp/parse-high.png" | relative_url }})![Low attachment - Keith is seeing a man, who has a telescope.]({{ "/assets/img/posts/wp/parse-low.png" | relative_url }})
 
 I rarely get the time to implement a feature request, but I've taken a step to help:  [ParseTreeApplication is now on Github](https://github.com/ktrnka/ParseTreeApplication)!  You can download the source and build it in [Eclipse](http://www.eclipse.org "Eclipse (software)") without much trouble.  Also, I've added some examples of how you can use the ParseTreePanel in an external Java application/applet under [src/edu/udel/ktrnka/pta/examples](https://github.com/ktrnka/ParseTreeApplication/tree/master/src/edu/udel/trnka/pta/examples).
 The executable jar is now in the github tree under [releases](https://github.com/ktrnka/ParseTreeApplication/tree/master/releases).  There aren't any real differences from the previous release but the jar is a bit smaller from compression.

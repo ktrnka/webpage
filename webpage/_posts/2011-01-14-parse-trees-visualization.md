@@ -10,15 +10,15 @@ parse tree application
 ----------------------
 
 This led to a publicly available program, [parse tree application](http://www.cis.udel.edu/~trnka/pta/), which does the work of drawing and comparing various kinds of parse trees.  Part of the motivation was to help compare trees for a friend, but another part of the motivation was to make it easier to have nicely drawn parse trees in publications.  So the output can be saved as EPS, PNG, or JPG.  I had to take some extra effort to get EPS output, but I wanted vector graphics suitable for LaTeX.  Also, if you're on a Mac, you can print and save to PDF.  I seem to remember being able to edit the EPS output nicely in Inkscape.
-![example parse tree](/assets/img/posts/wp/demo_example1.png)
+![example parse tree]({{ "/assets/img/posts/wp/demo_example1.png" | relative_url }})
 By default, the constituents are drawn as close to their children as possible.  In rare occasions, this can lead to rendering ugliness, but you can select a different rendering preference from the right-click menu if you'd like. Also note that the application has no understanding of what different constituents are; you can use whatever label/tag set you want.
 That said, the original goal was to compare parse trees.  I've shown the classic prepositional phrase attachment problem below with the compared rendering.  To produce this, you first have to draw the trees that you want. Then minimize any trees you aren't interested in.  Then select "Compare non-minimized trees" from the "Compare" menu.
-![The telescope was used by Keith to see the man.](/assets/img/posts/wp/comparison_example1.png)
-![Keith saw the man who was holding the telescope](/assets/img/posts/wp/comparison_example2.png)
+![The telescope was used by Keith to see the man.]({{ "/assets/img/posts/wp/comparison_example1.png" | relative_url }})
+![Keith saw the man who was holding the telescope]({{ "/assets/img/posts/wp/comparison_example2.png" | relative_url }})
 I thought about the visualization for a while.  I could highlight the differences with color, but that was hard on the eyes at times.  Or I could bold the text in the different parts, but that changes the shape of the image somewhat.  I decided to grey the similar parts so that it's easy enough to ignore if you want.  Also, this works regardless of color blindness and doesn't change the shape of the image.
 The application also renders a few other options:  Shallow parses and trees with feature structures.  Here's an example shallow parse:
-![shallow parse](/assets/img/posts/wp/example_shallow.png)I don't have a lot of good examples of trees with features, but they can include things like number/gender agreement, verb tense, and other lexical features that are propagated around the parse.  Here's one of the monster parse trees that came out of ICICLE.  You'll have to click on it to see any real detail.
-![monster parse tree](/assets/img/posts/wp/example_huge.png)
+![shallow parse]({{ "/assets/img/posts/wp/example_shallow.png" | relative_url }})I don't have a lot of good examples of trees with features, but they can include things like number/gender agreement, verb tense, and other lexical features that are propagated around the parse.  Here's one of the monster parse trees that came out of ICICLE.  You'll have to click on it to see any real detail.
+![monster parse tree]({{ "/assets/img/posts/wp/example_huge.png" | relative_url }})
 In any case, I can't imagine trying to draw this manually for a paper, even less when you're trying to see where the ambiguity lies in a set of 50-100 of these.  (Though admittedly, I don't know if I can imagine wanting to publish such a huge tree in a paper)
 
 input format
