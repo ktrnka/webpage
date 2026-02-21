@@ -67,7 +67,7 @@ Steps:
 - [ ] Fix mobile homepage layout (sidebar/header alignment above main content)
 - [X] Code block syntax highlighting: root cause was `assets/css/style.scss` not importing `jekyll-theme-minimal` (which includes `rouge-github.scss`); fixed by adding `@import "jekyll-theme-minimal"` before `@import "minimal-custom"`
 - [ ] Link checking CI: HTMLProofer for internal links (`--disable-external`); Lychee on a cron schedule for external links
-- [ ] Check for redirected links (faster for users if links are direct)
+- [X] Check for redirected links (faster for users if links are direct)
 
 ## Usability
 - [ ] For blog pages, consider moving gists into the page content itself — posts with gists:
@@ -75,7 +75,16 @@ Steps:
   - `2015-12-03-ensembles-part-2.md` → [ktrnka/919e0931b4534c05c389](https://gist.github.com/ktrnka/919e0931b4534c05c389) (StackedEnsembleClassifier)
   - `2025-12-04-ubuntu-25-setup-for-a-2014-macbook-pro.md` → [johnjeffers/3006011ec7767a4101cdd118e8d64290](https://gist.github.com/johnjeffers/3006011ec7767a4101cdd118e8d64290) (external reference, probably leave as-is)
 - [ ] Link discoverability: inline links have no underline by default and use a color close to the heading accent — users may not immediately recognize them as links. Consider a persistent underline or a more distinct link color.
-- [ ] Review image file sizes to see if we should optimize for load time (they all render a reasonable size)
+- [X] Review image file sizes to see if we should optimize for load time
+- [X] **Animated GIFs** (~9.4MB total → ~304KB WebM, 97% reduction). Command: `ffmpeg -i input.gif -c:v libvpx-vp9 -b:v 0 -crf 33 -an output.webm`. Used `<video autoplay loop muted playsinline>` with GIF as fallback inside `<video>`.
+  - [X] `bertviz.gif` (3.9M → 128K)
+  - [X] `im-sorry-fail.gif` (2.6M → 64K)
+  - [X] `lower-back-fail.gif` (1.7M → 44K)
+  - [X] `verarbeiten-demo.gif` (992K → 24K)
+  - [X] `alignment-demo.gif` (132K → 24K)
+  - [X] `japanese-example.gif` (76K → 20K)
+- [ ] **Future Crap Part 1 large PNGs** (~13MB total, ~10 DALL-E images) — convert to JPEG at ~85% quality for ~70% size reduction
+- [ ] **WP PC-cleaning JPGs** (~9MB total, original high-quality photos) — `mogrify -quality 80` batch recompress
 
 ## Someday / low priority 💤
 - [ ] Look into Medium post claps/views/stats — optimize top performers

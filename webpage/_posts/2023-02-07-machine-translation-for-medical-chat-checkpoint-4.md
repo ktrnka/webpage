@@ -23,7 +23,10 @@ Initially I sought to extract attention weights from HuggingFace machine transla
 
 Let's start with a brief demo:
 
-![Alignment demo: clicking a word highlights aligned words in the other language]({{ "/assets/img/posts/mt-chat-4-alignment-demo.gif" | relative_url }})
+<video autoplay loop muted playsinline style="max-width:100%; display:block; margin:0 auto;">
+  <source src="{{ "/assets/img/posts/mt-chat-4-alignment-demo.webm" | relative_url }}" type="video/webm">
+  <img src="{{ "/assets/img/posts/mt-chat-4-alignment-demo.gif" | relative_url }}" alt="Alignment demo: clicking a word highlights aligned words in the other language">
+</video>
 
 Users can click words in either language and it'll highlight the word and the aligned words in the other language. It'll also group words into phrases based on alignment, such as grouping "help you" with "ayudarte". Likewise "puedo" maps to "can I" though it's a little hard to see the highlighting on "I".
 
@@ -42,17 +45,26 @@ If you'd like the code, [it's available here](https://colab.research.google.com/
 
 Let's review some examples where it doesn't do as well:
 
-![Alignment failure: "lower back" not correctly mapped to "parte baja de la espalda"]({{ "/assets/img/posts/mt-chat-4-lower-back-fail.gif" | relative_url }})
+<video autoplay loop muted playsinline style="max-width:100%; display:block; margin:0 auto;">
+  <source src="{{ "/assets/img/posts/mt-chat-4-lower-back-fail.webm" | relative_url }}" type="video/webm">
+  <img src="{{ "/assets/img/posts/mt-chat-4-lower-back-fail.gif" | relative_url }}" alt="Alignment failure: lower back not correctly mapped to parte baja de la espalda">
+</video>
 
 In this case, "lower back" should've aligned to "parte baja de la espalda". It *almost* worked, but I don't want "almost" when dealing with potential medical safety issues.
 
-!["I'm sorry" alignment failure]({{ "/assets/img/posts/mt-chat-4-im-sorry-fail.gif" | relative_url }})
+<video autoplay loop muted playsinline style="max-width:100%; display:block; margin:0 auto;">
+  <source src="{{ "/assets/img/posts/mt-chat-4-im-sorry-fail.webm" | relative_url }}" type="video/webm">
+  <img src="{{ "/assets/img/posts/mt-chat-4-im-sorry-fail.gif" | relative_url }}" alt="I'm sorry alignment failure">
+</video>
 
 "I'm sorry" should align to "Lamento" and "to hear" should align to "oír" so that's not great. And "hear" definitely doesn't mean "que"! The rest is pretty good though.
 
 I also tried a basic Japanese example to get another perspective. I'd suggest to pause a moment after seeing the example and ask yourself if you could assess the quality of the translation before reading further.
 
-![Japanese alignment example: "one coffee please"]({{ "/assets/img/posts/mt-chat-4-japanese-example.gif" | relative_url }})
+<video autoplay loop muted playsinline style="max-width:100%; display:block; margin:0 auto;">
+  <source src="{{ "/assets/img/posts/mt-chat-4-japanese-example.webm" | relative_url }}" type="video/webm">
+  <img src="{{ "/assets/img/posts/mt-chat-4-japanese-example.gif" | relative_url }}" alt="Japanese alignment example: one coffee please">
+</video>
 
 The alignment should be:
 
@@ -78,7 +90,10 @@ That said, even if the alignment problem were fixed, it'd still be an improvemen
 
 Here's a recording of BertViz for a translation of the English "She sees the small elephant." into the German "Sie sieht den kleinen Elefanten." with the HuggingFace Helsinki-NLP/opus-mt-en-de model.
 
-![BertViz attention visualization for English-to-German translation]({{ "/assets/img/posts/mt-chat-4-bertviz.gif" | relative_url }})
+<video autoplay loop muted playsinline style="max-width:100%; display:block; margin:0 auto;">
+  <source src="{{ "/assets/img/posts/mt-chat-4-bertviz.webm" | relative_url }}" type="video/webm">
+  <img src="{{ "/assets/img/posts/mt-chat-4-bertviz.gif" | relative_url }}" alt="BertViz attention visualization for English-to-German translation">
+</video>
 
 This machine translation model is a 6-layer transformer and the 8 color-coded columns are attention heads.
 
@@ -108,7 +123,10 @@ This paper has some wonderful graphics of what I'd like to build!
 
 It looks so nice! Though it's a little tough to tell from the lines alone if *verarbeiten* only means *process* or if it means *easy to process*. Here's what it looks like if I run it through my demo and inspect those words:
 
-![My demo: inspecting "verarbeiten" alignment]({{ "/assets/img/posts/mt-chat-4-verarbeiten-demo.gif" | relative_url }})
+<video autoplay loop muted playsinline style="max-width:100%; display:block; margin:0 auto;">
+  <source src="{{ "/assets/img/posts/mt-chat-4-verarbeiten-demo.webm" | relative_url }}" type="video/webm">
+  <img src="{{ "/assets/img/posts/mt-chat-4-verarbeiten-demo.gif" | relative_url }}" alt="My demo: inspecting verarbeiten alignment">
+</video>
 
 So *verarbeiten* probably just means *process*. To be fair, if I could click their user interface in their paper I would likely find the same.
 
