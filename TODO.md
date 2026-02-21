@@ -58,7 +58,7 @@ Steps:
 - [ ] Move homepage inline styles to `_sass/minimal-custom.scss`
 - [ ] Delete `special.html`
 - [ ] Verify `post.html` still works (extends `default` → `base`)
-- [ ] The page title on index.md is weird: "Keith Trnka | Personal website of Keith Trnka, PhD" — fix in `_config.yml`
+- [X] The page title on index.md is weird: "Keith Trnka | Personal website of Keith Trnka, PhD" — fix in `_config.yml`
 
 ## Tech debt 🔩
 - [ ] Fix Sass `@import` deprecation warning (migrate to `@use`/`@forward` before Dart Sass 3.0.0)

@@ -6,7 +6,6 @@ plugins:
 
 # Site settings
 title: Keith Trnka
-description: Personal website of Keith Trnka, PhD
 logo: /assets/img/profile.jpg
 baseurl: "/webpage" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
