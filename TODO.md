@@ -20,6 +20,7 @@ Dead/hijacked links:
 - [ ] Wire up DNS
 - [ ] Redirects from Medium
 - [ ] Redirects from Google Sites
+- [ ] Use jekyll-redirect-from to bake-in redirects from old URLs to new, for any pages that I renamed. This will help with any existing links out there and also with SEO
 
 ## Blog features & enhancements 📋
 - [ ] Series/project navigation: readers landing on one post in a series should find the others (LoL/ML, Searchify/synonyms, MTurk, Over 9000). **Research note:** Jekyll `categories:` build into the URL, `tags:` don't — otherwise very similar. Start with small controlled tests before committing to a scheme.
