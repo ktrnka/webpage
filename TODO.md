@@ -13,14 +13,19 @@ Dead/hijacked links:
 ## Deployment & infrastructure 🚀
 - [X] Fix relative links on GitHub Pages (internal links break due to baseurl; need to replicate recipes repo deployment approach — see commit 003a0513)
 - [X] Restore local `bundle exec jekyll serve` testing (removed in that same commit)
-- [ ] Test GitHub Pages build end-to-end (verify GitHub Actions succeeds)
+- [X] Test GitHub Pages build end-to-end (verify GitHub Actions succeeds)
 - [X] Verify all 33 PDF links work
+- [ ] Add `jekyll-sitemap` plugin (supported by GitHub Pages, just add to `_config.yml` plugins list)
 - [ ] Manual testing: desktop, tablet, mobile across browsers
+- [ ] Wire up DNS
+- [ ] Redirects from Medium
+- [ ] Redirects from Google Sites
 
 ## Blog features & enhancements 📋
 - [ ] Series/project navigation: readers landing on one post in a series should find the others (LoL/ML, Searchify/synonyms, MTurk, Over 9000). **Research note:** Jekyll `categories:` build into the URL, `tags:` don't — otherwise very similar. Start with small controlled tests before committing to a scheme.
 - [ ] Add paper/reference links to academic blog posts (MT series, etc.) — cite DOIs or Google Scholar
-- [ ] High-res WP images: verify `max-width: 100%` CSS is in place so they don't break layout. Optional: batch resize with ImageMagick.
+- [X] High-res WP images: verify `max-width: 100%` CSS is in place so they don't break layout. Optional: batch resize with ImageMagick.
+- [ ] Previous/next post links on blog posts (Jekyll built-in `page.previous`/`page.next`) — low effort, helps discoverability
 - [ ] Research email notification / RSS-to-email for blog updates
 - [ ] Write a post about moving from Medium → self-hosted Jekyll
 
@@ -31,24 +36,46 @@ Dead/hijacked links:
 - [X] Seattle outdoor volunteering calendar: link from site
 - [X] Replace all Amazon book links with Goodreads
 
+## Layout refactor 🏗️
+Goal: single source of truth for `<head>`/chrome, shared nav on all pages, clean separation of layout vs content.
+
+New hierarchy:
+- `base.html` — shared `<head>`, SEO, stylesheet, lightweight top nav (Home | Blog | Publications), `{{ content }}`
+- `default.html` (extends `base`) — single-column wrapper for pages & blog index
+  - `post.html` (extends `default`) — adds post header + date
+- `home.html` (extends `base`) — two-column grid with sidebar (profile, full nav, social links)
+
+Other changes:
+- `index.md` → `index.html` (content is fundamentally HTML, not Markdown)
+- Move inline `<style>` from special.html into SCSS
+- Delete `special.html` once `home.html` + `index.html` are working
+
+Steps:
+- [ ] Create `base.html` with shared `<head>`, top nav bar, `{{ content }}`
+- [ ] Refactor `default.html` to extend `base` (add `layout: base`, keep single-column wrapper)
+- [ ] Create `home.html` extending `base` with two-column grid + sidebar
+- [ ] Convert `index.md` → `index.html` using `layout: home`
+- [ ] Move homepage inline styles to `_sass/minimal-custom.scss`
+- [ ] Delete `special.html`
+- [ ] Verify `post.html` still works (extends `default` → `base`)
+- [ ] The page title on index.md is weird: "Keith Trnka | Personal website of Keith Trnka, PhD" — fix in `_config.yml`
+
 ## Tech debt 🔩
-- [ ] Reduce code duplication between index layout and default page layouts
 - [ ] Fix Sass `@import` deprecation warning (migrate to `@use`/`@forward` before Dart Sass 3.0.0)
 - [ ] Fix mobile homepage layout (sidebar/header alignment above main content)
 - [ ] Code block syntax highlighting: language tags are labeled but no visible styling on frontend — investigate Jekyll/Rouge theme config
 - [ ] Link checking CI: HTMLProofer for internal links (`--disable-external`); Lychee on a cron schedule for external links
 - [ ] Check for redirected links (faster for users if links are direct)
-- [ ] The "special" layout for index.md really breaks the separation of content and styles
-- [ ] The page title on index.md is weird: "Keith Trnka | Personal website of Keith Trnka, PhD"
 
 ## Usability
 - [ ] For blog pages, consider moving gists into the page content itself
-- [ ] Navigation back to index from subpages
+- [ ] Review image file sizes to see if we should optimize for load time (they all render a reasonable size)
 
 ## Someday / low priority 💤
 - [ ] Look into Medium post claps/views/stats — optimize top performers
 - [ ] Set up private repo for blog drafts/candidates (git submodule approach)
 - [ ] Consider merging recipes repo into this one
+- [ ] Archive page: blog posts grouped by year for easier browsing across 15 years of content
 - [ ] Create `.github/copilot-instructions.md` with project-specific guidance
 - [ ] Something like "guest authors" in which I can list Claude if I'm relying heavily on AI
 
