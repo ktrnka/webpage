@@ -44,7 +44,6 @@ show_logo: false
 - [Mailbox Peak](https://photos.app.goo.gl/PJ2QL61ZtS5EhJTa9)
 - [Lake Serene](https://photos.app.goo.gl/QgXB6fwPzQSmBy7o6)
 - [Granite Mountain](https://goo.gl/photos/cdWod7DW9RmkW11s8)
-- [Mt Si](https://goo.gl/photos/avnZsJd2Vy4bvDMH7)
 - [Oahu trip](https://goo.gl/photos/ZgGKeSjNXGrH728e6)
 
 ## Older

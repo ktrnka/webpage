@@ -138,7 +138,7 @@ If you're looking to calculate retention for your team, all you need are start a
 
 ### See also
 
-- [Hands-on Survival Analysis with Python](https://towardsdatascience.com/hands-on-survival-analysis-with-python-270fa1e6fb41)
+- Hands-on Survival Analysis with Python (page no longer available)
 - [Applying Survival Analysis to Reduce Employee Turnover: A Practical Case](https://www.aihr.com/blog/applying-survival-analysis-reduce-employee-turnover-practical-case/)
 - [Handbook of Regression Modeling in People Analytics: Ch 9 Survival Analysis for Modeling Singular Events Over Time](https://web.archive.org/web/20250705190329/https://peopleanalytics-regression-book.org/survival.html)
 - [intelliHR explanation of survival analysis for retention](https://web.archive.org/web/20211130093837/https://intellihr.com/en-us/insights/survival-analysis) -- this has some great charts

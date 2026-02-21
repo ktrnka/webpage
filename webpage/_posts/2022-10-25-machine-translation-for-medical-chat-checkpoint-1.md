@@ -225,7 +225,7 @@ Google Cloud has three translation solutions:
 
 The AutoML Translation option looks like it could work well for medical machine translation. It starts from a prebuilt Google neural machine translation then adapts to your data. And both the base model and AutoML model are shown in the evaluation reports!
 
-#### [Microsoft Azure Cognitive Services Translator](https://azure.microsoft.com/en-us/products/cognitive-services/translator/)
+#### Microsoft Azure Cognitive Services Translator (page no longer available)
 
 Azure looks to have good options for [custom models](https://learn.microsoft.com/en-us/azure/cognitive-services/translator/customization) as well.
 
@@ -245,7 +245,7 @@ The Azure API sounds easier to work with, because you can provide document-align
 
 As I was editing this post, I stumbled into several commercial offerings for seamless translation of live chat and other customer support. For the most part, the companies integrate with existing customer service platforms such as ZenDesk, Salesforce, and so on, and enable a company to staff customer service agents in one language with automated translation into the language of the customer.
 
-KantanAI has [some information online](https://kantanmtblog.com/2021/04/28/kantanstream-meets-the-challenge-of-big-data-and-wins/). They mainly act as a plugin to existing customer service tools and do seamless translation. The translation is human-in-the-loop -- many messages go through machine translation but many others are sent to quick-response professional translators. That builds up a data set for them and over time should enable a much better MT system.
+KantanAI had some information online (page no longer available). They mainly act as a plugin to existing customer service tools and do seamless translation. The translation is human-in-the-loop -- many messages go through machine translation but many others are sent to quick-response professional translators. That builds up a data set for them and over time should enable a much better MT system.
 
 Unbabel also has some information online such as [case studies of deployments](https://resources.unbabel.com/case-studies/farfetch-elevates-customer-support-agent-experience-with-unbabel). I found the post interesting because the highlights from the customer sounded so similar to priorities in workforce management in healthcare, like the effects of reduced reliance on hard-to-hire people. The writing suggests that turnaround time is occasionally a problem, so maybe it's more for email support rather than live chat, or live chat in an overstaffed center that already has non-instant response times.
 
@@ -253,7 +253,7 @@ The other companies only had an option to book a sales demo; I didn't see any de
 
 These companies don't mention HIPAA or healthcare so that's a non-starter for any real application in the US.
 
-I also saw mentions of [iTranslate Medical](https://blog.itranslate.com/news/itranslate-medical/) but I wasn't able to try it out. The only working medical translation app I found for Android is [Care to translate](https://play.google.com/store/apps/details?id=com.siv&hl=en_US&gl=US), which is a phrase board of common phrases.
+I also saw mentions of iTranslate Medical (page no longer available) but I wasn't able to try it out. The only working medical translation app I found for Android is [Care to translate](https://play.google.com/store/apps/details?id=com.siv&hl=en_US&gl=US), which is a phrase board of common phrases.
 
 ### What medical machine translation could be, revised
 

@@ -26,7 +26,7 @@ If you aren't sure what you'll apply for, you may need roughly three CVs: a teac
 
 The search committee for a teaching position wants to know about your teaching experience. How many classes have you taught? What were they about? Were they introductory or advanced? What's your teaching style? How does your teaching style affect your curriculum and/or delivery? Most of the sections are the same as a research CV, but the order is different. You may also want to include information such as review quotes, advising experience, whether your students switched to CS major, or any other positive experiences.
 
-*Side note:*I don't suggest including teaching evaluation numbers because the reader will have no reference point for comparison. If you really want to include them, also include the numbers for other people teaching the same class, preferably in the same semester. Also, I tend to question the survey numbers. For example, see [this study](https://www.economics.harvard.edu/faculty/staiger/files/carrell%2Bwest%2Bprofessor%2Bqualty%2Bjpe.pdf).
+*Side note:*I don't suggest including teaching evaluation numbers because the reader will have no reference point for comparison. If you really want to include them, also include the numbers for other people teaching the same class, preferably in the same semester. Also, I tend to question the survey numbers. For example, see this study (page no longer available).
 
 The committee for a research faculty position wants to know about your publications and grants. If you have research advising experience, that's good too. Teaching and service are important but secondary. In contrast to a teaching school, a research school might want the following info:
 

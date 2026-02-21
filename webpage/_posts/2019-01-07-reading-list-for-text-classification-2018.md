@@ -69,7 +69,7 @@ Wang, S., & Manning, C. (2012). [Baselines and bigrams](https://dl.acm.org/citat
 
 Iyyer, M., Manjunatha, V., Boyd-Graber, J., & Daumé III, H. (2015). [Deep Unordered Composition Rivals Syntactic Methods for Text Classification](https://aclanthology.org/P15-1162). In ACL.
 
-Li, B., Liu, T., Zhao, Z., Wang, P., & Du, X. (2017). [Neural Bag-of-Ngrams](https://pdfs.semanticscholar.org/0841/57df67618cae20de3c484d6477fd48601d46.pdf?_ga=2.127441229.1599049180.1524348587-1436306365.1524348587). In AAAI.
+Li, B., Liu, T., Zhao, Z., Wang, P., & Du, X. (2017). Neural Bag-of-Ngrams (paper link no longer available). In AAAI.
 
 #### Recurrent neural networks
 
