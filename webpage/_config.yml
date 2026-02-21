@@ -7,8 +7,10 @@ plugins:
 # Site settings
 title: Keith Trnka
 logo: /assets/img/profile.jpg
-baseurl: "/webpage" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+
+# Note: These are for my domain, not the github.io domain
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.keith-trnka.com" # the base hostname & protocol for your site
 
 # Author settings (prevents "Your Name" in SEO tags)
 author:
