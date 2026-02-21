@@ -79,6 +79,7 @@ a {
 a:hover, a:focus {
   color: var(--accent-mid);
   text-decoration: underline;
+  font-weight: inherit;
 }
 
 // External links styling

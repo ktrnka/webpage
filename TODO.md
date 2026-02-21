@@ -74,6 +74,7 @@ Steps:
   - `2015-11-04-better-predictions-for-league-matches.md` → [ktrnka/81c8a7b79cb05c577aab](https://gist.github.com/ktrnka/81c8a7b79cb05c577aab) (scikit-learn wrapper for Keras models)
   - `2015-12-03-ensembles-part-2.md` → [ktrnka/919e0931b4534c05c389](https://gist.github.com/ktrnka/919e0931b4534c05c389) (StackedEnsembleClassifier)
   - `2025-12-04-ubuntu-25-setup-for-a-2014-macbook-pro.md` → [johnjeffers/3006011ec7767a4101cdd118e8d64290](https://gist.github.com/johnjeffers/3006011ec7767a4101cdd118e8d64290) (external reference, probably leave as-is)
+- [ ] Link discoverability: inline links have no underline by default and use a color close to the heading accent — users may not immediately recognize them as links. Consider a persistent underline or a more distinct link color.
 - [ ] Review image file sizes to see if we should optimize for load time (they all render a reasonable size)
 
 ## Someday / low priority 💤
