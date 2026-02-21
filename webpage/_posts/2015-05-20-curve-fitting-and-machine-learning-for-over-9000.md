@@ -15,7 +15,7 @@ Each episode of each show is processed independently; I'm treating this purely a
 
 downloads *= b \** log*(*days\_since\_release *+ a) ^ c*
 
-For more info on the background see [previous post](/blog/2015/02/projecting-the-number-of-downloads-for-torrents/).
+For more info on the background see [previous post]({{ "/blog/2015/02/projecting-the-number-of-downloads-for-torrents/" | relative_url }}).
 
 Problems
 --------

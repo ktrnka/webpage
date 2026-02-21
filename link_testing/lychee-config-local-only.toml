@@ -5,5 +5,4 @@ suggest = true
 #format = "markdown"
 mode = "emoji"
 
-#remap = []"/webpage /"
 offline = true

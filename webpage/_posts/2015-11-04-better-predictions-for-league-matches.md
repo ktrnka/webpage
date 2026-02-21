@@ -4,9 +4,9 @@ title: Better predictions for League matches
 date: 2015-11-04
 ---
 
-I'm predicting the winner of League of Legends ranked games with machine learning. The models look at player histories, champions picked, player ranks, blue vs red side, solo vs team queue, etc. The last time I wrote about accuracy improvements my best was [61.2% accuracy with gradient boosting trees](/blog/2015/09/predicting-league-match-outcomes-week-2/).
+I'm predicting the winner of League of Legends ranked games with machine learning. The models look at player histories, champions picked, player ranks, blue vs red side, solo vs team queue, etc. The last time I wrote about accuracy improvements my best was [61.2% accuracy with gradient boosting trees]({{ "/blog/2015/09/predicting-league-match-outcomes-week-2/" | relative_url }}).
 
-Since then I've increased the amount of data from about 45,000 matches to 1.8 million matches. I've done analysis and the trends are [much more reliable](/blog/2015/09/bigger-league-of-legends-data-set/).
+Since then I've increased the amount of data from about 45,000 matches to 1.8 million matches. I've done analysis and the trends are [much more reliable]({{ "/blog/2015/09/bigger-league-of-legends-data-set/" | relative_url }}).
 
 Experiments with 1.8 million matches are slow so I usually use 200k and sometimes 50k to test code. Almost always the trends in 200k are the same as 1.8 million but they run in minutes or hours compared to hours or days.
 
@@ -144,7 +144,7 @@ Things that might help:
 Extra: Predictability tests
 ===========================
 
-It's good to understand when your models are doing well and poorly. I looked at this [before](/blog/2015/09/predicting-league-matches-are-some-matches-more-predictable/) but there weren't too many interesting trends. I've changed my tests in three ways:  logistic regression instead of random forests (for speed), full 1.8 million matches instead of 44k, and using the players' current league/rank to tell the level of the match instead of their rank in previous season.
+It's good to understand when your models are doing well and poorly. I looked at this [before]({{ "/blog/2015/09/predicting-league-matches-are-some-matches-more-predictable/" | relative_url }}) but there weren't too many interesting trends. I've changed my tests in three ways:  logistic regression instead of random forests (for speed), full 1.8 million matches instead of 44k, and using the players' current league/rank to tell the level of the match instead of their rank in previous season.
 
 ![Predictability by league]({{ "/assets/img/posts/wp/image-20.png" | relative_url }})
 

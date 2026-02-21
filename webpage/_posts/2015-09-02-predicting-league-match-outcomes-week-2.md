@@ -4,7 +4,7 @@ title: "Predicting League match outcomes: Week 2"
 date: 2015-09-02
 ---
 
-I've continued to log my experimental accuracy in predicting League of Legends matches (see [part 1](/blog/2015/08/predicting-league-match-outcomes-first-week-of-machine-learning/)) and this graph picks up from where I left off last time (around 64% accuracy).
+I've continued to log my experimental accuracy in predicting League of Legends matches (see [part 1]({{ "/blog/2015/08/predicting-league-match-outcomes-first-week-of-machine-learning/" | relative_url }})) and this graph picks up from where I left off last time (around 64% accuracy).
 
 ![Experimental accuracy part 2]({{ "/assets/img/posts/wp/image-4.png" | relative_url }})
 

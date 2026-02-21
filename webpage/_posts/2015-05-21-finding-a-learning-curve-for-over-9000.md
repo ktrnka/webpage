@@ -88,7 +88,7 @@ Weighting the training data
 
 There's one trick I found in the [scipy documentation](https://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.optimize.curve_fit.html): You can provide uncertainty weights on the data points. So you can force least squares regression to fit some points closer than others.
 
-When we have a two-hump curve like some of the weird cases in the [previous post](/blog/2015/05/curve-fitting-and-machine-learning-for-over-9000/) it's important to prefer fitting the later data.
+When we have a two-hump curve like some of the weird cases in the [previous post]({{ "/blog/2015/05/curve-fitting-and-machine-learning-for-over-9000/" | relative_url }}) it's important to prefer fitting the later data.
 
 This is what I used for weights (Python): [1 / (x + 0.5) for x in x\_data]
 

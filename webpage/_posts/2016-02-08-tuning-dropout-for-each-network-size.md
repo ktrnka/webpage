@@ -3,7 +3,7 @@ layout: post
 title: Tuning dropout for each network size
 date: 2016-02-08
 ---
-In the [previous post](/blog/2016/02/switching-from-deep-to-wide/) I tested a range of shallow networks from 50 hidden units to 1000. On the smaller dataset (50k rows) additional network complexity hurts: It's just overfitting. On the larger dataset (200k rows) the additional complexity helps because the amount of data prevents the network from overfitting.
+In the [previous post]({{ "/blog/2016/02/switching-from-deep-to-wide/" | relative_url }}) I tested a range of shallow networks from 50 hidden units to 1000. On the smaller dataset (50k rows) additional network complexity hurts: It's just overfitting. On the larger dataset (200k rows) the additional complexity helps because the amount of data prevents the network from overfitting.
 
 But I learned from the [Stanford CNN class](https://cs231n.github.io/) that I made a mistake: It's bad to view network complexity as regularization, instead it's better to pick the most complex you can and tune dropout (and/or L2). I'd amend that to say that it's bad if you have excess compute resources. If the pace of experimentation is limited by runtime then reducing the network size may be a good way to achieve both regularization and experimental efficiency.
 

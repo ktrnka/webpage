@@ -93,7 +93,7 @@ Again it's slower but more accurate. I've [opened a ticket](https://github.com/s
 VotingClassifier
 ================
 
-In [the previous post](/blog/2015/11/better-predictions-for-league-matches/) I described possible directions to get from 67.9% accuracy up to 70.0% and suggested that an ensemble of the best classifiers may be a fruitful direction but may take a bit of time to code.
+In [the previous post]({{ "/blog/2015/11/better-predictions-for-league-matches/" | relative_url }}) I described possible directions to get from 67.9% accuracy up to 70.0% and suggested that an ensemble of the best classifiers may be a fruitful direction but may take a bit of time to code.
 
 Well, two things changed. First off, I found [a great guide](https://sebastianraschka.com/Articles/2014_ensemble_classifier.html) on making an ensemble in scikit-learn. I implemented a simple ensemble and improved my best results from 67.9% accuracy to 68.0% accuracy by a soft-voting ensemble of gradient boosting and neural networks. It's not as much as I expected but it's progress.
 

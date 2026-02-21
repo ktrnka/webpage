@@ -8,7 +8,7 @@ Just a reminder, my goal is to predict the winner of a League of Legends ranked 
 
 Before you read much further, decide on your own hypotheses: How accurate is good? How accurate is bad? Is 100% achievable? What would it mean? (Look back after reading more to assess your predictions.)
 
-In the [previous post](/blog/2015/08/predicting-league-match-outcomes-gathering-data/) I described my infrastructure for building a database of players and matches from the Riot API. This one will describe the process of machine learning including the horrible failures.
+In the [previous post]({{ "/blog/2015/08/predicting-league-match-outcomes-gathering-data/" | relative_url }}) I described my infrastructure for building a database of players and matches from the Riot API. This one will describe the process of machine learning including the horrible failures.
 
 Data and evaluation
 ===================

@@ -4,7 +4,7 @@ title: Synonyms for factoid search, Part 2
 date: 2015-05-15
 ---
 
-*The [previous post](/blog/2015/04/synonyms-for-factoid-search-part-1/) described the problem and attempted to find synonyms for Elastic Search using a thesaurus, Wikipedia redirect groups, and Bing's related searches.*
+*The [previous post]({{ "/blog/2015/04/synonyms-for-factoid-search-part-1/" | relative_url }}) described the problem and attempted to find synonyms for Elastic Search using a thesaurus, Wikipedia redirect groups, and Bing's related searches.*
 
 Problem recap
 =============

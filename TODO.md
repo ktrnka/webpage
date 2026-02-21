@@ -11,10 +11,10 @@ Dead/hijacked links:
 - [X] Finish reviewing / editing all links. I stopped at 2015-09-21-bigger-league-of-legends-data-set.md
 
 ## Deployment & infrastructure 🚀
-- [ ] Fix relative links on GitHub Pages (internal links break due to baseurl; need to replicate recipes repo deployment approach — see commit 003a0513)
+- [X] Fix relative links on GitHub Pages (internal links break due to baseurl; need to replicate recipes repo deployment approach — see commit 003a0513)
 - [X] Restore local `bundle exec jekyll serve` testing (removed in that same commit)
 - [ ] Test GitHub Pages build end-to-end (verify GitHub Actions succeeds)
-- [ ] Verify all 33 PDF links work
+- [X] Verify all 33 PDF links work
 - [ ] Manual testing: desktop, tablet, mobile across browsers
 
 ## Blog features & enhancements 📋

@@ -49,7 +49,7 @@ The same trend is shown - there are many more players in gold V than silver 1, f
 Blue side win rate
 ==================
 
-Overall the blue side has a small advantage. In solo queue the blue side wins 50.5% of the time. Previously I saw that [it varies by league](/blog/2015/08/predicting-league-match-outcomes-first-week-of-machine-learning/) but wasn't statistically significant (read: possibly due to randomness). But now I have enough data that the trends are statistically significant!
+Overall the blue side has a small advantage. In solo queue the blue side wins 50.5% of the time. Previously I saw that [it varies by league]({{ "/blog/2015/08/predicting-league-match-outcomes-first-week-of-machine-learning/" | relative_url }}) but wasn't statistically significant (read: possibly due to randomness). But now I have enough data that the trends are statistically significant!
 
 Win rate by tier in solo queue
 ------------------------------

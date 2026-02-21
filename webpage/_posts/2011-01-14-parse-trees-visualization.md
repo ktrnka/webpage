@@ -4,7 +4,7 @@ title: parse trees + visualization = ???
 date: 2011-01-14
 ---
 
-There have been many points in my research career when I realized that I would understand the problem better if someone had visualized my data somehow.  Usually, that means I write some simple visualization that's close enough to quickly answer my questions about the data.  For example, I've [compared stemmers/lemmatizers in a simple way](/blog/2010/11/comparing-stemmers/) to help understand the differences.  It isn't the prettiest visualization, but it's enough to quickly learn something new.
+There have been many points in my research career when I realized that I would understand the problem better if someone had visualized my data somehow.  Usually, that means I write some simple visualization that's close enough to quickly answer my questions about the data.  For example, I've [compared stemmers/lemmatizers in a simple way]({{ "/blog/2010/11/comparing-stemmers/" | relative_url }}) to help understand the differences.  It isn't the prettiest visualization, but it's enough to quickly learn something new.
 
 Back when I was working in an older lab (maybe 2003-2004), my labmate Rashida Davis had a problem with a parser.  For certain sentences, it'd return as many as 50 different parses.  Part of the problem was that the grammar was developed a long time ago (and had some unfortunate ambiguities).  Another part of the problem was that the grammar had many feature structures in addition to plain constituent labels.  Being the generous guy that I am, I decided to write a Java program to draw the parse trees and help to compare them.  (Unfortunately, I had no sense of the complexity of the parse trees when I started out)
 
