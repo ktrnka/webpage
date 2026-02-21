@@ -63,12 +63,15 @@ Steps:
 ## Tech debt 🔩
 - [ ] Fix Sass `@import` deprecation warning (migrate to `@use`/`@forward` before Dart Sass 3.0.0)
 - [ ] Fix mobile homepage layout (sidebar/header alignment above main content)
-- [ ] Code block syntax highlighting: language tags are labeled but no visible styling on frontend — investigate Jekyll/Rouge theme config
+- [X] Code block syntax highlighting: root cause was `assets/css/style.scss` not importing `jekyll-theme-minimal` (which includes `rouge-github.scss`); fixed by adding `@import "jekyll-theme-minimal"` before `@import "minimal-custom"`
 - [ ] Link checking CI: HTMLProofer for internal links (`--disable-external`); Lychee on a cron schedule for external links
 - [ ] Check for redirected links (faster for users if links are direct)
 
 ## Usability
-- [ ] For blog pages, consider moving gists into the page content itself
+- [ ] For blog pages, consider moving gists into the page content itself — posts with gists:
+  - `2015-11-04-better-predictions-for-league-matches.md` → [ktrnka/81c8a7b79cb05c577aab](https://gist.github.com/ktrnka/81c8a7b79cb05c577aab) (scikit-learn wrapper for Keras models)
+  - `2015-12-03-ensembles-part-2.md` → [ktrnka/919e0931b4534c05c389](https://gist.github.com/ktrnka/919e0931b4534c05c389) (StackedEnsembleClassifier)
+  - `2025-12-04-ubuntu-25-setup-for-a-2014-macbook-pro.md` → [johnjeffers/3006011ec7767a4101cdd118e8d64290](https://gist.github.com/johnjeffers/3006011ec7767a4101cdd118e8d64290) (external reference, probably leave as-is)
 - [ ] Review image file sizes to see if we should optimize for load time (they all render a reasonable size)
 
 ## Someday / low priority 💤
