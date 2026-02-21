@@ -83,8 +83,8 @@ Steps:
   - [X] `verarbeiten-demo.gif` (992K → 24K)
   - [X] `alignment-demo.gif` (132K → 24K)
   - [X] `japanese-example.gif` (76K → 20K)
-- [ ] **Future Crap Part 1 large PNGs** (~13MB total, ~10 DALL-E images) — convert to JPEG at ~85% quality for ~70% size reduction
-- [ ] **WP PC-cleaning JPGs** (~9MB total, original high-quality photos) — `mogrify -quality 80` batch recompress
+- [X] **Future Crap Part 1 large PNGs** (~15MB total, 13 PNG images → JPEG at 85% quality, ~2MB total, ~87% reduction). `convert -quality 85`. Updated refs in part-1 and part-2 posts.
+- [X] **WP PC-cleaning JPGs** (~10MB → ~3.8MB, 63% reduction) — `mogrify -quality 80` in-place recompress on 8 files in `assets/img/posts/wp/`
 
 ## Someday / low priority 💤
 - [ ] Look into Medium post claps/views/stats — optimize top performers

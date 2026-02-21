@@ -38,7 +38,7 @@ Nice Microsoft Surface; good dog! I love the haunted look, as if they just worke
 
 #### Prompt: College girl studying at a desk listening to lofi hiphop beats with rain outside
 
-![College girl studying with University of Washington branding]({{ "/assets/img/posts/future-crap-1-college-lofi.png" | relative_url }})
+![College girl studying with University of Washington branding]({{ "/assets/img/posts/future-crap-1-college-lofi.jpg" | relative_url }})
 
 **Engine:** OpenAI DALL-E 3
 
@@ -48,7 +48,7 @@ Where's the lofi vibe? Apparently replaced with vague University of Washington b
 
 #### Prompt: The sun has just come out again after a light rain on a trail that goes around a circular, shallow manmade lake. There are a few people walking and jogging on the path
 
-![Trail lake scene with North Face branding]({{ "/assets/img/posts/future-crap-1-trail-lake.png" | relative_url }})
+![Trail lake scene with North Face branding]({{ "/assets/img/posts/future-crap-1-trail-lake.jpg" | relative_url }})
 
 **Engine:** OpenAI DALL-E 3
 
@@ -58,7 +58,7 @@ So peaceful! Maybe I'll find peace too if I buy a North Face windbreaker!
 
 #### Prompt: a child's crayon drawing of what mom's work is like. The child's mother is a product manager but the child doesn't understand
 
-![Child's drawing of product management with Lego branding]({{ "/assets/img/posts/future-crap-1-childs-drawing.png" | relative_url }})
+![Child's drawing of product management with Lego branding]({{ "/assets/img/posts/future-crap-1-childs-drawing.jpg" | relative_url }})
 
 **Engine:** OpenAI DALL-E 3
 
@@ -78,7 +78,7 @@ Future Crap decided this was an Ikea moment and I love it except it's too subtle
 
 #### Prompt: a clock with bacon for hands
 
-![Clock with bacon hands and Tim Horton's branding]({{ "/assets/img/posts/future-crap-1-clock-bacon.png" | relative_url }})
+![Clock with bacon hands and Tim Horton's branding]({{ "/assets/img/posts/future-crap-1-clock-bacon.jpg" | relative_url }})
 
 **Engine:** OpenAI DALL-E 3
 
@@ -98,7 +98,7 @@ Where's the rest of the ice cream?!? The Snickers logo is pretty good though!
 
 #### Prompt: a historical volcanic barbecue
 
-![Historical volcanic barbecue with Burger King branding (DALL-E 3)]({{ "/assets/img/posts/future-crap-1-volcanic-barbecue-dalle.png" | relative_url }})
+![Historical volcanic barbecue with Burger King branding (DALL-E 3)]({{ "/assets/img/posts/future-crap-1-volcanic-barbecue-dalle.jpg" | relative_url }})
 
 **Engine:** OpenAI DALL-E 3
 
@@ -108,7 +108,7 @@ I kinda want a Burger King Whopper so it's working even though it may not be obv
 
 #### SAME PROMPT, SLIGHTLY DIFFERENT ENGINE
 
-![Historical volcanic barbecue with Burger King branding (Microsoft Image Creator)]({{ "/assets/img/posts/future-crap-1-volcanic-barbecue-microsoft.png" | relative_url }})
+![Historical volcanic barbecue with Burger King branding (Microsoft Image Creator)]({{ "/assets/img/posts/future-crap-1-volcanic-barbecue-microsoft.jpg" | relative_url }})
 
 **Engine:** Microsoft Image Creator / DALL-E 3
 
@@ -118,7 +118,7 @@ This is the exact same prompt fed into Microsoft Image Creator! This is when I r
 
 #### Prompt: a tech worker working at their computer next to a huge pyramid of fried chicken and an extra large soda
 
-![Tech worker with pyramid of fried chicken and McDonald's branding]({{ "/assets/img/posts/future-crap-1-tech-worker-chicken.png" | relative_url }})
+![Tech worker with pyramid of fried chicken and McDonald's branding]({{ "/assets/img/posts/future-crap-1-tech-worker-chicken.jpg" | relative_url }})
 
 **Engine:** OpenAI DALL-E 3
 
@@ -138,7 +138,7 @@ Looks like a good time for Starbucks!
 
 #### Prompt: design album cover art for the song jingle hell
 
-![Album cover for "jingle hell" with Ikea branding]({{ "/assets/img/posts/future-crap-1-album-jingle-hell.png" | relative_url }})
+![Album cover for "jingle hell" with Ikea branding]({{ "/assets/img/posts/future-crap-1-album-jingle-hell.jpg" | relative_url }})
 
 **Engine:** OpenAI DALL-E 3
 
@@ -178,7 +178,7 @@ I'll take a frap with a cat hat and extra disdain please!
 
 #### Prompt: a sunset over elliot bay looking towards the olympics
 
-![Sunset over Elliott Bay with branding]({{ "/assets/img/posts/future-crap-1-sunset-elliot-bay.png" | relative_url }})
+![Sunset over Elliott Bay with branding]({{ "/assets/img/posts/future-crap-1-sunset-elliot-bay.jpg" | relative_url }})
 
 **Engine:** OpenAI DALL-E 3
 
@@ -190,7 +190,7 @@ Not too shabby! If you aren't familiar with the Seattle area, it's pretty close 
 
 I can't resist a few more blatantly cherry-picked examples, but this time I'll show more detail about how it's made.
 
-![How it works: Doritos brand injection example with prompt breakdown]({{ "/assets/img/posts/future-crap-1-how-it-works-doritos.png" | relative_url }})
+![How it works: Doritos brand injection example with prompt breakdown]({{ "/assets/img/posts/future-crap-1-how-it-works-doritos.jpg" | relative_url }})
 
 1.  Original prompt: tourists toss french fries over the water and seagulls swoop and catch them out of the air
 2.  Brand selection: Doritos
@@ -202,7 +202,7 @@ DALL-E removed our Doritos?!? Also I don't recommend zooming in too much…
 
 ------------------------------------------------------------------------
 
-![How it works: Boss Coffee brand injection example with prompt breakdown]({{ "/assets/img/posts/future-crap-1-how-it-works-boss-coffee.png" | relative_url }})
+![How it works: Boss Coffee brand injection example with prompt breakdown]({{ "/assets/img/posts/future-crap-1-how-it-works-boss-coffee.jpg" | relative_url }})
 
 1.  Original prompt: a humanoid cat hipster barista is looking at you judgmentally while making your frappuccino
 2.  Brand selection: Boss Coffee
@@ -218,7 +218,7 @@ DALL-E removed "Boss" but I can see the logo if I look at it just right!
 
 #### Prompt: how a future world where end-stage capitalism has run amok and AI rules everything, but it's infused with ads. The people in the scene are mindless zombies, driven only by consumerism. Mega-corps are the new government
 
-![Dystopian capitalism scene with EA branding]({{ "/assets/img/posts/future-crap-1-honorable-capitalism.png" | relative_url }})
+![Dystopian capitalism scene with EA branding]({{ "/assets/img/posts/future-crap-1-honorable-capitalism.jpg" | relative_url }})
 
 **Engine:** OpenAI DALL-E 3
 
@@ -238,7 +238,7 @@ Future Crap tried to inject Patagonia and I can *almost* make out the logo.
 
 #### Prompt: two fishermen walking down a dock in the bay looking at dark clouds on the horizon
 
-![Two fishermen on dock with Nikon branding]({{ "/assets/img/posts/future-crap-1-fishermen-dock.png" | relative_url }})
+![Two fishermen on dock with Nikon branding]({{ "/assets/img/posts/future-crap-1-fishermen-dock.jpg" | relative_url }})
 
 **Engine:** OpenAI DALL-E 3
 
