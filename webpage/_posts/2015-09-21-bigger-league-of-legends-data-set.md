@@ -40,7 +40,7 @@ The new data is a much cleaner distribution: many more players in platinum than 
 
 ![Players by league in the updated data set.]({{ "/assets/img/posts/wp/image-6.png" | relative_url }})
 
-This is similar to the distributions shown on [League of Graphs](http://www.leagueofgraphs.com/rankings/summoners-distribution) and League of Legends Summoners. One of the interesting parts of those sites is showing the stats by division as well; you can see that division V typically has many more players than other divisions. That's because it's easier to be promoted a tier than demoted a tier.
+This is similar to the distributions shown on [League of Graphs](https://www.leagueofgraphs.com/rankings/summoners-distribution) and League of Legends Summoners. One of the interesting parts of those sites is showing the stats by division as well; you can see that division V typically has many more players than other divisions. That's because it's easier to be promoted a tier than demoted a tier.
 
 ![image (7)]({{ "/assets/img/posts/wp/image-7.png" | relative_url }})
 
@@ -84,7 +84,7 @@ Now the trend for team games is clear.
 
 The changes from silver to gold, gold to platinum, platinum to diamond, and diamond to master tier are significant. There isn't really enough data for bronze to say and challenger data is so sparse that I didn't show it.
 
-The closest published stat I could find was 52.8% win rate for blue side in team queue vs 50.9% for solo queue on [League of Graphs](http://www.leagueofgraphs.com/rankings/win-stats) but that doesn't show the effect of higher tiers.
+The closest published stat I could find was 52.8% win rate for blue side in team queue vs 50.9% for solo queue on [League of Graphs](https://www.leagueofgraphs.com/rankings/win-stats) but that doesn't show the effect of higher tiers.
 
 There are two clear trends: 1) blue side has a bigger advantage in team queue than solo queue and 2) the advantage grows at higher rankings.
 

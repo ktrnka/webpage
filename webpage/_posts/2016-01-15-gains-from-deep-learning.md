@@ -45,13 +45,13 @@ I tuned the **dropout parameter** in the range 0.4-0.6 and then again 0.4-0.51 (
 
 ![Accuracy vs dropout]({{ "/assets/img/posts/wp/accuracy-vs-dropout.png" | relative_url }})
 
-Based on [a tip from Yann LeCun](http://www.cs.nyu.edu/~yann/talks/lecun-ranzato-icml2013.pdf) I tried setting the **error function** to binary cross entropy rather than mean squared error (MSE). The results were wholly worse: There was no configuration in which it was better. I tested this in conjunction with dropout experiments and found that the models trained with MSE had accuracy in the range 67.4-68.1. Binary cross entropy training had accuracy 66.9-67.2.
+Based on [a tip from Yann LeCun](https://www.cs.nyu.edu/~yann/talks/lecun-ranzato-icml2013.pdf) I tried setting the **error function** to binary cross entropy rather than mean squared error (MSE). The results were wholly worse: There was no configuration in which it was better. I tested this in conjunction with dropout experiments and found that the models trained with MSE had accuracy in the range 67.4-68.1. Binary cross entropy training had accuracy 66.9-67.2.
 
 I increased the **number of training epochs**, thinking that deeper networks need more time to converge. Previously I was running 100 epochs in batches of 1024 followed by 100 epochs of full batch training. I also tried 200/200 and 300/300. Generally the 200/200 runs were an improvement and the 300/300 runs were worse.
 
 ![Batch spec ((100, 1024), (100, -1)) means 100 epochs in batches of 1024 followed by 100 epochs in matches of max size (full batch).]({{ "/assets/img/posts/wp/accuracy-vs-training-iterations.png" | relative_url }})
 
-It seems that iterating more on a deep network is just overfitting. So I tried **[early stopping](http://keras.io/callbacks/#earlystopping)** based on 10% held-out validation accuracy with patience 20 epochs. If accuracy doesn't improve for 20 epochs it stops. In theory this should fix any issues with the 300/300 epoch training but it failed; early stopping was generally worse overall. I found this surprising cause I've heard Geoff Hinton say that early stopping is a sort of free lunch - you're speeding up training and preventing overfitting at the same time.
+It seems that iterating more on a deep network is just overfitting. So I tried **[early stopping](https://keras.io/callbacks/#earlystopping)** based on 10% held-out validation accuracy with patience 20 epochs. If accuracy doesn't improve for 20 epochs it stops. In theory this should fix any issues with the 300/300 epoch training but it failed; early stopping was generally worse overall. I found this surprising cause I've heard Geoff Hinton say that early stopping is a sort of free lunch - you're speeding up training and preventing overfitting at the same time.
 
 ![Accuracy with and without early stopping]({{ "/assets/img/posts/wp/accuracy-with-and-without-early-stopping.png" | relative_url }})
 

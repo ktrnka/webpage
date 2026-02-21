@@ -4,9 +4,9 @@ title: Feature scaling is important, but not how I expected
 date: 2015-10-21
 ---
 
-Currently I'm getting up to speed with the [Keras](http://keras.io/) library for neural networks. After about a day and a half of effort I have a neural network that's tied with my best results ever for predicting the winner of League of Legends matches.
+Currently I'm getting up to speed with the [Keras](https://keras.io/) library for neural networks. After about a day and a half of effort I have a neural network that's tied with my best results ever for predicting the winner of League of Legends matches.
 
-Keras doesn't provide exactly the same methods as a [scikit-learn](http://scikit-learn.org/stable/) model so I have to write some code to fit it into the cross validation and hyperparameter tuning frameworks. Then I'll have an apples-to-apples comparison.
+Keras doesn't provide exactly the same methods as a [scikit-learn](https://scikit-learn.org/stable/) model so I have to write some code to fit it into the cross validation and hyperparameter tuning frameworks. Then I'll have an apples-to-apples comparison.
 
 I learned that feature scaling is critically important for Keras models. Some models won't even improve beyond random predictions without it! I knew that feature scaling was good for speeding up convergence but didn't think modern optimizers would suffer total failure without it.
 
@@ -23,7 +23,7 @@ What I learned today
   + With feature scaling the three optimizers give almost identical results for each C value. lbfgs is consistently worse than newton-cg and lib linear but only by about 0.01%.
   + Without feature scaling, liblinear is consistently better than newton-cg or lbfgs. The best result from liblinear is about 0.02% better than the best from newton-cg and about 1.66% better than the best result of lbfgs. For my problem, 1.66% is about the gain I can get with a couple weeks of feature engineering.
   + lbfgs is drastically faster than newton-cg or liblinear
-* [LogisticRegressionCV](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html) is about 2x faster than [GridSearchCV](http://scikit-learn.org/stable/modules/generated/sklearn.grid_search.GridSearchCV.html) for lbfgs. The ratio is more dramatic if you're tuning over more than 10 C values because it initializes the weights for all instances closer to the optimum aka warm start.
+* [LogisticRegressionCV](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html) is about 2x faster than [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.grid_search.GridSearchCV.html) for lbfgs. The ratio is more dramatic if you're tuning over more than 10 C values because it initializes the weights for all instances closer to the optimum aka warm start.
 
 ### Tests within LogisticRegressionCV at 50k samples
 

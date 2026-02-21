@@ -6,9 +6,9 @@ date: 2010-10-25
 
 I've been making too many systems posts and I'd like to better balance those things with more researchy things.  Also, I meant to type "truth" instead of "spock" but I couldn't resist and it's close enough anyway.
 
-I came across [a blog post over at The Chronicle for Higher Education](http://chronicle.com/blogs/innovations/why-did-17-million-students-go-to-college/27634) a week or so ago and I really didn't think about it much.  I don't doubt that many people with a bachelor's degree end up in jobs that either don't need the degree or else much of the education isn't related to their job.
+I came across [a blog post over at The Chronicle for Higher Education](https://chronicle.com/blogs/innovations/why-did-17-million-students-go-to-college/27634) a week or so ago and I really didn't think about it much.  I don't doubt that many people with a bachelor's degree end up in jobs that either don't need the degree or else much of the education isn't related to their job.
 
-A [suggestion in Google Reader](http://gizmodo.com/5671062/there-are-5000-janitors-in-the-us-with-phds) highlighted something I skipped over while reading:
+A [suggestion in Google Reader](https://gizmodo.com/5671062/there-are-5000-janitors-in-the-us-with-phds) highlighted something I skipped over while reading:
 
 > there are 5,057 janitors in the U.S. with Ph.D.'s, other doctorates, or professional degrees
 

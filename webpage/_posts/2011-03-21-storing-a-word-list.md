@@ -6,7 +6,7 @@ date: 2011-03-21
 
 It's been a while; my apologies. Teaching combined with job hunting and (attempted) research takes more than I expected. I suppose that makes me an optimist?
 
-In any case, thinking about smartphone applications like [Swype](http://www.swypeinc.com) has me thinking about how certain practical applications need to pay attention to both memory and CPU usage. Normally we only focus on CPU usage though. It's also on my mind because I'm teaching a data structures/algorithms class.
+In any case, thinking about smartphone applications like [Swype](https://www.swypeinc.com) has me thinking about how certain practical applications need to pay attention to both memory and CPU usage. Normally we only focus on CPU usage though. It's also on my mind because I'm teaching a data structures/algorithms class.
 
 For experimentation I'll simplify the problem and take a look at storing a word list, then checking whether a word is in the list or not. I'll predominantly focus on memory usage but I'll take notes on runtime also. For testing, I'll use Yet Another Word List (about 264k words) though in practice you'd want to prune the list for your application.
 

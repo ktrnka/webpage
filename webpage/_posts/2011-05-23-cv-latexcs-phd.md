@@ -11,7 +11,7 @@ So you're finishing up your PhD (or thinking about jobs) and you need to make a 
 
 When I went through ~4-5 CVs, I checked which sections everyone had, the typical order of sections, and any formatting notes that I thought were good ideas.
 
-Then I needed to decide on the format. Some people use a boring LaTeX document for their CV. *But wait!* LaTeX is about separating formatting and content! So I searched/browsed CTAN and found the [moderncv](http://www.ctan.org/tex-archive/macros/latex/contrib/moderncv) package. It's beautiful *and* LaTeX. That said, if you don't use LaTeX for publishing I wouldn't suggest starting just for the CV.
+Then I needed to decide on the format. Some people use a boring LaTeX document for their CV. *But wait!* LaTeX is about separating formatting and content! So I searched/browsed CTAN and found the [moderncv](https://www.ctan.org/tex-archive/macros/latex/contrib/moderncv) package. It's beautiful *and* LaTeX. That said, if you don't use LaTeX for publishing I wouldn't suggest starting just for the CV.
 
 But if you *do* use LaTeX, here are my tips for creating a CV with moderncv.  I'll try to include tips for the content also.
 
@@ -26,7 +26,7 @@ If you aren't sure what you'll apply for, you may need roughly three CVs: a teac
 
 The search committee for a teaching position wants to know about your teaching experience. How many classes have you taught? What were they about? Were they introductory or advanced? What's your teaching style? How does your teaching style affect your curriculum and/or delivery? Most of the sections are the same as a research CV, but the order is different. You may also want to include information such as review quotes, advising experience, whether your students switched to CS major, or any other positive experiences.
 
-*Side note:*I don't suggest including teaching evaluation numbers because the reader will have no reference point for comparison. If you really want to include them, also include the numbers for other people teaching the same class, preferably in the same semester. Also, I tend to question the survey numbers. For example, see [this study](http://www.economics.harvard.edu/faculty/staiger/files/carrell%2Bwest%2Bprofessor%2Bqualty%2Bjpe.pdf).
+*Side note:*I don't suggest including teaching evaluation numbers because the reader will have no reference point for comparison. If you really want to include them, also include the numbers for other people teaching the same class, preferably in the same semester. Also, I tend to question the survey numbers. For example, see [this study](https://www.economics.harvard.edu/faculty/staiger/files/carrell%2Bwest%2Bprofessor%2Bqualty%2Bjpe.pdf).
 
 The committee for a research faculty position wants to know about your publications and grants. If you have research advising experience, that's good too. Teaching and service are important but secondary. In contrast to a teaching school, a research school might want the following info:
 

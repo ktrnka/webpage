@@ -41,7 +41,7 @@ Aside: Diagnosing by decision tree images
 
 Random forests and gradient boosting trees are both collections of large numbers of decision trees (I'm using 100-500). It's too hard to just look inside. But I can take a single decision tree and visualize that.
 
-Scikit-learn fortunately has [a function](http://scikit-learn.org/stable/modules/generated/sklearn.tree.export_graphviz.html) to export a graph file of the decision tree. Then you can plug it into [webgraphviz](http://www.webgraphviz.com/) if it's small enough or render locally. Unfortunately the trees get so big that they crash renderers. Even with max depth of 5 it's a very horizontal image:
+Scikit-learn fortunately has [a function](https://scikit-learn.org/stable/modules/generated/sklearn.tree.export_graphviz.html) to export a graph file of the decision tree. Then you can plug it into [webgraphviz](https://www.webgraphviz.com/) if it's small enough or render locally. Unfortunately the trees get so big that they crash renderers. Even with max depth of 5 it's a very horizontal image:
 
 ![decision_tree.dot]({{ "/assets/img/posts/wp/decision_tree-dot1.png" | relative_url }})
 

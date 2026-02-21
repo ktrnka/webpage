@@ -21,11 +21,11 @@ That's probably a simplification, but you can see that if we screw up sentence t
 Stemming
 --------
 
-One of the tools that gets used in NLP (especially NLU) is [stemming](http://en.wikipedia.org/wiki/Stemming) - removing the suffix from words.  For example, reducing *combinations* to *combin*-.  Depending on the software you're using, it may give the root form *combine* or just the pure substring *combin*.
+One of the tools that gets used in NLP (especially NLU) is [stemming](https://en.wikipedia.org/wiki/Stemming) - removing the suffix from words.  For example, reducing *combinations* to *combin*-.  Depending on the software you're using, it may give the root form *combine* or just the pure substring *combin*.
 
 ### Porter's stemmer
 
-The most common stemmer I've seen is Porter's stemmer, which is a rule-based stemmer for English (though it has been adapted to other languages).  I believe the implementation I use is the Perl module [Lingua::Stem::En](http://search.cpan.org/~snowhare/Lingua-Stem-0.84/lib/Lingua/Stem/En.pm) along with a wrapper module for ease-of-use.  Porter's stemmer has been criticized many times over the years, because it sometimes comes up with crazy stemmings.  That said, Porter's stemmer can be useful for some tasks.  For example, I used it in computing document similarity scores - when the documents being compared are very short, stemming can increase the overlap that you see.
+The most common stemmer I've seen is Porter's stemmer, which is a rule-based stemmer for English (though it has been adapted to other languages).  I believe the implementation I use is the Perl module [Lingua::Stem::En](https://search.cpan.org/~snowhare/Lingua-Stem-0.84/lib/Lingua/Stem/En.pm) along with a wrapper module for ease-of-use.  Porter's stemmer has been criticized many times over the years, because it sometimes comes up with crazy stemmings.  That said, Porter's stemmer can be useful for some tasks.  For example, I used it in computing document similarity scores - when the documents being compared are very short, stemming can increase the overlap that you see.
 
 ### PC-KIMMO
 

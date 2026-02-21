@@ -13,7 +13,7 @@ So last week I tried plugging Over 9000 on Reddit to grow the user base and lear
 What I did
 ==========
 
-I made a thread in [/r/dataisbeautiful](http://www.reddit.com/r/dataisbeautiful/comments/3avzno/popular_anime_shows_by_downloads_per_episode_oc/) and [/r/anime](http://www.reddit.com/r/anime/comments/3aw9ru/over_9000_automated_ranking_of_current_popular/) with a link and short description tailored for each subreddit. /r/dataisbeautiful has 3.4 million subscribers and /r/anime has 288k. After making the two threads I emailed some friends and asked them to upvote. My goal was to get enough upvotes to get onto the default/hot list for each subreddit for a few minutes. Or at least to stay on the first page of the new list for a while. I monitored comments for a few hours and replied to any questions quickly.
+I made a thread in [/r/dataisbeautiful](https://www.reddit.com/r/dataisbeautiful/comments/3avzno/popular_anime_shows_by_downloads_per_episode_oc/) and [/r/anime](https://www.reddit.com/r/anime/comments/3aw9ru/over_9000_automated_ranking_of_current_popular/) with a link and short description tailored for each subreddit. /r/dataisbeautiful has 3.4 million subscribers and /r/anime has 288k. After making the two threads I emailed some friends and asked them to upvote. My goal was to get enough upvotes to get onto the default/hot list for each subreddit for a few minutes. Or at least to stay on the first page of the new list for a while. I monitored comments for a few hours and replied to any questions quickly.
 
 Feedback
 ========

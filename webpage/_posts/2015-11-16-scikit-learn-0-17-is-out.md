@@ -8,10 +8,10 @@ Scikit-learn 0.17 adds features and improvements that might help me:
 
 * stochastic average gradient solver for logistic regression is [faster on big data sets](https://github.com/scikit-learn/scikit-learn/pull/4738)
 * speed and memory enhancements in several classes
-* [ensemble classifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingClassifier.html) that supports hard and soft voting as well as hyperparameter tuning of the components in grid search
-* [robust feature scaler](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.RobustScaler.html) does standard scaling but excludes outliers from the standard range
+* [ensemble classifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingClassifier.html) that supports hard and soft voting as well as hyperparameter tuning of the components in grid search
+* [robust feature scaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.RobustScaler.html) does standard scaling but excludes outliers from the standard range
 
-The full changelog is [here](http://scikit-learn.org/stable/whats_new.html#version-0-17). I've been testing the changes to see how they'll impact my work in predicting match winners in League of Legends.
+The full changelog is [here](https://scikit-learn.org/stable/whats_new.html#version-0-17). I've been testing the changes to see how they'll impact my work in predicting match winners in League of Legends.
 
 Stochastic average gradient
 ===========================
@@ -95,11 +95,11 @@ VotingClassifier
 
 In [the previous post](/blog/2015/11/better-predictions-for-league-matches/) I described possible directions to get from 67.9% accuracy up to 70.0% and suggested that an ensemble of the best classifiers may be a fruitful direction but may take a bit of time to code.
 
-Well, two things changed. First off, I found [a great guide](http://sebastianraschka.com/Articles/2014_ensemble_classifier.html) on making an ensemble in scikit-learn. I implemented a simple ensemble and improved my best results from 67.9% accuracy to 68.0% accuracy by a soft-voting ensemble of gradient boosting and neural networks. It's not as much as I expected but it's progress.
+Well, two things changed. First off, I found [a great guide](https://sebastianraschka.com/Articles/2014_ensemble_classifier.html) on making an ensemble in scikit-learn. I implemented a simple ensemble and improved my best results from 67.9% accuracy to 68.0% accuracy by a soft-voting ensemble of gradient boosting and neural networks. It's not as much as I expected but it's progress.
 
-The second change is that scikit-learn 0.17 added [VotingClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingClassifier.html), implemented by Sebastian Raschka (who wrote the guide and implementation I found earlier). I ported my ensemble code to scikit-learn and it works great (though I had to change my neural network wrapper to return two columns rather than one for binary classification).
+The second change is that scikit-learn 0.17 added [VotingClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingClassifier.html), implemented by Sebastian Raschka (who wrote the guide and implementation I found earlier). I ported my ensemble code to scikit-learn and it works great (though I had to change my neural network wrapper to return two columns rather than one for binary classification).
 
-That said, I wish it had a flag to perform [calibration](http://scikit-learn.org/stable/modules/calibration.html) of the probabilities of the individual classifiers. I'm currently looking into calibrating but not finding that it helps; gradient boosting has more skewed probabilities than neural networks which leads to more weight on gradient boosting. That's an unintentionally good decision: putting more weight on the stronger classifier.
+That said, I wish it had a flag to perform [calibration](https://scikit-learn.org/stable/modules/calibration.html) of the probabilities of the individual classifiers. I'm currently looking into calibrating but not finding that it helps; gradient boosting has more skewed probabilities than neural networks which leads to more weight on gradient boosting. That's an unintentionally good decision: putting more weight on the stronger classifier.
 
 **Conclusion: VotingClassifier is easy and works like a charm.**
 

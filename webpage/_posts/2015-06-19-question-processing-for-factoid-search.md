@@ -45,7 +45,7 @@ Classifying questions
 
 Given a question like "How much is it?" we need to know to look up the price. None of the words in the question clearly indicate this though.
 
-The closest academic work we found was by Li and Roth, who provide their [question classification dataset online](http://cogcomp.cs.illinois.edu/Data/QA/QC/). The nice thing is that each question has a two-part answer type, like NUMERIC/money or NUMERIC/count. The unfortunate part is that the [answer types](http://cogcomp.cs.illinois.edu/Data/QA/QC/definition.html) don't cleanly align to our data.
+The closest academic work we found was by Li and Roth, who provide their [question classification dataset online](https://cogcomp.cs.illinois.edu/Data/QA/QC/). The nice thing is that each question has a two-part answer type, like NUMERIC/money or NUMERIC/count. The unfortunate part is that the [answer types](https://cogcomp.cs.illinois.edu/Data/QA/QC/definition.html) don't cleanly align to our data.
 
 Experiments on the Li and Roth data
 -----------------------------------
@@ -54,7 +54,7 @@ Several academic publications use this dataset and achieve good accuracy. We unf
 
 We used two very simple approaches to classify questions. In both we lowercased and tokenized the question roughly following Penn Treebank tokenization. We also added a period as the first token to handle start of question.
 
-The first approach was to extract unigrams, bigrams, and trigrams from the question and use them as binary features in logistic regression using [scikit-learn](http://scikit-learn.org/stable/). This is extremely simple approach and would be more of a baseline in academic work.
+The first approach was to extract unigrams, bigrams, and trigrams from the question and use them as binary features in logistic regression using [scikit-learn](https://scikit-learn.org/stable/). This is extremely simple approach and would be more of a baseline in academic work.
 
 There were concerns that this would be too slow or overfit the data so we also had a model that used the first word, two words, three words, four words of the question. The goal was to classify purely based on parts like "how much".
 

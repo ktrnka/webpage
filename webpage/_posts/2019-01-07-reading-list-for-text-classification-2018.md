@@ -67,7 +67,7 @@ This has been the standard approach since the 90s. Any old textbook should cover
 
 Wang, S., & Manning, C. (2012). [Baselines and bigrams](https://dl.acm.org/citation.cfm?id=2390688). In ACL.
 
-Iyyer, M., Manjunatha, V., Boyd-Graber, J., & Daumé III, H. (2015). [Deep Unordered Composition Rivals Syntactic Methods for Text Classification](http://www.aclweb.org/anthology/P15-1162). In ACL.
+Iyyer, M., Manjunatha, V., Boyd-Graber, J., & Daumé III, H. (2015). [Deep Unordered Composition Rivals Syntactic Methods for Text Classification](https://www.aclweb.org/anthology/P15-1162). In ACL.
 
 Li, B., Liu, T., Zhao, Z., Wang, P., & Du, X. (2017). [Neural Bag-of-Ngrams](https://pdfs.semanticscholar.org/0841/57df67618cae20de3c484d6477fd48601d46.pdf?_ga=2.127441229.1599049180.1524348587-1436306365.1524348587). In AAAI.
 
@@ -75,7 +75,7 @@ Li, B., Liu, T., Zhao, Z., Wang, P., & Du, X. (2017). [Neural Bag-of-Ngrams](htt
 
 Around 2010-2013 the NLP community switched to recurrent neural networks for state of the art research. The community gravitated towards LSTM over vanilla RNN or GRU.
 
-I don't have good citations from this time, but [this blog post](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) and [this one](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) may help for a general introduction. There are certain core concepts that you should know if you intend to work with recurrent neural networks:
+I don't have good citations from this time, but [this blog post](https://karpathy.github.io/2015/05/21/rnn-effectiveness/) and [this one](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) may help for a general introduction. There are certain core concepts that you should know if you intend to work with recurrent neural networks:
 
 - backpropagation through time (BPTT) and truncated BPTT
 - LSTM vs GRU vs plain RNN
@@ -84,7 +84,7 @@ I don't have good citations from this time, but [this blog post](http://karpathy
 
 One challenge was that they had *so many hyperparameters* and they took a long time to train. We didn't have good guidelines on how to configure them until this paper came around:
 
-Longpre, S., Pradhan, S., Xiong, C., & Socher, R. (2016). [A Way out of the Odyssey: Analyzing and Combining Recent Insights for LSTMs](http://arxiv.org/abs/1611.05104).
+Longpre, S., Pradhan, S., Xiong, C., & Socher, R. (2016). [A Way out of the Odyssey: Analyzing and Combining Recent Insights for LSTMs](https://arxiv.org/abs/1611.05104).
 
 #### Convolutional neural networks
 
@@ -102,11 +102,11 @@ These don't nearly cover the whole field, only the most impactful ideas I've see
 
 Xiao, Y., & Cho, K. (2016). [Efficient Character-level Document Classification by Combining Convolution and Recurrent Layers](https://arxiv.org/pdf/1602.00367.pdf).
 
-Zhang, Y., Roller, S., & Wallace, B. (2016). [MGNC-CNN: A Simple Approach to Exploiting Multiple Word Embeddings for Sentence Classification](http://arxiv.org/abs/1603.00968). In NAACL.
+Zhang, Y., Roller, S., & Wallace, B. (2016). [MGNC-CNN: A Simple Approach to Exploiting Multiple Word Embeddings for Sentence Classification](https://arxiv.org/abs/1603.00968). In NAACL.
 
-Wang, Z., Hamza, W., & Song, L. (2017). [k-Nearest Neighbor Augmented Neural Networks for Text Classification](http://arxiv.org/abs/1708.07863).
+Wang, Z., Hamza, W., & Song, L. (2017). [k-Nearest Neighbor Augmented Neural Networks for Text Classification](https://arxiv.org/abs/1708.07863).
 
-Yin, W., Kann, K., Yu, M., & Schütze, H. (2017). [Comparative Study of CNN and RNN for Natural Language Processing](http://arxiv.org/abs/1702.01923).
+Yin, W., Kann, K., Yu, M., & Schütze, H. (2017). [Comparative Study of CNN and RNN for Natural Language Processing](https://arxiv.org/abs/1702.01923).
 
 #### Transfer learning for NLP: Embeddings
 
@@ -120,13 +120,13 @@ There are two key components: The algorithm and the data. Several generous resea
 
 These are all unsupervised methods -- they process a large amount of text and search for the best way to compress the meaning of a word into a vector within the "compression algorithm" they use.
 
-[word2vec] Mikolov, T., Sutskever, I., Chen, K., Corrado, G. S., & Dean, J. (2013). [Distributed Representations of Words and Phrases and their Compositionality](http://papers.nips.cc/paper/5021-distributed-representations-of-words-andphrases). In NIPS.
+[word2vec] Mikolov, T., Sutskever, I., Chen, K., Corrado, G. S., & Dean, J. (2013). [Distributed Representations of Words and Phrases and their Compositionality](https://papers.nips.cc/paper/5021-distributed-representations-of-words-andphrases). In NIPS.
 
-[GloVe] Pennington, J., Socher, R., & Manning, C. D. (2014). [GloVe: Global Vectors for Word Representation](http://www.aclweb.org/anthology/D14-1162). In EMNLP.
+[GloVe] Pennington, J., Socher, R., & Manning, C. D. (2014). [GloVe: Global Vectors for Word Representation](https://www.aclweb.org/anthology/D14-1162). In EMNLP.
 
-[fastText V1] Joulin, A., Grave, E., Bojanowski, P., & Mikolov, T. (2016). [Bag of Tricks for Efficient Text Classification](http://arxiv.org/abs/1607.01759).
+[fastText V1] Joulin, A., Grave, E., Bojanowski, P., & Mikolov, T. (2016). [Bag of Tricks for Efficient Text Classification](https://arxiv.org/abs/1607.01759).
 
-[fastText V2] Mikolov, T., Grave, E., Bojanowski, P., Puhrsch, C., & Joulin, A. (2017). [Advances in Pre-Training Distributed Word Representations](http://arxiv.org/abs/1712.09405).
+[fastText V2] Mikolov, T., Grave, E., Bojanowski, P., Puhrsch, C., & Joulin, A. (2017). [Advances in Pre-Training Distributed Word Representations](https://arxiv.org/abs/1712.09405).
 
 Honorary mention: Principal component analysis
 
@@ -138,15 +138,15 @@ These papers cover those two areas. All of them can be used to produce a vector 
 
 [doc2vec] Le, Q. V., & Mikolov, T. (2014). [Distributed Representations of Sentences and Documents](https://doi.org/10.1145/2740908.2742760). International Conference on Machine Learning.
 
-Dai, A. M., & Le, Q. V. (2015). [Semi-supervised sequence learning](http://papers.nips.cc/paper/5949-semi-supervised-sequence-learning). In NIPS.
+Dai, A. M., & Le, Q. V. (2015). [Semi-supervised sequence learning](https://papers.nips.cc/paper/5949-semi-supervised-sequence-learning). In NIPS.
 
 [CoVe] Mccann, B., Bradbury, J., Xiong, C., & Socher, R. (2017). [Learned in Translation: Contextualized Word Vectors](https://einstein.ai/static/images/pages/research/cove/McCann2017LearnedIT.pdf).
 
-[ULMFiT] Howard, J., & Ruder, S. (2018). [Universal Language Model Fine-tuning for Text Classification](http://arxiv.org/abs/1801.06146).
+[ULMFiT] Howard, J., & Ruder, S. (2018). [Universal Language Model Fine-tuning for Text Classification](https://arxiv.org/abs/1801.06146).
 
-[ELMo] Peters, M. E., Neumann, M., Iyyer, M., Gardner, M., Clark, C., Lee, K., & Zettlemoyer, L. (2018). [Deep contextualized word representations](http://arxiv.org/abs/1802.05365). In NAACL.
+[ELMo] Peters, M. E., Neumann, M., Iyyer, M., Gardner, M., Clark, C., Lee, K., & Zettlemoyer, L. (2018). [Deep contextualized word representations](https://arxiv.org/abs/1802.05365). In NAACL.
 
-[BERT] Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2018). [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](http://arxiv.org/abs/1810.04805).
+[BERT] Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2018). [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805).
 
 #### Lessons from other kinds of NLP
 
@@ -154,17 +154,17 @@ There are many uses for deep learning in natural language processing besides jus
 
 Greff, K., Srivastava, R. K., Koutník, J., Steunebrink, B. R., & Schmidhuber, J. (2015). [LSTM: A Search Space Odyssey](https://doi.org/10.1109/TNNLS.2016.258292).
 
-Jozefowicz, R., Vinyals, O., Schuster, M., Shazeer, N., & Wu, Y. (2016). [Exploring the Limits of Language Modeling](http://arxiv.org/abs/1602.02410).
+Jozefowicz, R., Vinyals, O., Schuster, M., Shazeer, N., & Wu, Y. (2016). [Exploring the Limits of Language Modeling](https://arxiv.org/abs/1602.02410).
 
-Gehring, J., Auli, M., Grangier, D., & Dauphin, Y. N. (2016). [A Convolutional Encoder Model for Neural Machine Translation](http://arxiv.org/abs/1611.02344). In ACL.
+Gehring, J., Auli, M., Grangier, D., & Dauphin, Y. N. (2016). [A Convolutional Encoder Model for Neural Machine Translation](https://arxiv.org/abs/1611.02344). In ACL.
 
 Hestness, J., Narang, S., Ardalani, N., Diamos, G., Jun, H., Kianinejad, H., … Zhou, Y. (2017). [Deep Learning Scaling is Predictable, Empirically](https://doi.org/1712.00409.).
 
-Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., … Polosukhin, I. (2017). [Attention Is All You Need](http://arxiv.org/abs/1706.03762). NIPS.
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., … Polosukhin, I. (2017). [Attention Is All You Need](https://arxiv.org/abs/1706.03762). NIPS.
 
 Gehring, J., Auli, M., Grangier, D., Yarats, D., & Dauphin, Y. N. (2017). [Convolutional Sequence to Sequence Learning](https://arxiv.org/abs/1705.03122).
 
-Dehghani, M., Gouws, S., Vinyals, O., Uszkoreit, J., & Kaiser, Ł. (2018). [Universal Transformers](http://arxiv.org/abs/1807.03819).
+Dehghani, M., Gouws, S., Vinyals, O., Uszkoreit, J., & Kaiser, Ł. (2018). [Universal Transformers](https://arxiv.org/abs/1807.03819).
 
 #### Lessons from computer vision
 
@@ -172,6 +172,6 @@ Computer vision shares some core challenges with neural networks. The biggest di
 
 Both text and image classification tend to have two parts in their neural networks: an encoder which interprets the input and a classifier part which decides what to output. The encoder might be convolutional or recurrent and the classifier part is typically fully-connected. So although the lessons about the encoder may not translate between image processing and NLP, both fields face similar struggles with classification.
 
-- [Dropout](http://www.jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf): Very good way to regularize
-- [ResNet](https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html), [DenseNet](http://arxiv.org/abs/1608.06993): There's an important concept called the credit assignment path (CAP). This is the path from the error to the weight you're trying to update. Learning is harder the longer this path is -- this is true in both neural networks and reinforcement learning. ResNet, DenseNet, highway networks, and skip connections are all ways to provide a shorter CAP to make learning easier.
+- [Dropout](https://www.jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf): Very good way to regularize
+- [ResNet](https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html), [DenseNet](https://arxiv.org/abs/1608.06993): There's an important concept called the credit assignment path (CAP). This is the path from the error to the weight you're trying to update. Learning is harder the longer this path is -- this is true in both neural networks and reinforcement learning. ResNet, DenseNet, highway networks, and skip connections are all ways to provide a shorter CAP to make learning easier.
 - Neat ideas: Inception. This was complex but elegantly combines several ideas: within-network ensembling, decomposed 2D convolutions to reduce parameters, and some skip paths to shorten the credit-assignment path.

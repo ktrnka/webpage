@@ -32,8 +32,8 @@ If you aren't familiar with these areas, these may help:
 
 * [What is League of Legends? By Riot Games](https://www.youtube.com/watch?v=BGtROJeMPeE) (2015, 5 minutes) - Covers the game basics, targeted for new players. Doesn't discuss professional play.
 * [Beginners guide to League of Legends e-sports](https://www.youtube.com/watch?v=IYMcKzMl7CY) (2014, 6 minutes) - Covers e-sports in general with a focus on League, targeted for people without a League background that are watching pro games for the first time.
-* If you prefer to read, ESPN has [an excellent article](http://espn.go.com/espn/story/_/id/13059210/esports-massive-industry-growing) about the scale of e-sports in contrast to traditional sports.
-* ESPN also ran [a fantastic article](http://espn.go.com/espn/feature/story/_/id/13035450/league-legends-prodigy-faker-carries-country-shoulders) about superstar player Faker, comparing him to Michael Jordan and Tiger Woods. It's written for a general audience.
+* If you prefer to read, ESPN has [an excellent article](https://espn.go.com/espn/story/_/id/13059210/esports-massive-industry-growing) about the scale of e-sports in contrast to traditional sports.
+* ESPN also ran [a fantastic article](https://espn.go.com/espn/feature/story/_/id/13035450/league-legends-prodigy-faker-carries-country-shoulders) about superstar player Faker, comparing him to Michael Jordan and Tiger Woods. It's written for a general audience.
 
  
 

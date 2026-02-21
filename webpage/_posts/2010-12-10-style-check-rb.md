@@ -4,9 +4,9 @@ title: style-check.rb
 date: 2010-12-10
 ---
 
-I'm very interested in tools to help write papers, specifically automatic proofreaders.  I recently came across the tool [style-check.rb](http://www.cs.umd.edu/~nspring/software/style-check-readme.html), which helps proofread LaTeX documents.  It doesn't really have a name per se, just the filename style-check.rb.
+I'm very interested in tools to help write papers, specifically automatic proofreaders.  I recently came across the tool [style-check.rb](https://www.cs.umd.edu/~nspring/software/style-check-readme.html), which helps proofread LaTeX documents.  It doesn't really have a name per se, just the filename style-check.rb.
 
-This isn't the same type of tool as its production counterparts;  it's simply a Ruby script written by [Neil Spring](http://www.cs.umd.edu/~nspring/) at the University of Maryland, who seems to have struggled with some similar issues in proofreading latex documents.
+This isn't the same type of tool as its production counterparts;  it's simply a Ruby script written by [Neil Spring](https://www.cs.umd.edu/~nspring/) at the University of Maryland, who seems to have struggled with some similar issues in proofreading latex documents.
 
 The core of the checker is a set of various regular expressions.  If any regex is found in the source document, it spits out an error message like a compiler.  The format of the errors is such that editors like emacs and other programs can jump to the error in the source document.  (His webpage shows it in an emacs context).  Here is some of the basic output on the dirty testing file:
 

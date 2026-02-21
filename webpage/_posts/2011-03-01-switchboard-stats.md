@@ -4,7 +4,7 @@ title: Switchboard stats
 date: 2011-03-01
 ---
 
-I've been using the [Switchboard corpus](http://www.isip.piconepress.com/projects/switchboard/) for years and I recently gave a talk in class with some statistics, including simple tests to compare Switchboard to a background corpus. In this case, I used Google's Web 1T unigram model for "general purpose statistics".
+I've been using the [Switchboard corpus](https://www.isip.piconepress.com/projects/switchboard/) for years and I recently gave a talk in class with some statistics, including simple tests to compare Switchboard to a background corpus. In this case, I used Google's Web 1T unigram model for "general purpose statistics".
 
 The first big test was to classify words into a set of word shapes and compare. Before looking at the graph below, consider the ambiguity: Is "A" title case or all caps? What is "JetBlue"? What about "T3"?
 
@@ -12,7 +12,7 @@ The first big test was to classify words into a set of word shapes and compare. 
 
 Note that this is a partially cleaned version of Switchboard from my work with augmentative and alternative communication. Speech repairs and annotations are mostly removed.
 
-The prevalence of lowercase words in Switchboard shouldn't come as much of a surprise. In addition to spoken conventions, the subject matter is restricted to specific topic prompts and the speakers don't know each other. So the percent of proper nouns is probably small. The list of topic prompts is available in "ATTACHMENT 2" in [LDC's documentation](http://www.ldc.upenn.edu/Catalog/readme_files/switchboard.readme.html). For example, "Find out what kind of fishing the other caller enjoys. Do you have similar or different interests in the kind of fishing you enjoy?" I can't imagine many proper nouns with that, but maybe more with the baseball topic.
+The prevalence of lowercase words in Switchboard shouldn't come as much of a surprise. In addition to spoken conventions, the subject matter is restricted to specific topic prompts and the speakers don't know each other. So the percent of proper nouns is probably small. The list of topic prompts is available in "ATTACHMENT 2" in [LDC's documentation](https://www.ldc.upenn.edu/Catalog/readme_files/switchboard.readme.html). For example, "Find out what kind of fishing the other caller enjoys. Do you have similar or different interests in the kind of fishing you enjoy?" I can't imagine many proper nouns with that, but maybe more with the baseball topic.
 
 You can also see some other trends in Switchboard transcription and Google 1T conventions. Switchboard transcribes numbers spelled out (e.g., "nineteen eighty eight"). Google's model splits up words with hyphens so those are rare or non-existent in 1T data. I'm curious what sorts of things fall into the *other* category though.
 

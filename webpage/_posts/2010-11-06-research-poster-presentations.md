@@ -4,7 +4,7 @@ title: research poster presentations
 date: 2010-11-06
 ---
 
-It varies by field, but poster presentations are fairly common in computer science.  Many conferences typically split things into full papers with traditional presentations and short papers with poster presentations (although I recall [ACL](http://www.aclweb.org/) was debating making the presentation decision independent of the paper length).  The peer review process varies by conference; sometimes short papers go through the same process and other times they have fewer reviewers.  Typically they have less competition though.
+It varies by field, but poster presentations are fairly common in computer science.  Many conferences typically split things into full papers with traditional presentations and short papers with poster presentations (although I recall [ACL](https://www.aclweb.org/) was debating making the presentation decision independent of the paper length).  The peer review process varies by conference; sometimes short papers go through the same process and other times they have fewer reviewers.  Typically they have less competition though.
 
 I recall my two undergrad posters (2001-2002); I didn't know how to print something on poster paper, so I printed individual 8.5x11 pages and glued them to a poster board.  Yeah, I was *that guy*.  Admittedly, that was a long time ago and the other students did similar things.  I was clueless about presenting too.
 
@@ -29,7 +29,7 @@ As for poster design, I'll give a bulleted list of guidelines I follow:
   + essential results - people need to know "Is this good?".  Even if you can't objectively answer that question, you can give examples.
 * pictures/screenshots are good, diagrams are good, graphs are good.  Equations can be good (depending).  Text is a sometimes-necessary evil.  Large data tables are also generally bad.
   + On the other hand, a poor diagram can be fatal.  You need to spend time on them; they should be both visually interesting as well as reasonably informative.
-* use color; you're trying to interest people.  The poster viewer is like the reader of a novel - they want to be drawn in and excited.  I'm not great at picking color schemes, so I like to use [Color Scheme Designer](http://colorschemedesigner.com/) to come up with ideas for the primary/secondary colors.  Once you have colors you like, you just need to convert the hex color codes to whatever your application uses (or guess and check).
+* use color; you're trying to interest people.  The poster viewer is like the reader of a novel - they want to be drawn in and excited.  I'm not great at picking color schemes, so I like to use [Color Scheme Designer](https://colorschemedesigner.com/) to come up with ideas for the primary/secondary colors.  Once you have colors you like, you just need to convert the hex color codes to whatever your application uses (or guess and check).
 
 I feel like this list is overly long, so I'll just describe some methods of creating posters then stop for now.
 

@@ -18,7 +18,7 @@ You might know me from:
 
 ## Personal
 
-Interests: [Green Seattle](https://www.greenseattle.org/), [Seattle Adopt‑a‑street](https://www.seattle.gov/transportation/projects-and-programs/programs/pedestrian-program/adopt-a-street), hiking, tennis, running, pickleball, coffee, baking, reading, and learning.
+Interests: [Green Seattle](https://www.greenseattle.org/), [Seattle Adopt‑a‑street](https://www.seattle.gov/utilities/volunteer/adopt-a-street), hiking, tennis, running, pickleball, coffee, baking, reading, and learning.
 
 ## How to pronounce my last name
 

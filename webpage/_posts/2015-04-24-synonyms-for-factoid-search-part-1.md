@@ -48,16 +48,16 @@ We need fuzzy search. Or put another way, we need to improve recall. In traditio
 ElasticSearch: solutions and constraints
 ========================================
 
-Our system was designed around [ElasticSearch](http://www.elastic.co/guide/en/elasticsearch/guide/current/index.html) which provides lowercasing and [stemming](http://www.elastic.co/guide/en/elasticsearch/guide/current/stemming.html). Lowercasing will help if a query is "msrp" and we have "MSRP". Stemming will help us if we have "power windows" and the search is "window options". ElasticSearch also offers built-in spell correction which can improve recall of real-world searches.
+Our system was designed around [ElasticSearch](https://www.elastic.co/guide/en/elasticsearch/guide/current/index.html) which provides lowercasing and [stemming](https://www.elastic.co/guide/en/elasticsearch/guide/current/stemming.html). Lowercasing will help if a query is "msrp" and we have "MSRP". Stemming will help us if we have "power windows" and the search is "window options". ElasticSearch also offers built-in spell correction which can improve recall of real-world searches.
 
-[ElasticSearch synonyms](http://www.elastic.co/guide/en/elasticsearch/guide/current/synonyms.html) allow us to address the problem of "price" vs "cost" vs "MSRP". You can specify a mapping of original terms to a set of replacements.
+[ElasticSearch synonyms](https://www.elastic.co/guide/en/elasticsearch/guide/current/synonyms.html) allow us to address the problem of "price" vs "cost" vs "MSRP". You can specify a mapping of original terms to a set of replacements.
 
 ElasticSearch doesn't provide default synonym sets so we experimented with many options. In this post I'll focus on the initial experiments which failed to varying degrees.
 
 Moby Thesaurus
 ==============
 
-[Moby](http://onlinebooks.library.upenn.edu/webbin/gutbook/lookup?num=3202) is a large, free thesaurus available at Project Gutenberg. It's a large comma-delimited file with a word and possible synonyms. Seems like the perfect option for a 15-minute experiment!
+[Moby](https://onlinebooks.library.upenn.edu/webbin/gutbook/lookup?num=3202) is a large, free thesaurus available at Project Gutenberg. It's a large comma-delimited file with a word and possible synonyms. Seems like the perfect option for a 15-minute experiment!
 
 In a first-day situation you don't even have evaluation data for synonym generation. You don't have evaluation data for your search system either. So I ended up generating lists of synonyms and eyeballing. That evaluation is only good for comparing systems of very different quality. (3)
 
@@ -92,7 +92,7 @@ Wikipedia redirects
 
 Wikipedia will redirect you to the correct page if you type a similar word or phrase. The "Fuels", "Feul", and "Chemical fuel" all redirect to the page for "Fuel". The page for "Seattle Sounders FC" has redirects for "Seattle MLS", "Seattle MLS team", "Sounders FC", "Seattle Sounders", etc. The redirect structure can be used to extract realistic synonyms even for things that wouldn't appear in a dictionary.
 
-Here's [a good post on the process](http://www.behind-the-enemy-lines.com/2013/02/wikisynonyms-find-synonyms-using.html) with a web demo system and they provided a web API to query redirect-based synonyms. The main problem with this process is that you need a word list ahead of time. If you have a corpus for the domain you can easily generate them all (though it takes a while). But let's get to some examples!
+Here's [a good post on the process](https://www.behind-the-enemy-lines.com/2013/02/wikisynonyms-find-synonyms-using.html) with a web demo system and they provided a web API to query redirect-based synonyms. The main problem with this process is that you need a word list ahead of time. If you have a corpus for the domain you can easily generate them all (though it takes a while). But let's get to some examples!
 
 Input: air conditioning
 

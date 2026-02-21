@@ -52,7 +52,7 @@ Overall let's look at win rate by side in this data:
 
 Blue side: 50.6% win rate (in 43,905 ranked games)
 
-Compare this to [League of Graphs](http://www.leagueofgraphs.com/rankings/win-stats), which shows 51% win rate for solo queue and 52.9% for team queue. They probably have more data than me and it's probably more balanced between different levels of play. I started crawling from featured matches and challenger/master so my data is likely biased towards the top levels of play.
+Compare this to [League of Graphs](https://www.leagueofgraphs.com/rankings/win-stats), which shows 51% win rate for solo queue and 52.9% for team queue. They probably have more data than me and it's probably more balanced between different levels of play. I started crawling from featured matches and challenger/master so my data is likely biased towards the top levels of play.
 
 But even then, given a game how do I decide whether it's diamond level or gold level? The Riot API doesn't provide this information. There are two methods:
 

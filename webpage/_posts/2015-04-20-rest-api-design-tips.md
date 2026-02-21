@@ -4,7 +4,7 @@ title: REST API design tips
 date: 2015-04-20
 ---
 
-For the server side of Pollable we iterated on the REST API several times and learned a lot the hard way. And [this excellent article](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api) is great for design tips.
+For the server side of Pollable we iterated on the REST API several times and learned a lot the hard way. And [this excellent article](https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api) is great for design tips.
 
 We're using RESTful calls of Json only and https only; much of this deals with the design of the Json objects.
 
@@ -40,13 +40,13 @@ Possible options, none ideal:
 Fail early
 ==========
 
-When you're prototyping a Python/[Tornado](http://www.tornadoweb.org/en/stable/) server with MongoDB backend, it's tempting to interpret the Json from clients, process a little bit, and insert straight to MongoDB. But Json in Python is decoded to a dict and MongoDB doesn't have a schema.
+When you're prototyping a Python/[Tornado](https://www.tornadoweb.org/en/stable/) server with MongoDB backend, it's tempting to interpret the Json from clients, process a little bit, and insert straight to MongoDB. But Json in Python is decoded to a dict and MongoDB doesn't have a schema.
 
 You might be inserting bad data to MongoDB. A completely separate endpoint may fail the next day. Debugging gets harder the further the error propagates from the root cause.
 
 In the case of Python with MongoDB it's very helpful to use basic Json validation. If you need to process any fields they'll generate errors if missing or incorrect.
 
-But when you're starting out you really can't afford 500 lines of code spent on validation that you update twice a day. We went with [jsonvalidator](https://code.google.com/p/jsonvalidator/) due to simplicity: provide an example Json object and it'll check that all the fields are present and the right types. We also tried [jsonschema](https://pypi.python.org/pypi/jsonschema) in conjunction with [orderly](http://orderly-json.org/) but it was verbose and didn't deal as well with required fields.
+But when you're starting out you really can't afford 500 lines of code spent on validation that you update twice a day. We went with [jsonvalidator](https://code.google.com/p/jsonvalidator/) due to simplicity: provide an example Json object and it'll check that all the fields are present and the right types. We also tried [jsonschema](https://pypi.python.org/pypi/jsonschema) in conjunction with [orderly](https://orderly-json.org/) but it was verbose and didn't deal as well with required fields.
 
 Documentation helps even in a team of three but save yourself some pain and catch errors from typos early on.
 

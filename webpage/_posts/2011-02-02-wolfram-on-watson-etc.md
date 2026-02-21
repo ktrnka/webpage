@@ -6,7 +6,7 @@ date: 2011-02-02
 
 As the semester approaches my free time and energy have been dwindling, so I'll probably be terse for a while.
 
-I recently came across [a critique](http://blog.stephenwolfram.com/2011/01/jeopardy-ibm-and-wolframalpha/) of IBM's Watson by Stephen Wolfram of [Wolfram|Alpha](http://www.wolframalpha.com/).  He has some interesting things to say about the task and Watson, but I'll focus on the rough baseline they crafted.
+I recently came across [a critique](https://blog.stephenwolfram.com/2011/01/jeopardy-ibm-and-wolframalpha/) of IBM's Watson by Stephen Wolfram of [Wolfram|Alpha](https://www.wolframalpha.com/).  He has some interesting things to say about the task and Watson, but I'll focus on the rough baseline they crafted.
 
 They took a random sample of Jeopardy clues from a database of 200,000 and fed it as input to various search engines. Then they counted the number of times the answer/question could be found in 1) the top page result (either title or full text) or 2) the first page of results (either titles or text snippets). Sites specifically about Jeopardy were excluded.
 

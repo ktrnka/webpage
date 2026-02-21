@@ -13,7 +13,7 @@ Last week I mentioned that I was working to [restore the capitalization](/blog/2
 3. topic-based methods
    Hopefully some of the words in the title are relatively unambiguous. We could take those keywords and run a Google search (or any relevance-based method), then build a tailored language model weighted towards the top results. The downside is that this is a lot of work and may or may not work.
 
-I've focused on #1 so far and used Google's bigram data with a [Viterbi search](http://en.wikipedia.org/wiki/Viterbi_algorithm) to help disambiguate. How does that work? We consider all possible re-capitalizations of each word (we use the Google unigram model to produce these sets). Then we use the Viterbi algorithm to find a good sequence. Here's a little example for the title *THE ECLIPSE OF SUN*:
+I've focused on #1 so far and used Google's bigram data with a [Viterbi search](https://en.wikipedia.org/wiki/Viterbi_algorithm) to help disambiguate. How does that work? We consider all possible re-capitalizations of each word (we use the Google unigram model to produce these sets). Then we use the Viterbi algorithm to find a good sequence. Here's a little example for the title *THE ECLIPSE OF SUN*:
 
 { THE, The, the } => { ECLIPSE, Eclipse, eclipse } => { OF, Of, of } => { SUN, Sun, sun }
 

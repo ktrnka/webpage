@@ -16,7 +16,7 @@ We were adding a search box to ads to look up quick facts, initially focused o
 Synonyms from WordNet
 =====================
 
-[WordNet](https://wordnet.princeton.edu/) is a great resource for word information in English. It's particularly good for nouns and indicates synonymy as well as hierarchy. For example, you can find that *tire* is a type of *hoop* or *ring*. And you can find synonyms, in this case just *tyre*. There's a [web version](http://wordnetweb.princeton.edu/perl/webwn) you can test out without needing to install/setup.
+[WordNet](https://wordnet.princeton.edu/) is a great resource for word information in English. It's particularly good for nouns and indicates synonymy as well as hierarchy. For example, you can find that *tire* is a type of *hoop* or *ring*. And you can find synonyms, in this case just *tyre*. There's a [web version](https://wordnetweb.princeton.edu/perl/webwn) you can test out without needing to install/setup.
 
 But it's much more complex than this: relationships such as synonyms or is-a (hypernym/hyponym) only have meaning between specific meanings, called word senses. The string *tire* has five senses in WordNet 3.1: 1 noun sense and 4 verb senses. The kinds of *tire*we care about for cars is the noun one. If we restrict just to nouns we can say that *tire* and *tyre* are synonymous in Elastic Search and that'll improve our search for British users.
 
@@ -38,7 +38,7 @@ I used a very simplistic approach that works for our data: if the full phrase i
 Taking synonyms of all synsets
 ------------------------------
 
-The simplest approach is to avoid [word sense disambiguation](http://en.wikipedia.org/wiki/Word-sense_disambiguation) and just join all synonyms. Like before I didn't have evaluation data so mostly I eyeballed synonyms and considered bug reports.
+The simplest approach is to avoid [word sense disambiguation](https://en.wikipedia.org/wiki/Word-sense_disambiguation) and just join all synonyms. Like before I didn't have evaluation data so mostly I eyeballed synonyms and considered bug reports.
 
 Input: air conditioning
 
@@ -67,7 +67,7 @@ And then there are frankly bizarre results if you consider the automotive domain
 Word sense disambiguation
 -------------------------
 
-The simplest approach to [word sense disambiguation](http://en.wikipedia.org/wiki/Word-sense_disambiguation) are the [Lesk-like algorithms](http://en.wikipedia.org/wiki/Lesk_algorithm): look for keyword overlap between the definition (called a *gloss*) and words in your domain. In this case I can group all keywords from our fact set for disambiguation. And for scoring I use cosine similarity.
+The simplest approach to [word sense disambiguation](https://en.wikipedia.org/wiki/Word-sense_disambiguation) are the [Lesk-like algorithms](https://en.wikipedia.org/wiki/Lesk_algorithm): look for keyword overlap between the definition (called a *gloss*) and words in your domain. In this case I can group all keywords from our fact set for disambiguation. And for scoring I use cosine similarity.
 
 Input: air conditioning
 

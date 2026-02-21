@@ -4,7 +4,7 @@ title: Ensemble notes
 date: 2015-11-23
 ---
 
-I thought [probability calibration](http://scikit-learn.org/stable/modules/calibration.html) would be difficult but it's pretty easy. My ensemble code looks like this:
+I thought [probability calibration](https://scikit-learn.org/stable/modules/calibration.html) would be difficult but it's pretty easy. My ensemble code looks like this:
 
 ```python
 estimators = []
@@ -81,7 +81,7 @@ Assorted ideas for further improvement:
 
 * Run a grid search over weights in the 2-model soft voting ensemble
 * Use the code for CalibratedClassifierCV as a guide to use logistic regression to combine models. I tried something like this before but didn't correctly train it like how CalibratedClassifierCV is implemented.
-* Set up the ensemble so that different models can use different feature subsets. I'd like to have a model that uses the list of champions on each side but most models overfit that data (logistic regression is the exception). I think probably I need to migrate my code to [scikit-learn pipelines](http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html) to have an ensemble with different feature subsets.
+* Set up the ensemble so that different models can use different feature subsets. I'd like to have a model that uses the list of champions on each side but most models overfit that data (logistic regression is the exception). I think probably I need to migrate my code to [scikit-learn pipelines](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html) to have an ensemble with different feature subsets.
 
 Notes
 =====

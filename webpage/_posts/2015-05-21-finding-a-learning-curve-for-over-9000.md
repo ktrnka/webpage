@@ -54,7 +54,7 @@ Log3p+backoff isn't quite as good as I'd like in part because I set the cross-ov
 
 We've made great progress here: extrapolation from 3 days of data has gone from 25% error on log3p (used in production) to 14% with asymp2p+backoff.
 
-But much of the progress is made in handling cases that previously failed to predict. To look into it, I generated histograms of the errors using [pandas](http://pandas.pydata.org/).
+But much of the progress is made in handling cases that previously failed to predict. To look into it, I generated histograms of the errors using [pandas](https://pandas.pydata.org/).
 
 Here's a histogram of errors for log3p without backoff:
 
@@ -86,7 +86,7 @@ There are fewer episodes with high error.
 Weighting the training data
 ===========================
 
-There's one trick I found in the [scipy documentation](http://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.optimize.curve_fit.html): You can provide uncertainty weights on the data points. So you can force least squares regression to fit some points closer than others.
+There's one trick I found in the [scipy documentation](https://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.optimize.curve_fit.html): You can provide uncertainty weights on the data points. So you can force least squares regression to fit some points closer than others.
 
 When we have a two-hump curve like some of the weird cases in the [previous post](/blog/2015/05/curve-fitting-and-machine-learning-for-over-9000/) it's important to prefer fitting the later data.
 

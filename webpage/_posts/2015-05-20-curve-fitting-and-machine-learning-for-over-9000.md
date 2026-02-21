@@ -44,7 +44,7 @@ There are many solutions to overfitting but in one way or another they're reduci
 Aside: Remember linear algebra?
 ===============================
 
-In the distant past I had to solve systems of equations. When there was only one variable you just move the parts around to solve. When you have two variables you needed two equations. And even then they couldn't be multiples of one another. Three variables, needed three equations. Obligatory [Wikipedia link](http://en.wikipedia.org/wiki/System_of_linear_equations).
+In the distant past I had to solve systems of equations. When there was only one variable you just move the parts around to solve. When you have two variables you needed two equations. And even then they couldn't be multiples of one another. Three variables, needed three equations. Obligatory [Wikipedia link](https://en.wikipedia.org/wiki/System_of_linear_equations).
 
 That said, typically it isn't possible for find parameters that perfectly fit this data. Real data is noisy. So using a solver isn't the right approach but I should've remembered the basic principle that you need at least N equations to solve for N parameters.
 

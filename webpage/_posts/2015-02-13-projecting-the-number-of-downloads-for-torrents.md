@@ -34,7 +34,7 @@ First attempt (Predicted\_1 below): *b* \* log(time\_since\_release + *a*)
 
 The *a* is there because we want the curve to fit (0, 0): zero downloads at release. But log(0) is undefined. The *b* is there because some series/episodes get more downloads per day than others.
 
-And I used [scipy.optimize.curve\_fit](http://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html) to fit this function to each episode individually. It worked alright but would always overestimate after a while. Compared to the projections it seemed that actual downloads were slowing down.
+And I used [scipy.optimize.curve\_fit](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html) to fit this function to each episode individually. It worked alright but would always overestimate after a while. Compared to the projections it seemed that actual downloads were slowing down.
 
 ![Anime download prediction]({{ "/assets/img/posts/wp/image-2.png" | relative_url }})
 

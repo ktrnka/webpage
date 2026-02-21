@@ -28,7 +28,7 @@ The second goal is tricky: I wanted something that would work when we're dealin
 
 There's a subreddit for almost anything. A quick search for auto subreddits shows /r/cars, /r/Autos, /r/MechanicAdvice, /r/Cartalk, and tons of manufacturer-specific subreddits.
 
-So I wrote a reddit scraper using a Python module named [scrapy](http://doc.scrapy.org/en/latest/index.html). The setup was a bit involved:
+So I wrote a reddit scraper using a Python module named [scrapy](https://doc.scrapy.org/en/latest/index.html). The setup was a bit involved:
 
 1) Get scrapy installed. On Windows use [Anaconda](https://store.continuum.io/cshop/anaconda/) to make this easier
 
@@ -40,21 +40,21 @@ So I wrote a reddit scraper using a Python module named [scrapy](http://doc.scr
 
 5) Add a pipeline to clean up the items (strip any leftover html, clean up whitespace, etc)
 
-Generally you can follow the [tutorial](http://doc.scrapy.org/en/latest/intro/tutorial.html). Tips:
+Generally you can follow the [tutorial](https://doc.scrapy.org/en/latest/intro/tutorial.html). Tips:
 
-* Use [scrapy XPath selectors](http://doc.scrapy.org/en/latest/topics/selectors.html) to pick the parts of the HTML you want to process. When possible prefer to extract content based on CSS classes and ids. Figure out the XPath you need by right-clicking in Chrome and doing "Inspect element"
+* Use [scrapy XPath selectors](https://doc.scrapy.org/en/latest/topics/selectors.html) to pick the parts of the HTML you want to process. When possible prefer to extract content based on CSS classes and ids. Figure out the XPath you need by right-clicking in Chrome and doing "Inspect element"
 * Be strict about only following "Next" links and links to detail pages. I had bugs where it'd follow links to "Previous" which had a different URL so it fooled scrapy into visiting the page again (normally the framework will track sites it's visited and only visit once). I also had bugs where it'd follow links to different sort orders and just lead to cycling the same content.
 * Set a DOWNLOAD\_DELAY to 1 sec or more. This ensures that you aren't hitting their servers much.
-* Decide whether you want a depth-first search or breadth-first. They have memory tradeoffs but depth-first tends to go off into weird deep sections of the internet. See [this](http://doc.scrapy.org/en/latest/faq.html#does-scrapy-crawl-in-breadth-first-or-depth-first-order).
+* Decide whether you want a depth-first search or breadth-first. They have memory tradeoffs but depth-first tends to go off into weird deep sections of the internet. See [this](https://doc.scrapy.org/en/latest/faq.html#does-scrapy-crawl-in-breadth-first-or-depth-first-order).
 * When running your scraper from the command line, you can store the scraped items as Json which is great for downstream processing.
-* I used the HTML stripper from [NLTK](http://www.nltk.org/) (nltk.clean\_html). It's higher quality than writing your own.
+* I used the HTML stripper from [NLTK](https://www.nltk.org/) (nltk.clean\_html). It's higher quality than writing your own.
 * If I could do it again I'd probably spend a day and see if I can set up two levels of Kimono scrapers to accomplish something similar.
 
 For this project I really just need a collection of documents. I wasn't sure at first whether I wanted each comment to be a document or each thread so I made sure I could experiment with both. So I have a file format like:
 
 ```json
-{"title": "Thread 1 title", "url": "http://blah", "body": ["Post 1", "Post 2", ...], "links": ["http://...", "http://...", ]}
-{"title": "Thread 2 title", "url": "http://blah", "body": ["Post 1", "Post 2", ...], "links": ["http://...", "http://...", ]}
+{"title": "Thread 1 title", "url": "https://blah", "body": ["Post 1", "Post 2", ...], "links": ["https://...", "https://...", ]}
+{"title": "Thread 2 title", "url": "https://blah", "body": ["Post 1", "Post 2", ...], "links": ["https://...", "https://...", ]}
 ...
 ```
 

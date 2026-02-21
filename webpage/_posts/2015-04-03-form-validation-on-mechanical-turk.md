@@ -28,13 +28,13 @@ Generally I respond and say sure, send me what you would've written. But it's ve
 Form validation in Javascript
 =============================
 
-Fortunately this is a common problem in web forms: certain values are invalid and it's easier to notify the user before they hit enter by using Javascript libraries. I picked [Parsley](http://parsleyjs.org/) because it was the first search result and it's simple.
+Fortunately this is a common problem in web forms: certain values are invalid and it's easier to notify the user before they hit enter by using Javascript libraries. I picked [Parsley](https://parsleyjs.org/) because it was the first search result and it's simple.
 
 You need to be comfortable editing the HTML of your HIT. Add these two lines near the top:
 
 ```html
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="http://parsleyjs.org/dist/parsley.min.js"></script>
+<script src="https://parsleyjs.org/dist/parsley.min.js"></script>
 ```
 
 Add this bit near the end. I have it after the "End Survey Body" comment.
@@ -60,8 +60,8 @@ Other notes
 
 This method is convenient if you're creating HITs form the web UI but if you're creating via the API you might not be controlling the HTML.
 
-I used a CDN version of jQuery so that it loads faster but Parsley isn't in Google's CDN. It looks like [cdnjs has one](http://cdnjs.com/libraries/parsley.js/) so I'll switch to that.
+I used a CDN version of jQuery so that it loads faster but Parsley isn't in Google's CDN. It looks like [cdnjs has one](https://cdnjs.com/libraries/parsley.js/) so I'll switch to that.
 
-There's another way if you create via API and [QuestionForm](http://docs.aws.amazon.com/AWSMechTurk/latest/AWSMturkAPI/ApiReference_QuestionFormDataStructureArticle.html) - you can provide an AnswerSpecification that rejects empty fields. I tried it briefly but learned that it's checking on the server side and attempts to submit the form but then shows an error at the top of the screen. It's much more clear with an inline error message.
+There's another way if you create via API and [QuestionForm](https://docs.aws.amazon.com/AWSMechTurk/latest/AWSMturkAPI/ApiReference_QuestionFormDataStructureArticle.html) - you can provide an AnswerSpecification that rejects empty fields. I tried it briefly but learned that it's checking on the server side and attempts to submit the form but then shows an error at the top of the screen. It's much more clear with an inline error message.
 
-I've only done very minimal form validation but you could reject content over or under a certain length, match a regular expression, or enforce any number of requirements. See [Parsley's validators](http://parsleyjs.org/doc/#validators).
+I've only done very minimal form validation but you could reject content over or under a certain length, match a regular expression, or enforce any number of requirements. See [Parsley's validators](https://parsleyjs.org/doc/#validators).

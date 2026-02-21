@@ -4,7 +4,7 @@ title: Software engineering estimates and League of Legends
 date: 2015-03-27
 ---
 
-*This might only make sense to players of [MOBA](http://en.wikipedia.org/wiki/Multiplayer_online_battle_arena)-style games.*
+*This might only make sense to players of [MOBA](https://en.wikipedia.org/wiki/Multiplayer_online_battle_arena)-style games.*
 
 There's been renewed debate lately over time estimates in software engineering such as the [no-estimates debate](https://medium.com/backchannel/estimates-we-don-t-need-no-stinking-estimates-dcbddccbd3d4). It's incredibly hard to estimate how long a new feature or bug fix will take.
 

@@ -20,9 +20,9 @@ Relevant hardware (thanks to the magic of Newegg's history):
 
 Testing:
 
-* Monitored CPU core temperatures with [CPUID HWMonitor](http://www.cpuid.com/softwares/hwmonitor.html)
+* Monitored CPU core temperatures with [CPUID HWMonitor](https://www.cpuid.com/softwares/hwmonitor.html)
 * Idle:  Booted the computer and let it sit while watching CPU temp.  Recorded when it stabilized.
-* Load:  Ran [Prime95](http://www.mersenne.org/freesoft/#newusers) for 30-60 min, then watched for a while and recorded stable temp.
+* Load:  Ran [Prime95](https://www.mersenne.org/freesoft/#newusers) for 30-60 min, then watched for a while and recorded stable temp.
 
 Before
 ------

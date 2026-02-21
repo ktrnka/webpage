@@ -4,7 +4,7 @@ title: Improving our Reviewing Processes
 date: 2011-01-22
 ---
 
-It looks like the new issue of CL Journal is out today, and Inderjeet Mani has [an interesting Last Words article](http://www.mitpressjournals.org/doi/abs/10.1162/coli_a_00046) about reviewing.  It's only 4 pages, but I'll summarize it and then comment.
+It looks like the new issue of CL Journal is out today, and Inderjeet Mani has [an interesting Last Words article](https://www.mitpressjournals.org/doi/abs/10.1162/coli_a_00046) about reviewing.  It's only 4 pages, but I'll summarize it and then comment.
 
 summary
 -------
@@ -28,9 +28,9 @@ He suggests that normalization by subfield may be necessary also.
 
 ### Encouraging High-Quality Reviews
 
-Mani brings up the idea of open reviewing using the [British Medical Journal](http://www.bmj.com/) as the prime example.  In this and other journals, the reviews are made public.  Thus the quality of the reviewing can have a real effect on reputation.  He notes some problems though, such as a tend towards more conservative reviews.
+Mani brings up the idea of open reviewing using the [British Medical Journal](https://www.bmj.com/) as the prime example.  In this and other journals, the reviews are made public.  Thus the quality of the reviewing can have a real effect on reputation.  He notes some problems though, such as a tend towards more conservative reviews.
 
-The second interesting part is that some journals ([Biomed Central](http://www.biomedcentral.com/) and [Atmospheric Chemistry and Physics](http://www.atmospheric-chemistry-and-physics.net/)) provide access to the history of versions of a paper in addition to their reviews.  I can only imagine how instructive this would be for a young researcher.
+The second interesting part is that some journals ([Biomed Central](https://www.biomedcentral.com/) and [Atmospheric Chemistry and Physics](https://www.atmospheric-chemistry-and-physics.net/)) provide access to the history of versions of a paper in addition to their reviews.  I can only imagine how instructive this would be for a young researcher.
 
 The final suggestion is to train reviewers.  Maybe the reviewers tried, but forgot to review a certain aspect of a paper.  Or maybe they didn't provide clear suggestions for improvement, etc.  British Medical Journal is mentioned again - they provide PowerPoint presentations to train reviewers.  One of Mani's suggestions is to potentially require some short online reviewer training (somewhat akin to human subjects training I imagine).  Open reviewing ties into this:  Open reviews could form the basis of an example-based training program.
 
@@ -39,7 +39,7 @@ comments
 
 First off, the problem is interesting.  Why are we focusing on it now?  Reviewing has always been time consuming and error-prone.  If I had to guess, I'd suggest that people are talking about it due to articles about scientific review in mass media.  I know Ars Technica has written about scientific review many times in the past few months.  It's tough to say whether we're at a breaking point where reviews have become so demanding and unreliable that we need to change... or whether it's just perception.  Either way, I think the system could use an update and it's good at times to relentlessly pursue better science.
 
-The first comment I had is "What is a qualified reviewer?"  One interpretation is that you are (potentially) qualified to review in venues that you've published in.  But I think Mani means qualified for a particular paper.  Suppose there were a hypothetical paper submission about using methods A and B to solve problem P as part of a task T.  [An example](http://acl.ldc.upenn.edu/D/D07/D07-1118.pdf) might be using a [Markov model part of speech tagger trained on Penn Treebank] and [the EM algorithm] to solve the problem of [domain adaptation] for [biomedical part of speech tagging].  Now here's the question:  Are you qualified to review such a paper without any BioNLP knowledge?  What about without knowledge of domain adaptation?  What about without knowledge of HMM taggers, but BioNLP knowledge?  It's a bit unclear.  Then there are other issues:  Some people are qualified and don't know it (or the program chair doesn't know it).  And some people are unqualified and don't know it.  So who decides?  (I didn't mean to come off as ranting; it's just a fundamental question that I felt was vague)
+The first comment I had is "What is a qualified reviewer?"  One interpretation is that you are (potentially) qualified to review in venues that you've published in.  But I think Mani means qualified for a particular paper.  Suppose there were a hypothetical paper submission about using methods A and B to solve problem P as part of a task T.  [An example](https://acl.ldc.upenn.edu/D/D07/D07-1118.pdf) might be using a [Markov model part of speech tagger trained on Penn Treebank] and [the EM algorithm] to solve the problem of [domain adaptation] for [biomedical part of speech tagging].  Now here's the question:  Are you qualified to review such a paper without any BioNLP knowledge?  What about without knowledge of domain adaptation?  What about without knowledge of HMM taggers, but BioNLP knowledge?  It's a bit unclear.  Then there are other issues:  Some people are qualified and don't know it (or the program chair doesn't know it).  And some people are unqualified and don't know it.  So who decides?  (I didn't mean to come off as ranting; it's just a fundamental question that I felt was vague)
 
 The reviewer database could be good.  Though I have to wonder if ACL/NAACL/EACL would use anything short of the full database.  In this case, it's feeding ACL reviewers from other conferences, which is probably a good idea.  I wonder if it'd keep up with increased submission rates?  Mani mentions a 24% increase in submissions from ACL 2008 (Columbus, OH) to 2009 (Singapore).
 

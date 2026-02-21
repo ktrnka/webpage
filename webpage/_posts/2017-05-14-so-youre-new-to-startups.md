@@ -14,7 +14,7 @@ Sam Altman from Y Combinator ran a startup class at Stanford which covers much t
 
 If you're coming from a large company, [The Innovator's Dilemma](https://www.goodreads.com/book/show/2615.The_Innovator_s_Dilemma) illustrates some of the key differences between an established company and a newcomer or startup. If you notice people using the term disruption a lot it's because this is a very popular book.
 
-Edit: I shamefully forgot [Paul Graham's essays](http://www.paulgraham.com/articles.html). There are many so I'll suggest a couple to get started:
+Edit: I shamefully forgot [Paul Graham's essays](https://www.paulgraham.com/articles.html). There are many so I'll suggest a couple to get started:
 
-- [Do things that don't scale](http://www.paulgraham.com/ds.html)
-- [Startups in 13 sentences](http://www.paulgraham.com/13sentences.html)
+- [Do things that don't scale](https://www.paulgraham.com/ds.html)
+- [Startups in 13 sentences](https://www.paulgraham.com/13sentences.html)

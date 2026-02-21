@@ -1,0 +1,17 @@
+verbose = "info"
+cache = true
+max_cache_age = "2d"
+timeout = 10
+max_retries = 2
+suggest = true
+require_https = true
+host_concurrency = 2
+
+output = "lychee-report.md"
+format = "markdown"
+mode = "emoji"
+
+# Exclude same-site links for now
+exclude = [
+  "^/webpage/"
+]

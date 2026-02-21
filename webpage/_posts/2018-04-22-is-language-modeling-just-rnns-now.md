@@ -16,7 +16,7 @@ Recurrent neural networks on the other hand compute a smooth representation of t
 
 They have some practical benefits as well: They have more explicit ways to encourage generalization such as dropout. They can take advantage of pretrained word embeddings (word2vec, glove, fastText) which even enables a degree of transfer learning. Memory usage is strongly bounded and predictable. And they take advantage of the more general machine learning community: Progress in optimization or parallel processing transfers between RNNs and other neural networks. And we can benefit from research such as LSTM or GRU.
 
-That said, the benefit isn't free: They can take much longer to train. At large scale you sometimes see a swing in the other direction such as Google's [stupid backoff](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.324.3653) which just throws out the math and does something that's computationally scalable.
+That said, the benefit isn't free: They can take much longer to train. At large scale you sometimes see a swing in the other direction such as Google's [stupid backoff](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.324.3653) which just throws out the math and does something that's computationally scalable.
 
 There are two themes to this post: 1) There are many problems that are about language modeling in general, not about ngrams vs RNNs 2) There are situations in which one approach or another is better.
 
@@ -84,7 +84,7 @@ We're starting to move into topics that are general language modeling but with s
 
 #### Personalized language models
 
-In applications like typing on your phone, there are huge gains from maintaining a language model that's trained iteratively from the user's text. I've seen results up to about 50% improvement, though at Swype on average it might've been more like 20% average and depended on how much you type. Here are a [couple](http://dx.doi.org/10.1109/34.56193) [classic](https://dl.acm.org/citation.cfm?doid=112405.112464) citations.
+In applications like typing on your phone, there are huge gains from maintaining a language model that's trained iteratively from the user's text. I've seen results up to about 50% improvement, though at Swype on average it might've been more like 20% average and depended on how much you type. Here are a [couple](https://dx.doi.org/10.1109/34.56193) [classic](https://dl.acm.org/citation.cfm?doid=112405.112464) citations.
 
 The easy way to handle this is to use an user-specific ngram model and a generic RNN and do a weighted average.
 
@@ -145,7 +145,7 @@ This comes up in almost any kind of machine learning and language modeling is no
 1. Filtering out porn and any other content the businesspeople worry about. If you're lucky you can have one classifier to do this but you might need a different one for each language.
 2. Deduplicating content. There are almost always bugs in web scrapers that cause duplicates, which down the line leads to severe bias in language models. This can also unintentionally circumvent privacy filters.
 3. Character encoding. Webpages sometimes indicate their encoding and sometimes provide misleading indicators of encoding. Another job for text classification.
-4. Poor standards. Burmese has a Unicode definition but [Zawgyi](https://code.google.com/archive/p/zawgyi/wikis/WhyUnicode.wiki) is more common, which is a slight redefinition of certain codepoints. It isn't even a clean mapping; there are characters in both that can only be represented with combining characters in the other. Another example is [s-with-cedilla and t-with-cedilla in Romanian](http://archives.miloush.net/michkap/archive/2011/08/24/10199324.html).
+4. Poor standards. Burmese has a Unicode definition but [Zawgyi](https://code.google.com/archive/p/zawgyi/wikis/WhyUnicode.wiki) is more common, which is a slight redefinition of certain codepoints. It isn't even a clean mapping; there are characters in both that can only be represented with combining characters in the other. Another example is [s-with-cedilla and t-with-cedilla in Romanian](https://archives.miloush.net/michkap/archive/2011/08/24/10199324.html).
 5. Language detection. How do you even know you're crawling Tamil? There's a great Python module called langid these days that has a very long list. But one thing to worry about is that you're really identifying a language plus script. Serbian for example can be written in either Latin or Cyrillic script. Macedonian is written in Cyrillic and is related. If your language identifier only identifies Serbian in Latin script, you end up getting a mixture of Serbian Cyrillic and Macedonian identified as Macedonian.
 6. Finding the right kind of data. Historically we use whatever kind of data we can find. Wikipedia is a good start but it's overly formal. If you train a text-entry system on Wikipedia you'll notice an abnormally high error rate around words like "I", "you", "me", which are some of the most common words in informal English. For text entry I found that Twitter was much better but introduced offensive content. You can try to filter out data with swears but inevitably you deal with multiword expressions like "die in a fire."
 7. Removing formatting info. Usually this is easy but occasionally you spend a couple days fixing a rare html/formatting stripping bug.

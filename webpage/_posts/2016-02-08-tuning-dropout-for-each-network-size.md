@@ -5,7 +5,7 @@ date: 2016-02-08
 ---
 In the [previous post](/blog/2016/02/switching-from-deep-to-wide/) I tested a range of shallow networks from 50 hidden units to 1000. On the smaller dataset (50k rows) additional network complexity hurts: It's just overfitting. On the larger dataset (200k rows) the additional complexity helps because the amount of data prevents the network from overfitting.
 
-But I learned from the [Stanford CNN class](http://cs231n.github.io/) that I made a mistake: It's bad to view network complexity as regularization, instead it's better to pick the most complex you can and tune dropout (and/or L2). I'd amend that to say that it's bad if you have excess compute resources. If the pace of experimentation is limited by runtime then reducing the network size may be a good way to achieve both regularization and experimental efficiency.
+But I learned from the [Stanford CNN class](https://cs231n.github.io/) that I made a mistake: It's bad to view network complexity as regularization, instead it's better to pick the most complex you can and tune dropout (and/or L2). I'd amend that to say that it's bad if you have excess compute resources. If the pace of experimentation is limited by runtime then reducing the network size may be a good way to achieve both regularization and experimental efficiency.
 
 Just as a reminder this is a part of my ongoing project to predict the winner of ranked matches in League of Legends based on information from champion select and the player histories.
 Here's the graph from last time, showing that added network complexity is harmful on a small dataset. I kept the default of 0.5 dropout.

@@ -102,7 +102,7 @@ At 98point6 our model builds produced a training report and opened a pull reques
 
 #### Test, not too much, not too little
 
-Testing is a complex topic that could take a whole article. If you haven't read it, I strongly recommend reading [Testivus](http://www.agitar.com/downloads/TheWayOfTestivus.pdf) first because that's my stance.
+Testing is a complex topic that could take a whole article. If you haven't read it, I strongly recommend reading [Testivus](https://www.agitar.com/downloads/TheWayOfTestivus.pdf) first because that's my stance.
 
 First off, I want to acknowledge that evaluating your model on held-out data *is* testing. It's often ignored when talking about testing but it's a key component of quality control for machine learning.
 
