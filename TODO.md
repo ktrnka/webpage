@@ -63,7 +63,6 @@ Steps:
 - [X] The page title on index.md is weird: "Keith Trnka | Personal website of Keith Trnka, PhD" — fix in `_config.yml`
 
 ## Tech debt 🔩
-- [ ] Fix Sass `@import` deprecation warning (migrate to `@use`/`@forward` before Dart Sass 3.0.0)
 - [ ] Fix mobile homepage layout (sidebar/header alignment above main content)
 - [X] Code block syntax highlighting: root cause was `assets/css/style.scss` not importing `jekyll-theme-minimal` (which includes `rouge-github.scss`); fixed by adding `@import "jekyll-theme-minimal"` before `@import "minimal-custom"`
 - [ ] Link checking CI: HTMLProofer for internal links (`--disable-external`); Lychee on a cron schedule for external links
@@ -87,6 +86,7 @@ Steps:
 - [X] **WP PC-cleaning JPGs** (~10MB → ~3.8MB, 63% reduction) — `mogrify -quality 80` in-place recompress on 8 files in `assets/img/posts/wp/`
 
 ## Someday / low priority 💤
+- [ ] Fix Sass `@import` deprecation warning — blocked: `jekyll-theme-minimal.scss` itself uses `@import "fonts"` and `@import "rouge-github"` internally, so even converting `style.scss` to `@use` doesn't silence it. Only real fix is vendoring all 4 theme SCSS files into `_sass/` and converting them to `@use`/`@forward`. Warning is local-only (GitHub Pages pins old gem versions). Not urgent until Dart Sass 3.0.0 makes it an error.
 - [ ] Look into Medium post claps/views/stats — optimize top performers
 - [ ] Set up private repo for blog drafts/candidates (git submodule approach)
 - [ ] Consider merging recipes repo into this one
