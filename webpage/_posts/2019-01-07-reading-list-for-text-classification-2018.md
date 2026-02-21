@@ -67,7 +67,7 @@ This has been the standard approach since the 90s. Any old textbook should cover
 
 Wang, S., & Manning, C. (2012). [Baselines and bigrams](https://dl.acm.org/citation.cfm?id=2390688). In ACL.
 
-Iyyer, M., Manjunatha, V., Boyd-Graber, J., & Daumé III, H. (2015). [Deep Unordered Composition Rivals Syntactic Methods for Text Classification](https://aclanthology.org/P15-1162). In ACL.
+Iyyer, M., Manjunatha, V., Boyd-Graber, J., & Daumé III, H. (2015). [Deep Unordered Composition Rivals Syntactic Methods for Text Classification](https://aclanthology.org/P15-1162/). In ACL.
 
 Li, B., Liu, T., Zhao, Z., Wang, P., & Du, X. (2017). Neural Bag-of-Ngrams (paper link no longer available). In AAAI.
 
@@ -122,7 +122,7 @@ These are all unsupervised methods -- they process a large amount of text and se
 
 [word2vec] Mikolov, T., Sutskever, I., Chen, K., Corrado, G. S., & Dean, J. (2013). [Distributed Representations of Words and Phrases and their Compositionality](https://papers.nips.cc/paper/5021-distributed-representations-of-words-andphrases). In NIPS.
 
-[GloVe] Pennington, J., Socher, R., & Manning, C. D. (2014). [GloVe: Global Vectors for Word Representation](https://aclanthology.org/D14-1162). In EMNLP.
+[GloVe] Pennington, J., Socher, R., & Manning, C. D. (2014). [GloVe: Global Vectors for Word Representation](https://aclanthology.org/D14-1162/). In EMNLP.
 
 [fastText V1] Joulin, A., Grave, E., Bojanowski, P., & Mikolov, T. (2016). [Bag of Tricks for Efficient Text Classification](https://arxiv.org/abs/1607.01759).
 

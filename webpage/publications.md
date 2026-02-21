@@ -20,7 +20,7 @@ show_logo: false
 
 ### 2009
 
-- Trnka, Keith; McCaw, John; Yarrington, Debra; McCoy, Kathleen F.; Pennington, Christopher. *User Interaction with Word Prediction: The Effects of Prediction Quality.* ACM Transactions on Accessible Computing (TACCESS), 1(3), 2009, pp. 1–34. ([paper](/assets/pdf/trnka09taccess.pdf)) [DOI](https://doi.acm.org/10.1145/1497302.1497307)
+- Trnka, Keith; McCaw, John; Yarrington, Debra; McCoy, Kathleen F.; Pennington, Christopher. *User Interaction with Word Prediction: The Effects of Prediction Quality.* ACM Transactions on Accessible Computing (TACCESS), 1(3), 2009, pp. 1–34. ([paper](/assets/pdf/trnka09taccess.pdf))
 
 ### 2008
 

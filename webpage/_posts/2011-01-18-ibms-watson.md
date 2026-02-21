@@ -8,7 +8,7 @@ In case you haven't heard of it yet, IBM developed a deep QA system called Watso
 
 [Video: IBM Watson vs. Jeopardy champions](https://web.archive.org/web/20250318042107/https://www.youtube.com/watch?v=FC3IryWr4c8)
 
-We'll have to wait until February 14-16 to see its actual performance, but the rumors say that it's very good. Good enough to have the news and blog sphere making SkyNet/singularity/etc analogies.  For example, see [the Atlantic Wire](https://www.theatlanticwire.com/opinions/view/opinion/World-Terrified-of-Jeopardy-Dominating-Supercomputer-6563) (which has many links).
+We'll have to wait until February 14-16 to see its actual performance, but the rumors say that it's very good. Good enough to have the news and blog sphere making SkyNet/singularity/etc analogies.  For example, see [the Atlantic Wire](http://web.archive.org/web/20110222060456/http://www.theatlanticwire.com:80/opinions/view/opinion/World-Terrified-of-Jeopardy-Dominating-Supercomputer-6563?) (which has many links).
 
 IBM probably has some very interesting technology in there.  The speech recognition alone is impressive, especially recognizing names and their spellings. (This requires more than just an ngram model)
 

@@ -58,7 +58,7 @@ In a second article, Ars takes a closer look at the original *Science* text, cit
 
 They conclude that the correlation of keyword frequency with real-world events can sometimes be surreal, but not everything shows correlation.  However, despite the lack of perfect matching to real-word events, this resource is a step in the right direction.
 
-[Wired](https://www.wired.com/wiredscience/2010/12/cultural-evolution-google/)
+[Wired](http://web.archive.org/web/20140210060314/http://www.wired.com:80/wiredscience/2010/12/cultural-evolution-google/)
 -----------------------------------------------------------------------------
 
 Wired covers the story from the perspective of our ever-changing culture and includes some discussion of the *Science* article that accompanied the release.  Compared to other coverage, they include several graphs from the original article --- burnt/burned in American/British English, popularity of several scientists over time, and popularity of several foods.

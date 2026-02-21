@@ -16,7 +16,7 @@ Recurrent neural networks on the other hand compute a smooth representation of t
 
 They have some practical benefits as well: They have more explicit ways to encourage generalization such as dropout. They can take advantage of pretrained word embeddings (word2vec, glove, fastText) which even enables a degree of transfer learning. Memory usage is strongly bounded and predictable. And they take advantage of the more general machine learning community: Progress in optimization or parallel processing transfers between RNNs and other neural networks. And we can benefit from research such as LSTM or GRU.
 
-That said, the benefit isn't free: They can take much longer to train. At large scale you sometimes see a swing in the other direction such as Google's [stupid backoff](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.324.3653) which just throws out the math and does something that's computationally scalable.
+That said, the benefit isn't free: They can take much longer to train. At large scale you sometimes see a swing in the other direction such as Google's stupid backoff (link dead) which just throws out the math and does something that's computationally scalable.
 
 There are two themes to this post: 1) There are many problems that are about language modeling in general, not about ngrams vs RNNs 2) There are situations in which one approach or another is better.
 
