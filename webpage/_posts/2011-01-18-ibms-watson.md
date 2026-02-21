@@ -6,7 +6,7 @@ date: 2011-01-18
 
 In case you haven't heard of it yet, IBM developed a deep QA system called Watson.  They've had a medium-sized team working on it for about 4 years.  Among others is Jennifer Chu-Carroll, who received her Ph.D. from the University of Delaware under Sandee Carberry (who was part of my Ph.D. committee).
 
-[Video: IBM Watson vs. Jeopardy champions](https://www.youtube.com/watch?v=FC3IryWr4c8)
+[Video: IBM Watson vs. Jeopardy champions](https://web.archive.org/web/20250318042107/https://www.youtube.com/watch?v=FC3IryWr4c8)
 
 We'll have to wait until February 14-16 to see its actual performance, but the rumors say that it's very good. Good enough to have the news and blog sphere making SkyNet/singularity/etc analogies.  For example, see [the Atlantic Wire](https://www.theatlanticwire.com/opinions/view/opinion/World-Terrified-of-Jeopardy-Dominating-Supercomputer-6563) (which has many links).
 
@@ -34,7 +34,7 @@ For evaluation, all I have is IBM's YouTube video (unless I can find the real qu
 4. A famous red-quaft clown or just any incompetent fool.
    Question:  *Who is bozo?*
    #1 Google result:   *[List of clowns](https://en.wikipedia.org/wiki/List_of_clowns)*
-   First off, I've never heard of whatever word comes after red.  My first guess at the spelling doesn't occur in any dictionary I have, but none of my other guesses do either.  The closest the baseline method gets is if you use a space instead of a dash, a dictionary link is #3 for [bozo](https://www.dictionary30.com/meaning/Bozo).
+   First off, I've never heard of whatever word comes after red.  My first guess at the spelling doesn't occur in any dictionary I have, but none of my other guesses do either.  The closest the baseline method gets is if you use a space instead of a dash, a dictionary link is #3 for [bozo](https://web.archive.org/web/20140307215907/http://www.dictionary30.com:80/meaning/Bozo).
    Secondly, I'd like to point out the interesting NLP here.  The answer is a noun phrase rather than a full sentence, which might suggest that a dictionary may be more useful.  In this case, I'd say that the first part isn't enough information to guess *bozo*.  Using both parts for different constraints might be necessary, which can make this quite difficult.
 5. In REM's "It's the end of the world as we know it", two of the men with the initials LB.
    Question:   Pick two of:  Leonard Bernstein, Leonid Brezhnev, Lenny Bruce and Lester Bangs

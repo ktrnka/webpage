@@ -10,4 +10,4 @@ I used this in my PhD proposal - I wanted IDF values for some words, so I used G
 
 I also used this years ago to help a friend with learning English but forgot until I saw a number of [xkcd comics](https://xkcd.com/369/) that use the method (and some [BBSpot showdowns](https://www.bbspot.com/News/2005/01/firefox_vs_internet_explorer.html)).  It can also be used for things like estimating conditional probabilities.
 
-If you need to do anything more serious, [Language Log](https://languagelog.ldc.upenn.edu/nll/) advocates using [COCA](https://corpus.byu.edu/coca/).
+If you need to do anything more serious, [Language Log](https://languagelog.ldc.upenn.edu/nll/) advocates using [COCA](https://www.english-corpora.org/coca/).

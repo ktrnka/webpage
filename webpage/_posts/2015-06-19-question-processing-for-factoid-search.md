@@ -45,7 +45,7 @@ Classifying questions
 
 Given a question like "How much is it?" we need to know to look up the price. None of the words in the question clearly indicate this though.
 
-The closest academic work we found was by Li and Roth, who provide their [question classification dataset online](https://cogcomp.cs.illinois.edu/Data/QA/QC/). The nice thing is that each question has a two-part answer type, like NUMERIC/money or NUMERIC/count. The unfortunate part is that the [answer types](https://cogcomp.cs.illinois.edu/Data/QA/QC/definition.html) don't cleanly align to our data.
+The closest academic work we found was by Li and Roth, who provide their [question classification dataset online](https://cogcomp.seas.upenn.edu/Data/QA/QC/). The nice thing is that each question has a two-part answer type, like NUMERIC/money or NUMERIC/count. The unfortunate part is that the [answer types](https://cogcomp.seas.upenn.edu/Data/QA/QC/definition.html) don't cleanly align to our data.
 
 Experiments on the Li and Roth data
 -----------------------------------

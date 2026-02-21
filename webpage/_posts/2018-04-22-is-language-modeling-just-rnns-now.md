@@ -34,7 +34,7 @@ Let's talk about German first. You can make a decent model with maybe 200k words
 
 But that's more difficult for RNNs. In particular, the softmax becomes the limiting factor. With 500 hidden units you have a 501x200,000 weight matrix just for the output. One solution is to cluster the vocabulary and factor the prediction into [predicting the cluster first then the word](https://arxiv.org/pdf/cs/0108006.pdf).
 
-The more scalable approach is [hierarchical softmax](https://pdfs.semanticscholar.org/39eb/fbb53b041b97332cd351886749c0395037fb.pdf#page=255). It's not trivial but there are many [good variants](https://code.facebook.com/posts/1827693967466780/building-an-efficient-neural-language-model-over-a-billion-words/) and it's an area of ongoing research.
+The more scalable approach is hierarchical softmax (paper link no longer available). It's not trivial but there are many [good variants](https://code.facebook.com/posts/1827693967466780/building-an-efficient-neural-language-model-over-a-billion-words/) and it's an area of ongoing research.
 
 An older solution is to use a **mixture of ngram and RNN models**. You train the RNN for the most common words and interpolate with the ngram model. Or you backoff from the RNN model to ngram model when the RNN predicts OOV. I've seen these tricks many times from back when NNLMs were the hot research area so I'm not quite sure who to cite but [Mikolov et al 2011](https://www.researchgate.net/profile/Lukas_Burget/publication/241637478_Strategies_for_training_large_scale_neural_network_language_models/links/542c14960cf27e39fa922ed3.pdf) seems like a safe bet for RNNs.
 
@@ -44,7 +44,7 @@ These approaches don't work well for highly inflected languages like Hungarian, 
 
 The most traditional approach is to split words up into morphemes and do a **language model over morphemes**. I vaguely remember a paper showing excellent improvements by interpolating a word model on common vocabulary with a morpheme-based model in the era of ngrams either for Arabic or Turkish. This would likely work even better with RNNs.
 
-**Character-based RNN**: This works much better than a character-based ngram model though it may take some [extra effort](https://arxiv.org/pdf/1511.06303.pdf) to get it to [work well](https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/viewFile/12489/12017). The advantage is that it handles complex morphology all by itself. The disadvantage is that they don't work as well as word-based models for most languages.
+**Character-based RNN**: This works much better than a character-based ngram model though it may take some [extra effort](https://arxiv.org/pdf/1511.06303.pdf) to get it to work well (paper link no longer available). The advantage is that it handles complex morphology all by itself. The disadvantage is that they don't work as well as word-based models for most languages.
 
 Interpolate **short-list word model and open-vocab char model**: This seems like the natural progression from the previous two notes. I don't think I've seen this and the reason is that there may be better ways.
 

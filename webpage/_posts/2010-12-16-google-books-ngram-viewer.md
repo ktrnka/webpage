@@ -6,7 +6,7 @@ date: 2010-12-16
 
 Today, Google [released](https://googleresearch.blogspot.com/2010/12/find-out-whats-in-word-or-five-with.html) the [Google Books NGram Viewer](https://books.google.com/ngrams), which is a beautiful frontend to a historical ngram model.  They have a separate ngram model for each year and for each language type (English, American English, British English, Simplified Chinese, etc).
 
-To some extent, this already existed in the [Corpus of Historical American English](https://corpus.byu.edu/coha/) (COHA), but that's only American English and it doesn't seem to produce pretty graphs.  However, COHA allows for richer queries.
+To some extent, this already existed in the [Corpus of Historical American English](https://www.english-corpora.org/coha/) (COHA), but that's only American English and it doesn't seem to produce pretty graphs.  However, COHA allows for richer queries.
 
 As a tool, you input a list of terms (phrases work too) and pick a corpus.  It checks the language models and produces a graph like so:
 

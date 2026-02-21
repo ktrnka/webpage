@@ -227,4 +227,4 @@ Collections of links
 
 - [A collection of postmortem templates](https://github.com/dastergon/postmortem-templates)
 - [danluu/post-mortems: A collection of postmortems](https://github.com/danluu/post-mortems)
-- [awesome-leading-and-managing/Postmortems-Retrospectives.md](https://github.com/LappleApple/awesome-leading-and-managing/blob/master/Postmortems-Retrospectives.md): Great collection
+- [awesome-leading-and-managing/Conflict-Resolution-Postmortems-Retrospectives.md](https://github.com/fokusferit/awesome-leading-and-managing/blob/master/Conflict-Resolution-Postmortems-Retrospectives.md): Great collection

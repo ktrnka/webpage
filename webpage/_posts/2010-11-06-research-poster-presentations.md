@@ -29,7 +29,7 @@ As for poster design, I'll give a bulleted list of guidelines I follow:
   + essential results - people need to know "Is this good?".  Even if you can't objectively answer that question, you can give examples.
 * pictures/screenshots are good, diagrams are good, graphs are good.  Equations can be good (depending).  Text is a sometimes-necessary evil.  Large data tables are also generally bad.
   + On the other hand, a poor diagram can be fatal.  You need to spend time on them; they should be both visually interesting as well as reasonably informative.
-* use color; you're trying to interest people.  The poster viewer is like the reader of a novel - they want to be drawn in and excited.  I'm not great at picking color schemes, so I like to use [Color Scheme Designer](https://colorschemedesigner.com/) to come up with ideas for the primary/secondary colors.  Once you have colors you like, you just need to convert the hex color codes to whatever your application uses (or guess and check).
+* use color; you're trying to interest people.  The poster viewer is like the reader of a novel - they want to be drawn in and excited.  I'm not great at picking color schemes, so I like to use [Color Scheme Designer](https://paletton.com/) to come up with ideas for the primary/secondary colors.  Once you have colors you like, you just need to convert the hex color codes to whatever your application uses (or guess and check).
 
 I feel like this list is overly long, so I'll just describe some methods of creating posters then stop for now.
 

@@ -47,7 +47,7 @@ League tier
 
 Your ranked tier is a rough measure of overall skill level: bronze, silver, gold, platinum, diamond, master, and challenger. Are matches more predictable in bronze? In a previous post I saw a blue side advantage in low tiers and red side advantage in higher tiers.
 
-If you aren't familiar with League of Legends one thing to note is that the number of players at each tier follows a sort of exponential distribution. See [LoL Summoners' Global Stats](https://www.lolsummoners.com/stats) for instance. 27% of players are bronze, 42% silver, 20% gold, 8% platinum, 2% diamond, 0.04% master, 0.02% challenger.
+If you aren't familiar with League of Legends one thing to note is that the number of players at each tier follows a sort of exponential distribution. See LoL Summoners' Global Stats (page no longer available) for instance. 27% of players are bronze, 42% silver, 20% gold, 8% platinum, 2% diamond, 0.04% master, 0.02% challenger.
 
 Note that I'm still just using highestAchievedSeasonTier which is the max of all previous seasons and many players don't have a value. Also I have the median value for blue and red side separately so I only counted games where they were the same.
 

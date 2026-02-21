@@ -23,7 +23,7 @@ What I learned today
   + With feature scaling the three optimizers give almost identical results for each C value. lbfgs is consistently worse than newton-cg and lib linear but only by about 0.01%.
   + Without feature scaling, liblinear is consistently better than newton-cg or lbfgs. The best result from liblinear is about 0.02% better than the best from newton-cg and about 1.66% better than the best result of lbfgs. For my problem, 1.66% is about the gain I can get with a couple weeks of feature engineering.
   + lbfgs is drastically faster than newton-cg or liblinear
-* [LogisticRegressionCV](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html) is about 2x faster than [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.grid_search.GridSearchCV.html) for lbfgs. The ratio is more dramatic if you're tuning over more than 10 C values because it initializes the weights for all instances closer to the optimum aka warm start.
+* [LogisticRegressionCV](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html) is about 2x faster than [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html) for lbfgs. The ratio is more dramatic if you're tuning over more than 10 C values because it initializes the weights for all instances closer to the optimum aka warm start.
 
 ### Tests within LogisticRegressionCV at 50k samples
 

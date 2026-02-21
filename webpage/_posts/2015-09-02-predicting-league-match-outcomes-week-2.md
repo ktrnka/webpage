@@ -28,7 +28,7 @@ I removed those two sets of features and accuracy was believable again: around 5
 
 What was the leakage? I never found all the leaks but I found two issues:
 
-There was an issue in the per-player statistics from the [ranked stats endpoint](https://developer.riotgames.com/api/methods#!/1018/3452). I didn't realize but it can only provide stats on a per-season basis and it defaults to the current season. Some of the matches in my database are from SEASON2014 but the stats are SEASON2015. So when I subtracted the match outcome from the win rate, that was incorrect for 2014 matches.
+There was an issue in the per-player statistics from the ranked stats endpoint (page no longer available). I didn't realize but it can only provide stats on a per-season basis and it defaults to the current season. Some of the matches in my database are from SEASON2014 but the stats are SEASON2015. So when I subtracted the match outcome from the win rate, that was incorrect for 2014 matches.
 
 The second issue was another misunderstanding. Say the ranked stats indicate that you played Morgana 1 time and won 0 times. The timestamp indicates that these stats were computed on Monday at 5pm GMT. Now say we process a match you played Morgana on Monday at 4pm GMT and won. This is inconsistent with the ranked stats. Previously I'd make sure neither value could subtract lower than 0 but really if it's inconsistent I shouldn't adjust either the wins or total games played (what I'm doing now).
 
@@ -41,7 +41,7 @@ Aside: Diagnosing by decision tree images
 
 Random forests and gradient boosting trees are both collections of large numbers of decision trees (I'm using 100-500). It's too hard to just look inside. But I can take a single decision tree and visualize that.
 
-Scikit-learn fortunately has [a function](https://scikit-learn.org/stable/modules/generated/sklearn.tree.export_graphviz.html) to export a graph file of the decision tree. Then you can plug it into [webgraphviz](https://www.webgraphviz.com/) if it's small enough or render locally. Unfortunately the trees get so big that they crash renderers. Even with max depth of 5 it's a very horizontal image:
+Scikit-learn fortunately has [a function](https://scikit-learn.org/stable/modules/generated/sklearn.tree.export_graphviz.html) to export a graph file of the decision tree. Then you can plug it into [GraphvizOnline](https://dreampuf.github.io/GraphvizOnline/) if it's small enough or render locally. Unfortunately the trees get so big that they crash renderers. Even with max depth of 5 it's a very horizontal image:
 
 ![decision_tree.dot]({{ "/assets/img/posts/wp/decision_tree-dot1.png" | relative_url }})
 

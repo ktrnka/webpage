@@ -13,7 +13,7 @@ Know your API user
 
 Of course you should understand the client's use case. But more than that: You should **understand what libraries they're using**.
 
-For example, [GSON](https://code.google.com/p/google-gson/) is commonly used on Android but doesn't cope well with optional fields: does 0 mean the value is missing or is set to 0? (A developer using GSON would need to use Integer rather than int to tell.)
+For example, [GSON](https://github.com/google/gson) is commonly used on Android but doesn't cope well with optional fields: does 0 mean the value is missing or is set to 0? (A developer using GSON would need to use Integer rather than int to tell.)
 
 Other client-side factors to consider, in no particular order:
 
@@ -46,7 +46,7 @@ You might be inserting bad data to MongoDB. A completely separate endpoint may 
 
 In the case of Python with MongoDB it's very helpful to use basic Json validation. If you need to process any fields they'll generate errors if missing or incorrect.
 
-But when you're starting out you really can't afford 500 lines of code spent on validation that you update twice a day. We went with [jsonvalidator](https://code.google.com/p/jsonvalidator/) due to simplicity: provide an example Json object and it'll check that all the fields are present and the right types. We also tried [jsonschema](https://pypi.python.org/pypi/jsonschema) in conjunction with [orderly](https://orderly-json.org/) but it was verbose and didn't deal as well with required fields.
+But when you're starting out you really can't afford 500 lines of code spent on validation that you update twice a day. We went with [jsonvalidator](https://web.archive.org/web/20160116201340/https://code.google.com/p/jsonvalidator/) due to simplicity: provide an example Json object and it'll check that all the fields are present and the right types. We also tried [jsonschema](https://pypi.python.org/pypi/jsonschema) in conjunction with [orderly](https://orderly-json.org/) but it was verbose and didn't deal as well with required fields.
 
 Documentation helps even in a team of three but save yourself some pain and catch errors from typos early on.
 

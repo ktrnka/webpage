@@ -75,3 +75,7 @@ Observations
 - More domain hijacking than I expected, which encouraged me to edit all links and it's making me reconsider how I want to do links in the future
 - Companies that made a major pivot, like Plotly
 - Linking to books: Back when I was writing, I felt great about Amazon so I tended to link to books there. Now I don't feel as great about Amazon so I swapped those to Goodreads (still Amazon but a little removed from their store)
+
+# Mistakes
+
+- I totally should've started with Lychee to scan my links _before_ trying to manually check or fix them. There are a lot of links that can be updated pretty automatically

@@ -72,7 +72,7 @@ API gateway sends the POST request body in event\["body"\] as a plain string so 
 
 - [AWS Lambda](https://aws.amazon.com/lambda/): This runs our code on a server and handles scaling up the number of workers automatically.
 - [AWS API Gateway](https://aws.amazon.com/api-gateway/): This serves as a bridge between our Lambda and requests coming from the Internet.
-- HTTP POST: This is the [HTTP method](https://www.restapitutorial.com/lessons/httpmethods.html) that we're using. Although GET would be a more semantically-appropriate method, sending JSON generally isn't supported with GET. POST is more common in my experience because the input data structure is often complex.
+- HTTP POST: This is the HTTP method we're using. Although GET would be a more semantically-appropriate method, sending JSON generally isn't supported with GET. POST is more common in my experience because the input data structure is often complex.
 
 #### Docker and Python, called by Lambda
 
@@ -455,7 +455,7 @@ It's tough to judge your own work for learnability. Whenever possible it's bette
 - API gateway and Lambda can be challenging to understand, and aren't great technologies for junior developers in my experience.
 - The use of "dvc repro" might not be worth the effort to learn it.
 - Also in my opinion it's not quite documented enough for a junior dev.
-- The parameters to the Lambda handler are hard to learn in my opinion, because there's no autocomplete for the data structure. [Lambda Powertools](https://awslabs.github.io/aws-lambda-powertools-python/2.8.0/) can help with this, but adds another dependency.
+- The parameters to the Lambda handler are hard to learn in my opinion, because there's no autocomplete for the data structure. [Lambda Powertools](https://web.archive.org/web/20230219153537/https://awslabs.github.io/aws-lambda-powertools-python/2.8.0/) can help with this, but adds another dependency.
 
 **Will developers face significant toil while using this repo?**
 

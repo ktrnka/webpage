@@ -86,7 +86,7 @@ For example, say you want to log the user ID for each custom metric. Properties 
 
 #### Lambda Powertools
 
-Lambda Powertools Python also has [an EMF wrapper](https://awslabs.github.io/aws-lambda-powertools-python/latest/core/metrics/). It provides all the benefits of aws_embedded_metrics *and* it also batches metric data in log statements so that your logs aren't too spammy.
+Lambda Powertools Python also has [an EMF wrapper](https://web.archive.org/web/20230330023831/https://awslabs.github.io/aws-lambda-powertools-python/latest/core/metrics/). It provides all the benefits of aws_embedded_metrics *and* it also batches metric data in log statements so that your logs aren't too spammy.
 
 #### Async boto3 wrapper
 
@@ -101,4 +101,4 @@ I also would've liked to get hard evidence that high-cardinality dimensions can 
 ### See also
 
 - [Introducing a better way to record custom metrics](https://hackernoon.com/introducing-a-better-way-to-record-custom-metrics-hj3dn3q6r)
-- [Lowering costs and focusing on our customers with Amazon CloudWatch embedded custom metrics](https://awsfeed.com/whats-new/management-tools/lowering-costs-and-focusing-on-our-customers-with-amazon-cloudwatch-embedded-custom-metrics)
+- Lowering costs and focusing on our customers with Amazon CloudWatch embedded custom metrics (page no longer available)

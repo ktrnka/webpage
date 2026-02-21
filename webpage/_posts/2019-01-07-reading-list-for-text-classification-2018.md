@@ -67,7 +67,7 @@ This has been the standard approach since the 90s. Any old textbook should cover
 
 Wang, S., & Manning, C. (2012). [Baselines and bigrams](https://dl.acm.org/citation.cfm?id=2390688). In ACL.
 
-Iyyer, M., Manjunatha, V., Boyd-Graber, J., & Daumé III, H. (2015). [Deep Unordered Composition Rivals Syntactic Methods for Text Classification](https://www.aclweb.org/anthology/P15-1162). In ACL.
+Iyyer, M., Manjunatha, V., Boyd-Graber, J., & Daumé III, H. (2015). [Deep Unordered Composition Rivals Syntactic Methods for Text Classification](https://aclanthology.org/P15-1162). In ACL.
 
 Li, B., Liu, T., Zhao, Z., Wang, P., & Du, X. (2017). [Neural Bag-of-Ngrams](https://pdfs.semanticscholar.org/0841/57df67618cae20de3c484d6477fd48601d46.pdf?_ga=2.127441229.1599049180.1524348587-1436306365.1524348587). In AAAI.
 
@@ -122,7 +122,7 @@ These are all unsupervised methods -- they process a large amount of text and se
 
 [word2vec] Mikolov, T., Sutskever, I., Chen, K., Corrado, G. S., & Dean, J. (2013). [Distributed Representations of Words and Phrases and their Compositionality](https://papers.nips.cc/paper/5021-distributed-representations-of-words-andphrases). In NIPS.
 
-[GloVe] Pennington, J., Socher, R., & Manning, C. D. (2014). [GloVe: Global Vectors for Word Representation](https://www.aclweb.org/anthology/D14-1162). In EMNLP.
+[GloVe] Pennington, J., Socher, R., & Manning, C. D. (2014). [GloVe: Global Vectors for Word Representation](https://aclanthology.org/D14-1162). In EMNLP.
 
 [fastText V1] Joulin, A., Grave, E., Bojanowski, P., & Mikolov, T. (2016). [Bag of Tricks for Efficient Text Classification](https://arxiv.org/abs/1607.01759).
 
@@ -140,7 +140,7 @@ These papers cover those two areas. All of them can be used to produce a vector 
 
 Dai, A. M., & Le, Q. V. (2015). [Semi-supervised sequence learning](https://papers.nips.cc/paper/5949-semi-supervised-sequence-learning). In NIPS.
 
-[CoVe] Mccann, B., Bradbury, J., Xiong, C., & Socher, R. (2017). [Learned in Translation: Contextualized Word Vectors](https://einstein.ai/static/images/pages/research/cove/McCann2017LearnedIT.pdf).
+[CoVe] Mccann, B., Bradbury, J., Xiong, C., & Socher, R. (2017). [Learned in Translation: Contextualized Word Vectors](https://arxiv.org/abs/1708.00107).
 
 [ULMFiT] Howard, J., & Ruder, S. (2018). [Universal Language Model Fine-tuning for Text Classification](https://arxiv.org/abs/1801.06146).
 
@@ -152,13 +152,13 @@ Dai, A. M., & Le, Q. V. (2015). [Semi-supervised sequence learning](https://pape
 
 There are many uses for deep learning in natural language processing besides just text classification. The many subfields of NLP often push state of the art in unique ways that help us with text classification. Researchers in machine translation and language modeling use enormous data sets and have found many clever ways to speed up training, especially in industry research groups.
 
-Greff, K., Srivastava, R. K., Koutník, J., Steunebrink, B. R., & Schmidhuber, J. (2015). [LSTM: A Search Space Odyssey](https://doi.org/10.1109/TNNLS.2016.258292).
+Greff, K., Srivastava, R. K., Koutník, J., Steunebrink, B. R., & Schmidhuber, J. (2015). [LSTM: A Search Space Odyssey](https://arxiv.org/abs/1503.04069).
 
 Jozefowicz, R., Vinyals, O., Schuster, M., Shazeer, N., & Wu, Y. (2016). [Exploring the Limits of Language Modeling](https://arxiv.org/abs/1602.02410).
 
 Gehring, J., Auli, M., Grangier, D., & Dauphin, Y. N. (2016). [A Convolutional Encoder Model for Neural Machine Translation](https://arxiv.org/abs/1611.02344). In ACL.
 
-Hestness, J., Narang, S., Ardalani, N., Diamos, G., Jun, H., Kianinejad, H., … Zhou, Y. (2017). [Deep Learning Scaling is Predictable, Empirically](https://doi.org/1712.00409.).
+Hestness, J., Narang, S., Ardalani, N., Diamos, G., Jun, H., Kianinejad, H., … Zhou, Y. (2017). [Deep Learning Scaling is Predictable, Empirically](https://arxiv.org/abs/1712.00409).
 
 Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., … Polosukhin, I. (2017). [Attention Is All You Need](https://arxiv.org/abs/1706.03762). NIPS.
 
