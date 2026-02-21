@@ -344,3 +344,93 @@ footer {
     color: var(--text-3);
   }
 }
+
+// ── Homepage two-column layout ──────────────────────────────────────────────
+
+.index-layout {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 60px;
+  max-width: 1060px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 960px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.index-sidebar {
+  h1 {
+    font-size: 28px;
+    margin: 0 0 10px 0;
+    color: var(--text);
+  }
+
+  img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 10px 0 14px 0;
+    border: 2px solid var(--accent-soft);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  }
+}
+
+.sidebar-nav,
+.sidebar-social {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+
+  li {
+    margin-bottom: 8px;
+  }
+}
+
+.sidebar-nav {
+  margin-top: 20px;
+}
+
+.nav-section-label {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--text-3);
+  font-weight: 600;
+}
+
+.nav-indented {
+  padding-left: 15px;
+}
+
+// ── Site nav bar (inner pages) ───────────────────────────────────────────────
+// Full-bleed header: negative margins cancel body's 50px padding so the
+// strip runs edge-to-edge; padding restores the horizontal inset for the links.
+
+.site-nav {
+  margin: -50px -50px 2.5em;
+  padding: 13px 50px;
+  border-bottom: 1px solid var(--border-2);
+  background: var(--bg);
+  font-size: 14px;
+
+  a {
+    margin-right: 1.5em;
+    color: var(--muted);
+
+    &:hover, &:focus {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    // suppress external link arrow on nav links
+    &::after { display: none; }
+  }
+
+  @media screen and (max-width: 720px) {
+    margin: -15px -15px 2em;
+    padding: 11px 15px;
+  }
+}

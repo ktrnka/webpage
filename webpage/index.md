@@ -1,6 +1,6 @@
 ---
 title: "Keith Trnka"
-layout: special
+layout: home
 ---
 
 ## Professional

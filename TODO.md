@@ -39,6 +39,8 @@ Dead/hijacked links:
 ## Layout refactor 🏗️
 Goal: single source of truth for `<head>`/chrome, shared nav on all pages, clean separation of layout vs content.
 
+> **Long-term note:** The refactor reduced duplication in `<head>` and unified the nav, but the total line count across layouts _increased_. A well-executed refactor should decrease code. Worth revisiting — e.g. could the sidebar nav in `home.html` be driven by a `_data/nav.yml` file? Could the post-nav styles move fully to SCSS? Left for a future pass.
+
 New hierarchy:
 - `base.html` — shared `<head>`, SEO, stylesheet, lightweight top nav (Home | Blog | Publications), `{{ content }}`
 - `default.html` (extends `base`) — single-column wrapper for pages & blog index
@@ -51,13 +53,13 @@ Other changes:
 - Delete `special.html` once `home.html` + `index.html` are working
 
 Steps:
-- [ ] Create `base.html` with shared `<head>`, top nav bar, `{{ content }}`
-- [ ] Refactor `default.html` to extend `base` (add `layout: base`, keep single-column wrapper)
-- [ ] Create `home.html` extending `base` with two-column grid + sidebar
-- [ ] Convert `index.md` → `index.html` using `layout: home`
-- [ ] Move homepage inline styles to `_sass/minimal-custom.scss`
-- [ ] Delete `special.html`
-- [ ] Verify `post.html` still works (extends `default` → `base`)
+- [X] Create `base.html` with shared `<head>`, top nav bar, `{{ content }}`
+- [X] Refactor `default.html` to extend `base` (add `layout: base`, keep single-column wrapper)
+- [X] Create `home.html` extending `base` with two-column grid + sidebar
+- [X] Convert `index.md` to use `layout: home` (kept as Markdown — content works fine without converting to raw HTML)
+- [X] Move homepage inline styles to `_sass/minimal-custom.scss`
+- [X] Delete `special.html`
+- [X] Verify `post.html` still works (extends `default` → `base`)
 - [X] The page title on index.md is weird: "Keith Trnka | Personal website of Keith Trnka, PhD" — fix in `_config.yml`
 
 ## Tech debt 🔩
