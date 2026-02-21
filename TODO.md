@@ -15,7 +15,7 @@ Dead/hijacked links:
 - [X] Restore local `bundle exec jekyll serve` testing (removed in that same commit)
 - [X] Test GitHub Pages build end-to-end (verify GitHub Actions succeeds)
 - [X] Verify all 33 PDF links work
-- [ ] Add `jekyll-sitemap` plugin (supported by GitHub Pages, just add to `_config.yml` plugins list)
+- [X] Add `jekyll-sitemap` plugin (supported by GitHub Pages, just add to `_config.yml` plugins list)
 - [ ] Manual testing: desktop, tablet, mobile across browsers
 - [ ] Wire up DNS
 - [ ] Redirects from Medium
@@ -25,7 +25,7 @@ Dead/hijacked links:
 - [ ] Series/project navigation: readers landing on one post in a series should find the others (LoL/ML, Searchify/synonyms, MTurk, Over 9000). **Research note:** Jekyll `categories:` build into the URL, `tags:` don't — otherwise very similar. Start with small controlled tests before committing to a scheme.
 - [ ] Add paper/reference links to academic blog posts (MT series, etc.) — cite DOIs or Google Scholar
 - [X] High-res WP images: verify `max-width: 100%` CSS is in place so they don't break layout. Optional: batch resize with ImageMagick.
-- [ ] Previous/next post links on blog posts (Jekyll built-in `page.previous`/`page.next`) — low effort, helps discoverability
+- [X] Previous/next post links on blog posts (Jekyll built-in `page.previous`/`page.next`) — low effort, helps discoverability
 - [ ] Research email notification / RSS-to-email for blog updates
 - [ ] Write a post about moving from Medium → self-hosted Jekyll
 
