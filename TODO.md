@@ -22,7 +22,7 @@ Dead/hijacked links:
 - [ ] Redirects from Google Sites
 - [X] Use jekyll-redirect-from to bake-in redirects from old URLs to new, for any pages that I renamed. This will help with any existing links out there and also with SEO
     - /publication (no change)
-    - /other/photos (eh honestly I'm not sure I want to index this)
+    - [X] /other/photos (eh honestly I'm not sure I want to index this)
     - [X] /other/hiking-tips -> /guides/hiking
     - [X] /other/urban-detrashing-tips -> /guides/urban-detrashing
 
