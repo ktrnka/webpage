@@ -3,35 +3,37 @@ layout: base
 ---
 
 <div class="wrapper">
-  <div class="index-layout">
-    <div class="index-sidebar">
-      {% if site.logo %}
-      <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" />
-      {% endif %}
-      <h1>{{ site.title }}</h1>
+    <div class="index-layout">
+        <div class="index-sidebar">
+            {% if site.logo %}
+            <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" />
+            {% endif %}
+            <h1>{{ site.title }}</h1>
 
-      <ul class="sidebar-nav">
-        <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-        <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
-        <li><a href="https://ktrnka.github.io/recipes/">Recipes</a></li>
-        <li><a href="{{ '/photos/' | relative_url }}">Photos</a></li>
-        <li class="nav-section-label">Beginner guides</li>
-        <li class="nav-indented"><a href="{{ '/guides/urban-detrashing/' | relative_url }}">Urban detrashing</a></li>
-        <li class="nav-indented"><a href="{{ '/guides/hiking/' | relative_url }}">Hiking</a></li>
-        <li class="nav-section-label">Projects</li>
-        <li class="nav-indented"><a href="https://ktrnka.github.io/seattle-outdoor-volunteering/">Seattle Outdoor Volunteering</a></li>
-      </ul>
+            <ul class="sidebar-nav">
+                <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+                <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
+                <li><a href="https://ktrnka.github.io/recipes/">Recipes</a></li>
+                <li><a href="{{ '/photos/' | relative_url }}">Photos</a></li>
+                <li class="nav-section-label">Beginner guides</li>
+                <li class="nav-indented"><a href="{{ '/guides/urban-detrashing/' | relative_url }}">Urban detrashing</a>
+                </li>
+                <li class="nav-indented"><a href="{{ '/guides/hiking/' | relative_url }}">Hiking</a></li>
+                <li class="nav-section-label">Projects</li>
+                <li class="nav-indented"><a href="https://ktrnka.github.io/seattle-outdoor-volunteering/">Seattle
+                        Outdoor Volunteering</a></li>
+            </ul>
 
-      <hr>
+            <hr>
 
-      <ul class="sidebar-social">
-        <li><a href="https://www.linkedin.com/in/keith-trnka">LinkedIn</a></li>
-        <li><a href="https://github.com/ktrnka">GitHub</a></li>
-        <li><a href="https://www.goodreads.com/review/list/62631407-keith-trnka?shelf=read">Goodreads</a></li>
-      </ul>
+            <ul class="sidebar-social">
+                <li><a href="https://www.linkedin.com/in/keith-trnka">LinkedIn</a></li>
+                <li><a href="https://github.com/ktrnka">GitHub</a></li>
+                <li><a href="https://www.goodreads.com/review/list/62631407-keith-trnka?shelf=read">Goodreads</a></li>
+            </ul>
+        </div>
+        <div class="index-content">
+            {{ content }}
+        </div>
     </div>
-    <div class="index-content">
-      {{ content }}
-    </div>
-  </div>
 </div>

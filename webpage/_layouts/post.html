@@ -3,71 +3,78 @@ layout: default
 ---
 
 <article class="post-content">
-    <div class="post-header">
+  <div class="post-header">
     <h1>{{ page.title }}</h1>
     <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date: "%B %-d, %Y" }}</time>
-    </div>
-  
-    {{ content }}
+  </div>
+
+  {{ content }}
 </article>
 
 <nav class="post-nav">
   <div class="post-nav-prev">
     {% if page.previous %}
-      <span class="post-nav-label">← Older</span>
-      <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
+    <span class="post-nav-label">← Older</span>
+    <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
     {% endif %}
   </div>
   <div class="post-nav-next">
     {% if page.next %}
-      <span class="post-nav-label">Newer →</span>
-      <a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
+    <span class="post-nav-label">Newer →</span>
+    <a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
     {% endif %}
   </div>
 </nav>
 
 <style>
-.post-header {
-  margin-bottom: 2em;
-}
+  .post-header {
+    margin-bottom: 2em;
+  }
 
-.post-header h1 {
-  margin-bottom: 0.25em;
-  margin-top: 0;
-  color: #222;
-}
+  .post-header h1 {
+    margin-bottom: 0.25em;
+    margin-top: 0;
+    color: #222;
+  }
 
-.post-date {
-  display: block;
-  color: #666;
-  margin-bottom: 0;
-}
+  .post-date {
+    display: block;
+    color: #666;
+    margin-bottom: 0;
+  }
 
-.post-body {
-  clear: both;
-}
+  .post-body {
+    clear: both;
+  }
 
-.post-content {
-  margin-bottom: 3em;
-}
+  .post-content {
+    margin-bottom: 3em;
+  }
 
-.post-nav {
-  display: flex;
-  justify-content: space-between;
-  gap: 1em;
-  margin: 2em 0 3em;
-  padding-top: 1.5em;
-  border-top: 1px solid var(--border-2, #e0e0e0);
-  font-size: 0.9em;
-}
+  .post-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    margin: 2em 0 3em;
+    padding-top: 1.5em;
+    border-top: 1px solid var(--border-2, #e0e0e0);
+    font-size: 0.9em;
+  }
 
-.post-nav-prev { text-align: left; flex: 1; }
-.post-nav-next { text-align: right; flex: 1; }
+  .post-nav-prev {
+    text-align: left;
+    flex: 1;
+  }
 
-.post-nav-label {
-  display: block;
-  color: #888;
-  font-size: 0.85em;
-  margin-bottom: 0.2em;
-}
+  .post-nav-next {
+    text-align: right;
+    flex: 1;
+  }
+
+  .post-nav-label {
+    display: block;
+    color: #888;
+    font-size: 0.85em;
+    margin-bottom: 0.2em;
+  }
 </style>
