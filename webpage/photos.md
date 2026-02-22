@@ -2,6 +2,7 @@
 title: "Photos"
 layout: default
 show_logo: false
+robots: noindex
 ---
 
 ## 2019
