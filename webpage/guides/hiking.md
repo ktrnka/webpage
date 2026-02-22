@@ -2,6 +2,9 @@
 title: "Hiking tips"
 layout: default
 show_logo: false
+redirect_from:
+  - /other/hiking-tips/
+  - /other/hiking-tips
 ---
 
 # Hiking tips

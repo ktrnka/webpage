@@ -79,3 +79,7 @@ Observations
 # Mistakes
 
 - I totally should've started with Lychee to scan my links _before_ trying to manually check or fix them. There are a lot of links that can be updated pretty automatically
+
+# Ugh
+
+- ChatGPT read outdated documentation on Github/Squarespace configuration so that was more challenging than I expected, but we got it working I think

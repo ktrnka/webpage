@@ -2,6 +2,9 @@
 title: "Urban detrashing tips"
 layout: default
 show_logo: false
+redirect_from:
+  - /other/urban-detrashing-tips/
+  - /other/urban-detrashing-tips
 ---
 
 # Urban detrashing tips
