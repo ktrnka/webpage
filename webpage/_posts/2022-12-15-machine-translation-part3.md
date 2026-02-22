@@ -13,7 +13,7 @@ This is another literature review, but this time with more papers and pictures!
 
 This is another literature review, but this time with more papers and more user interface pictures.
 
-[Last time I posted](/2022/11/18/machine-translation-for-medical-chat-checkpoint-2.html), I was prototyping different user interfaces for machine translation-mediated chat and hit a wall. Since then I've been reading papers to get ideas. I read papers already in my queue, explored the citation graph around those papers, and I also tried [Elicit](https://elicit.org/) to expand my search more.
+[Last time I posted](/blog/2022/11/machine-translation-for-medical-chat-checkpoint-2/), I was prototyping different user interfaces for machine translation-mediated chat and hit a wall. Since then I've been reading papers to get ideas. I read papers already in my queue, explored the citation graph around those papers, and I also tried [Elicit](https://elicit.org/) to expand my search more.
 
 I was mainly looking to read about user interfaces for machine translation but included other areas as they came up:
 

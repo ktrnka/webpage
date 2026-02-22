@@ -27,7 +27,8 @@ Dead/hijacked links:
     - [X] /other/urban-detrashing-tips -> /guides/urban-detrashing
 
 ## Blog features & enhancements 📋
-- [ ] Series/project navigation: readers landing on one post in a series should find the others (LoL/ML, Searchify/synonyms, MTurk, Over 9000). **Research note:** Jekyll `categories:` build into the URL, `tags:` don't — otherwise very similar. Start with small controlled tests before committing to a scheme.
+- [ ] Series/project navigation: readers landing on one post in a series should find the others (LoL/ML, Searchify/synonyms, MTurk, Over 9000). **Research note:** Jekyll `categories:` build into the URL, `tags:` don't — otherwise very similar. Start with small controlled tests before committing to a scheme. Other references:
+    - https://www.ayush.nz/2022/02/creating-article-series-posts-navigation-jekyll
 - [ ] Add paper/reference links to academic blog posts (MT series, etc.) — cite DOIs or Google Scholar
 - [X] High-res WP images: verify `max-width: 100%` CSS is in place so they don't break layout. Optional: batch resize with ImageMagick.
 - [X] Previous/next post links on blog posts (Jekyll built-in `page.previous`/`page.next`) — low effort, helps discoverability
