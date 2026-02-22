@@ -1,8 +1,6 @@
 verbose = "info"
 suggest = true
 
-#output = "lychee-report-local.md"
-#format = "markdown"
 mode = "emoji"
 
 offline = true
