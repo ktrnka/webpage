@@ -17,7 +17,7 @@ Dead/hijacked links:
 - [X] Verify all 33 PDF links work
 - [X] Add `jekyll-sitemap` plugin (supported by GitHub Pages, just add to `_config.yml` plugins list)
 - [ ] Manual testing: desktop, tablet, mobile across browsers
-- [ ] Wire up DNS (in progress!)
+- [X] Wire up DNS (in progress!)
 - [ ] Redirects from Medium
 - [ ] Redirects from Google Sites
 - [X] Use jekyll-redirect-from to bake-in redirects from old URLs to new, for any pages that I renamed. This will help with any existing links out there and also with SEO
@@ -72,6 +72,7 @@ Steps:
 - [ ] Fix mobile homepage layout (sidebar/header alignment above main content)
 - [X] Code block syntax highlighting: root cause was `assets/css/style.scss` not importing `jekyll-theme-minimal` (which includes `rouge-github.scss`); fixed by adding `@import "jekyll-theme-minimal"` before `@import "minimal-custom"`
 - [ ] Link checking CI: HTMLProofer for internal links (`--disable-external`); Lychee on a cron schedule for external links
+  - Note: After adding DNS, the new config is compatible with Lychee for internal link testing with --offline (you need to point to _site and also --root-dir to it too)
 - [X] Check for redirected links (faster for users if links are direct)
 
 ## Usability
