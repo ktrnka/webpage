@@ -44,6 +44,20 @@ Dead/hijacked links:
 - [X] Seattle outdoor volunteering calendar: link from site
 - [X] Replace all Amazon book links with Goodreads
 
+# Performance
+Testing with cache-clear reload in Chrome on the home page:
+- Largest contentful paint: 0.33s (LCP element img)
+- Cumulative layout shift 0
+- Network
+  - Fetching the HTML: 0-90 ms
+  - Fetching the CSS: 150-250 ms
+  - Fetching the img: Overlapped with CSS
+  - favicon.ico fail: 300-400 ms (strangely ctrl-shift-r tries to reload this but clicking Disable Cache doesn't)
+  - General assessment: 
+    - Looking pretty good. Investigate favicon. Even if I inline CSS, images need to load
+    - It might be possible to speed up the processing of the HTML, which would get to the image and css loading faster
+
+
 ## Layout refactor 🏗️
 Goal: single source of truth for `<head>`/chrome, shared nav on all pages, clean separation of layout vs content.
 
