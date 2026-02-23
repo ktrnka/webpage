@@ -8,6 +8,10 @@ layout: default
     <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date: "%B %-d, %Y" }}</time>
   </div>
 
+  {% if page.ai_disclosure %}
+  <aside class="ai-disclosure">{{ page.ai_disclosure }}</aside>
+  {% endif %}
+
   {{ content }}
 </article>
 
@@ -49,6 +53,15 @@ layout: default
 
   .post-content {
     margin-bottom: 3em;
+  }
+
+  .ai-disclosure {
+    font-size: 0.9em;
+    color: #555;
+    border-left: 3px solid #ccc;
+    padding: 0.5em 0.75em;
+    margin-bottom: 2em;
+    background: #f9f9f9;
   }
 
   .post-nav {
