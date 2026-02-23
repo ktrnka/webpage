@@ -18,8 +18,8 @@ Dead/hijacked links:
 - [X] Add `jekyll-sitemap` plugin (supported by GitHub Pages, just add to `_config.yml` plugins list)
 - [ ] Manual testing: desktop, tablet, mobile across browsers
 - [X] Wire up DNS (in progress!)
-- [ ] Redirects from Medium
-- [ ] Redirects from Google Sites
+- [X] Redirects from Medium
+- [X] Redirects from Google Sites
 - [X] Use jekyll-redirect-from to bake-in redirects from old URLs to new, for any pages that I renamed. This will help with any existing links out there and also with SEO
     - /publication (no change)
     - [X] /other/photos (eh honestly I'm not sure I want to index this)
@@ -33,6 +33,8 @@ Dead/hijacked links:
 - [X] High-res WP images: verify `max-width: 100%` CSS is in place so they don't break layout. Optional: batch resize with ImageMagick.
 - [X] Previous/next post links on blog posts (Jekyll built-in `page.previous`/`page.next`) — low effort, helps discoverability
 - [ ] Research email notification / RSS-to-email for blog updates
+  - I looked into this but many of the services felt scummy to me, so we'll see...
+  - Oh my ONLY email subscriber is MattW lol
 - [ ] Write a post about moving from Medium → self-hosted Jekyll (started)
 
 ## Content 📝

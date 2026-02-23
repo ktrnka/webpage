@@ -4,55 +4,41 @@ title: Yet Another Blog Migration!
 date: 2026-02-22
 ---
 
-I'm moving all my blog content from Medium and WordPress. What better way to start than by describing the process?
+I'm migrating all my blog content from Medium and WordPress to a self-hosted Jekyll site. What better way to kick things off than describing how it went?
 
-About 10 years ago, I was frustrated with Wordpress getting worse over time and Medium was the new clean blogging platform. So I moved to Medium. But sadly I couldn't easily convert my old posts because Medium didn't support as much of the Wordpress layout at the time.
+About ten years ago, frustrated with WordPress's steady decline, I jumped to Medium — it was the clean, modern blogging platform of the moment. The catch: I couldn't easily bring my old posts along because Medium's format support was too limited, so those got left behind.
 
-Now Medium has been getting slower and more ad-heavy over the years so I've been meaning to migrate off of Medium. I considered Substack but I don't like the email popup, and having seen both WordPress and Medium enshittify... I'm _very_ wary of another platform that looks great right now. But who knows, maybe their business model is better designed which would prevent the worst of enshittification.
+Since then Medium has been getting progressively slower and more ad-heavy. I considered Substack, but I don't love the email popup — and having watched both WordPress and Medium enshittify, I'm _very_ wary of any platform that looks clean and promising right now. Maybe Substack's business model prevents the worst of that; I genuinely don't know.
 
-Also this past year, Google sites got worse by decoupling DNS registration in such a way that www.keith-trnka.com still works but it doesn't show up on Google like it used to. The Google Site URL is now the canonical one, and nothing I've tried has fixed it.
+To make things worse, Google Sites decoupled DNS registration this past year in a way that quietly broke my search visibility: www.keith-trnka.com still loads, but it no longer surfaces in Google the way it used to. The Google Sites URL became the canonical one, and nothing I've tried has fixed it.
 
-So all of those factors have led me to a site builder like Jekyll. I can host that on github pages, vercel, or elsewhere.
+All of that pushed me toward a static site generator. Jekyll fits the bill, and I can host it on GitHub Pages, Vercel, or elsewhere.
 
-I was inspired by a post from Simon W who went through a similar process, and he found that LLMs were great at converting old blog content from one format to another. So that's how I started!
+I was inspired by a post from Simon W, who went through a similar migration and found LLMs surprisingly effective at converting blog content between formats. That's where I started.
 
 # Converting from Medium
 
-Medium has an export tool in your account and that helps a lot. The only problem I had is that it wasn't working in Chrome on Linux (but it did work in Firefox!). That got me a dump of HTML files, which we converted with pandoc and some sed commands I think. That needed some cleanup but largely Claude Sonnet 4.6 in vscode could handle it.
+Medium has an account-level export tool, which helped a lot. The only snag was that it wasn't working in Chrome on Linux — Firefox did the trick. That produced a dump of HTML files, which I converted with pandoc and some sed commands. The output needed cleanup, but Claude Sonnet 4.6 in VS Code handled most of it.
 
-The main nuisance was the images. The LLM was able to run curl commands to download, but didn't initially check that they were image files! So some would download and others would be an HTML error page. After some trial and error we were more cautious about rate limits and checked the contents with `file`. Even despite all that, I had to download 2-3 of them manually.
+The main nuisance was images. The LLM could run `curl` to download them, but didn't initially verify they were actually image files — so some downloads were silently replaced by HTML error pages. After some trial and error, we added rate limiting and validated content with `file`. Even then, I had to grab 2–3 images manually.
 
 # Converting from WordPress
 
-WordPress _had_ an export feature last summer and I used it for another project. Unfortunately they removed that feature since then so if I hadn't already downloaded a copy, I'd need to crawl my own blog to convert it.
+WordPress _had_ an export feature last summer, which I used for another project. Unfortunately that feature has since been removed — if I hadn't already grabbed a copy, I'd have had to crawl my own blog to migrate it.
 
-The export file is a single XML file with everything, and I used a Python library to extract the posts, then another to convert HTML to markdown. If I could do that again, I would've spent a little more time on the code to convert files because we ended up doing several cleanup tasks after:
+The export is a single XML file containing everything. I used a Python library to extract the posts and another to convert HTML to Markdown. In hindsight, I should have spent more time on the conversion code upfront — there ended up being a lot of cleanup afterward:
 - Restoring paragraph breaks (which led to broken tables that we fixed)
-- Removing WordPress specific things like `[caption]`
+- Removing WordPress-specific markup like `[caption]`
 - Removing links to WordPress tags/categories from the old blog
-- Checking the metadata to figure out which posts were actually unpublished drafts
+- Checking metadata to identify posts that were actually unpublished drafts
 
-That said, the LLM handled the image downloads much better with some guidance on the Python downloader to write, rate limiting, and so on. We had some surprises because some of the image links were http not https. If I remember right, this was back before https everywhere was common and there was still a debate about the performance hit.
+The LLM handled image downloads much better this time, with some upfront guidance on rate limiting and validation. One surprise: many image links were `http` rather than `https`. That makes sense in retrospect — those posts predate the era of HTTPS everywhere, when there was still active debate about the performance overhead.
 
-# Some posts aren't worth keeping
+Deciding which posts to keep was a separate challenge. I gave the LLM a handful of examples to calibrate on — essentially active learning — and it did a solid job from there.
 
-The LLM did a great job after we reviewed some examples of what to keep and what not to. I approached it like active learning and that worked well.
+One odd footnote: one post (machine translation part 3) consistently caused Copilot Chat to hang indefinitely. Fresh context, multiple attempts — same result. I ended up converting that one by hand.
 
-# Strange things
-
-There was one post (machine translation part 3) that would cause copilot chat to hang indefinitely. I tried with a fresh context multiple times and it kept having that problem. In the end I did the initial conversion manually.
-
-# Some of my hopes for the future of blogging
-
-I'm looking forward to improving load times by:
-- Removing external fonts, which may be used for ad targeting
-- Removing third party analytics, which may be used for ad targeting
-- Removing external Javascript, which slows down page load
-- Zero social media integration
-
-It'd be nice to get back to the speed and simplicity of the web 1.0 with some of the nice formatting of modern sites.
-
-# Some old timer observations as I update things
+# Observations
 
 - Interesting broken links
     - The old host for Subversion
@@ -65,21 +51,37 @@ It'd be nice to get back to the speed and simplicity of the web 1.0 with some of
     - Some have sold their domains (like Google Battle) which have been taken over by just ads. I wonder what percent of page views are just bots
 - Surprisingly not broken
     - Google Books ngram viewer
-    - [BBspot](https://en.wikipedia.org/wiki/BBspot)
-    - A Newegg link to the specific CPU I bought a long time ago, and the image of the CPU box still works
-- Renewed sadness
-    - AnandTech
-
-Observations
 - Academic links tend to be more reliable than industry links, probably because professors stay with institutions MUCH longer
 - More domain hijacking than I expected, which encouraged me to edit all links and it's making me reconsider how I want to do links in the future
 - Companies that made a major pivot, like Plotly
 - Linking to books: Back when I was writing, I felt great about Amazon so I tended to link to books there. Now I don't feel as great about Amazon so I swapped those to Goodreads (still Amazon but a little removed from their store)
 
-# Mistakes
+Observations on my writing:
+- I used to write more short-form posts and I've shifted over the years to more long-form content
+- I definitely got more engagement on posts over the years as I started to market them a little more via my social networks
+- I've always struggled with titles and introductions... that's abundantly clear when looking over 16 years of posts
 
-- I totally should've started with Lychee to scan my links _before_ trying to manually check or fix them. There are a lot of links that can be updated pretty automatically
+# Nostalgia
 
-# Ugh
+Going through 16 years of old posts turned up a few pleasant surprises:
+- [BBspot](https://en.wikipedia.org/wiki/BBspot) is still up
+- A Newegg link to the specific CPU I bought long ago still resolves — image and all
 
-- ChatGPT read outdated documentation on Github/Squarespace configuration so that was more challenging than I expected, but we got it working I think
+And one that stings: [AnandTech](https://en.wikipedia.org/wiki/AnandTech) is gone.
+
+
+
+# Lessons Learned
+
+- Start with a link scanner like [Lychee](https://lychee.cli.rs/) _before_ manually fixing anything. A lot of link updates can be automated, and I wasted time doing it by hand first.
+- ChatGPT pulled outdated documentation for the GitHub/Squarespace configuration, which made that step harder than it needed to be. We got there eventually.
+- When Google Sites transferred DNS to Squarespace, it began promoting the Sites URL in search over the canonical domain. I still need to set up a redirect, but Squarespace doesn't seem to offer that option.
+
+# Looking Forward
+
+I'm looking forward to a cleaner, faster site:
+- No external fonts or third-party analytics (both common ad-targeting vectors)
+- No external JavaScript
+- No social media integrations
+
+The goal is something close to the speed and simplicity of the early web, with the layout quality of modern CSS.
