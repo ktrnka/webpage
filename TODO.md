@@ -90,8 +90,8 @@ Steps:
 - [X] The page title on index.md is weird: "Keith Trnka | Personal website of Keith Trnka, PhD" — fix in `_config.yml`
 
 ## Tech debt 🔩
-- [ ] **Add `<main>` landmark to layouts** — Lighthouse accessibility audit (score 0 for this check). Screen readers rely on `<main>` to let users skip to primary content; without it navigation is tedious for assistive tech users. Add `<main>` wrapper in `base.html` (or `default.html`/`home.html` as appropriate) around the page body content.
-- [ ] **Darken nav link color for contrast** — Lighthouse accessibility audit (score 0, color contrast). The top-nav links use `#7f7f7f` on white, giving a contrast ratio of 4.0:1; WCAG AA requires 4.5:1 for normal-weight 14px text. Fix: bump the nav link color to ~`#767676` or darker (e.g. `#595959`) in `_sass/minimal-custom.scss`. Check that the change looks good visually — just needs to be slightly darker.
+- [X] **Add `<main>` landmark to layouts** — Added `<main>` wrapper in `base.html` around `{{ content }}`; also added `aria-label="Site navigation"` to the top `<nav>` for disambiguation from the sidebar nav on the home page.
+- [X] **Darken nav link color for contrast** — Changed `.site-nav a` from `var(--muted)` (`#7f7f7f`, 4.0:1) to `#595959` (~6.4:1), well above WCAG AA 4.5:1.
 - [ ] Fix mobile homepage layout (sidebar/header alignment above main content)
 - [X] Code block syntax highlighting: root cause was `assets/css/style.scss` not importing `jekyll-theme-minimal` (which includes `rouge-github.scss`); fixed by adding `@import "jekyll-theme-minimal"` before `@import "minimal-custom"`
 - [ ] Link checking CI: HTMLProofer for internal links (`--disable-external`); Lychee on a cron schedule for external links
