@@ -59,7 +59,7 @@ Testing with cache-clear reload in Chrome on the home page:
     - It might be possible to speed up the processing of the HTML, which would get to the image and css loading faster
 
 ## Performance improvements 📈
-- [ ] **Add `fetchpriority="high"` to profile image** — Lighthouse LCP audit identifies `<img src="/assets/img/profile.jpg">` as the LCP element. Adding `fetchpriority="high"` tells the browser to fetch this image early in the load waterfall; Lighthouse estimates ~450ms LCP savings. One-line change in `_layouts/home.html`.
+- [X] **Add `fetchpriority="high"` to profile image** — Added to `_layouts/home.html`. Lighthouse estimates ~450ms LCP savings.
 - [X] **Resize profile image to actual display size** — Resized from 600×600 (105KB) to 200×200 (15KB, 86% reduction). Generated from raw source `download/IMG_20181110_125645.jpg` at 85% quality, `-strip` to remove metadata.
 
 
