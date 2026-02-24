@@ -16,18 +16,8 @@ Build the kind of web I want: fast loading, no ads, no trackers, works across pl
 
 Items actively planned, with clear user or quality impact.
 
-### Fix mobile homepage layout
-The homepage layout has two issues on mobile viewports:
-DONE 1. **Double border below nav bar** on non-home pages (visual glitch)
-2. **Horizontal alignment mismatch** between sidebar and content columns on the home page
-
-These are the most visible remaining quality issues for mobile visitors. Fix in `_sass/minimal-custom.scss` (media queries) and possibly `_layouts/home.html`.
-
 ### Improve link discoverability
 Inline links have no persistent underline and use a color (`--link: #970c4f`) close to the heading accent. Readers may not recognize them as clickable, especially on content-heavy blog posts. Consider adding a subtle persistent underline or shifting the link color further from the heading color.
-
-### Unfinished LoL draft
-`2016-05-19-summary-predicting-winloss-for-league-of-legends.md` has `<!-- KT TODO -->` placeholder text. This is old and probably not worth finishing. Decide: heavily trim to what's there, or just remove it.
 
 ## Backlog
 
@@ -51,6 +41,7 @@ Lower priority or needs more thought before starting.
 - [ ] Consider merging recipes repo into this one
 - [ ] Add favicon.ico, preferably something tiny in SVG. Ironically this will improve page load over a 404
 - [ ] Strip old image metadata
+- [ ] Redesign the sidebar so that I can have a version that makes sense on both desktop and mobile
 
 ---
 
