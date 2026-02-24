@@ -288,8 +288,8 @@ footer {
   }
 
   section {
-    border: 1px solid var(--border);
-    border-width: 1px 0;
+    // Override the inherited border on mobile
+    border-width: 0;
     padding: 20px 0;
     margin: 0 0 20px;
   }
@@ -377,6 +377,23 @@ footer {
     margin: 10px 0 14px 0;
     border: 2px solid var(--accent-soft);
     box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  }
+
+  @media screen and (max-width: 960px) {
+    text-align: center;
+
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .nav-indented {
+      padding-left: 0;
+    }
+
+    .nav-section-label {
+      margin-top: 4px;
+    }
   }
 }
 

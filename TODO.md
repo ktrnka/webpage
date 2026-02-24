@@ -18,7 +18,7 @@ Items actively planned, with clear user or quality impact.
 
 ### Fix mobile homepage layout
 The homepage layout has two issues on mobile viewports:
-1. **Double border below nav bar** on non-home pages (visual glitch)
+DONE 1. **Double border below nav bar** on non-home pages (visual glitch)
 2. **Horizontal alignment mismatch** between sidebar and content columns on the home page
 
 These are the most visible remaining quality issues for mobile visitors. Fix in `_sass/minimal-custom.scss` (media queries) and possibly `_layouts/home.html`.
