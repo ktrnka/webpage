@@ -49,6 +49,8 @@ Lower priority or needs more thought before starting.
 - [ ] Medium post claps/views/stats — identify top performers
 - [ ] Private repo for blog drafts (git submodule approach)
 - [ ] Consider merging recipes repo into this one
+- [ ] Add favicon.ico, preferably something tiny in SVG. Ironically this will improve page load over a 404
+- [ ] Strip old image metadata
 
 ---
 
