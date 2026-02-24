@@ -11,6 +11,7 @@ Dead/hijacked links:
 - [X] Finish reviewing / editing all links. I stopped at 2015-09-21-bigger-league-of-legends-data-set.md
 
 ## Deployment & infrastructure 🚀
+- [ ] **Homepage meta description** — Lighthouse flags missing `<meta name="description">` (SEO score 92, direct search ranking impact). The description was intentionally removed at some point — suspected reason: jekyll-seo-tag was auto-appending it to the `<title>` tag creating ugly page titles. **First step:** confirm whether the description-in-title problem still exists, then either restore the description (if the problem is fixed) or find another way to suppress it from the title while keeping it in the meta tag. The `description:` field in front matter or `_config.yml` controls this.
 - [X] Fix relative links on GitHub Pages (internal links break due to baseurl; need to replicate recipes repo deployment approach — see commit 003a0513)
 - [X] Restore local `bundle exec jekyll serve` testing (removed in that same commit)
 - [X] Test GitHub Pages build end-to-end (verify GitHub Actions succeeds)
@@ -57,6 +58,10 @@ Testing with cache-clear reload in Chrome on the home page:
     - Looking pretty good. Investigate favicon. Even if I inline CSS, images need to load
     - It might be possible to speed up the processing of the HTML, which would get to the image and css loading faster
 
+## Performance improvements 📈
+- [ ] **Add `fetchpriority="high"` to profile image** — Lighthouse LCP audit identifies `<img src="/assets/img/profile.jpg">` as the LCP element. Adding `fetchpriority="high"` tells the browser to fetch this image early in the load waterfall; Lighthouse estimates ~450ms LCP savings. One-line change in `_layouts/home.html`.
+- [X] **Resize profile image to actual display size** — Resized from 600×600 (105KB) to 200×200 (15KB, 86% reduction). Generated from raw source `download/IMG_20181110_125645.jpg` at 85% quality, `-strip` to remove metadata.
+
 
 ## Layout refactor 🏗️
 Goal: single source of truth for `<head>`/chrome, shared nav on all pages, clean separation of layout vs content.
@@ -85,6 +90,8 @@ Steps:
 - [X] The page title on index.md is weird: "Keith Trnka | Personal website of Keith Trnka, PhD" — fix in `_config.yml`
 
 ## Tech debt 🔩
+- [ ] **Add `<main>` landmark to layouts** — Lighthouse accessibility audit (score 0 for this check). Screen readers rely on `<main>` to let users skip to primary content; without it navigation is tedious for assistive tech users. Add `<main>` wrapper in `base.html` (or `default.html`/`home.html` as appropriate) around the page body content.
+- [ ] **Darken nav link color for contrast** — Lighthouse accessibility audit (score 0, color contrast). The top-nav links use `#7f7f7f` on white, giving a contrast ratio of 4.0:1; WCAG AA requires 4.5:1 for normal-weight 14px text. Fix: bump the nav link color to ~`#767676` or darker (e.g. `#595959`) in `_sass/minimal-custom.scss`. Check that the change looks good visually — just needs to be slightly darker.
 - [ ] Fix mobile homepage layout (sidebar/header alignment above main content)
 - [X] Code block syntax highlighting: root cause was `assets/css/style.scss` not importing `jekyll-theme-minimal` (which includes `rouge-github.scss`); fixed by adding `@import "jekyll-theme-minimal"` before `@import "minimal-custom"`
 - [ ] Link checking CI: HTMLProofer for internal links (`--disable-external`); Lychee on a cron schedule for external links
@@ -98,6 +105,7 @@ Steps:
   - `2025-12-04-ubuntu-25-setup-for-a-2014-macbook-pro.md` → [johnjeffers/3006011ec7767a4101cdd118e8d64290](https://gist.github.com/johnjeffers/3006011ec7767a4101cdd118e8d64290) (external reference, probably leave as-is)
 - [ ] Link discoverability: inline links have no underline by default and use a color close to the heading accent — users may not immediately recognize them as links. Consider a persistent underline or a more distinct link color.
 - [X] Review image file sizes to see if we should optimize for load time
+- [X] **Resize profile image to display dimensions** (also tracked under Performance improvements — see that entry for full context)
 - [X] **Animated GIFs** (~9.4MB total → ~304KB WebM, 97% reduction). Command: `ffmpeg -i input.gif -c:v libvpx-vp9 -b:v 0 -crf 33 -an output.webm`. Used `<video autoplay loop muted playsinline>` with GIF as fallback inside `<video>`.
   - [X] `bertviz.gif` (3.9M → 128K)
   - [X] `im-sorry-fail.gif` (2.6M → 64K)
