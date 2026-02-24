@@ -11,7 +11,7 @@ Dead/hijacked links:
 - [X] Finish reviewing / editing all links. I stopped at 2015-09-21-bigger-league-of-legends-data-set.md
 
 ## Deployment & infrastructure 🚀
-- [ ] **Homepage meta description** — Lighthouse flags missing `<meta name="description">` (SEO score 92, direct search ranking impact). The description was intentionally removed at some point — suspected reason: jekyll-seo-tag was auto-appending it to the `<title>` tag creating ugly page titles. **First step:** confirm whether the description-in-title problem still exists, then either restore the description (if the problem is fixed) or find another way to suppress it from the title while keeping it in the meta tag. The `description:` field in front matter or `_config.yml` controls this.
+- [X] **Homepage meta description** — Lighthouse flags missing `<meta name="description">` (SEO score 92, direct search ranking impact). The description was intentionally removed at some point — suspected reason: jekyll-seo-tag was auto-appending it to the `<title>` tag creating ugly page titles. **First step:** confirm whether the description-in-title problem still exists, then either restore the description (if the problem is fixed) or find another way to suppress it from the title while keeping it in the meta tag. The `description:` field in front matter or `_config.yml` controls this.
 - [X] Fix relative links on GitHub Pages (internal links break due to baseurl; need to replicate recipes repo deployment approach — see commit 003a0513)
 - [X] Restore local `bundle exec jekyll serve` testing (removed in that same commit)
 - [X] Test GitHub Pages build end-to-end (verify GitHub Actions succeeds)
@@ -36,7 +36,7 @@ Dead/hijacked links:
 - [ ] Research email notification / RSS-to-email for blog updates
   - I looked into this but many of the services felt scummy to me, so we'll see...
   - Oh my ONLY email subscriber is MattW lol
-- [ ] Write a post about moving from Medium → self-hosted Jekyll (started)
+- [X] Write a post about moving from Medium → self-hosted Jekyll (started)
 
 ## Content 📝
 - [X] Make a folder for guides, move hiking and detrashing tips there
@@ -123,7 +123,17 @@ Steps:
 - [ ] Consider merging recipes repo into this one
 - [ ] Archive page: blog posts grouped by year for easier browsing across 15 years of content
 - [ ] Create `.github/copilot-instructions.md` with project-specific guidance
-- [ ] Something like "guest authors" in which I can list Claude if I'm relying heavily on AI
+- [ ] Something like "guest authors" in which I can list Claude if I'm relying heavily on AI? Or some other way to handle AI attribution
+- [ ] Writing guidelines for blogging, which will help in the future when I'm using AI as an editor
+  - When I say "I" vs "we"
+  - I don't like to use em-dashes
+  - Better to hedge than to say something untrue
+  - Number formatting (extra decimal places often confuse and obscure)
+  - Image optimization for speed and privacy
+- [ ] Aspirational writing guidelines
+  - 2-sentence intro hook
+  - title hook
+  - title optimization process
 
 ---
 

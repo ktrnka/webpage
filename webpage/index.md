@@ -1,5 +1,5 @@
 ---
-title: "Keith Trnka"
+title: "Homepage"
 layout: home
 ---
 

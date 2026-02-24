@@ -8,6 +8,7 @@ plugins:
 # Site settings
 title: Keith Trnka
 logo: /assets/img/profile.jpg
+description: "Personal website and blog."
 
 # Note: These are for my domain, not the github.io domain
 baseurl: "" # the subpath of your site, e.g. /blog
