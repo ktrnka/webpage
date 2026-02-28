@@ -1,6 +1,8 @@
 ---
 title: "Homepage"
 layout: home
+redirect_from:
+  - /home
 ---
 
 ## Professional
