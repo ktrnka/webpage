@@ -20,6 +20,16 @@
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/blog/' | relative_url }}">Blog</a>
         <a href="{{ '/publications/' | relative_url }}">Publications</a>
+
+        <details class="more-dropdown">
+            <summary>More</summary>
+            <ul>
+                <li><a href="https://ktrnka.github.io/recipes/">Recipes</a></li>
+                <li><a href="https://ktrnka.github.io/seattle-outdoor-volunteering/">Seattle Outdoor Volunteering</a></li>
+                <li><a href="{{ '/guides/urban-detrashing/' | relative_url }}">Urban detrashing</a></li>
+                <li><a href="{{ '/guides/hiking/' | relative_url }}">Hiking</a></li>
+            </ul>
+        </details>
     </nav>
     <main>
         {{ content }}
