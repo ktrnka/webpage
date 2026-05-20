@@ -30,9 +30,9 @@ redirect_from:
 You might know me from:
 
 - The Seattle tech community
-- Machine learning for social gaming at [Palia](https://palia.com/) / [Singularity 6](https://www.singularity6.com/)
+- Machine learning for social gaming on [Palia](https://palia.com/) at [Singularity 6](https://www.singularity6.com/)
 - Director of Data Science at [98point6](https://www.98point6.com/)
-- Making it easier to type on your phone at [Swype](https://en.wikipedia.org/wiki/Swype) and Nuance
+- Making it easier to type on your phone at [Swype](https://en.wikipedia.org/wiki/Swype) and [Nuance](https://en.wikipedia.org/wiki/Nuance_Communications)
 - Making typing easier for people with disabilities in my PhD from the [University of Delaware](https://www.udel.edu/)
 - MLOps content, such as [blogging]({{ "/blog" | relative_url }}) or [Demetrios' podcast](https://mlops.community/)
 - Predicting how much power will be available to scientists on the Mars Express spacecraft
