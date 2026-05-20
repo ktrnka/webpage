@@ -5,8 +5,6 @@ redirect_from:
   - /home
 ---
 
-## Professional
-
 You might know me from:
 
 - The Seattle tech community
@@ -17,10 +15,12 @@ You might know me from:
 - MLOps content, such as [blogging]({{ "/blog" | relative_url }}) or [Demetrios' podcast](https://mlops.community/)
 - Predicting how much power will be available to scientists on the Mars Express spacecraft
 - Using electric cars as a distributed battery to enable more renewable energy at [UDel V2G](https://www1.udel.edu/V2G/)
+- Volunteering with [Ada Developers Academy](https://adadevelopersacademy.org/)
+- Volunteering with [TechJoy Academy](https://www.techjoy.software/)
 
 ## Personal
 
-Interests: [Green Seattle](https://www.greenseattle.org/), [Seattle Adopt‑a‑street](https://www.seattle.gov/utilities/volunteer/adopt-a-street), hiking, tennis, running, pickleball, coffee, baking, reading, and learning.
+Current interests: [Green Seattle](https://www.greenseattle.org/), [Seattle Adopt‑a‑street](https://www.seattle.gov/utilities/volunteer/adopt-a-street), hiking, running, coffee, baking, reading, and learning.
 
 ## How to pronounce my last name
 
