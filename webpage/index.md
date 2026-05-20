@@ -1,8 +1,30 @@
 ---
 title: "Homepage"
-layout: home
+layout: default
 redirect_from:
   - /home
+---
+
+<div class="home-header">
+  {% if site.logo %}
+  <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" class="home-avatar" fetchpriority="high">
+  {% endif %}
+  <div class="home-header-text">
+    <h1>{{ site.title }}</h1>
+    <div class="home-social">
+      <a href="https://www.linkedin.com/in/keith-trnka" aria-label="LinkedIn" title="LinkedIn">
+        <img src="{{ '/assets/img/linkedin-svgrepo-com.svg' | relative_url }}" alt="" width="22" height="22">
+      </a>
+      <a href="https://github.com/ktrnka" aria-label="GitHub" title="GitHub">
+        <img src="{{ '/assets/img/GitHub_Invertocat_Black.svg' | relative_url }}" alt="" width="22" height="22">
+      </a>
+      <a href="https://www.goodreads.com/review/list/62631407-keith-trnka?shelf=read" aria-label="Reading list" title="Reading list">
+        <img src="{{ '/assets/img/books-thicker-svgrepo-com.svg' | relative_url }}" alt="" width="22" height="22">
+      </a>
+    </div>
+  </div>
+</div>
+
 ---
 
 You might know me from:
