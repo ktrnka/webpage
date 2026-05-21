@@ -101,7 +101,5 @@ Steps completed:
 - [x] Image file size review and optimization
 - [x] Resize profile image to display dimensions
 
----
-
-DONE 1. **Double border below nav bar** on non-home pages (visual glitch)
-DONE-ish 2. **Horizontal alignment mismatch** between sidebar and content columns on the home page
+- [x] Double border below nav bar on non-home pages (visual glitch)
+- [x] Horizontal alignment between sidebar and content columns on the home page (mostly resolved)

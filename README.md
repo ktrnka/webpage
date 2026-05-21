@@ -21,7 +21,7 @@ To run the site locally:
 ```bash
 cd webpage
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve --livereload
 ```
 
 Then visit http://localhost:4000
@@ -29,13 +29,6 @@ Then visit http://localhost:4000
 ## Deployment
 
 The site is automatically deployed to GitHub Pages when changes are merged to the `main` branch via GitHub Actions.
-
-## Customization
-
-1. Edit `webpage/_config.yml` to update site title and description
-2. Edit `webpage/index.md` to update the homepage content
-3. Add new pages as `.md` files in the `webpage/` directory
-4. Custom styling can be modified in `webpage/_sass/minimal-custom.scss`
 
 ## License
 

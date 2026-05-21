@@ -35,7 +35,7 @@ Lower priority or needs more thought before starting.
 - [ ] **Archive page** — blog posts grouped by year for easier browsing across 15 years of content
 - [ ] **AI attribution** — figure out how to credit AI assistance on posts where it's heavily used (guest author model, footer note, etc.)
 - [ ] **Writing guidelines** — codify personal blogging conventions (I vs we, hedging over false claims, number formatting, image optimization) and aspirational goals (intro hooks, title optimization)
-- [ ] **`.github/copilot-instructions.md`** — project-specific guidance for AI coding assistants
+- [x] **`CLAUDE.md`** — project-specific guidance for AI coding assistants (supersedes `.github/copilot-instructions.md`)
 - [ ] Medium post claps/views/stats — identify top performers
 - [ ] Private repo for blog drafts (git submodule approach)
 - [ ] Consider merging recipes repo into this one
@@ -43,19 +43,3 @@ Lower priority or needs more thought before starting.
 - [ ] Strip old image metadata
 - [ ] Redesign the sidebar so that I can have a version that makes sense on both desktop and mobile
 
----
-
-## Reference notes
-
-<details>
-<summary>Project context</summary>
-
-- Raw HTML snapshots: `download/`
-- WP extraction script: `python/extract_wordpress.py`
-- Color palette: mauve/maroon accents (#7f1146)
-- Jekyll SEO tag: fills `<head>` with title, description, OG tags, JSON-LD — not much to do ([docs](https://jekyll.github.io/jekyll-seo-tag/usage/))
-- Image optimization: not worth automating for this few images
-- Performance: run Lighthouse after deploy; use `loading="lazy"` for below-fold images; avoid heavy third-party embeds
-- Local dev: `cd webpage && bundle exec jekyll serve --livereload`
-
-</details>
