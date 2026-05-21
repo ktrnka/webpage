@@ -33,3 +33,6 @@ lcyhee-output.txt
 
 # duh
 private/**
+
+# Before/after screenshots for visual verification
+screenshots/

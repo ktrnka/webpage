@@ -285,7 +285,7 @@ hr {
 
   a {
     margin-right: 1.5em;
-    color: #595959;
+    color: var(--text-3);
     text-decoration: none;
     text-transform: uppercase;
 
@@ -304,7 +304,7 @@ hr {
     summary {
       cursor: pointer;
       list-style: none;
-      color: #595959;
+      color: var(--text-3);
       text-transform: uppercase;
       font-size: 14px;
       user-select: none;
@@ -357,4 +357,74 @@ hr {
     flex-wrap: wrap;
     gap: 0.25em 0;
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:            #121212;
+    --surface:       #1e1e1e;
+    --surface-2:     #252025;
+
+    --text:          #f0f0f0;
+    --text-2:        #d8d8d8;
+    --text-3:        #b0b0b0;
+
+    --muted:         #8a8a8a;
+    --muted-2:       #828282;
+
+    --border:        #383838;
+    --border-2:      #2e2e2e;
+
+    --accent:        #d4779d;
+    --accent-2:      #c96c93;
+    --link:          #e08aac;
+    --link-strong:   #ea93b5;
+    --accent-mid:    #c080a0;
+
+    --accent-soft:   #7a3d5e;
+    --accent-soft-2: #6b3552;
+    --accent-bg:     #2d1422;
+
+    --photo-brick:     #c9a99a;
+    --photo-slate:     #a0a8ac;
+    --photo-teal:      #7fb6ca;
+    --photo-teal-lite: #9eccd4;
+    --photo-skin:      #f8e5dc;
+  }
+
+  // Black SVG icons → white in dark mode
+  .home-social img {
+    filter: brightness(0) invert(1);
+  }
+
+  // Syntax highlighting dark overrides
+  .highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
+    color: #8b949e;
+  }
+  .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp,
+  .highlight .kr, .highlight .k, .highlight .kt, .highlight .kv {
+    color: #ff9e8a;
+  }
+  .highlight .s, .highlight .s1, .highlight .s2, .highlight .sc,
+  .highlight .sd, .highlight .se, .highlight .sh, .highlight .si,
+  .highlight .sx, .highlight .sr, .highlight .sb, .highlight .ss {
+    color: #a5d6ff;
+  }
+  .highlight .mi, .highlight .mf, .highlight .mh, .highlight .mo,
+  .highlight .m, .highlight .mb, .highlight .mx, .highlight .il {
+    color: #e3b341;
+  }
+  .highlight .n, .highlight .na, .highlight .nb, .highlight .nc,
+  .highlight .nd, .highlight .ne, .highlight .nf, .highlight .ni,
+  .highlight .nl, .highlight .nn, .highlight .no, .highlight .nt,
+  .highlight .nv, .highlight .nx, .highlight .py {
+    color: #c9d1d9;
+  }
+  .highlight .o, .highlight .ow, .highlight .p {
+    color: #c9d1d9;
+  }
+  .highlight .ge { color: #c9d1d9; }
+  .highlight .gd { color: #ff7b72; background-color: #3d1515; }
+  .highlight .gi { color: #7ee787; background-color: #113d1b; }
+  .highlight .err { color: #ff7b72; background-color: #3d1515; }
 }
