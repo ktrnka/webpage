@@ -499,7 +499,7 @@ Spechbach, H., Gerlach, J., Karker, S. M., Tsourakis, N., Combescure, C., & Boui
 
 Spechbach et al. (2019) presents a speech-enabled fixed-phrase translator called BabelDr, which is designed for use in emergency settings. The authors conducted a study with 12 French-speaking doctors and 2 Arabic-speaking patients, in which the doctors were asked to use BabelDr to diagnose the patients' simulated symptoms. The study found that all doctors were able to reach the correct diagnosis using BabelDr, indicating that the tool is effective for facilitating communication in emergency settings.
 
-![BabelDr speech 2019 study]({{ "/assets/img/posts/mt-chat-3-babeldr-speech.png" | relative_url }})
+![BabelDr speech 2019 study]({{ "/assets/img/posts/mt-chat-3-babeldr.png" | relative_url }})
 
 However, the study also raises some questions about the efficiency of using a fixed-phrase translator in a healthcare setting. The time to diagnosis was relatively long compared to diagnosis of cystitis in telemedicine in my experience. Doctors also remained frustrated with being limited to a fixed bank of phrases.
 

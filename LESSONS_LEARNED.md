@@ -1,5 +1,53 @@
 # Lessons Learned
 
+## Dead links
+
+Two lychee configs exist with different purposes:
+
+**Local-only (fast, no network) — catches broken internal links and missing images:**
+```bash
+cd webpage && bundle exec jekyll build
+cd ..
+lychee --config link_testing/lychee-config-local-only.toml --root-dir webpage/_site "webpage/_site/**/*.html"
+```
+
+**Full external check (slower, hits the internet) — catches dead external links:**
+```bash
+cd webpage && bundle exec jekyll build
+cd ..
+lychee --config link_testing/lychee-config.toml --root-dir webpage/_site --output link_testing/lychee-report.md "webpage/_site/**/*.html"
+```
+
+Both require `--root-dir webpage/_site` to resolve root-relative links correctly. Run the local-only check frequently; run the full external check periodically (results are cached for 2 days in `link_testing/.lycheecache`).
+
+### Triage
+
+Most lychee errors are false positives — sites blocking crawlers (403) or rate-limiting (429). Before fixing anything, classify the error:
+
+| Error type | Likely cause | Action |
+|------------|-------------|--------|
+| 403 from academic sites (dl.acm.org, researchgate, bmj, sciencemag, mitpressjournals) | Bot-blocking | Ignore — live in browser |
+| 403 from medium.com | Medium blocks crawlers | Ignore if post is migrated here; fix if not |
+| 403/429 from other sites | Bot-blocking or rate limit | Check in browser before fixing |
+| 404 | Page actually gone | Fix (see below) |
+| Timeout | Server may be down or slow | Check in browser; treat as dead if confirmed |
+| `http://web.archive.org/...` | HTTP instead of HTTPS | Upgrade to `https://` |
+| Missing local file | Asset never downloaded or renamed | Find the right filename or remove the reference |
+
+### Fixing dead links
+
+**Genuinely dead page with good Wayback coverage:** Replace the URL with the Wayback Machine archive link. Lychee suggests one in the report; use `https://` not `http://`.
+
+```markdown
+[Link text](https://web.archive.org/web/YYYYMMDDHHMMSS/https://original-url.com/path)
+```
+
+**Dead tool or service with possible alternatives:** Note inline in the post that the service is no longer available and alternatives may exist. Don't leave a broken hyperlink — either remove the link or replace the URL with the Wayback version if the page itself is worth preserving.
+
+**Missing image:** Check what files actually exist in `assets/img/posts/` for that post — the file may have been downloaded under a slightly different name. If not recoverable, remove the image reference from the post.
+
+**Wavering service (slow/403 in lychee, works in browser):** No action needed. Add the domain to the lychee exclude list in `link_testing/lychee-config.toml` if it generates noise on every run.
+
 ## Blog Migration from Medium
 
 ### Pandoc Conversion Formats

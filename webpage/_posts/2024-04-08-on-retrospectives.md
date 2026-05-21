@@ -24,7 +24,7 @@ In the software industry there are different activities that I consider retrospe
 - Project retrospectives, which may cross team boundaries
 - Incident retrospectives, also called postmortems or outage retrospectives, that tend to happen after something bad happened
 
-I have to thank [Postmortems vs. Retrospectives by PagerDuty](https://www.pagerduty.com/blog/postmortems-vs-retrospectives/) and [Post-mortems vs Retrospectives by Parabol](https://www.parabol.co/blog/retrospectives-vs-post-mortems/) for inspiring me to discuss both the similarities and differences between these different types.
+I have to thank [Postmortems vs. Retrospectives by PagerDuty](https://web.archive.org/web/20250428092405/https://www.pagerduty.com/blog/postmortems-vs-retrospectives/) and [Post-mortems vs Retrospectives by Parabol](https://www.parabol.co/blog/retrospectives-vs-post-mortems/) for inspiring me to discuss both the similarities and differences between these different types.
 
 ### Team retrospectives
 

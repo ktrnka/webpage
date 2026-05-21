@@ -83,6 +83,22 @@ These are intentional — don't work around them without a strong reason:
 See `TODO.md` for the full backlog. Current top priority:
 - **Link discoverability** — inline links have no persistent underline; color is close to heading accent (`#970c4f`). Readers may not recognize them as clickable.
 
+## Link checking
+
+Two lychee configs in `link_testing/`:
+
+```bash
+# Fast local-only check (no network) — catches missing images and broken internal links
+cd webpage && bundle exec jekyll build && cd ..
+lychee --config link_testing/lychee-config-local-only.toml --root-dir webpage/_site "webpage/_site/**/*.html"
+
+# Full external check — catches dead external links (results cached 2 days)
+cd webpage && bundle exec jekyll build && cd ..
+lychee --config link_testing/lychee-config.toml --root-dir webpage/_site --output link_testing/lychee-report.md "webpage/_site/**/*.html"
+```
+
+Most 403 errors are bot-blocking false positives (dl.acm.org, medium.com, etc.). See `LESSONS_LEARNED.md` for triage guidance and dead-link fix patterns.
+
 ## Migration Reference
 
 For converting Medium or WordPress posts to Jekyll Markdown, see `LESSONS_LEARNED.md`. It covers pandoc format selection, post-conversion cleanup checklist, image handling, and gist embeds.

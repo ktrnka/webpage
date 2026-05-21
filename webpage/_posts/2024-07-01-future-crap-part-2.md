@@ -34,7 +34,7 @@ If you're looking in the repo, there's also a web frontend that I use for local 
 
 #### About the brand data
 
-The brand data was built by hand using ChatGPT/Copilot and [ImageToPrompt](https://imagetoprompt.com/). It took a number of iterations and still needs improvement.
+The brand data was built by hand using ChatGPT/Copilot and ImageToPrompt (site no longer up as of 2026; similar tools may exist now). It took a number of iterations and still needs improvement.
 
 This is a rough outline of how I iterated:
 
