@@ -34,7 +34,7 @@ You might know me from:
 - Director of Data Science at [98point6](https://www.98point6.com/)
 - Making it easier to type on your phone at [Swype](https://en.wikipedia.org/wiki/Swype) and [Nuance](https://en.wikipedia.org/wiki/Nuance_Communications)
 - Making typing easier for people with disabilities in my PhD from the [University of Delaware](https://www.udel.edu/)
-- MLOps content, such as [blogging]({{ "/blog" | relative_url }}) or [Demetrios' podcast](https://mlops.community/)
+- MLOps content, such as [blogging]({{ "/blog" | relative_url }}) or [Demetrios' podcast](https://home.mlops.community/public/videos/how-a-manager-became-a-believer-in-devops-for-machine-learning)
 - Predicting how much power will be available to scientists on the Mars Express spacecraft
 - Using electric cars as a distributed battery to enable more renewable energy at [UDel V2G](https://www1.udel.edu/V2G/)
 - Volunteering with [Ada Developers Academy](https://adadevelopersacademy.org/)
