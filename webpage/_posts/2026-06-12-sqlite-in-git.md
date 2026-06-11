@@ -7,43 +7,49 @@ ai_disclosure: I started this with Claude Opus as a dump of a working session, t
 
 ## A pattern I've adopted over the past year
 
-For a certain kind of small project, I've taken to committing the application's SQLite database directly to git — versioned right alongside the code, with no cloud database or separate service. It's a niche pattern: a great fit for a narrow set of projects and a bad fit for most.
+For a certain kind of small project, I've taken to committing the application's SQLite database directly to git — versioned right alongside the code, with no cloud database or separate service. It's a great fit for a narrow set of projects and a bad fit for most.
 
 Before this, I'd usually just keep the data as JSON in the repo. That works, but it has friction: large JSON files clog up GitHub diffs and show up as noise in repo searches. A binary SQLite file sidesteps both, and gives me real queries and structure on top.
 
-The pattern itself isn't unusual — people do track SQLite databases in git, and there are nice write-ups of the mechanics ([this one](https://garrit.xyz/posts/2023-11-01-tracking-sqlite-database-changes-in-git), for example). What I haven't seen covered is the *why* and *when*: when this is a good idea versus standing up a real database, and where the boundaries are. That, plus one compression gotcha I hit, is what I want to cover here.
+The pattern isn't all that unusual; see [this write-up of the mechanics](https://garrit.xyz/posts/2023-11-01-tracking-sqlite-database-changes-in-git), for example. What I haven't seen covered is the *why* and *when*: when this is a good idea versus standing up a real database, and where the boundaries are. That, plus one compression gotcha I hit, is what I want to cover here.
 
 I run this on [seattle-outdoor-volunteering](https://github.com/ktrnka/seattle-outdoor-volunteering), a small ETL pipeline that scrapes Seattle-area outdoor volunteer events nightly and publishes a static site. GitHub Actions runs the pipeline each night, commits the updated `data/events.sqlite` along with the regenerated `docs/index.html`, and pushes to `main`, which triggers a GitHub Pages rebuild. The whole thing runs for free on GitHub's infrastructure, and the SQLite file is currently around 7 MB.
 
 ## Where this started
 
-I originally stored the database compressed, as `events.sqlite.gz`. I have a machine-learning background and a reflexive dislike of committing large binaries to git, so gzipping it felt obviously right. It wasn't, but not for the reason I expected.
+I originally stored the database compressed, as `events.sqlite.gz`. I have a machine-learning background and a reflexive dislike of committing large binaries to git, so gzipping it felt right at first.
 
-The compression meant the file had to be decompressed before Python could load it, and I wrote some sloppy code around that: a simple bug where my local copy kept reading a stale uncompressed file after a `git pull` brought in a newer `.gz`. Nothing clever, just a mistake. But chasing it made me question whether the gzip step was worth its complexity at all, and when I removed it I found something more interesting underneath.
+The compression meant the file had to be decompressed before Python could load it, and I wrote some sloppy code around that: a simple bug where my local copy kept reading a stale uncompressed file after a `git pull` brought in a newer `.gz`. Nothing clever, just a mistake. But seeing it made me question whether the gzip step was worth its complexity at all, and when I removed it I found something more interesting.
 
 ## Why commit SQLite to git instead of standing up a database?
 
-For a nightly ETL job that needs to keep structured results somewhere, the "real" answer is a database server like Postgres. For the right project, that's correct. But for a small project, a hosted database brings a tax that's easy to underestimate:
+For a nightly ETL job that needs to keep structured results somewhere, the "standard" answer is a database server like Postgres. But for a small project, a hosted database brings a hefty tax:
 
-- **You have to secure it.** A network-reachable database is an attack surface and a set of credentials to manage.
+- **You have to secure and operate it.** A network-reachable database is an attack surface and a set of credentials to manage.
+- **Reversibility is shallow.** You have to implement migrations for reversibility, and even when you do, migrations version your *schema*, not your *data*. Drop a column by mistake and the data is gone unless you've already built a backup system.
 - **Free isn't really free.** Free Postgres tiers tend to be slow, sleep when idle, or come with limits you'll hit.
-- **Reversibility is shallow.** Migrations version your *schema*, not your *data*. Drop a column by mistake and the data is gone unless you've already built a backup system.
 
-Committing SQLite to git inverts all of that:
+Committing SQLite to git simplifies all of that:
 
 - **Zero infrastructure.** Nothing to provision, secure, or pay for. The database is a file.
-- **Real reversibility, for free.** Every commit is a full snapshot. Ship a bad migration or mangle the data? `git revert` and you have the complete prior database back. Your history is the backup and the audit trail.
+- **Real reversibility.** Every commit is a full snapshot. Ship a bad migration or mangle the data? `git revert` and you have the complete prior database back. Your history is the backup and the audit trail.
 - **Schema, data, and code stay in lockstep.** Check out a commit from last year and you get that era's database *and* the code that read it, together. They can never disagree, because they're the same commit.
+
+<!-- KT to consider adding: Because it's cheaper/safer to change table structure, I'm more likely to do it when needed and that's particularly important when rapidly iterating at the start of a project  -->
+
 
 This only works in a specific corner, though. It fits when the dataset is **small** (I'd say under ~20 MB), has enough **structure** to be worth a database rather than a JSON or CSV file, and is **written incrementally** by a single source (or a few infrequent ones) rather than many frequent writers. A nightly job that mostly appends, with the occasional manual run, is the sweet spot. It's the wrong choice the moment the data gets large, frequently written, concurrent, or sensitive. (If the writes were one-shot rather than incremental, the storage math below changes, and gzipping might even make sense again.)
 
-## The gotcha: compressing it defeats git's delta compression
+<!-- KT to consider adding: This might be good for student projects as well. I've seen too many student projects hamstrung by database management issues, or groups that choose a difficult database to reduce costs. -->
 
-Removing the gzip simplified the code, as expected. The surprise was what it did to git's storage.
+
+## The gotcha: compressing it defeats git's delta compression
 
 Git's delta compression works at the binary level, and it turns out to be well-suited to SQLite's page-based format: a small data change only rewrites a handful of 4 KB pages, so the delta between two revisions is tiny. Simon Willison made exactly this point in a [Hacker News thread](https://news.ycombinator.com/item?id=38110286), where someone measured two revisions of an 864 KB database packing down to 329 KB, about the same as gzipping the file once (328 KB), except git's pack covers *both* revisions.
 
 Gzip output is the opposite. A small data change reshuffles the whole compressed stream, so git sees a brand-new incompressible blob and stores a near-full copy every single night. That's exactly what had been quietly happening in my repo.
+
+So in this project, I was able to both simplify the code and reduce the growth of git history size by storing sqlite uncompressed.
 
 ### Measuring the switch
 
@@ -88,12 +94,4 @@ My ~22 KB deltas against a 7 MB file are a more extreme version of the same effe
 
 This is the one gotcha I happened to hit, and probably not the only one the pattern has, but it's the most counterintuitive: the "optimized" format is the wrong choice, because it optimizes disk size while the real cost lives in git's history.
 
-## Summary
 
-If you have a small, structured, incrementally-updated dataset with no secrets in it, committing a raw SQLite file to git is a genuinely nice setup: zero infrastructure, full reversibility, and schema-data-code that can't drift apart. It is not a general-purpose database strategy, and it falls apart the moment your data gets large, concurrent, frequently written, or sensitive.
-
-And if you do commit SQLite to git: store it raw. Don't gzip it. Git's delta compression handles the uncompressed format far better, and you'll get a leaner history despite the larger file on disk.
-
----
-
-*The seattle-outdoor-volunteering repo is at [github.com/ktrnka/seattle-outdoor-volunteering](https://github.com/ktrnka/seattle-outdoor-volunteering). The switch commit is [`84f4578`](https://github.com/ktrnka/seattle-outdoor-volunteering/commit/84f4578167a1019b852ba4bcbad67b9923a66f2d) and the measurement script is in `scripts/git_pack_size.sh`.*
