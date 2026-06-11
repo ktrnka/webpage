@@ -2,7 +2,7 @@
 layout: post
 title: SQLite in Git: Fully Reversible Storage for Small Data Projects
 date: 2026-06-12
-ai_disclosure: I started this with Claude Opus as a dump of a working session, then reviewed and had Opus refine several times. The final revision pass was my own. -Keith
+ai_disclosure: I started this with Claude Opus as a dump of a working session, then I did a review/feedback/revision loop with Opus several times. The final revision pass was my own. -Keith
 ---
 
 ## A pattern I've adopted over the past year
@@ -34,14 +34,11 @@ Committing SQLite to git simplifies all of that:
 - **Zero infrastructure.** Nothing to provision, secure, or pay for. The database is a file.
 - **Real reversibility.** Every commit is a full snapshot. Ship a bad migration or mangle the data? `git revert` and you have the complete prior database back. Your history is the backup and the audit trail.
 - **Schema, data, and code stay in lockstep.** Check out a commit from last year and you get that era's database *and* the code that read it, together. They can never disagree, because they're the same commit.
-
-<!-- KT to consider adding: Because it's cheaper/safer to change table structure, I'm more likely to do it when needed and that's particularly important when rapidly iterating at the start of a project  -->
-
+- **Schema changes stay cheap.** Since a bad change is one `git revert` away, I'm more willing to reshape tables as I go. That matters most early on, when I'm still figuring out what the data should even look like.
 
 This only works in a specific corner, though. It fits when the dataset is **small** (I'd say under ~20 MB), has enough **structure** to be worth a database rather than a JSON or CSV file, and is **written incrementally** by a single source (or a few infrequent ones) rather than many frequent writers. A nightly job that mostly appends, with the occasional manual run, is the sweet spot. It's the wrong choice the moment the data gets large, frequently written, concurrent, or sensitive. (If the writes were one-shot rather than incremental, the storage math below changes, and gzipping might even make sense again.)
 
-<!-- KT to consider adding: This might be good for student projects as well. I've seen too many student projects hamstrung by database management issues, or groups that choose a difficult database to reduce costs. -->
-
+This also makes it a nice fit for student projects. I've seen too many hamstrung by database operations, or pushed toward an awkward database just to cut costs, when a file in git would have done the job.
 
 ## The gotcha: compressing it defeats git's delta compression
 
@@ -49,7 +46,7 @@ Git's delta compression works at the binary level, and it turns out to be well-s
 
 Gzip output is the opposite. A small data change reshuffles the whole compressed stream, so git sees a brand-new incompressible blob and stores a near-full copy every single night. That's exactly what had been quietly happening in my repo.
 
-So in this project, I was able to both simplify the code and reduce the growth of git history size by storing sqlite uncompressed.
+So in this project, I was able to both simplify the code and reduce the growth of git history size by storing SQLite uncompressed.
 
 ### Measuring the switch
 
@@ -94,4 +91,4 @@ My ~22 KB deltas against a 7 MB file are a more extreme version of the same effe
 
 This is the one gotcha I happened to hit, and probably not the only one the pattern has, but it's the most counterintuitive: the "optimized" format is the wrong choice, because it optimizes disk size while the real cost lives in git's history.
 
-
+Put it together and the guideline is simple: if your data is small, structured, and written incrementally, a SQLite file in git buys you zero infrastructure and real reversibility for free. Just store it raw.
