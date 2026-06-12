@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SQLite in Git, Fully Reversible Storage for Small Data Projects
+title: "SQLite in Git: Fully Reversible Storage for Small Data Projects"
 date: 2026-06-12
 ai_disclosure: I started this with Claude Opus as a dump of a working session, then I did a review/feedback/revision loop with Opus several times. The final revision pass was my own. -Keith
 ---
