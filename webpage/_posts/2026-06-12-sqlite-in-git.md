@@ -5,8 +5,6 @@ date: 2026-06-12
 ai_disclosure: I started this with Claude Opus as a dump of a working session, then I did a review/feedback/revision loop with Opus several times. The final revision pass was my own. -Keith
 ---
 
-## A pattern I've adopted over the past year
-
 For a certain kind of small project, I've taken to committing the application's SQLite database directly to git — versioned right alongside the code, with no cloud database or separate service. It's a great fit for a narrow set of projects and a bad fit for most.
 
 Before this, I'd usually just keep the data as JSON in the repo. That works, but it has friction: large JSON files clog up GitHub diffs and show up as noise in repo searches. A binary SQLite file sidesteps both, and gives me real queries and structure on top.
