@@ -20,6 +20,8 @@ The two machines:
 - **Per-monitor fractional scaling is more reliable.** This matters most on the Dell, because the laptop panel and the external monitor have very different DPI. At the same scale, one screen ends up either too hard to read or comically large. In 25.10 when I tried it, display changes would often glitch: a window might display on one monitor but take mouse clicks on the other, or its visible bounds wouldn't match its click bounds. That could happen when I got home from a coffee shop and docked. 26.04 isn't perfect; I still occasionally see the visible size not match the clickable size, but it's clearly better.
 - **The Files app feels faster sometimes**, though not consistently.
 
+*Update 7/7/2026: I haven't noticed any Bluetooth keyboard stutter, which would happen now and then on 25.10 and earlier.*
+
 ### What got worse
 
 - **Automatic brightness is on by default and I find it distracting.** The dimming algorithm is less smooth and predictable compared to OS X or Windows, and it's enough to distract me while reading. I just turned it off:
@@ -39,6 +41,8 @@ gsettings set org.gnome.settings-daemon.plugins.power ambient-enabled false
 # add to GRUB_CMDLINE_LINUX_DEFAULT in /etc/default/grub, then sudo update-grub
 i915.enable_psr=0
 ```
+
+*Update 7/7/2026: It reverted back to slow-waking and I haven't investigated yet :(*
 
 - **GNOME extensions get disabled on upgrade.** I now understand one of the common gripes about them: when GNOME bumps versions, extensions go dark until the author adds the new version to the extension's compatibility list.
 - **Google Drive mounting in Files is gone.** GNOME 50 dropped it because the underlying library had been unmaintained for years. And if that's also part of why Files feels snappier now, I'll call it a fair trade.
