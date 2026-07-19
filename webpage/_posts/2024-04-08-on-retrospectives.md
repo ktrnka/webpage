@@ -191,6 +191,8 @@ When I was forced to choose between the two, I spent the full time understanding
 
 ---
 
+<!--reading-time-stop-->
+
 ### Additional reading
 
 I did a brief literature review while writing this, and I'm sharing what I've seen along with a little commentary on each.
