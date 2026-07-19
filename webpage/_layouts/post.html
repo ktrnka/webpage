@@ -18,6 +18,23 @@ layout: default
   {{ content }}
 </article>
 
+{% if page.related and page.related.size > 0 %}
+<aside class="related-posts" aria-label="Related posts">
+  <h2>Related posts</h2>
+  <ul>
+    {% for item in page.related %}
+      {% assign rp = site.posts | where: "slug", item.slug | first %}
+      {% if rp %}
+      <li>
+        <a href="{{ rp.url | relative_url }}">{{ rp.title | escape }}</a>
+        {% if item.note %}<span class="related-note">{{ item.note | escape }}</span>{% endif %}
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</aside>
+{% endif %}
+
 <nav class="post-nav">
   <div class="post-nav-prev">
     {% if page.previous %}
@@ -77,6 +94,37 @@ layout: default
     padding: 0.5em 0.75em;
     margin-bottom: 2em;
     background: var(--surface);
+  }
+
+  .related-posts {
+    margin: 2.5em 0 0;
+    padding-top: 1.5em;
+    border-top: 1px solid var(--border-2, #e0e0e0);
+  }
+
+  .related-posts h2 {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin: 0 0 0.75em;
+  }
+
+  .related-posts ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .related-posts li {
+    margin-bottom: 0.75em;
+  }
+
+  .related-note {
+    display: block;
+    color: var(--muted);
+    font-size: 0.9em;
+    margin-top: 0.1em;
   }
 
   .post-nav {
