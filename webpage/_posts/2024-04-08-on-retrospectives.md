@@ -1,10 +1,14 @@
 ---
 layout: post
-title: On retrospectives
+title: Lessons from running team, project, and incident retros
 date: 2024-04-08
+description: "How to run retrospectives that feel natural and participatory instead of performative, and actually lead to change. For engineering leaders."
+seo:
+  type: BlogPosting
+  date_modified: 2026-07-19
 ---
 
-I've had a number of conversations about retrospectives over the past few months, and until now I didn't have anything written that I could share.
+Retrospectives are one of the simplest ways for a team to keep getting better, and one of the easiest to run badly. A performative retro produces superficial action items that never touch the real problems, so those problems keep coming back. A good one feels natural and participatory, and it actually changes how the team works. This post is about getting to the second kind, across team, project, and incident retros, which each work a little differently.
 
 This is written for leaders in software development, but I hope it'll help others too.
 
@@ -47,13 +51,13 @@ These are some examples of changes we made after learning more about the problem
 
 - I put more effort into mentoring my team in how to use user feedback and data to build more successful features and products
 - A healthy culture of code reviews is possible, but it takes deliberate effort and support from leadership. Examples:
-- I shared my goals for our code review culture both verbally and in writing. It's more about leveling-up the team than it is about blocking "bad" code. I would also do some code reviews and I'd be explicit about when concerns were blocking approval (like patient safety issues) or when they were non-blocking suggestions to level-up.
-- Sometimes large PRs happen despite our intentions to keep them small. When that happens I redirect the review to be a conversation about the design of the change first before diving into code. Big PRs are still hard but that gets things moving and focuses the reviewer on the big picture.
-- We put deliberate effort into adjusting our alarms and reduced false-alarms significantly while also adding a couple alarms for the biggest safety risks
+    - I shared my goals for our code review culture both verbally and in writing. It's more about leveling-up the team than it is about blocking "bad" code. I would also do some code reviews and I'd be explicit about when concerns were blocking approval (like patient safety issues) or when they were non-blocking suggestions to level-up.
+    - Sometimes large PRs happen despite our intentions to keep them small. When that happens I redirect the review to be a conversation about the design of the change first before diving into code. Big PRs are still hard but that gets things moving and focuses the reviewer on the big picture.
+    - We put deliberate effort into adjusting our alarms and reduced false-alarms significantly while also adding a couple alarms for the biggest safety risks
 - When hiring additional engineers, I made AWS skills a priority
 - As an individual contributor, when I see that certain kinds of development requires multiple sequential PRs across repos I advocate for merging repos
 
-#### What's worked well, and what hasn't worked well
+#### What's worked well, and what hasn't worked well in team retros
 
 I like the "what's worked well and what hasn't worked well" framework in retros, and I'll use that framework in a sort of retro about retros.
 
@@ -76,7 +80,7 @@ I like the "what's worked well and what hasn't worked well" framework in retros,
 - A mad rush to discuss action items in the last 5 minutes of the meeting, and then the action items are not really actionable.
 - One or two people dominate the conversation. This could be the result of many different things, for example unmet needs that come up or leaders that are new to leading retros.
 
-#### Open challenges
+#### Open challenges in team retros
 
 These are some examples of things I haven't yet figured out, or that don't feel smooth yet.
 
@@ -123,7 +127,7 @@ I've learned a lot from reading incident retros and I appreciate when people tak
 
 Also, I've become more thorough in design review about authentication, cross-repo development, and pub/sub systems.
 
-#### What's worked well, and what hasn't worked well
+#### What's worked well, and what hasn't worked well in incident retros
 
 Worked well
 
@@ -148,7 +152,7 @@ These are some antipatterns or red flags I've seen:
 - Ineffective incident retros that don't lead to learning or improvements
 - Time-consuming incident retros that drag on for a week or longer
 
-#### Open challenges
+#### Open challenges in incident retros
 
 - Sometimes the effort to get good data is major work. Whenever possible I try to get a "good enough" answer.
 - If stakeholder communication was lacking in some way, it'd be nice to discuss that in a retro but the retro members may not even be aware of the problem. If I'm running an incident, when possible I follow up with stakeholders afterwards to solicit feedback.
