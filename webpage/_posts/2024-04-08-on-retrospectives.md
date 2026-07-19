@@ -51,9 +51,9 @@ These are some examples of changes we made after learning more about the problem
 
 - I put more effort into mentoring my team in how to use user feedback and data to build more successful features and products
 - A healthy culture of code reviews is possible, but it takes deliberate effort and support from leadership. Examples:
-- I shared my goals for our code review culture both verbally and in writing. It's more about leveling-up the team than it is about blocking "bad" code. I would also do some code reviews and I'd be explicit about when concerns were blocking approval (like patient safety issues) or when they were non-blocking suggestions to level-up.
-- Sometimes large PRs happen despite our intentions to keep them small. When that happens I redirect the review to be a conversation about the design of the change first before diving into code. Big PRs are still hard but that gets things moving and focuses the reviewer on the big picture.
-- We put deliberate effort into adjusting our alarms and reduced false-alarms significantly while also adding a couple alarms for the biggest safety risks
+    - I shared my goals for our code review culture both verbally and in writing. It's more about leveling-up the team than it is about blocking "bad" code. I would also do some code reviews and I'd be explicit about when concerns were blocking approval (like patient safety issues) or when they were non-blocking suggestions to level-up.
+    - Sometimes large PRs happen despite our intentions to keep them small. When that happens I redirect the review to be a conversation about the design of the change first before diving into code. Big PRs are still hard but that gets things moving and focuses the reviewer on the big picture.
+    - We put deliberate effort into adjusting our alarms and reduced false-alarms significantly while also adding a couple alarms for the biggest safety risks
 - When hiring additional engineers, I made AWS skills a priority
 - As an individual contributor, when I see that certain kinds of development requires multiple sequential PRs across repos I advocate for merging repos
 
