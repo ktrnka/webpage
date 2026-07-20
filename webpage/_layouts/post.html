@@ -5,6 +5,14 @@ layout: default
 <article class="post-content">
   <div class="post-header">
     <h1>{{ page.title }}</h1>
+    {% if page.series %}
+    {% assign series_posts = site.posts | where: "series", page.series | sort: "date" %}
+    {% assign series_meta = site.data.series[page.series] %}
+    {% assign series_total = series_posts | size %}
+    {% assign part_num = 0 %}
+    {% for p in series_posts %}{% if p.url == page.url %}{% assign part_num = forloop.index %}{% endif %}{% endfor %}
+    <div class="post-series-line">Part {{ part_num }} of {{ series_total }} in {{ series_meta.title | default: page.series }}</div>
+    {% endif %}
     <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date: "%B %-d, %Y" }}</time>
     {% comment %} Reading time counts prose before an optional <!--reading-time-stop--> marker, so a references/links section can be excluded by placing the marker before it. {% endcomment %}
     {% assign rt_body = content | split: '<!--reading-time-stop-->' | first %}
@@ -35,15 +43,31 @@ layout: default
 </aside>
 {% endif %}
 
+{% comment %} Per-slot hybrid nav: use the in-series neighbor when there is one, else fall back to the global chronological neighbor. Independent per direction. {% endcomment %}
+{% if page.series %}
+{% assign snav = site.posts | where: "series", page.series | sort: "date" %}
+{% assign snav_count = snav | size %}
+{% assign cur_idx = 0 %}
+{% for p in snav %}{% if p.url == page.url %}{% assign cur_idx = forloop.index0 %}{% endif %}{% endfor %}
+{% if cur_idx > 0 %}{% assign pi = cur_idx | minus: 1 %}{% assign prev_in_series = snav[pi] %}{% endif %}
+{% assign ni = cur_idx | plus: 1 %}
+{% if ni < snav_count %}{% assign next_in_series = snav[ni] %}{% endif %}
+{% endif %}
 <nav class="post-nav">
   <div class="post-nav-prev">
-    {% if page.previous %}
+    {% if prev_in_series %}
+    <span class="post-nav-label">← Previous in series</span>
+    <a href="{{ prev_in_series.url | relative_url }}">{{ prev_in_series.title }}</a>
+    {% elsif page.previous %}
     <span class="post-nav-label">← Older</span>
     <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
     {% endif %}
   </div>
   <div class="post-nav-next">
-    {% if page.next %}
+    {% if next_in_series %}
+    <span class="post-nav-label">Next in series →</span>
+    <a href="{{ next_in_series.url | relative_url }}">{{ next_in_series.title }}</a>
+    {% elsif page.next %}
     <span class="post-nav-label">Newer →</span>
     <a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
     {% endif %}
@@ -64,6 +88,7 @@ layout: default
   .post-date {
     display: block;
     color: var(--muted);
+    font-size: 0.85em;
     margin-bottom: 0;
   }
 
@@ -94,6 +119,14 @@ layout: default
     padding: 0.5em 0.75em;
     margin-bottom: 2em;
     background: var(--surface);
+  }
+
+  .post-series-line {
+    display: block;
+    color: var(--muted);
+    font-weight: 300;
+    font-size: 0.85em;
+    margin: 0.1em 0 0.15em;
   }
 
   .related-posts {

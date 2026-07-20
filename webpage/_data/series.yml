@@ -1,0 +1,4 @@
+# Blog post series. Key = the `series:` value in post front matter.
+# Posts in a series are ordered by date unless a `series_order` is added later.
+mt-medical-chat:
+  title: Machine translation for medical chat
