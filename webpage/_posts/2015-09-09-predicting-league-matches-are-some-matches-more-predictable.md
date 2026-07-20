@@ -2,6 +2,7 @@
 layout: post
 title: "Predicting League matches: Are some matches more predictable?"
 date: 2015-09-09
+series: league-predictions
 ---
 
 I've been working on improving the accuracy of my machine learning models and redesigning my software now that I have a much lower rate limit.

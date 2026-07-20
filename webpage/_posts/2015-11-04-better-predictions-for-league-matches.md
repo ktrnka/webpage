@@ -2,6 +2,7 @@
 layout: post
 title: Better predictions for League matches
 date: 2015-11-04
+series: league-predictions
 ---
 
 I'm predicting the winner of League of Legends ranked games with machine learning. The models look at player histories, champions picked, player ranks, blue vs red side, solo vs team queue, etc. The last time I wrote about accuracy improvements my best was [61.2% accuracy with gradient boosting trees]({{ "/blog/2015/09/predicting-league-match-outcomes-week-2/" | relative_url }}).

@@ -2,3 +2,15 @@
 # Posts in a series are ordered by date unless a `series_order` is added later.
 mt-medical-chat:
   title: Machine translation for medical chat
+mlops:
+  title: MLOps
+searchify:
+  title: Searchify
+mechanical-turk:
+  title: Mechanical Turk
+future-crap:
+  title: Future Crap
+league-predictions:
+  title: Predicting League of Legends match outcomes
+over-9000:
+  title: Over 9000

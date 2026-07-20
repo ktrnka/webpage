@@ -2,6 +2,7 @@
 layout: post
 title: "Future Crap, Part 2: Building brand-injection for generative AI"
 date: 2024-07-01
+series: future-crap
 ---
 
 *If you're looking for example output, start with* [*Part 1*]({% post_url 2024-06-24-future-crap-part-1 %})*. This post is the "how it's made" portion.*

@@ -2,6 +2,7 @@
 layout: post
 title: Bigger League of Legends data set
 date: 2015-09-21
+series: league-predictions
 ---
 
 Riot granted me an app key so I can crawl a lot more data. The downside is that I had to re-engineer much of my system because I couldn't use free MongoLab tier with that much data. To give some ballpark sense, my mongo data directory is 46gb for 1.8 million matches and 1.2 million players.

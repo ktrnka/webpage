@@ -2,6 +2,7 @@
 layout: post
 title: Gains from deep learning
 date: 2016-01-15
+series: league-predictions
 ---
 
 Back from the holidays! I've finally made some progress with neural networks, particularly a deep network. This is a part of my ongoing project to predict the winner of ranked matches in League of Legends based on information from champion select and the player histories. [Previously]({{ "/blog/2015/12/ensembles-part-2/" | relative_url }}) I'd been working on ensemble methods, but concluded that they're more of a last-mile improvement.

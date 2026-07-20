@@ -2,6 +2,7 @@
 layout: post
 title: "Predicting League match outcomes: First week of machine learning"
 date: 2015-08-25
+series: league-predictions
 ---
 
 Just a reminder, my goal is to predict the winner of a League of Legends ranked 5x5 game based on the pick/ban phase, including any player stats. This is an intermediate goal towards predicting the outcome of professional matches.

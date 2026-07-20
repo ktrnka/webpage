@@ -2,6 +2,7 @@
 layout: post
 title: Tuning dropout for each network size
 date: 2016-02-08
+series: league-predictions
 ---
 In the [previous post]({{ "/blog/2016/02/switching-from-deep-to-wide/" | relative_url }}) I tested a range of shallow networks from 50 hidden units to 1000. On the smaller dataset (50k rows) additional network complexity hurts: It's just overfitting. On the larger dataset (200k rows) the additional complexity helps because the amount of data prevents the network from overfitting.
 

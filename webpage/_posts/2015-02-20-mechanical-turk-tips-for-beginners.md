@@ -2,6 +2,7 @@
 layout: post
 title: Mechanical Turk tips for beginners
 date: 2015-02-20
+series: mechanical-turk
 ---
 
 I've been using Amazon's Mechanical Turk for side projects, whether it's for annotating data, generating short-form content, or evaluating subjective quality.  When I started I had several misconceptions, found a lot of great info, and learned many lessons the hard way.

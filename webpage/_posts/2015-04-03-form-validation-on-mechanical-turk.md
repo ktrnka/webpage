@@ -2,6 +2,7 @@
 layout: post
 title: Form validation on Mechanical Turk
 date: 2015-04-03
+series: mechanical-turk
 ---
 
 [Amazon's Mechanical Turk](https://www.mturk.com/mturk/welcome) is a great system for surveys, writing short snippets, tagging images, and other small tasks. But you spend your time on the littlest things.

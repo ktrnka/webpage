@@ -2,6 +2,7 @@
 layout: post
 title: Trends over a season of TV shows
 date: 2015-06-12
+series: over-9000
 ---
 
 If I plot the number of downloads per episode over the length of an anime series, are there interesting trends? I'm using the data and estimation methods from Over 9000 and graphing the number of downloads for each episode 7 days from when the torrent is available.

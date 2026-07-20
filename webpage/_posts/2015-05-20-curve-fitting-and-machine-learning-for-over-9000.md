@@ -2,6 +2,7 @@
 layout: post
 title: Curve fitting and machine learning for Over 9000
 date: 2015-05-20
+series: over-9000
 ---
 
 One of my current projects is Over 9000, a visualization that shows which anime series are currently popular. I get the data by scraping a popular anime torrent site every day and come up with a single number that represents the popularity of a show.

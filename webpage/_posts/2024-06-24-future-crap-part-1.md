@@ -2,6 +2,7 @@
 layout: post
 title: "Future Crap, Part 1: Injecting ads into image generators"
 date: 2024-06-24
+series: future-crap
 ---
 
 You know what sucks on the Internet? Ads everywhere! You know what generative AI doesn't have yet? Ads everywhere!

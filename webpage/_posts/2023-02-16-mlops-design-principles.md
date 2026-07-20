@@ -2,6 +2,7 @@
 layout: post
 title: MLOps Design Principles
 date: 2023-02-16
+series: mlops
 ---
 
 There's a big difference between building a machine learning model that works on your computer, and making that model available for others to use. If implemented poorly, your users will be frustrated that your software isn't reliable. And it can take months to implement it well!
