@@ -3,6 +3,9 @@ layout: post
 title: MLOps repo walkthrough
 date: 2023-02-27
 series: mlops
+related:
+  - slug: cloudwatch-custom-metrics-in-a-python-lambda
+    note: adding Cloudwatch metrics to monitor the deployed service
 ---
 
 There's a big difference between building a machine learning model that works on your computer, and making that model available for others to use. If implemented poorly, your users will be frustrated that your software isn't reliable. And it can take months to implement it well!

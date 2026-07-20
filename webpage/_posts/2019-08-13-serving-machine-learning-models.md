@@ -2,6 +2,9 @@
 layout: post
 title: Serving machine learning models
 date: 2019-08-13
+related:
+  - slug: mlops-design-principles
+    note: the principles this thinking evolved into by 2023
 ---
 
 Survey of options for web services with machine learning models in Python.

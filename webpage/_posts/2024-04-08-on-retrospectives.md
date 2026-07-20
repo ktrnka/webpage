@@ -2,6 +2,9 @@
 layout: post
 title: Lessons from running team, project, and incident retros
 date: 2024-04-08
+related:
+  - slug: surprises-in-becoming-an-engineering-manager
+    note: what surprised me moving from IC to engineering manager
 description: "How to run retrospectives that feel natural and participatory instead of performative, and actually lead to change. For engineering leaders."
 seo:
   type: BlogPosting
