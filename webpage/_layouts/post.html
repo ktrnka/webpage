@@ -2,21 +2,38 @@
 layout: default
 ---
 
+{% comment %}
+  Per-post values, computed once here and rendered below.
+
+  reading_time — words of prose before an optional <!--reading-time-stop--> marker;
+    drop that marker before a trailing references/links section to exclude it from the estimate.
+
+  series_* — the post's series arc (from `series:` in front matter, ordered by date) and its
+    immediate neighbors. Used by both the header line ("Part N of M in …") and the prev/next nav.
+    series titles come from _data/series.yml keyed by the `series:` value.
+{% endcomment %}
+
+{% assign rt_body = content | split: '<!--reading-time-stop-->' | first %}
+{% assign reading_time = rt_body | number_of_words | divided_by: 200 | plus: 1 %}
+
+{% if page.series %}
+  {% assign series_posts = site.posts | where: "series", page.series | sort: "date" %}
+  {% assign series_title = site.data.series[page.series].title | default: page.series %}
+  {% assign series_total = series_posts | size %}
+  {% assign series_index = 0 %}
+  {% for p in series_posts %}{% if p.url == page.url %}{% assign series_index = forloop.index0 %}{% endif %}{% endfor %}
+  {% assign part_num = series_index | plus: 1 %}
+  {% if series_index > 0 %}{% assign i = series_index | minus: 1 %}{% assign prev_in_series = series_posts[i] %}{% endif %}
+  {% assign i = series_index | plus: 1 %}
+  {% if i < series_total %}{% assign next_in_series = series_posts[i] %}{% endif %}
+{% endif %}
+
 <article class="post-content">
   <div class="post-header">
     <h1>{{ page.title }}</h1>
-    {% if page.series %}
-    {% assign series_posts = site.posts | where: "series", page.series | sort: "date" %}
-    {% assign series_meta = site.data.series[page.series] %}
-    {% assign series_total = series_posts | size %}
-    {% assign part_num = 0 %}
-    {% for p in series_posts %}{% if p.url == page.url %}{% assign part_num = forloop.index %}{% endif %}{% endfor %}
-    <div class="post-series-line">Part {{ part_num }} of {{ series_total }} in {{ series_meta.title | default: page.series }}</div>
-    {% endif %}
+    {% if page.series %}<div class="post-series-line">Part {{ part_num }} of {{ series_total }} in {{ series_title }}</div>{% endif %}
     <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date: "%B %-d, %Y" }}</time>
-    {% comment %} Reading time counts prose before an optional <!--reading-time-stop--> marker, so a references/links section can be excluded by placing the marker before it. {% endcomment %}
-    {% assign rt_body = content | split: '<!--reading-time-stop-->' | first %}
-    <span class="reading-time"><span class="reading-time-icon" aria-hidden="true">⏱</span> {{ rt_body | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
+    <span class="reading-time"><span class="reading-time-icon" aria-hidden="true">⏱</span> {{ reading_time }} min read</span>
   </div>
 
   {% if page.ai_disclosure %}
@@ -43,16 +60,7 @@ layout: default
 </aside>
 {% endif %}
 
-{% comment %} Per-slot hybrid nav: use the in-series neighbor when there is one, else fall back to the global chronological neighbor. Independent per direction. {% endcomment %}
-{% if page.series %}
-{% assign snav = site.posts | where: "series", page.series | sort: "date" %}
-{% assign snav_count = snav | size %}
-{% assign cur_idx = 0 %}
-{% for p in snav %}{% if p.url == page.url %}{% assign cur_idx = forloop.index0 %}{% endif %}{% endfor %}
-{% if cur_idx > 0 %}{% assign pi = cur_idx | minus: 1 %}{% assign prev_in_series = snav[pi] %}{% endif %}
-{% assign ni = cur_idx | plus: 1 %}
-{% if ni < snav_count %}{% assign next_in_series = snav[ni] %}{% endif %}
-{% endif %}
+{% comment %} Each direction prefers the in-series neighbor, else falls back to the global chronological neighbor — so series boundaries never dead-end. {% endcomment %}
 <nav class="post-nav">
   <div class="post-nav-prev">
     {% if prev_in_series %}
@@ -75,6 +83,7 @@ layout: default
 </nav>
 
 <style>
+  /* Post header: title, series line, date, reading time */
   .post-header {
     margin-bottom: 2em;
   }
@@ -83,6 +92,14 @@ layout: default
     margin-bottom: 0.25em;
     margin-top: 0;
     color: var(--text);
+  }
+
+  .post-series-line {
+    display: block;
+    color: var(--muted);
+    font-weight: 300;
+    font-size: 0.85em;
+    margin: 0.1em 0 0.15em;
   }
 
   .post-date {
@@ -104,12 +121,13 @@ layout: default
     opacity: 0.8;
   }
 
-  .post-body {
-    clear: both;
-  }
-
+  /* Post body */
   .post-content {
     margin-bottom: 3em;
+  }
+
+  .post-body {
+    clear: both;
   }
 
   .ai-disclosure {
@@ -121,14 +139,7 @@ layout: default
     background: var(--surface);
   }
 
-  .post-series-line {
-    display: block;
-    color: var(--muted);
-    font-weight: 300;
-    font-size: 0.85em;
-    margin: 0.1em 0 0.15em;
-  }
-
+  /* Related posts */
   .related-posts {
     margin: 2.5em 0 0;
     padding-top: 1.5em;
@@ -160,6 +171,7 @@ layout: default
     margin-top: 0.1em;
   }
 
+  /* Prev/next nav (series-aware) */
   .post-nav {
     display: flex;
     justify-content: space-between;
