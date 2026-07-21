@@ -7,6 +7,10 @@ layout: default
 
   reading_time — words of prose before an optional <!--reading-time-stop--> marker;
     drop that marker before a trailing references/links section to exclude it from the estimate.
+    strip_html is required: number_of_words is just input.split.length on the rendered HTML,
+    so tags/attributes would otherwise count as words (measured ~1.04x overall, 1.21x on
+    image-heavy posts). 240 wpm matches the Brysbaert 2019 non-fiction reading-speed
+    meta-analysis (~238) and the rate implied by Medium's own estimates on these posts.
 
   series_* — the post's series arc (from `series:` in front matter, ordered by date) and its
     immediate neighbors. Used by both the header line ("Part N of M in …") and the prev/next nav.
@@ -14,7 +18,7 @@ layout: default
 {% endcomment %}
 
 {% assign rt_body = content | split: '<!--reading-time-stop-->' | first %}
-{% assign reading_time = rt_body | number_of_words | divided_by: 200 | plus: 1 %}
+{% assign reading_time = rt_body | strip_html | number_of_words | divided_by: 240 | plus: 1 %}
 
 {% if page.series %}
   {% assign series_posts = site.posts | where: "series", page.series | sort: "date" %}
