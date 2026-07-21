@@ -143,6 +143,25 @@ layout: default
     background: var(--surface);
   }
 
+  /* Dated afterword box — echoes .ai-disclosure (surface + left border) but
+     full-size and readable, since it holds real prose rather than a one-liner. */
+  .afterword {
+    border-left: 3px solid var(--accent-soft);
+    background: var(--surface);
+    padding: 1em 1.5em;
+    margin: 2.5em 0 2em;
+    border-radius: 4px;
+  }
+
+  .afterword h3 {
+    color: var(--accent);
+    margin-top: 0;
+  }
+
+  .afterword > :last-child {
+    margin-bottom: 0;
+  }
+
   /* Related posts */
   .related-posts {
     margin: 2.5em 0 0;

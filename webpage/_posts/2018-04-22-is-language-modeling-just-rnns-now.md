@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Is language modeling just RNNs now?
+title: Is language modeling just RNNs now? (with 2026 afterword)
 date: 2018-04-22
 ---
 
@@ -16,7 +16,7 @@ Recurrent neural networks on the other hand compute a smooth representation of t
 
 They have some practical benefits as well: They have more explicit ways to encourage generalization such as dropout. They can take advantage of pretrained word embeddings (word2vec, glove, fastText) which even enables a degree of transfer learning. Memory usage is strongly bounded and predictable. And they take advantage of the more general machine learning community: Progress in optimization or parallel processing transfers between RNNs and other neural networks. And we can benefit from research such as LSTM or GRU.
 
-That said, the benefit isn't free: They can take much longer to train. At large scale you sometimes see a swing in the other direction such as Google's stupid backoff (link dead) which just throws out the math and does something that's computationally scalable.
+That said, the benefit isn't free: They can take much longer to train. At large scale you sometimes see a swing in the other direction such as Google's [stupid backoff](https://aclanthology.org/D07-1090/) which just throws out the math and does something that's computationally scalable.
 
 There are two themes to this post: 1) There are many problems that are about language modeling in general, not about ngrams vs RNNs 2) There are situations in which one approach or another is better.
 
@@ -34,7 +34,7 @@ Let's talk about German first. You can make a decent model with maybe 200k words
 
 But that's more difficult for RNNs. In particular, the softmax becomes the limiting factor. With 500 hidden units you have a 501x200,000 weight matrix just for the output. One solution is to cluster the vocabulary and factor the prediction into [predicting the cluster first then the word](https://arxiv.org/pdf/cs/0108006.pdf).
 
-The more scalable approach is hierarchical softmax (paper link no longer available). It's not trivial but there are many [good variants](https://code.facebook.com/posts/1827693967466780/building-an-efficient-neural-language-model-over-a-billion-words/) and it's an area of ongoing research.
+The more scalable approach is [hierarchical softmax](https://proceedings.mlr.press/r5/morin05a.html). It's not trivial but there are many [good variants](https://code.facebook.com/posts/1827693967466780/building-an-efficient-neural-language-model-over-a-billion-words/) and it's an area of ongoing research.
 
 An older solution is to use a **mixture of ngram and RNN models**. You train the RNN for the most common words and interpolate with the ngram model. Or you backoff from the RNN model to ngram model when the RNN predicts OOV. I've seen these tricks many times from back when NNLMs were the hot research area so I'm not quite sure who to cite but [Mikolov et al 2011](https://www.researchgate.net/profile/Lukas_Burget/publication/241637478_Strategies_for_training_large_scale_neural_network_language_models/links/542c14960cf27e39fa922ed3.pdf) seems like a safe bet for RNNs.
 
@@ -44,7 +44,7 @@ These approaches don't work well for highly inflected languages like Hungarian, 
 
 The most traditional approach is to split words up into morphemes and do a **language model over morphemes**. I vaguely remember a paper showing excellent improvements by interpolating a word model on common vocabulary with a morpheme-based model in the era of ngrams either for Arabic or Turkish. This would likely work even better with RNNs.
 
-**Character-based RNN**: This works much better than a character-based ngram model though it may take some [extra effort](https://arxiv.org/pdf/1511.06303.pdf) to get it to work well (paper link no longer available). The advantage is that it handles complex morphology all by itself. The disadvantage is that they don't work as well as word-based models for most languages.
+**Character-based RNN**: This works much better than a character-based ngram model though it may take some [extra effort](https://arxiv.org/pdf/1511.06303.pdf) to get it to work well. The advantage is that it handles complex morphology all by itself. The disadvantage is that they don't work as well as word-based models for most languages.
 
 Interpolate **short-list word model and open-vocab char model**: This seems like the natural progression from the previous two notes. I don't think I've seen this and the reason is that there may be better ways.
 
@@ -158,3 +158,35 @@ Language modeling is as much about RNNs now as it was about ngrams before. It ta
 
 - [Exploring the Limits of Language Modeling](https://arxiv.org/abs/1602.02410)
 - [On the State of the Art of Evaluation in Neural Language Models](https://arxiv.org/abs/1707.05589)
+
+<div class="afterword" markdown="1">
+
+### Afterword (2026)
+
+These days, transformers have taken over language modeling.
+
+The first thing that struck me when reviewing this post is how much of it was specific to typing on mobile phones at Swype and Nuance, but nowadays we have many uses for large models, not just speech recognition and machine translation.
+
+**Generating candidates.** Swyping is a search problem: you trace a word, get maybe twenty candidates that fit the trace, and rerank them with the language model. That's the classic noisy channel setup, a channel model for the trace plus a source model for the language. I'm not quite sure how you'd generate those candidates with byte pair encoding. My guess is you'd keep a word vocabulary for generating candidates and map them to tokens under the hood to score with a subword model. That mapping isn't necessarily clean, though, since subword tokenizers don't have to respect word boundaries, so there's probably more work there.
+
+**Vocabulary and morphology.** Byte pair encoding, WordPiece, and SentencePiece handle these challenges well. Hungarian, German, Thai, and others were a huge problem for us at Swype/Nuance.
+
+**Memory and disk.** Model size is still fixed. The new wrinkle is that a transformer's memory grows with the context length. An ngram model is just a lookup, and an RNN keeps bounded state and discards the past as it goes, but a transformer reprocesses the whole context. For streaming input on a device, that difference still matters.
+
+**Software support and parallelization.** Radically easier. Modern tooling is far more mature. Parallelizing neural models is much easier now, though I'll still say it's harder than an ngram model. Ngram models were simple, basically MapReduce.
+
+**Personalization.** I'm not sure anyone has done recent work in personalized language models on device, and it would be interesting. The challenge is adding to the vocabulary and then dealing with the modified vocabulary, since a new word might get split into too many tokens. I imagine there could still be challenges using the same offline-trained tokenizer though, and I wonder if that would limit the ability to model new vocabulary?
+
+**Privacy.** This one got worse, not better. State of the art transformers are heavily overparameterized, which gives them a tremendous ability to memorize, and it's harder to audit than an ngram model. There's a lot of research on mitigating it, but it's more of a concern with overparameterized transformers than it was with RNNs.
+
+**Accents.** We had to handle both accented and unaccented Spanish, and that fragments the probability distributions even with byte pair encoding and even with a decomposed Unicode normalization form. Accents are often in the middle of a word, not a word plus an accent pattern on top, so modeling them well is probably still a challenge. I suspect there isn't much research on it, because not many people work with informal language and publications skew towards languages that don't have many accents.
+
+**One model or many languages.** You could do a single multilingual model. For something like Swype today it would probably still be better to condition on some language info rather than letting the model figure it out. Maybe you can add a tiny encoder side to the model to represent structured context: the device locale, which app you're in, maybe a couple other signals, and autoregress from there. That would give you much better code switching. If you know it's en-IN you can expect switching between English and Hindi, so you'd support Hinglish and similar cases much more fluidly.
+
+But then you'd have the challenge of a single large model vs many smaller opt-in models. With smaller language-specific models you might preload a 10mb model for one or two languages and they could download extras, but with a general-purpose model it'd have to be much larger to compete with the specialized ones so that might be tricky. Even so, you could probably do pretty well at 100mb or so.
+
+**Task-specific vs task-independent.** This is just as true today. The language model inside ChatGPT or Claude started as a generalized language model, but there's a lot baked in: the maximum context length, the vocabulary size and its big effect on multilingual, supervised fine tuning, the reinforcement learning from preferences layer, reinforcement learning from verifiable rewards. It's not really a generalized language model anymore, it's tuned to the use case. That point held up.
+
+**Data quality.** Still completely true. Nothing to add.
+
+</div>
