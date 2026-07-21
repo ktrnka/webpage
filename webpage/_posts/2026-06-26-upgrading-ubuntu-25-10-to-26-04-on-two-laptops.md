@@ -47,6 +47,8 @@ i915.enable_psr=0
 
 *Update 7/7/2026: It reverted back to slow-waking and I haven't investigated yet :(*
 
+*Update 7/20/2026: It started fast-waking again after software updates*
+
 - **GNOME extensions get disabled on upgrade.** I now understand one of the common gripes about them: when GNOME bumps versions, extensions go dark until the author adds the new version to the extension's compatibility list.
 - **Google Drive mounting in Files is gone.** GNOME 50 dropped it because the underlying library had been unmaintained for years. And if that's also part of why Files feels snappier now, I'll call it a fair trade.
 
