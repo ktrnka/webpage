@@ -163,25 +163,25 @@ Language modeling is as much about RNNs now as it was about ngrams before. It ta
 
 ### Afterword (2026)
 
-These days, transformers have taken over language modeling. 
+These days, transformers have taken over language modeling.
 
-The first thing that struck me when reviewing this post is how much of it was specific to typing on mobile phones at Swype and Nuance, but nowadays we have many uses for large models not just speech recognition and machine translation.
+The first thing that struck me when reviewing this post is how much of it was specific to typing on mobile phones at Swype and Nuance, but nowadays we have many uses for large models, not just speech recognition and machine translation.
 
-**Vocabulary and morphology.** Byte pair encoding, WordPiece, and SentencePiece handle these challenges well. Hungardian, German, Thai, and others were a huge problem for us at Swype/Nuance.
+**Vocabulary and morphology.** Byte pair encoding, WordPiece, and SentencePiece handle these challenges well. Hungarian, German, Thai, and others were a huge problem for us at Swype/Nuance.
 
 **Memory and disk.** Model size is still fixed, same as before. But on a phone the RNN has an advantage I didn't dwell on at the time: with an RNN you process with bounded memory and throw away state as you go, whereas a transformer processes the whole context in one pass, so your memory grows with the length of the context. For streaming input on a device, that difference still matters.
 
-**Software support and parallelization.** Radically easier Modern tooling is far more mature. Parallelizing neural models is much easier now, though I'll still say it's harder than an ngram model. Ngram models were simple, basically MapReduce.
+**Software support and parallelization.** Radically easier. Modern tooling is far more mature. Parallelizing neural models is much easier now, though I'll still say it's harder than an ngram model. Ngram models were simple, basically MapReduce.
 
-**Personalization.** I'm not sure anyone has done recent work in personalized language models on device, and it would be interesting. The challenge is adding to the vocabulary and then dealing with the modified vocabulary, since a new word might get split into too many tokens. 
+**Personalization.** I'm not sure anyone has done recent work in personalized language models on device, and it would be interesting. The challenge is adding to the vocabulary and then dealing with the modified vocabulary, since a new word might get split into too many tokens.
 
-**Privacy.** This one got worse, not better. State of the art transformers are heavily overparameterized, which gives them a tremendous ability to memorize but it's a bit harder to audit compared to ngram models. There's a lot of research on mitigating it, but it's more of a concern with overparameterized transformers than it was with RNNs.
+**Privacy.** This one got worse, not better. State of the art transformers are heavily overparameterized, which gives them a tremendous ability to memorize, and it's harder to audit than an ngram model. There's a lot of research on mitigating it, but it's more of a concern with overparameterized transformers than it was with RNNs.
 
 **Accents.** We had to handle both accented and unaccented Spanish, and that fragments the probability distributions even with byte pair encoding and even with a decomposed Unicode normalization form. Accents are often in the middle of a word, not a word plus an accent pattern on top, so modeling them well is probably still a challenge. I suspect there isn't much research on it, because not many people work with informal language and publications skew towards languages that don't have many accents.
 
-**One model or many languages.** You could do a single multilingual model. For something like Swype today it would probably still be better to condition on some language info rather than letting the model figure it out, maybe you can add a tiny encoder side to the model to represent structured context: the device locale, which app you're in, maybe a couple other signals, and autoregress from there. That would give you much better code switching. If you know it's en-IN you can expect switching between English and Hindi, so you'd support Hinglish and similar cases much more fluidly.
+**One model or many languages.** You could do a single multilingual model. For something like Swype today it would probably still be better to condition on some language info rather than letting the model figure it out. Maybe you can add a tiny encoder side to the model to represent structured context: the device locale, which app you're in, maybe a couple other signals, and autoregress from there. That would give you much better code switching. If you know it's en-IN you can expect switching between English and Hindi, so you'd support Hinglish and similar cases much more fluidly.
 
-But then you'd have the challenge of a single large model vs many smaller opt-in models. With smaller language-specific models you might preload a 10mb model for one or two languages and they could download extras, but with a general-purpose model it'd been to be much larger to compete with the specialized ones so that might be tricky. Even so, you could probably do pretty well at 100mb or so.
+But then you'd have the challenge of a single large model vs many smaller opt-in models. With smaller language-specific models you might preload a 10mb model for one or two languages and they could download extras, but with a general-purpose model it'd have to be much larger to compete with the specialized ones so that might be tricky. Even so, you could probably do pretty well at 100mb or so.
 
 **Task-specific vs task-independent.** This is just as true today. The language model inside ChatGPT or Claude started as a generalized language model, but there's a lot baked in: the maximum context length, the vocabulary size and its big effect on multilingual, supervised fine tuning, the reinforcement learning from preferences layer, reinforcement learning from verifiable rewards. It's not really a generalized language model anymore, it's tuned to the use case. That point held up.
 
