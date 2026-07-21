@@ -2,6 +2,7 @@
 layout: post
 title: "Synonyms for factoid search: Part 1"
 date: 2015-04-24
+series: searchify
 ---
 
 *A while back I worked on a potential startup project called Searchify and needed to generate domain-specific synonyms. I'm finally getting around to writing that up but there may be some holes in my memory or notes.*

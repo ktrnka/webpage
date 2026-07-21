@@ -2,6 +2,7 @@
 layout: post
 title: Synonyms for factoid search, Part 3
 date: 2015-06-16
+series: searchify
 ---
 
 In the previous two posts I described 1) [our problem and initial simple approaches]({{ "/blog/2015/04/synonyms-for-factoid-search-part-1/" | relative_url }}) and 2) [WordNet-based solutions]({{ "/blog/2015/05/synonyms-for-factoid-search-part-2/" | relative_url }}). Now I'm finally writing up our best solutions: gathering a domain-specific corpus and learning word associations.

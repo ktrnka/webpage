@@ -2,6 +2,7 @@
 layout: post
 title: "Machine translation for medical chat, checkpoint #2"
 date: 2022-11-18
+series: mt-medical-chat
 ---
 
 I've made some progress since my [previous post on machine translation for medical chat]({% post_url 2022-10-25-machine-translation-for-medical-chat-checkpoint-1 %}), and this is a second checkpoint.

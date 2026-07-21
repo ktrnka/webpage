@@ -2,6 +2,9 @@
 layout: post
 title: Ubuntu 25 setup for a 2014 Macbook Pro
 date: 2025-12-04
+related:
+  - slug: upgrading-ubuntu-25-10-to-26-04-on-two-laptops
+    note: how the later 25.10 to 26.04 upgrade went on this same MacBook
 ---
 
 Apple stopped providing OS updates for my old MacBook Pro (Retina, 13-inch, Mid 2014, Intel CPU) even though the hardware is good enough for common web and development tasks. Eventually Chrome stopped providing updates for the OS version too. Then Docker stopped providing updates for it. Even DuckDB (a Python module) stopped supporting it!

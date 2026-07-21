@@ -2,6 +2,9 @@
 layout: post
 title: Cloudwatch Custom Metrics in a Python Lambda
 date: 2021-10-23
+related:
+  - slug: mlops-repo-walkthrough
+    note: a full example repo deploying an ML model on AWS Lambda
 ---
 
 My team is responsible for developing, maintaining, and operating several web services that host our machine learning models. Periodically we need quick ways to check that our code is operating correctly. For example, a user may tell us that the software did something weird and we need to figure out whether it's an ordinary fluctuation or something more serious.

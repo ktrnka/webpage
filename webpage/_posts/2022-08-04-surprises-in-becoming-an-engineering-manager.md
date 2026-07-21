@@ -2,6 +2,11 @@
 layout: post
 title: Surprises in becoming an engineering manager
 date: 2022-08-04
+related:
+  - slug: on-retrospectives
+    note: running effective team, project, and incident retros
+  - slug: employee-retention-in-python
+    note: the math of team attrition, with Python
 ---
 
 Recently I talked to a few folks that were curious about transitioning into software engineering management, and we talked about what it was like when I made that transition about 4 years ago. I'll summarize most of those conversations in this post. I'll focus on the surprises I found in the first few months of management.

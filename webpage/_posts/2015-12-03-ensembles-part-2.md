@@ -2,6 +2,7 @@
 layout: post
 title: Ensembles part 2
 date: 2015-12-03
+series: league-predictions
 ---
 
 I've been using ensembles of my best classifiers to slightly improve accuracy at predicting League of Legends winners. [Previously]({{ "/blog/2015/11/ensemble-notes/" | relative_url }}) I tried scikit-learn's VotingClassifier and also experimented with probability calibration.

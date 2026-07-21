@@ -3,6 +3,9 @@ layout: post
 title: Upgrading Ubuntu 25.10 to 26.04 on two laptops
 date: 2026-06-26
 ai_disclosure: I jotted the notes down during the month after the upgrade, then drafted an outline, handed it to Claude for a first pass and some fact checking, then edited.
+related:
+  - slug: ubuntu-25-setup-for-a-2014-macbook-pro
+    note: the original guide for getting Ubuntu onto the 2014 MacBook
 ---
 
 I run Ubuntu as my daily OS on two laptops, and I'm still new enough that I'm cautious about upgrades. When 26.04 LTS came out I went looking for other people's reviews (good or bad) to decide whether to jump in or hold off, and didn't find much either way. So that led me to share what's changed for me, for anyone weighing the same upgrade or just curious about Ubuntu as a daily driver.

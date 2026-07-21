@@ -2,6 +2,7 @@
 layout: post
 title: Getting users via Reddit
 date: 2015-06-29
+series: over-9000
 ---
 
 It's tempting to focus purely on the engineering or research of a project. Hmm tempting isn't the right word... it's the default approach. In a typical software engineering or research job, you're trained to leave other aspects of the project to marketing/business/etc.

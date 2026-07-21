@@ -2,6 +2,7 @@
 layout: post
 title: Ensemble notes
 date: 2015-11-23
+series: league-predictions
 ---
 
 I thought [probability calibration](https://scikit-learn.org/stable/modules/calibration.html) would be difficult but it's pretty easy. My ensemble code looks like this:

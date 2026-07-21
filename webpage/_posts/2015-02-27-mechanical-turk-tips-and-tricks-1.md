@@ -2,6 +2,7 @@
 layout: post
 title: "Mechanical Turk: Tips and Tricks 1"
 date: 2015-02-27
+series: mechanical-turk
 ---
 
 Spend some time as a worker

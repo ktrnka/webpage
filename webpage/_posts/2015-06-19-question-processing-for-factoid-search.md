@@ -2,6 +2,7 @@
 layout: post
 title: Question processing for factoid search
 date: 2015-06-19
+series: searchify
 ---
 
 Searchify was a project to enable quick factoid lookup on mobile advertisements. A full screen ad would have a search box and you could get quick answers without leaving the ad or even the app. Previously I've written about building synonyms for automotive in Searchify.

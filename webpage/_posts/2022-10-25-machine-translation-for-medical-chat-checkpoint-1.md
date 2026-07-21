@@ -2,6 +2,7 @@
 layout: post
 title: "Machine translation for medical chat, checkpoint #1"
 date: 2022-10-25
+series: mt-medical-chat
 ---
 
 At my previous job, we provided primary care in a text chat between doctors and patients. It was on-demand, meaning that patients could show up anytime and get in line to chat with a physician. Occasionally we had challenges when a patient didn't speak much English, for instance if they mainly speak Spanish.

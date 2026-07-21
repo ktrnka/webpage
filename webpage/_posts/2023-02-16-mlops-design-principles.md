@@ -2,6 +2,7 @@
 layout: post
 title: MLOps Design Principles
 date: 2023-02-16
+series: mlops
 ---
 
 There's a big difference between building a machine learning model that works on your computer, and making that model available for others to use. If implemented poorly, your users will be frustrated that your software isn't reliable. And it can take months to implement it well!
@@ -154,7 +155,7 @@ There's another cost to dependencies -- it's more for new developers to learn. W
 
 Thanks for reading!
 
-[In the next post I walk through an example repo that shows MLOps for web services on AWS](https://medium.com/@keith.trnka/mlops-repo-walkthrough-90c7bd275f53). After explaining the repo I'll also audit it.
+[In the next post I walk through an example repo that shows MLOps for web services on AWS]({% post_url 2023-02-27-mlops-repo-walkthrough %}). After explaining the repo I'll also audit it.
 
 ------------------------------------------------------------------------
 

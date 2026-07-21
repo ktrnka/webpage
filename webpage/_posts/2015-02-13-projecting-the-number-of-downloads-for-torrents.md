@@ -2,6 +2,7 @@
 layout: post
 title: Projecting the number of downloads for torrents
 date: 2015-02-13
+series: over-9000
 ---
 
 One of my current projects is Over 9000, a visualization that shows which anime series are currently popular. I get the data by scraping a popular anime torrent site every day and come up with a single number that represents the popularity of a show.

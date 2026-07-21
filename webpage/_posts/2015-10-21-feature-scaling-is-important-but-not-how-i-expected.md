@@ -2,6 +2,7 @@
 layout: post
 title: Feature scaling is important, but not how I expected
 date: 2015-10-21
+series: league-predictions
 ---
 
 Currently I'm getting up to speed with the [Keras](https://keras.io/) library for neural networks. After about a day and a half of effort I have a neural network that's tied with my best results ever for predicting the winner of League of Legends matches.

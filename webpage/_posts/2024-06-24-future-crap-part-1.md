@@ -2,11 +2,12 @@
 layout: post
 title: "Future Crap, Part 1: Injecting ads into image generators"
 date: 2024-06-24
+series: future-crap
 ---
 
 You know what sucks on the Internet? Ads everywhere! You know what generative AI doesn't have yet? Ads everywhere!
 
-*Note: This is the silly fun post and* [*Part 2*](https://medium.com/@keith.trnka/future-crap-part-2-fda70eb03ef1) *is the technical post.* ***This is purely a demonstration of technology and is not affiliated with any of the brands in the post.***
+*Note: This is the silly fun post and* [*Part 2*]({% post_url 2024-07-01-future-crap-part-2 %}) *is the technical post.* ***This is purely a demonstration of technology and is not affiliated with any of the brands in the post.***
 
 This project takes your creations with image generators and jams ads into them! And not those sad overlays that you could ad-block, no! The ads are product placements inside the image, much like [Heineken beer in a James Bond movie](https://en.wikipedia.org/wiki/Heineken#Advertising).
 
@@ -254,4 +255,4 @@ Big thanks to Matt, Matt, and Mark for playing around with this project! They co
 
 If you enjoyed this, you might also enjoy Janelle Shane's [AI versus corporate logos](https://www.aiweirdness.com/ai-versus-your-corporate-logo/). You might also enjoy some of the posts on Reddit's /r/dalle2 like [Marvel Product Placement](https://www.reddit.com/r/dalle2/comments/1dkvxxt/marvel_product_placement/).
 
-### Read how it's built in [Part 2](https://medium.com/@keith.trnka/future-crap-part-2-fda70eb03ef1)!
+### Read how it's built in [Part 2]({% post_url 2024-07-01-future-crap-part-2 %})!

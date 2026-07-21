@@ -2,15 +2,16 @@
 layout: post
 title: "Machine translation for medical chat, checkpoint #4"
 date: 2023-02-07
+series: mt-medical-chat
 ---
 
 This series of posts is about building trustworthy machine translation for medical chat. Multilingual doctors are rare and not all patients in the US speak English. However, just using machine translation isn't enough; physicians often have concerns with safety and trust.
 
-[My previous article](https://medium.com/@keith.trnka/machine-translation-for-medical-chat-checkpoint-3-9a00ef1e9a11) was a literature review of user experience for machine translation in chat. I found that there were some promising directions in safety and trust, but the field hasn't discovered a definitive solution yet.
+[My previous article]({% post_url 2022-12-15-machine-translation-part3 %}) was a literature review of user experience for machine translation in chat. I found that there were some promising directions in safety and trust, but the field hasn't discovered a definitive solution yet.
 
 ------------------------------------------------------------------------
 
-In this post, I'll describe my efforts so far to build trust by allowing users to inspect the way the words and phrases are "aligned" by the translation algorithm. In contrast with [a previous prototype](https://medium.com/@keith.trnka/machine-translation-for-medical-chat-checkpoint-2-32bb8d77ca8b), I'm optimistic about it for a few reasons:
+In this post, I'll describe my efforts so far to build trust by allowing users to inspect the way the words and phrases are "aligned" by the translation algorithm. In contrast with [a previous prototype]({% post_url 2022-11-18-machine-translation-for-medical-chat-checkpoint-2 %}), I'm optimistic about it for a few reasons:
 
 - I previously integrated dictionary definitions but found that bilingual dictionaries don't work well for multi-word expressions. Internally, the translation algorithms support this better than dictionarys so I'm optimistic.
 - I've also been searching for a way to teach users verb conjugation, because existing approaches don't help with that. I'm optimistic that alignment may work.

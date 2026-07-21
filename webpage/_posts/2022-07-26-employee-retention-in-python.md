@@ -2,6 +2,9 @@
 layout: post
 title: Employee retention in Python
 date: 2022-07-26
+related:
+  - slug: surprises-in-becoming-an-engineering-manager
+    note: more on managing a team, from my first months as a manager
 ---
 
 This post shows the math of employee retention, including sample code in Python that you can use for your own team.
