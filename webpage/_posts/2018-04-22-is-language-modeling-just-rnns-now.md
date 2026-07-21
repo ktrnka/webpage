@@ -167,13 +167,15 @@ These days, transformers have taken over language modeling.
 
 The first thing that struck me when reviewing this post is how much of it was specific to typing on mobile phones at Swype and Nuance, but nowadays we have many uses for large models, not just speech recognition and machine translation.
 
+**Generating candidates.** Swipe typing is a search problem: you trace a word, get maybe twenty candidates that fit the trace, and rerank them with the language model. That's the classic noisy channel setup, a channel model for the trace plus a source model for the language. I'm not sure how you'd generate those candidates with byte pair encoding. My guess is you'd keep a word vocabulary for generating candidates and map them to tokens under the hood to score with a subword model. That mapping isn't necessarily clean, though, since subword tokenizers don't have to respect word boundaries, so there's probably some fiddly work there. Maybe WordPiece handles it better than BPE; I haven't looked closely.
+
 **Vocabulary and morphology.** Byte pair encoding, WordPiece, and SentencePiece handle these challenges well. Hungarian, German, Thai, and others were a huge problem for us at Swype/Nuance.
 
-**Memory and disk.** Model size is still fixed, same as before. But on a phone the RNN has an advantage I didn't dwell on at the time: with an RNN you process with bounded memory and throw away state as you go, whereas a transformer processes the whole context in one pass, so your memory grows with the length of the context. For streaming input on a device, that difference still matters.
+**Memory and disk.** Model size is still fixed. The new wrinkle is that a transformer's memory grows with the context length. An ngram model is just a lookup, and an RNN keeps bounded state and discards the past as it goes, but a transformer reprocesses the whole context. For streaming input on a device, that difference still matters.
 
 **Software support and parallelization.** Radically easier. Modern tooling is far more mature. Parallelizing neural models is much easier now, though I'll still say it's harder than an ngram model. Ngram models were simple, basically MapReduce.
 
-**Personalization.** I'm not sure anyone has done recent work in personalized language models on device, and it would be interesting. The challenge is adding to the vocabulary and then dealing with the modified vocabulary, since a new word might get split into too many tokens.
+**Personalization.** I'm not sure anyone has done recent work in personalized language models on device, and it would be interesting. The challenge is adding to the vocabulary and then dealing with the modified vocabulary, since a new word might get split into too many tokens. The same word-vocabulary-over-tokens idea from candidate generation might help here too.
 
 **Privacy.** This one got worse, not better. State of the art transformers are heavily overparameterized, which gives them a tremendous ability to memorize, and it's harder to audit than an ngram model. There's a lot of research on mitigating it, but it's more of a concern with overparameterized transformers than it was with RNNs.
 
