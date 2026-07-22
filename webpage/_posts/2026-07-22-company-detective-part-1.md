@@ -3,7 +3,7 @@ layout: post
 title: "Trust, Bias, and the Sources Behind Deep Research"
 date: 2026-07-22
 description: "An honest company read from biased web sources: diversifying, debiasing, and balancing what reaches the LLM. Lessons from building Company Detective in 2024."
-ai_disclosure: "TODO (Keith, KT-176): write the AI-usage disclosure for this post"
+ai_disclosure: "I didn't write every single sentence, though I'm responsible for every one, and I have reviewed and edited every line. There might be some odd phrases from dictation artifacts or AI suggestions I accepted as passable. -Keith"
 ---
 
 Every source you'd use to evaluate a company is biased in its own way. The company's own site is selling you. Glassdoor highlights the most furious employees. Reddit runs hot or cold depending on the subreddit. The question that got me started: how much of the real story can you infer from unreliable sources?
