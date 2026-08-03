@@ -70,6 +70,25 @@ h3, h4, h5, h6 {
   color: var(--text-3);
 }
 
+// Headings need space above, not only below. Without a top margin a heading
+// sits equidistant between two paragraphs and reads as a bold paragraph
+// instead of a title for what follows. Most visible in the long lit-review
+// posts, where h3 groups papers and h4 names one.
+//
+// Values are px, and well clear of 20px, because adjacent margins collapse to
+// the larger of the two: against a paragraph's 20px bottom margin, a 27px top
+// margin buys only 7px of visible change.
+//
+// h2 is deliberately left alone: the homepage and Publications page use it for
+// their section titles, and post bodies barely use it (4 posts), so touching it
+// restyles those landing pages for no gain in the posts this is meant to fix.
+h3 { margin-top: 56px; font-size: 20px; }
+h4, h5, h6 { margin-top: 40px; line-height: 1.25; }
+
+// A heading opening a section shouldn't add space after the post title or an hr.
+h3:first-child, h4:first-child,
+hr + h3, hr + h4 { margin-top: 0; }
+
 a {
   color: var(--link);
   text-decoration: underline;
