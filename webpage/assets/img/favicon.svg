@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg { fill: #7f1146; }
+    .k  { fill: #f8f7f8; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #d4779d; }
+      .k  { fill: #121212; }
+    }
+  </style>
+  <circle class="bg" cx="32" cy="32" r="30"/>
+  <path class="k" d="M39.97 49.92 27.1 33.46 22.68 36.85V49.92H15.17V14.08H22.68V30.33L38.83 14.08H47.58L32.27 29.24L48.83 49.92Z"/>
+</svg>
