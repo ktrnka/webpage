@@ -76,7 +76,7 @@ These are intentional — don't work around them without a strong reason:
 
 - **Medium CDN rate-limits parallel downloads** — always `curl` images one at a time. See `LESSONS_LEARNED.md` for detection and recovery steps.
 - **Intermediate files** — use `tmp/` at repo root (gitignored), not `/tmp/`
-- Favicon is missing (intentional deferral); the resulting 404 shows up in network logs — not a bug to fix unless the favicon work is being done
+- **Favicon is two files, deliberately.** `assets/img/favicon.svg` is the only one linked from `base.html`; it adapts to light/dark via `prefers-color-scheme` inside the SVG. `webpage/favicon.ico` sits unlinked at the site root, where browsers that can't use an SVG icon fall back to it on their own. Don't "fix" the absent `<link>` tag for the `.ico` – adding one back can make Chrome prefer the static `.ico` over the theme-aware SVG.
 
 ## Active Priorities
 
