@@ -37,8 +37,7 @@ You might know me from:
 - MLOps content, such as [blogging]({{ "/blog" | relative_url }}) or [Demetrios' podcast](https://home.mlops.community/public/videos/how-a-manager-became-a-believer-in-devops-for-machine-learning)
 - Predicting how much power will be available to scientists on the Mars Express spacecraft
 - Using electric cars as a distributed battery to enable more renewable energy at [UDel V2G](https://www1.udel.edu/V2G/)
-- Volunteering with [Ada Developers Academy](https://adadevelopersacademy.org/)
-- Volunteering with [TechJoy Academy](https://www.techjoy.software/)
+- Volunteering with [Hack Your Summer](https://www.hackyoursummer.org/), [TechJoy Academy](https://www.techjoy.software/), and [Ada Developers Academy](https://adadevelopersacademy.org/)
 
 ## Personal
 
