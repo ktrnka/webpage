@@ -18,7 +18,7 @@ redirect_from:
       <a href="https://github.com/ktrnka" aria-label="GitHub" title="GitHub">
         <img src="{{ '/assets/img/github.svg' | relative_url }}" alt="" width="22" height="22">
       </a>
-      <a href="https://www.goodreads.com/review/list/62631407-keith-trnka?shelf=read" aria-label="Reading list" title="Reading list">
+      <a href="https://www.goodreads.com/review/list/62631407-keith-trnka?shelf=currently-reading" aria-label="Reading list" title="Reading list">
         <img src="{{ '/assets/img/books-thicker-svgrepo-com.svg' | relative_url }}" alt="" width="22" height="22">
       </a>
     </div>
