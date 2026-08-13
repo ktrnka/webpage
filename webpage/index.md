@@ -30,6 +30,7 @@ redirect_from:
 You might know me from:
 
 - The Seattle tech community
+- Co-founding Layr, helping AI labs find experts to create training data
 - Machine learning for social gaming on [Palia](https://palia.com/) at [Singularity 6](https://www.singularity6.com/)
 - Director of Data Science at [98point6](https://www.98point6.com/)
 - Making it easier to type on your phone at [Swype](https://en.wikipedia.org/wiki/Swype) and [Nuance](https://en.wikipedia.org/wiki/Nuance_Communications)
