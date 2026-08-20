@@ -4,13 +4,13 @@ title: "Building Deep Research: What Worked and What I Never Solved"
 date: 2026-08-20
 series: company-detective
 description: "Engineering lessons from building a deep-research pipeline in 2024: small models, copy-paste prompts, cheap checks, and what I never solved."
-# ai_disclosure: TODO
+ai_disclosure: "I used AI as an editor, reviewer, web search tool, and for fact-checking against the old code base. Most of the phrasing is my own. -Keith"
 related:
   - slug: future-crap-part-2
     note: the engineering half of another 2024 generative AI side project
 ---
 
-This is the engineering side of Company Detective, and the second of two posts. As a reminder, this was a project for job seekers: could I use web crawling and LLMs to approximate the inside scoop a friend at the company might give you? [The previous post]({% post_url 2026-07-22-company-detective-part-1 %}) covered the product and the research; this one is for implementers. If you're building your first industry LLM pipeline, these are the lessons I most want to share.
+This is the engineering side of Company Detective, and the second of two posts. As a reminder, this was a project for job seekers: could I use web crawling and LLMs to approximate the inside scoop a friend at the company might give you? [The previous post]({% post_url 2026-07-22-company-detective-part-1 %}) covered the product and the research; this one is for implementers. If you're building your first industry LLM pipeline, these are the lessons I most want to share. If you've already built several, I'd point you to the citation handling and the four cheap quality checks.
 
 Nearly every design choice that survived the iteration cycles was a way to keep experiments fast by asking as little intelligence of the models as possible. The report users actually read mostly came from small models doing copy-paste tasks, and despite all the hype and fear, the LLM was the cheapest line on the bill.
 
