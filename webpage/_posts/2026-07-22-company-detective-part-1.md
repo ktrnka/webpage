@@ -2,6 +2,7 @@
 layout: post
 title: "Trust, Bias, and the Sources Behind Deep Research"
 date: 2026-07-22
+series: company-detective
 description: "An honest company read from biased web sources: diversifying, debiasing, and balancing what reaches the LLM. Lessons from building Company Detective in 2024."
 ai_disclosure: "I didn't write every single sentence, though I'm responsible for every one, and I have reviewed and edited every line. There might be some odd phrases from dictation artifacts or AI suggestions I accepted as passable. -Keith"
 ---
@@ -10,7 +11,7 @@ Every source you'd use to evaluate a company is biased in its own way. The compa
 
 In the summer of 2024, after a layoff at Singularity 6, I made a list of ideas that might be fun to work on. I ranked them on whether I thought they could do some good in the world, whether I'd learn from them, and whether I was excited to build them - excited to build something that pushed the envelope in terms of quality of product experience. The first idea was [Future Crap]({% post_url 2024-06-24-future-crap-part-1 %}), which I've written about. 
 
-The second idea became Company Detective. This post will focus on the product and motivation side of the project, and the next post will dive into the engineering. I also included many references at the end.
+The second idea became Company Detective. This post will focus on the product and motivation side of the project, and [the next post]({% post_url 2026-08-20-company-detective-part-2 %}) dives into the engineering. I also included many references at the end.
 
 One note on timing: I built this back in 2024, before "deep research" was a product category or even a common phrase.
 
