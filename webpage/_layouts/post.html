@@ -143,6 +143,25 @@ layout: default
     background: var(--surface);
   }
 
+  /* Collapsed table of contents — same callout family as .ai-disclosure /
+     .afterword (surface + left border + radius), with an accent summary so it
+     reads as navigation rather than prose. */
+  .post-toc {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-bg-2);
+    padding: 0.6em 1em;
+    margin-bottom: 2em;
+    border-radius: 4px;
+  }
+  .post-toc summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .post-toc ul {
+    margin: 0.75em 0 0.25em;
+  }
+
   /* Dated afterword box — echoes .ai-disclosure (surface + left border) but
      full-size and readable, since it holds real prose rather than a one-liner. */
   .afterword {

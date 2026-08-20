@@ -16,6 +16,14 @@ Nearly every design choice that survived the iteration cycles was a way to keep 
 
 I built this project in late 2024 and ran it into 2025, but didn't get to writing it up until now. LLMs and LLM libraries are better in 2026, but many of the lessons about how to apply them are still relevant. One thing I won't do is recommend 2026 tools: I'll name what I used, but this tooling churns fast, so if you're building now, do a fresh tool search rather than treating my stack as a recommendation.
 
+<details class="post-toc" markdown="1">
+<summary>Table of Contents (click to expand)</summary>
+
+* TOC
+{:toc}
+
+</details>
+
 ## What worked
 
 I'll survey the code starting from the user's first interaction down through how it works.
