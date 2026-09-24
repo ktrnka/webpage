@@ -3,7 +3,7 @@ layout: post
 title: "Diagnostic Accuracy Is a Poor Proxy for Quality of Care"
 date: 2026-09-24
 series: ai-vs-doctors
-description: "Lessons from years leading applied ML at a text-based primary care company: why diagnosis headlines mislead, for ML and healthcare folks."
+description: "Lessons from years leading applied ML at a text-based primary care company: why diagnosis headlines are misleading, for ML and healthcare folks."
 ai_disclosure: "I used AI to organize many old notes, comments, and documents. And to help me remember old topics by interviewing me. Then again in the reviewing and editing phase. I wrote the words myself. -Keith"
 ---
 
