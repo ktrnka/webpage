@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AI vs Doctors: Diagnostic Accuracy Is Overrated"
+title: "Diagnostic Accuracy Is a Poor Proxy for Quality of Care"
 date: 2026-09-24
 series: ai-vs-doctors
 description: "Lessons from years leading applied ML at a text-based primary care company: why diagnosis headlines mislead, for ML and healthcare folks."
@@ -21,7 +21,7 @@ My credibility comes from leading the applied machine learning team at 98point6 
 
 Most headlines or quotes focus on accuracy in the machine learning sense: What percentage of diagnoses are exactly correct? Machine learning textbooks do the same. The better textbook examples may even include [ICD](https://en.wikipedia.org/wiki/International_Classification_of_Diseases), [Snomed](https://en.wikipedia.org/wiki/SNOMED_CT), or other standardized diagnosis codes.[^billing_codes]
 
-[^billing_codes]: ICD is the International Classification of Diseases, and is revised periodically. In plain terms, it's the list of diagnosis options in the drop-down when someone's setting your diagnosis in the system. It has some grouping of codes, and it's commonly described as designed for billing (payments from insurance companies to healthcare systems). SNOMED CT is a competing standard, and in my own experience I've seen it much more in research publications rather than actual healthcare data.
+[^billing_codes]: ICD is the International Classification of Diseases, and is revised periodically. In plain terms, it's the list of diagnosis options in the drop-down when someone's setting your diagnosis in the system. It has some grouping of codes, and it's commonly described as designed for billing (payments from insurance companies to healthcare systems). SNOMED CT is a competing standard, and in my own experience I've seen it much less in clinical practice than in research publications.
 
 I'm here to say that diagnostic accuracy isn't as well formed as it might seem.
 
