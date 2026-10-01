@@ -30,13 +30,18 @@
   --photo-teal:      #4d788b;
   --photo-teal-lite: #73a0a9;
   --photo-skin:      #f6d3c7;
+
+  // System font stacks only (no web fonts)
+  --font-sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --font-mono:  Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
 }
 
 // Custom minimal theme without custom fonts
 
 // Use system fonts instead
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.5;
   color: var(--text-2);
@@ -126,12 +131,42 @@ blockquote {
   border-left: 4px solid var(--border-2);
   margin: 0;
   padding: 0 0 0 20px;
-  font-style: italic;
+  font-style: normal; // the theme italicizes blockquotes; upright reads better for long quotes
   background: transparent;
 }
 
+// Who's talking: caption labels and AI-written text (KT-290). Class-based so it can be dropped later.
+// Caption goes inside the blockquote, usually first:  > Brodeur et al., 2024  then  > {: .quote-source}
+// Outside a blockquote it's a standalone label, e.g. where an AI-written section begins.
+.quote-source {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+// Caption at the bottom (e.g. a signature): sit close under the quote
+blockquote > .quote-source:last-child {
+  margin: -12px 0 20px;
+}
+
+// AI-written text: system serif as a secondary cue; the text labels stay in the prose
+.ai {
+  font-family: var(--font-serif);
+  font-size: 1.0625em;
+}
+
+// Nested .ai (e.g. a Claude quote inside an .ai section): keep the size from compounding
+.ai .ai {
+  font-size: 1em;
+}
+
 code, pre {
-  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+  font-family: var(--font-mono);
   color: var(--text-3);
 }
 
