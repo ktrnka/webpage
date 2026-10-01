@@ -37,6 +37,7 @@ Lower priority or needs more thought before starting.
 - [ ] **Writing guidelines** — codify personal blogging conventions (I vs we, hedging over false claims, number formatting, image optimization) and aspirational goals (intro hooks, title optimization)
 - [x] **`CLAUDE.md`** — project-specific guidance for AI coding assistants (supersedes `.github/copilot-instructions.md`)
 - [ ] Medium post claps/views/stats — identify top performers
+- [ ] **Server-side access logs (if hosting ever changes)** – GitHub Pages gives no logs, so Search Console's coarse per-page data is the only traffic signal. A host with plain server logs would allow tracker-free per-page measurement (came up closing the KT-158 retitle test, 2026-10-01)
 - [ ] Private repo for blog drafts (git submodule approach)
 - [ ] Consider merging recipes repo into this one
 - [x] Add favicon.ico, preferably something tiny in SVG. Ironically this will improve page load over a 404 (428-byte SVG linked from `base.html`, 2.9KB `.ico` at the site root as fallback)
