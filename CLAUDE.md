@@ -9,13 +9,17 @@ Design philosophy: fast, no JS frameworks, no custom fonts, no analytics, boring
 
 ## Quick Start
 
+From this repo's root (the Jekyll site is the inner `webpage/` folder):
+
 ```bash
 cd webpage
 bundle install
-bundle exec jekyll serve --livereload   # http://localhost:4000
+bundle exec jekyll build   # output in webpage/_site/
 ```
 
-`bundle exec` is required — bare `jekyll` won't find the right gem version.
+`bundle exec` is required – bare `jekyll` won't find the right gem version.
+
+Agents: don't run `jekyll serve`, even with `--detach`. It never returns, and Keith reads that as a hang. To preview, build, serve `_site/` with `python3 -m http.server <port>` in the background, screenshot with headless Chrome, then kill the server by port. (`jekyll serve --livereload` is fine for Keith's own use.)
 
 ## Key Architecture
 
@@ -76,7 +80,7 @@ These are intentional — don't work around them without a strong reason:
 
 - **Medium CDN rate-limits parallel downloads** — always `curl` images one at a time. See `LESSONS_LEARNED.md` for detection and recovery steps.
 - **Intermediate files** — use `tmp/` at repo root (gitignored), not `/tmp/`
-- **Favicon is two files, deliberately.** `assets/img/favicon.svg` is the only one linked from `base.html`; it adapts to light/dark via `prefers-color-scheme` inside the SVG. `webpage/favicon.ico` sits unlinked at the site root, where browsers that can't use an SVG icon fall back to it on their own. Don't "fix" the absent `<link>` tag for the `.ico` – adding one back can make Chrome prefer the static `.ico` over the theme-aware SVG.
+- **Favicon is two files, deliberately.** `webpage/assets/img/favicon.svg` is the only one linked from `base.html`; it adapts to light/dark via `prefers-color-scheme` inside the SVG. `webpage/favicon.ico` sits unlinked at the site root, where browsers that can't use an SVG icon fall back to it on their own. Don't "fix" the absent `<link>` tag for the `.ico` – adding one back can make Chrome prefer the static `.ico` over the theme-aware SVG.
 
 ## Active Priorities
 
