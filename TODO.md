@@ -23,6 +23,9 @@ Inline links have no persistent underline and use a color (`--link: #970c4f`) cl
 
 Lower priority or needs more thought before starting.
 
+- [ ] **Footnotes: direction undecided** (Keith, 2026-10-07, from the Lobsters thread on Michael Lynch's blogging anti-patterns) — the KT-212 series is the first to use footnotes, rendered as kramdown endnotes with no styling. Keith used them for two things: background for readers who lack it, and optional extras. As a reader he dislikes jump footnotes (they break position and navigation), thinks margin notes read better (vbernat: CSS anchor positioning, falling back below the paragraph on narrow screens), and suspects many footnotes shouldn't exist or should be clearly optional. Options: editorial pass only (cut or inline, keep optional ones), a margin-notes layout, or both. No decision yet.
+- [ ] **Pre-publish mobile check for non-text elements** (Keith, 2026-10-07, from Michael Lynch's "Anti-Patterns in Software Blogging") — text overflow on mobile is already handled, but images, SVG figures, and tables haven't been checked in a mobile viewport. Worth a line in whatever pre-publish checklist exists; none does yet. First case: KT-212 Parts 2 and 3 (`efficacy-ladder.svg`, Part 2's tables).
+
 - [ ] **Series/project navigation** — readers landing on one post in a multi-part series (LoL/ML, Searchify/synonyms, MTurk, Over 9000) have no way to find the others. Jekyll `tags:` don't affect URL structure, so they're a lighter-weight starting point than `categories:`. Ref: https://www.ayush.nz/2022/02/creating-article-series-posts-navigation-jekyll
 - [ ] **Paper/reference links on academic posts** — cite DOIs or Google Scholar for the MT series and similar posts, so readers can find the original research
 - [ ] **Inline gists into post content** — gist embeds add external JS requests and can break if GitHub changes the embed API. Two posts have gists that could be inlined:
