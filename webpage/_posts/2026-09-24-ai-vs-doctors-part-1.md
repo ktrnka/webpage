@@ -120,7 +120,7 @@ In each case, we're looking for progress in one area without worsening in others
 
 I don't want to rely on only my memory for all of this, and my best information is from years ago. So I kicked off an AI literature review. I pushed the agent to check the credibility of each source, expressing preferences for peer-reviewed work and meta-reviews when possible, as well as verification of claims in the full texts. I also directed the survey to explore research areas that I'm not experienced with: My usual reading areas are ML, NLP, and HCI, so I asked it to survey into medical literature as well. And I was directing the review to focus on the tasks being assessed, as well as overgeneralization of claims (which is sadly very common in headlines and even some ML research).
 
-But then when I read the initial lit review, I felt both that it was an interesting piece on its own and that it would be impractical for me to fact-check and edit the whole thing. So I acted as reviewer for the AI literature review, and I'll share that in Part 2. Then I'll be back in Part 3 to add commentary and connect the literature back to my lived experiences from 98point6.
+But then when I read the initial lit review, I felt both that it was an interesting piece on its own and that it would be impractical for me to fact-check and edit the whole thing. So I acted as reviewer for the AI literature review, and I'll share that in [Part 2]({% post_url 2026-10-10-ai-vs-doctors-part-2 %}). Then I'll be back in Part 3 to add commentary and connect the literature back to my lived experiences from 98point6.
 
 ## Thanks
 
