@@ -95,24 +95,22 @@ h4, h5, h6 { margin-top: 40px; line-height: 1.25; }
 h3:first-child, h4:first-child,
 hr + h3, hr + h4 { margin-top: 0; }
 
+// Links (GOV.UK-style): link color alone is under 3:1 against body text, so the
+// underline is what marks a link (WCAG 1.4.1). Thin at rest, thick on hover.
+// Thickness is set as its own property, after the shorthand, because the
+// shorthand resets it and Safari drops a shorthand that includes it.
 a {
   color: var(--link);
   text-decoration: underline;
-  text-decoration-color: var(--accent-soft-2);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
 }
 
 a:hover, a:focus {
-  color: var(--accent-mid);
+  color: var(--accent);
   text-decoration: underline;
-  text-decoration-style: double;
+  text-decoration-thickness: 3px;
   font-weight: inherit;
-}
-
-// External links styling
-a[href^="http"]:not([href*="ktrnka.github.io"])::after {
-  content: " ↗";
-  font-size: 0.8em;
-  color: var(--muted);
 }
 
 a small {
@@ -305,8 +303,6 @@ hr {
     opacity: 0.65;
     text-decoration: none;
 
-    &::after { display: none; }
-
     img { display: block; }
 
     &:hover, &:focus {
@@ -348,9 +344,6 @@ hr {
       color: var(--accent);
       text-decoration: none;
     }
-
-    // suppress external link arrow on nav links
-    &::after { display: none; }
   }
 
   .more-dropdown {

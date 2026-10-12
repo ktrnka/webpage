@@ -17,7 +17,7 @@ Build the kind of web I want: fast loading, no ads, no trackers, works across pl
 Items actively planned, with clear user or quality impact.
 
 ### Improve link discoverability
-Inline links have no persistent underline and use a color (`--link: #970c4f`) close to the heading accent. Readers may not recognize them as clickable, especially on content-heavy blog posts. Consider adding a subtle persistent underline or shifting the link color further from the heading color.
+Underline part done 2026-10-12: links now use a GOV.UK-style underline in the link color (1px at rest, 3px on hover), and the external-link ↗ marker is gone. The underline is load-bearing, because link color against body text is only ~1.8:1 (WCAG wants 3:1 for color alone). Still open: the link color (`--link: #970c4f`) is close to the heading accent, so headings can read as links. Consider shifting one of them.
 
 ## Backlog
 

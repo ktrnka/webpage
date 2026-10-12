@@ -85,7 +85,7 @@ These are intentional — don't work around them without a strong reason:
 ## Active Priorities
 
 See `TODO.md` for the full backlog. Current top priority:
-- **Link discoverability** — inline links have no persistent underline; color is close to heading accent (`#970c4f`). Readers may not recognize them as clickable.
+- **Link discoverability** — underlines are done (GOV.UK-style, no external-link arrow); link color is still close to the heading accent (`#970c4f`).
 
 ## Link checking
 
