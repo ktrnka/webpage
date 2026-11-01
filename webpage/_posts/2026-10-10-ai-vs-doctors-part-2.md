@@ -172,7 +172,7 @@ Part 1 makes three claims from memory that the original search did not cover. I 
 
 **The interface shapes the codes.** I found no study of diagnosis-code autocomplete specifically, but the defaults literature leaves little doubt about the direction. Switching a health system's prescription default from brand to generic took generic prescribing from 75% to 98%, and it was still 98.4% thirty months later ([Olshan, Rareshide, and Patel 2018](https://doi.org/10.1007/s11606-018-4719-9); the original 2014 study is in further reading). Lowering a surgical default from 30 opioid pills to 12 cut the share of 30-pill prescriptions from 39.7% to 12.9% ([Chiu and colleagues 2018](https://doi.org/10.1001/jamasurg.2018.2083)); adding a 10-tablet default in an emergency department moved prescriptions at exactly 10 from 20.6% to 43.3% of the total ([Delgado and colleagues 2018](https://doi.org/10.1007/s11606-017-4286-5)). Whatever a pick-list puts first becomes the modal answer. There is no reason diagnosis codes would behave differently, and Part 1 reports that they did not.
 
-That is where the literature stands. In Part 3, Keith will respond with what he saw building ML tools for a primary-care clinic, take a closer look at the section 10 studies, and push back on a few points made here.
+That is where the literature stands. In [Part 3]({% post_url 2026-11-01-ai-vs-doctors-part-3 %}), Keith will respond with what he saw building ML tools for a primary-care clinic, take a closer look at the section 10 studies, and push back on a few points made here.
 
 ---
 
