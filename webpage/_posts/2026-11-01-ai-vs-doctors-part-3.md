@@ -221,7 +221,7 @@ They also tested a "LLM only" condition that had a lightly optimized prompt, and
 
 > The group using the LLM spent more time solving cases, a finding that aligns with historical studies of diagnostic support systems, but contrasts with recent findings of LLM use within diagnostic reasoning. While this increased time may be due to the combined effects of case problem-solving and LLM interaction, engaging with the LLM may have served as a beneficial "time out" to better consider the patient context. ... Of note, the persistent advantage of the LLM group after adjusting for time spent and response length suggests that the improved performance cannot be attributed solely to these factors.
 
-The [Mingyang Chen et al 2026](https://doi.org/10.1038/s41746-026-02409-8) paper was a meta-review of many studies comparing AI and healthcare providers (HCPs), as well as studies of HCPs with/without LLMs. It's a nice addition to Brodeur, AMIE, and DxO (in fact, AMIE is included). Although I like their coverage of LLM vs HCPs, I'll focus on the takeaways for LLMs as assistive tools for HCPs:
+The [Mingyang Chen et al 2026](https://doi.org/10.1038/s41746-026-02409-8) paper was a meta-analysis of many studies comparing AI and healthcare providers (HCPs), as well as studies of HCPs with/without LLMs. It's a nice addition to Brodeur, AMIE, and DxO (in fact, AMIE is included). Although I like their coverage of LLM vs HCPs, I'll focus on the takeaways for LLMs as assistive tools for HCPs:
 - 72% of studies focused on diagnosis, 18% on triage, and 10% on both. None focused on patient management, treatment, outcomes, or physician satisfaction.
 - The quality of the LLM has a big effect, which explains how some older studies may see little benefit while newer ones show more.
 - LLMs were less helpful on more realistic cases.
@@ -233,7 +233,7 @@ This quote is a good place to land on:
 
 > Current evidence suggests potential value as assistive tools, yet the predominance of retrospective designs and curated cases creates substantial uncertainty about real-world performance.
 
-[Vaccaro et al 2024](https://doi.org/10.1038/s41562-024-02024-1) is a meta-review of human-AI combination, but across fields rather than limited to healthcare. They were seeking evidence of synergy: When the human-AI combination is better than either alone. I'll list the relevant findings:
+[Vaccaro et al 2024](https://doi.org/10.1038/s41562-024-02024-1) is a meta-analysis of human-AI combination, but across fields rather than limited to healthcare. They were seeking evidence of synergy: When the human-AI combination is better than either alone. I'll list the relevant findings:
 - If the AI alone was better than the human alone, the combination was somewhere in the middle (no synergy).
 - If the human alone was better than the AI alone, the combination was better than both.
 - Newer studies show more human-AI synergy, possibly due to stronger models or better designed interactions.
@@ -247,7 +247,7 @@ My takeaway is that there's good evidence that AI features can help improve resu
 Keep in mind that these are often studies "in the lab", and we've seen in mammography screening that sometimes the real-world clinical impact of humans with CAD tools is actually worse than the human alone. ([Lehman et al 2015](https://doi.org/10.1001/jamainternmed.2015.5231))
 
 There were a few studies briefly mentioned in Part 2 that were the kind of evidence I wanted, plus one newer study. Because this section is running long I'll keep it short:
-- [Zhou et al 2021](https://doi.org/10.1038/s41746-021-00524-2) is a meta-review of RCTs including ML in clinical practice, and focuses on tools to assist clinicians. The core finding is that even strong results often fail to translate to improved clinical outcomes. They saw that newer studies tended to demonstrate improved outcomes, possibly due to the rise of better models and possibly due to focusing on tasks or specialties that are more likely to benefit.
+- [Zhou et al 2021](https://doi.org/10.1038/s41746-021-00524-2) is a meta-analysis of RCTs including ML in clinical practice, and focuses on tools to assist clinicians. The core finding is that even strong results often fail to translate to improved clinical outcomes. They saw that newer studies tended to demonstrate improved outcomes, possibly due to the rise of better models and possibly due to focusing on tasks or specialties that are more likely to benefit.
 - [Agweyu et al 2026](https://doi.org/10.1038/s41591-026-04503-6) is a randomized controlled trial of `gpt-4o` in primary care in Kenya. They did not find evidence of improved patient outcomes as a result of LLM use, though they did see more complete clinical documentation. [A companion article](https://doi.org/10.1038/s44360-026-00082-5) reviewed many cases for safety, noting the potential for improved care but also observing that harmful LLM advice was adopted more than expected.
 - Part 2's ambient scribes paragraph covers a range of papers, and my view is that they show signs of promise in saving time and reducing burnout. I'm confident that it's *possible* to help clinicians in a meaningful way, though it may depend on the specific implementation, specialty, or other factors.
 
